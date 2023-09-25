@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://bdnajcd2gjikk"]
+[gd_scene load_steps=2 format=3 uid="uid://bdnajcd2gjikk"]
+
+[ext_resource type="PackedScene" uid="uid://c1ke8q6v7ud1m" path="res://Player_Prefab.tscn" id="1_tl1hb"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_tl1hb")]
+position = Vector2(54, 112)
+
+[node name="Player2" parent="." instance=ExtResource("1_tl1hb")]
+position = Vector2(157, 133)
+
+[node name="Player3" parent="." instance=ExtResource("1_tl1hb")]
+position = Vector2(99, 170)
