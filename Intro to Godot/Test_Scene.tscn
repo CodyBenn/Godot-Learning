@@ -5,10 +5,14 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_tl1hb")]
-position = Vector2(54, 112)
+position = Vector2(58, 107)
+rotation = 0.789349
 
 [node name="Player2" parent="." instance=ExtResource("1_tl1hb")]
-position = Vector2(157, 133)
+position = Vector2(198, 97)
+rotation = 0.657009
+scale = Vector2(1.69122, 4.11054)
 
 [node name="Player3" parent="." instance=ExtResource("1_tl1hb")]
-position = Vector2(99, 170)
+position = Vector2(121.5, 152.5)
+scale = Vector2(2.73077, 2.59091)
