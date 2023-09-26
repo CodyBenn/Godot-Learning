@@ -1,4 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4q5s2qqianjx"]
+[gd_scene load_steps=4 format=3 uid="uid://c4q5s2qqianjx"]
+
+[ext_resource type="Texture2D" uid="uid://ct8axyk4f31gq" path="res://Sprites/main-character@idle-sheet.png" id="1_8llx3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ju28o"]
+albedo_texture = ExtResource("1_8llx3")
 
 [sub_resource type="BoxMesh" id="BoxMesh_s6rv1"]
 
@@ -6,4 +11,11 @@
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00223649, 0, 0.0113803)
+material_override = SubResource("StandardMaterial3D_ju28o")
 mesh = SubResource("BoxMesh_s6rv1")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00447297, 0, -1.33778)
+material_override = SubResource("StandardMaterial3D_ju28o")
+mesh = SubResource("BoxMesh_s6rv1")
+skeleton = NodePath("../MeshInstance3D")
