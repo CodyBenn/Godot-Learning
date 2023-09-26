@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4q5s2qqianjx"]
+[gd_scene load_steps=5 format=3 uid="uid://c4q5s2qqianjx"]
 
 [ext_resource type="Texture2D" uid="uid://ct8axyk4f31gq" path="res://Sprites/main-character@idle-sheet.png" id="1_8llx3"]
+[ext_resource type="Script" path="res://Test_Script.gd" id="1_wjxak"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ju28o"]
 albedo_texture = ExtResource("1_8llx3")
@@ -8,21 +9,26 @@ albedo_texture = ExtResource("1_8llx3")
 [sub_resource type="BoxMesh" id="BoxMesh_s6rv1"]
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_wjxak")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00223649, 0, 0.0113803)
+visible = false
 material_override = SubResource("StandardMaterial3D_ju28o")
 mesh = SubResource("BoxMesh_s6rv1")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.720442, 0.693515, 0, -0.693515, 0.720442, 0, 3.26785, 5.8727)
+visible = false
 light_color = Color(0.588235, 0.423529, 0.701961, 1)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.11807, -5.23572)
+visible = false
 light_color = Color(0.678431, 0.184314, 0, 1)
 omni_range = 18.292
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.0121472, 0.999926, 0, -0.999926, 0.0121472, 0, 4.64031, 0)
+visible = false
 spot_range = 4.77505
