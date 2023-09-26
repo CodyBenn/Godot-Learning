@@ -6,7 +6,7 @@
 size = Vector2(16, 16)
 
 [node name="Player" type="Sprite2D"]
-position = Vector2(100, 100)
+position = Vector2(106, 101)
 texture = ExtResource("1_2ifpd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

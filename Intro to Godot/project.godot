@@ -14,3 +14,7 @@ config/name="Intro to Godot"
 run/main_scene="res://Test_Scene.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://Icon is icon for game.svg"
+
+[filesystem]
+
+import/fbx/enabled=false
