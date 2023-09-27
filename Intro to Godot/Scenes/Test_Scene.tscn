@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bdnajcd2gjikk"]
 
-[ext_resource type="Script" path="res://Test_Script.gd" id="1_jugxe"]
-[ext_resource type="PackedScene" uid="uid://c1ke8q6v7ud1m" path="res://Player_Prefab.tscn" id="1_tl1hb"]
+[ext_resource type="PackedScene" uid="uid://c1ke8q6v7ud1m" path="res://Scenes/Player_Prefab.tscn" id="1_tl1hb"]
+[ext_resource type="Script" path="res://Scripts/Operator_Test_Script.gd" id="3_wfb1o"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_jugxe")
+script = ExtResource("3_wfb1o")
 
 [node name="Player" parent="." instance=ExtResource("1_tl1hb")]
 position = Vector2(58, 107)

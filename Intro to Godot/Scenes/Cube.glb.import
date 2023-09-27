@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://klqbtosqyho4"
-path="res://.godot/imported/Cube.glb-dc5d0025a1c17debcd6525ad30e7d81f.scn"
+path="res://.godot/imported/Cube.glb-a3e845d55c24ae406a64355b9bbd6ab4.scn"
 
 [deps]
 
-source_file="res://Cube.glb"
-dest_files=["res://.godot/imported/Cube.glb-dc5d0025a1c17debcd6525ad30e7d81f.scn"]
+source_file="res://Scenes/Cube.glb"
+dest_files=["res://.godot/imported/Cube.glb-a3e845d55c24ae406a64355b9bbd6ab4.scn"]
 
 [params]
 
