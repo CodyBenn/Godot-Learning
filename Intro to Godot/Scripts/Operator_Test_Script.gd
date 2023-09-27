@@ -33,7 +33,7 @@ func _ready():
 	money /= 2
 	print("/2 ", money)
 	
-	print("Ammount of money we have : ", money)
+	print("We now have : ", money)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
