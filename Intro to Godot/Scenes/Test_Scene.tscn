@@ -1,20 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://bdnajcd2gjikk"]
 
-[ext_resource type="Script" path="res://Scripts/Conditions.gd" id="1_7ga0u"]
+[ext_resource type="Script" path="res://Scripts/Test_Vectors.gd" id="1_slx5g"]
 [ext_resource type="PackedScene" uid="uid://c1ke8q6v7ud1m" path="res://Scenes/Player_Prefab.tscn" id="1_tl1hb"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_7ga0u")
 
 [node name="Player" parent="." instance=ExtResource("1_tl1hb")]
-position = Vector2(58, 107)
-rotation = 0.789349
+position = Vector2(326, 148)
+script = ExtResource("1_slx5g")
 
 [node name="Player2" parent="." instance=ExtResource("1_tl1hb")]
-position = Vector2(198, 97)
+position = Vector2(63, 118)
 rotation = 0.657009
 scale = Vector2(1.69122, 4.11054)
 
 [node name="Player3" parent="." instance=ExtResource("1_tl1hb")]
-position = Vector2(121.5, 152.5)
+position = Vector2(63, 234)
 scale = Vector2(2.73077, 2.59091)
