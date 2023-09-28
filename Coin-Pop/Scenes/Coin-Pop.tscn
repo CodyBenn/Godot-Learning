@@ -1,16 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://cefbs6076tcgt"]
+[gd_scene load_steps=8 format=3 uid="uid://cefbs6076tcgt"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_057qr"]
 [ext_resource type="Texture2D" uid="uid://tm3f2qi154ua" path="res://Images/HUD-life-count.png" id="2_on3l8"]
 [ext_resource type="PackedScene" uid="uid://dvlnmxjiua5gp" path="res://Scenes/coin.tscn" id="3_f683q"]
+[ext_resource type="Texture2D" uid="uid://d4faqp7w3ykbe" path="res://Images/background-hills1.png" id="4_pxgc6"]
+[ext_resource type="Texture2D" uid="uid://bde2l3je3givm" path="res://Images/background-hills2.png" id="5_tkqer"]
+[ext_resource type="Texture2D" uid="uid://d26d31d2813p" path="res://Images/background-sky.png" id="6_miiy3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nlcvl"]
 size = Vector2(19, 17)
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 324)
+scale = Vector2(0.6, 1)
+
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(2, -2)
+position = Vector2(520.613, 270)
 script = ExtResource("1_057qr")
 
 [node name="Sprite" type="Sprite2D" parent="Player"]
@@ -20,38 +27,102 @@ texture = ExtResource("2_on3l8")
 position = Vector2(-2.5, 2.5)
 shape = SubResource("RectangleShape2D_nlcvl")
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-2, 2)
-
 [node name="Coin" parent="." instance=ExtResource("3_f683q")]
-position = Vector2(84, 215)
+position = Vector2(290.613, 349)
 
 [node name="Coin2" parent="." instance=ExtResource("3_f683q")]
-position = Vector2(42, 118)
+position = Vector2(248.613, 252)
 
 [node name="Coin3" parent="." instance=ExtResource("3_f683q")]
-position = Vector2(216, 264)
+position = Vector2(422.613, 398)
 
 [node name="Coin4" parent="." instance=ExtResource("3_f683q")]
-position = Vector2(303, 164)
+position = Vector2(509.613, 298)
 
 [node name="Coin5" parent="." instance=ExtResource("3_f683q")]
-position = Vector2(129, 45)
+position = Vector2(335.613, 179)
 
 [node name="Coin6" parent="." instance=ExtResource("3_f683q")]
-position = Vector2(183, 189)
+position = Vector2(389.613, 323)
 
 [node name="Coin7" parent="." instance=ExtResource("3_f683q")]
-position = Vector2(445, 54)
+position = Vector2(651.613, 188)
 
 [node name="Coin8" parent="." instance=ExtResource("3_f683q")]
-position = Vector2(405, 256)
+position = Vector2(611.613, 390)
 
 [node name="Coin9" parent="." instance=ExtResource("3_f683q")]
-position = Vector2(491, 165)
+position = Vector2(697.613, 299)
 
 [node name="Coin10" parent="." instance=ExtResource("3_f683q")]
-position = Vector2(508, 275)
+position = Vector2(714.613, 409)
 
 [node name="Coin11" parent="." instance=ExtResource("3_f683q")]
-position = Vector2(311, 69)
+position = Vector2(517.613, 203)
+
+[node name="Coin12" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(130, 402)
+
+[node name="Coin13" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(99, 574)
+
+[node name="Coin14" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(406, 629)
+
+[node name="Coin15" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(286, 481)
+
+[node name="Coin16" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(636, 549)
+
+[node name="Coin17" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(938, 562)
+
+[node name="Coin18" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(1018, 325)
+
+[node name="Coin19" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(94, 171)
+
+[node name="Coin20" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(258, 83)
+
+[node name="Coin21" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(592, 74)
+
+[node name="Coin22" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(878, 60)
+
+[node name="Coin23" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(876, 246)
+
+[node name="Coin24" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(1087, 66)
+
+[node name="Coin25" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(863, 439)
+
+[node name="Coin26" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(495, 518)
+
+[node name="Coin27" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(1078, 476)
+
+[node name="Background-hills1" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(567, 310)
+rotation = 3.14159
+scale = Vector2(2.98873, -2.21047)
+texture = ExtResource("4_pxgc6")
+
+[node name="Background-hills2" type="Sprite2D" parent="Background-hills1"]
+show_behind_parent = true
+position = Vector2(0.362988, -111.137)
+scale = Vector2(1.00175, 1.70663)
+texture = ExtResource("5_tkqer")
+
+[node name="Background-sky" type="Sprite2D" parent="Background-hills1/Background-hills2"]
+show_behind_parent = true
+position = Vector2(2.08616e-05, 65.2168)
+scale = Vector2(1, 0.588765)
+texture = ExtResource("6_miiy3")
