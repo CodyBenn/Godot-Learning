@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvlnmxjiua5gp"]
+
+[ext_resource type="Script" path="res://Scripts/Coin.gd" id="1_qlivr"]
+[ext_resource type="Texture2D" uid="uid://cxvwd0qomtc5x" path="res://Images/HUD-coin-count.png" id="2_ri0bb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h0jgh"]
+radius = 8.0
+
+[node name="Coin" type="Area2D"]
+script = ExtResource("1_qlivr")
+
+[node name="Hud-coin-count" type="Sprite2D" parent="."]
+texture = ExtResource("2_ri0bb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -1)
+shape = SubResource("CircleShape2D_h0jgh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

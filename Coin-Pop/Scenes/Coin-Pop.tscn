@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://cefbs6076tcgt"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_057qr"]
+[ext_resource type="Texture2D" uid="uid://tm3f2qi154ua" path="res://Images/HUD-life-count.png" id="2_on3l8"]
+[ext_resource type="PackedScene" uid="uid://dvlnmxjiua5gp" path="res://Scenes/coin.tscn" id="3_f683q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlcvl"]
+size = Vector2(19, 17)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(2, -2)
+script = ExtResource("1_057qr")
+
+[node name="Sprite" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_on3l8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-2.5, 2.5)
+shape = SubResource("RectangleShape2D_nlcvl")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-2, 2)
+
+[node name="Coin" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(84, 215)
+
+[node name="Coin2" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(42, 118)
+
+[node name="Coin3" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(216, 264)
+
+[node name="Coin4" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(303, 164)
+
+[node name="Coin5" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(129, 45)
+
+[node name="Coin6" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(183, 189)
+
+[node name="Coin7" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(445, 54)
+
+[node name="Coin8" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(405, 256)
+
+[node name="Coin9" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(491, 165)
+
+[node name="Coin10" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(508, 275)
+
+[node name="Coin11" parent="." instance=ExtResource("3_f683q")]
+position = Vector2(311, 69)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tm3f2qi154ua"
-path="res://.godot/imported/HUD-life-count.png-fe52480690f5c1c2d061ff101750cd9c.ctex"
+path="res://.godot/imported/HUD-life-count.png-686520d9aca68cc17b3b6df1d5195a6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HUD-life-count.png"
-dest_files=["res://.godot/imported/HUD-life-count.png-fe52480690f5c1c2d061ff101750cd9c.ctex"]
+source_file="res://Images/HUD-life-count.png"
+dest_files=["res://.godot/imported/HUD-life-count.png-686520d9aca68cc17b3b6df1d5195a6b.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxvwd0qomtc5x"
-path="res://.godot/imported/HUD-coin-count.png-02a8db3f0d391d49a03af382776c5221.ctex"
+path="res://.godot/imported/HUD-coin-count.png-b256e1e8826d5ffa4ba5e4a14697c4fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HUD-coin-count.png"
-dest_files=["res://.godot/imported/HUD-coin-count.png-02a8db3f0d391d49a03af382776c5221.ctex"]
+source_file="res://Images/HUD-coin-count.png"
+dest_files=["res://.godot/imported/HUD-coin-count.png-b256e1e8826d5ffa4ba5e4a14697c4fd.ctex"]
 
 [params]
 
