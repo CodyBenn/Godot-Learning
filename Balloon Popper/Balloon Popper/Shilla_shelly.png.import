@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfo6acw2tueo5"
-path.s3tc="res://.godot/imported/Shilla_shelly.png-36e5f5137f3a0066d907ba1039e368eb.s3tc.ctex"
+path.s3tc="res://.godot/imported/Shilla_shelly.png-7a89bece0ec36584135bf3dd7fcb78ab.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Shilla_shelly.png"
-dest_files=["res://.godot/imported/Shilla_shelly.png-36e5f5137f3a0066d907ba1039e368eb.s3tc.ctex"]
+source_file="res://Balloon Popper/Shilla_shelly.png"
+dest_files=["res://.godot/imported/Shilla_shelly.png-7a89bece0ec36584135bf3dd7fcb78ab.s3tc.ctex"]
 
 [params]
 
