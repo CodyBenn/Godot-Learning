@@ -10,11 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Box Physics Slider"
-run/main_scene="res://Scenes/Physics.tscn"
+config/name="Looping"
+run/main_scene="res://Loops/Loops.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
