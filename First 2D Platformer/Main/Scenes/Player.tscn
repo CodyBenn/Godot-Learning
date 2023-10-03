@@ -13,7 +13,6 @@ shadow_size = 6
 shadow_color = Color(0, 0, 0, 1)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
-position = Vector2(81, 511)
 script = ExtResource("1_7d7gi")
 
 [node name="Sprite" type="Sprite2D" parent="."]
