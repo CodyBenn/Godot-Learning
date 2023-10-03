@@ -786,5 +786,3 @@ position = Vector2(1035, 441)
 
 [node name="Coin47" parent="Coin" instance=ExtResource("5_yujhv")]
 position = Vector2(1053, 441)
-
-[connection signal="body_entered" from="EndFlag" to="EndFlag" method="_on_body_entered"]
