@@ -6,6 +6,9 @@ extends CharacterBody2D
 var jump_count : int = 0
 var jump_max : int = 2
 
+var score : int = 0
+@onready var score_text : Label = get_node("CanvasLayer/ScoreText")
+
 func _physics_process(delta):
 	if not is_on_floor() :
 		velocity.y += gravity * delta
@@ -35,3 +38,7 @@ func _physics_process(delta):
 		
 func game_over():
 	get_tree().reload_current_scene()
+	
+func add_score(amount):
+	score += amount
+	score_text.text = str("Score : ", score)
