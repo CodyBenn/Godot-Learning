@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://byscxggrv8t4r"]
+
+[ext_resource type="Script" path="res://Main/Scripts/Platform.gd" id="1_ag0hd"]
+[ext_resource type="Texture2D" uid="uid://gfi7atna10f3" path="res://Main/Assets/Characters/character_0013.png" id="2_g2r8s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3lnc8"]
+size = Vector2(18, 18)
+
+[node name="Platform" type="StaticBody2D"]
+scale = Vector2(3.56, 0.2)
+script = ExtResource("1_ag0hd")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3lnc8")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_g2r8s")

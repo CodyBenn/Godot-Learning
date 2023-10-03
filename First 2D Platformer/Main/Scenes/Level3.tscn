@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://malkmswc7cbp"]
+[gd_scene load_steps=8 format=3 uid="uid://malkmswc7cbp"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Main/Assets/Tiles/tiles_packed.png" id="1_k45bq"]
 [ext_resource type="PackedScene" uid="uid://d1ji6h8kbqbjy" path="res://Main/Scenes/Player.tscn" id="2_pm5ue"]
 [ext_resource type="PackedScene" uid="uid://d3dr5qjqrpja0" path="res://Main/Scenes/End_Flag.tscn" id="3_arx3u"]
+[ext_resource type="PackedScene" uid="uid://nowwxtd5jt5k" path="res://Main/Scenes/Enemy.tscn" id="4_feu3m"]
+[ext_resource type="PackedScene" uid="uid://byscxggrv8t4r" path="res://Main/Scenes/Platform.tscn" id="5_ytd6c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_avrar"]
 texture = ExtResource("1_k45bq")
@@ -602,13 +604,30 @@ sources/0 = SubResource("TileSetAtlasSource_avrar")
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(1, 0.998412)
 tile_set = SubResource("TileSet_k245b")
 format = 2
-layer_0/tile_data = PackedInt32Array(917504, 196608, 0, 983039, 131072, 0, 983038, 131072, 0, 983037, 131072, 0, 917570, 131072, 0, 917571, 196608, 0, 983036, 65536, 0, 917569, 65536, 0)
+layer_0/tile_data = PackedInt32Array(917504, 196608, 0, 983039, 131072, 0, 983038, 131072, 0, 983037, 131072, 0, 917570, 131072, 0, 917571, 196608, 0, 983036, 65536, 0, 917569, 65536, 0, 1179652, 65536, 0, 1179653, 131072, 0, 1179654, 196608, 0, 983050, 65536, 0, 983051, 131072, 0, 983052, 196608, 0, 851984, 65536, 0, 851985, 131072, 0, 851986, 196608, 0, 851991, 65536, 0, 851992, 131072, 0, 851993, 196608, 0, 851998, 65536, 0, 851999, 131072, 0, 852000, 196608, 0, 852005, 65536, 0, 852006, 131072, 0, 852007, 196608, 0, 393260, 983040, 4, 458796, 983040, 5, 524332, 983040, 5, 589868, 983040, 5, 655404, 983040, 5, 720940, 983040, 5, 786476, 983040, 5, 852012, 983040, 5, 917548, 983040, 5, 983084, 983040, 5, 1048620, 983040, 5, 1114156, 983040, 6, 1179689, 851968, 6, 1179690, 851968, 6, 1179691, 917504, 6, 1179688, 851968, 4, 1179692, 917504, 5, 1245224, 983040, 5, 1310760, 983040, 5, 1376296, 983040, 6, 1376293, 983040, 4, 1441829, 983040, 5, 1507365, 983040, 6, 1572901, 851968, 5, 1572902, 786432, 6, 1572903, 851968, 6, 1572904, 851968, 6, 1572905, 851968, 6, 1572906, 851968, 6, 1572907, 917504, 6, 1572912, 65536, 1, 1572913, 131072, 1, 1572914, 196608, 1, 1638448, 65536, 6, 1703984, 65536, 6, 1769520, 65536, 6, 1835056, 65536, 6, 1900592, 65536, 6, 1966128, 65536, 6, 2031664, 65536, 6, 2097200, 65536, 6, 2162736, 65536, 7, 2162737, 131072, 7, 2162738, 196608, 7, 2097202, 196608, 6, 2031666, 196608, 6, 1966130, 196608, 6, 1900594, 196608, 6, 1835058, 196608, 6, 1769522, 196608, 6, 1703986, 196608, 6, 1638450, 196608, 6, 1638449, 131072, 6, 1703985, 131072, 6, 1769521, 131072, 6, 1835057, 131072, 6, 1900593, 131072, 6, 1966129, 131072, 6, 2031665, 131072, 6, 2097201, 131072, 6)
 
 [node name="Player" parent="." instance=ExtResource("2_pm5ue")]
-position = Vector2(-29, 235)
+position = Vector2(891, 406)
 
 [node name="EndFlag" parent="." instance=ExtResource("3_arx3u")]
 position = Vector2(1200, 243)
 next_scene = "res://Main/Scenes/Level1.tscn"
+
+[node name="Enemy" parent="." instance=ExtResource("4_feu3m")]
+position = Vector2(343, 216)
+
+[node name="Platform2" parent="." instance=ExtResource("5_ytd6c")]
+position = Vector2(995, 345)
+move_dir = Vector2(0, 50)
+
+[node name="Platform" parent="." instance=ExtResource("5_ytd6c")]
+position = Vector2(965, 257)
+move_dir = Vector2(150, 0)
+
+[node name="Platform3" parent="." instance=ExtResource("5_ytd6c")]
+position = Vector2(885, 201)
+constant_linear_velocity = Vector2(0, 100)
+move_dir = Vector2(0, 100)
