@@ -619,15 +619,17 @@ next_scene = "res://Main/Scenes/Level1.tscn"
 [node name="Enemy" parent="." instance=ExtResource("4_feu3m")]
 position = Vector2(343, 216)
 
-[node name="Platform2" parent="." instance=ExtResource("5_ytd6c")]
-position = Vector2(995, 345)
-move_dir = Vector2(0, 50)
+[node name="Platforms" type="Node" parent="."]
 
-[node name="Platform" parent="." instance=ExtResource("5_ytd6c")]
+[node name="Platform" parent="Platforms" instance=ExtResource("5_ytd6c")]
 position = Vector2(965, 257)
 move_dir = Vector2(150, 0)
 
-[node name="Platform3" parent="." instance=ExtResource("5_ytd6c")]
+[node name="Platform2" parent="Platforms" instance=ExtResource("5_ytd6c")]
+position = Vector2(995, 345)
+move_dir = Vector2(0, 50)
+
+[node name="Platform3" parent="Platforms" instance=ExtResource("5_ytd6c")]
 position = Vector2(885, 201)
 constant_linear_velocity = Vector2(0, 100)
 move_dir = Vector2(0, 100)

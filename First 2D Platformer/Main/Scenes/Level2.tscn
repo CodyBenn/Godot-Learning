@@ -644,145 +644,145 @@ scale = Vector2(1.04, 1.96)
 position = Vector2(495, 505)
 scale = Vector2(1.04, 1.96)
 
-[node name="Coin" type="Node" parent="."]
+[node name="Coins" type="Node" parent="."]
 
-[node name="Coin" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(99, 477)
 
-[node name="Coin2" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin2" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(117, 459)
 
-[node name="Coin3" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin3" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(99, 459)
 
-[node name="Coin4" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin4" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(117, 477)
 
-[node name="Coin5" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin5" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(153, 423)
 
-[node name="Coin6" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin6" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(171, 423)
 
-[node name="Coin7" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin7" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(243, 509)
 
-[node name="Coin8" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin8" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(333, 509)
 
-[node name="Coin9" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin9" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(369, 441)
 
-[node name="Coin10" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin10" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(387, 441)
 
-[node name="Coin11" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin11" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(405, 387)
 
-[node name="Coin12" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin12" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(423, 387)
 
-[node name="Coin13" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin13" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(441, 387)
 
-[node name="Coin14" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin14" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(423, 495)
 
-[node name="Coin15" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin15" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(441, 495)
 
-[node name="Coin16" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin16" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(459, 495)
 
-[node name="Coin17" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin17" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(567, 495)
 
-[node name="Coin18" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin18" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(585, 495)
 
-[node name="Coin19" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin19" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(603, 495)
 
-[node name="Coin20" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin20" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(513, 387)
 
-[node name="Coin21" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin21" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(531, 369)
 
-[node name="Coin22" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin22" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(585, 387)
 
-[node name="Coin23" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin23" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(603, 405)
 
-[node name="Coin24" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin24" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(603, 423)
 
-[node name="Coin25" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin25" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(603, 441)
 
-[node name="Coin26" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin26" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(603, 459)
 
-[node name="Coin27" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin27" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(729, 477)
 
-[node name="Coin28" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin28" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(747, 459)
 
-[node name="Coin29" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin29" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(765, 441)
 
-[node name="Coin30" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin30" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(801, 441)
 
-[node name="Coin31" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin31" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(819, 459)
 
-[node name="Coin32" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin32" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(837, 477)
 
-[node name="Coin33" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin33" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(981, 477)
 
-[node name="Coin34" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin34" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(999, 477)
 
-[node name="Coin35" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin35" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(1017, 477)
 
-[node name="Coin36" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin36" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(1035, 477)
 
-[node name="Coin37" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin37" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(1053, 477)
 
-[node name="Coin38" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin38" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(981, 459)
 
-[node name="Coin39" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin39" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(999, 459)
 
-[node name="Coin40" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin40" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(1017, 459)
 
-[node name="Coin41" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin41" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(1035, 459)
 
-[node name="Coin42" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin42" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(1053, 459)
 
-[node name="Coin43" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin43" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(981, 441)
 
-[node name="Coin44" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin44" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(999, 441)
 
-[node name="Coin45" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin45" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(1017, 441)
 
-[node name="Coin46" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin46" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(1035, 441)
 
-[node name="Coin47" parent="Coin" instance=ExtResource("5_yujhv")]
+[node name="Coin47" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(1053, 441)

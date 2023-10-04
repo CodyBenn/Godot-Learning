@@ -646,6 +646,26 @@ position = Vector2(29, 508)
 position = Vector2(744, 515)
 next_scene = "res://Main/Scenes/Level2.tscn"
 
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource("6_oq2rj")]
+position = Vector2(215, 504)
+move_dir = Vector2(55, 0)
+
+[node name="Spikes" type="Node" parent="."]
+
+[node name="Spikes2" parent="Spikes" instance=ExtResource("5_5dgf1")]
+position = Vector2(639, 527)
+scale = Vector2(1.09, 1.5)
+
+[node name="Spikes3" parent="Spikes" instance=ExtResource("5_5dgf1")]
+position = Vector2(621, 527)
+scale = Vector2(1.09, 1.5)
+
+[node name="Spikes" parent="Spikes" instance=ExtResource("5_5dgf1")]
+position = Vector2(657, 527)
+scale = Vector2(1.09, 1.5)
+
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource("4_2xc6j")]
@@ -704,23 +724,3 @@ position = Vector2(666, 491)
 
 [node name="Coin18" parent="Coins" instance=ExtResource("4_2xc6j")]
 position = Vector2(638, 478)
-
-[node name="Spikes" type="Node" parent="."]
-
-[node name="Spikes2" parent="Spikes" instance=ExtResource("5_5dgf1")]
-position = Vector2(639, 527)
-scale = Vector2(1.09, 1.5)
-
-[node name="Spikes3" parent="Spikes" instance=ExtResource("5_5dgf1")]
-position = Vector2(621, 527)
-scale = Vector2(1.09, 1.5)
-
-[node name="Spikes" parent="Spikes" instance=ExtResource("5_5dgf1")]
-position = Vector2(657, 527)
-scale = Vector2(1.09, 1.5)
-
-[node name="Enemies" type="Node" parent="."]
-
-[node name="Enemy" parent="Enemies" instance=ExtResource("6_oq2rj")]
-position = Vector2(215, 504)
-move_dir = Vector2(55, 0)
