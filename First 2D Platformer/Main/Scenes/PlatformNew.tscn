@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://badw6nthjqsqr"]
+
+[ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Main/Assets/Tiles/tiles_packed.png" id="1_rjktm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8y2y"]
+size = Vector2(54, 16)
+
+[sub_resource type="Animation" id="Animation_6ldpr"]
+resource_name = "Move_Loop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0a2ro"]
+_data = {
+"Move_Loop": SubResource("Animation_6ldpr")
+}
+
+[node name="Platform" type="AnimatableBody2D"]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rjktm")
+region_enabled = true
+region_rect = Rect2(216, 108, 54, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_y8y2y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0a2ro")
+}
