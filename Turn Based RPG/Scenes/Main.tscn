@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://croec3f8nx8p1"]
+[gd_scene load_steps=5 format=3 uid="uid://croec3f8nx8p1"]
 
 [ext_resource type="Script" path="res://Scripts/Turn_Manager.gd" id="1_1h13y"]
-[ext_resource type="PackedScene" uid="uid://8rc613np5g8w" path="res://Scenes/Character_Dragon.tscn" id="1_atkd7"]
+[ext_resource type="PackedScene" uid="uid://c2typybaev2oy" path="res://Scenes/Character_Dragon.tscn" id="1_atkd7"]
+[ext_resource type="Texture2D" uid="uid://c7x7wa22ybfji" path="res://Assets/Boar.png" id="4_k6bhj"]
+[ext_resource type="Texture2D" uid="uid://boca72q3730cv" path="res://Assets/Dragon.png" id="4_oqle3"]
 
 [node name="Battlescene" type="Node2D"]
 script = ExtResource("1_1h13y")
@@ -9,4 +11,11 @@ script = ExtResource("1_1h13y")
 [node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
 
+[node name="Player" parent="." instance=ExtResource("1_atkd7")]
+position = Vector2(-200, 10)
+visual = ExtResource("4_oqle3")
+
 [node name="Character" parent="." instance=ExtResource("1_atkd7")]
+position = Vector2(207, -117)
+visual = ExtResource("4_k6bhj")
+flip_visual = true
