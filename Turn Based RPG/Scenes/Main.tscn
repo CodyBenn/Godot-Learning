@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://croec3f8nx8p1"]
+[gd_scene load_steps=3 format=3 uid="uid://croec3f8nx8p1"]
 
+[ext_resource type="Script" path="res://Scripts/Turn_Manager.gd" id="1_1h13y"]
 [ext_resource type="PackedScene" uid="uid://8rc613np5g8w" path="res://Scenes/Character_Dragon.tscn" id="1_atkd7"]
 
 [node name="Battlescene" type="Node2D"]
+script = ExtResource("1_1h13y")
 
 [node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
