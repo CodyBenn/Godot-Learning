@@ -1,47 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://croec3f8nx8p1"]
+[gd_scene load_steps=2 format=3 uid="uid://croec3f8nx8p1"]
 
-[ext_resource type="Texture2D" uid="uid://boca72q3730cv" path="res://Assets/Dragon.png" id="1_5m4tw"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k3u1p"]
-bg_color = Color(0.227451, 0.227451, 0.227451, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qr7mu"]
-bg_color = Color(0.709804, 0.0235294, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_ngxut"]
-font_size = 20
-outline_size = 3
-outline_color = Color(0, 0, 0, 0.643137)
-shadow_color = Color(0, 0, 0, 1)
+[ext_resource type="PackedScene" uid="uid://8rc613np5g8w" path="res://Scenes/Character_Dragon.tscn" id="1_atkd7"]
 
 [node name="Battlescene" type="Node2D"]
 
 [node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
 
-[node name="Character" type="Node2D" parent="."]
-
-[node name="Sprite" type="Sprite2D" parent="Character"]
-texture = ExtResource("1_5m4tw")
-
-[node name="Healthbar" type="ProgressBar" parent="Character"]
-offset_left = -96.0
-offset_top = 91.0
-offset_right = 33.0
-offset_bottom = 118.0
-scale = Vector2(1.52, 1.36)
-theme_override_styles/background = SubResource("StyleBoxFlat_k3u1p")
-theme_override_styles/fill = SubResource("StyleBoxFlat_qr7mu")
-show_percentage = false
-
-[node name="HealthText" type="Label" parent="Character/Healthbar"]
-layout_mode = 0
-offset_left = 5.26316
-offset_top = 2.20589
-offset_right = 172.263
-offset_bottom = 41.2059
-scale = Vector2(0.710526, 0.588235)
-text = "25 / 25"
-label_settings = SubResource("LabelSettings_ngxut")
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Character" parent="." instance=ExtResource("1_atkd7")]
