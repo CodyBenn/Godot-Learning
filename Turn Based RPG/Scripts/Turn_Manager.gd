@@ -34,7 +34,6 @@ func _end_current_turn():
 	if game_over == false:
 		_begin_next_turn()
 		
-	
 func _character_died(character):
 	game_over = true
 	

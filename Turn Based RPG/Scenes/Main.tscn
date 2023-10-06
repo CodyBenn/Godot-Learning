@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://croec3f8nx8p1"]
+[gd_scene load_steps=10 format=3 uid="uid://croec3f8nx8p1"]
 
 [ext_resource type="Script" path="res://Scripts/Turn_Manager.gd" id="1_1h13y"]
 [ext_resource type="PackedScene" uid="uid://c2typybaev2oy" path="res://Scenes/Character_Dragon.tscn" id="1_atkd7"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c7x7wa22ybfji" path="res://Assets/Boar.png" id="4_k6bhj"]
 [ext_resource type="Texture2D" uid="uid://boca72q3730cv" path="res://Assets/Dragon.png" id="4_oqle3"]
 [ext_resource type="Resource" uid="uid://bgf8lqdbe6yd6" path="res://CombatActions/Stomp.tres" id="5_r2s5c"]
+[ext_resource type="Script" path="res://Scenes/CombatActionButton.gd" id="8_1jd5v"]
+[ext_resource type="Script" path="res://Scenes/PlayerUI.gd" id="8_kdqtc"]
 
 [node name="Battlescene" type="Node2D"]
 script = ExtResource("1_1h13y")
@@ -25,3 +27,35 @@ position = Vector2(207, -117)
 combat_actions = [ExtResource("3_00pra"), ExtResource("4_eop27")]
 visual = ExtResource("4_k6bhj")
 flip_visual = true
+
+[node name="PlayerCombatActionUI" type="VBoxContainer" parent="."]
+offset_left = -58.0
+offset_top = 45.0
+offset_right = 57.0
+offset_bottom = 181.0
+script = ExtResource("8_kdqtc")
+
+[node name="CombatAction1" type="Button" parent="PlayerCombatActionUI"]
+layout_mode = 2
+text = "Slash (5 DMG)"
+script = ExtResource("8_1jd5v")
+
+[node name="CombatAction2" type="Button" parent="PlayerCombatActionUI"]
+layout_mode = 2
+text = "Slash (5 DMG)"
+script = ExtResource("8_1jd5v")
+
+[node name="CombatAction3" type="Button" parent="PlayerCombatActionUI"]
+layout_mode = 2
+text = "Slash (5 DMG)"
+script = ExtResource("8_1jd5v")
+
+[node name="CombatAction4" type="Button" parent="PlayerCombatActionUI"]
+layout_mode = 2
+text = "Slash (5 DMG)"
+script = ExtResource("8_1jd5v")
+
+[connection signal="pressed" from="PlayerCombatActionUI/CombatAction1" to="PlayerCombatActionUI/CombatAction1" method="_on_pressed"]
+[connection signal="pressed" from="PlayerCombatActionUI/CombatAction2" to="PlayerCombatActionUI/CombatAction2" method="_on_pressed"]
+[connection signal="pressed" from="PlayerCombatActionUI/CombatAction3" to="PlayerCombatActionUI/CombatAction3" method="_on_pressed"]
+[connection signal="pressed" from="PlayerCombatActionUI/CombatAction4" to="PlayerCombatActionUI/CombatAction4" method="_on_pressed"]
