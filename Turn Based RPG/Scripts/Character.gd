@@ -7,6 +7,7 @@ class_name Character
 
 @export var combat_actions : Array
 @export var opponent : Node
+
 @onready var health_bar : ProgressBar = get_node("Healthbar")
 @onready var health_text : Label = get_node("Healthbar/HealthText")
 
