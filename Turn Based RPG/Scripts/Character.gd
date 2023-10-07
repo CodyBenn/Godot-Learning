@@ -1,7 +1,7 @@
 extends Node2D
 class_name Character
 
-@export var is_player : bool = true
+@export var is_player : bool
 @export var cur_hp : int = 25
 @export var max_hp : int = 25
 
@@ -13,7 +13,6 @@ class_name Character
 
 @export var visual : Texture2D
 @export var flip_visual : bool
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

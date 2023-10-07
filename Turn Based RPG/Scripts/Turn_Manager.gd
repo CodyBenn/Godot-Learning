@@ -11,7 +11,6 @@ var game_over : bool = false
 signal character_begin_turn(character)
 signal character_end_turn(character)
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	await get_tree().create_timer(0.5).timeout
 	begin_next_turn()

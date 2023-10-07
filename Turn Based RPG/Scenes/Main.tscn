@@ -20,6 +20,7 @@ zoom = Vector2(1.5, 1.5)
 
 [node name="Player" parent="." node_paths=PackedStringArray("opponent") instance=ExtResource("1_atkd7")]
 position = Vector2(-200, 10)
+is_player = true
 combat_actions = [ExtResource("3_00pra"), ExtResource("4_eop27"), ExtResource("5_r2s5c")]
 opponent = NodePath("../Enemy")
 visual = ExtResource("4_oqle3")
