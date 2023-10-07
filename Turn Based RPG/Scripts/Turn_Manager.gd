@@ -26,8 +26,8 @@ func begin_next_turn():
 		
 	emit_signal("character_begin_turn", cur_char)
 	
-func _end_current_turn():
-	emit_signal("character_end_turn", cur_char)	
+func end_current_turn():
+	emit_signal("character_end_turn", cur_char)
 	
 	await get_tree().create_timer(next_turn_delay).timeout
 	

@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_yy23d")
-display_name = "Berserk (10 DMG, -3 HP)"
+display_name = "Berserk"
 damage = 10
 heal = -4

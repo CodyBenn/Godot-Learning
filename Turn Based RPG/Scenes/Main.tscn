@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c7x7wa22ybfji" path="res://Assets/Boar.png" id="4_k6bhj"]
 [ext_resource type="Texture2D" uid="uid://boca72q3730cv" path="res://Assets/Dragon.png" id="4_oqle3"]
 [ext_resource type="Resource" uid="uid://bgf8lqdbe6yd6" path="res://CombatActions/Stomp.tres" id="5_r2s5c"]
-[ext_resource type="Script" path="res://Scenes/CombatActionButton.gd" id="8_1jd5v"]
-[ext_resource type="Script" path="res://Scenes/PlayerUI.gd" id="8_kdqtc"]
+[ext_resource type="Script" path="res://Scripts/PlayerUI.gd" id="8_5hcmn"]
+[ext_resource type="Script" path="res://Scripts/CombatActionButton.gd" id="9_besp2"]
 
 [node name="Battlescene" type="Node2D" node_paths=PackedStringArray("player_char", "enemy_char")]
 script = ExtResource("1_1h13y")
@@ -24,9 +24,10 @@ combat_actions = [ExtResource("3_00pra"), ExtResource("4_eop27"), ExtResource("5
 opponent = NodePath("../Enemy")
 visual = ExtResource("4_oqle3")
 
-[node name="Enemy" parent="." instance=ExtResource("1_atkd7")]
+[node name="Enemy" parent="." node_paths=PackedStringArray("opponent") instance=ExtResource("1_atkd7")]
 position = Vector2(207, -117)
 combat_actions = [ExtResource("3_00pra"), ExtResource("4_eop27")]
+opponent = NodePath("../Player")
 visual = ExtResource("4_k6bhj")
 flip_visual = true
 
@@ -36,28 +37,28 @@ offset_top = 62.0
 offset_right = 230.0
 offset_bottom = 198.0
 scale = Vector2(1.72, 1)
-script = ExtResource("8_kdqtc")
+script = ExtResource("8_5hcmn")
 buttons = [NodePath("CombatAction1"), NodePath("CombatAction2"), NodePath("CombatAction3"), NodePath("CombatAction4")]
 
 [node name="CombatAction1" type="Button" parent="PlayerCombatActionUI"]
 layout_mode = 2
 text = "Slash (5 DMG)"
-script = ExtResource("8_1jd5v")
+script = ExtResource("9_besp2")
 
 [node name="CombatAction2" type="Button" parent="PlayerCombatActionUI"]
 layout_mode = 2
 text = "Slash (5 DMG)"
-script = ExtResource("8_1jd5v")
+script = ExtResource("9_besp2")
 
 [node name="CombatAction3" type="Button" parent="PlayerCombatActionUI"]
 layout_mode = 2
 text = "Slash (5 DMG)"
-script = ExtResource("8_1jd5v")
+script = ExtResource("9_besp2")
 
 [node name="CombatAction4" type="Button" parent="PlayerCombatActionUI"]
 layout_mode = 2
 text = "Slash (5 DMG)"
-script = ExtResource("8_1jd5v")
+script = ExtResource("9_besp2")
 
 [connection signal="pressed" from="PlayerCombatActionUI/CombatAction1" to="PlayerCombatActionUI/CombatAction1" method="_on_pressed"]
 [connection signal="pressed" from="PlayerCombatActionUI/CombatAction2" to="PlayerCombatActionUI/CombatAction2" method="_on_pressed"]
