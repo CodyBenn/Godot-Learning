@@ -10,8 +10,10 @@
 [ext_resource type="Script" path="res://Scenes/CombatActionButton.gd" id="8_1jd5v"]
 [ext_resource type="Script" path="res://Scenes/PlayerUI.gd" id="8_kdqtc"]
 
-[node name="Battlescene" type="Node2D"]
+[node name="Battlescene" type="Node2D" node_paths=PackedStringArray("player_char", "enemy_char")]
 script = ExtResource("1_1h13y")
+player_char = NodePath("Player")
+enemy_char = NodePath("Enemy")
 
 [node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
@@ -29,11 +31,13 @@ visual = ExtResource("4_k6bhj")
 flip_visual = true
 
 [node name="PlayerCombatActionUI" type="VBoxContainer" parent="."]
-offset_left = -58.0
-offset_top = 45.0
-offset_right = 57.0
-offset_bottom = 181.0
+offset_left = 115.0
+offset_top = 62.0
+offset_right = 230.0
+offset_bottom = 198.0
+scale = Vector2(1.72, 1)
 script = ExtResource("8_kdqtc")
+buttons = [NodePath("CombatAction1"), NodePath("CombatAction2"), NodePath("CombatAction3"), NodePath("CombatAction4")]
 
 [node name="CombatAction1" type="Button" parent="PlayerCombatActionUI"]
 layout_mode = 2
