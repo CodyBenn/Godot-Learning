@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c4q5s2qqianjx"]
 
-[ext_resource type="Texture2D" uid="uid://ct8axyk4f31gq" path="res://Sprites/main-character@idle-sheet.png" id="1_8llx3"]
+[ext_resource type="Texture2D" uid="uid://ct8axyk4f31gq" path="res://Assets/main-character@idle-sheet.png" id="1_8llx3"]
 [ext_resource type="Script" path="res://Test_Script.gd" id="1_wjxak"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ju28o"]

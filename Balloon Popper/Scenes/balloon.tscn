@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq0pgyu36ry65"]
+
+[ext_resource type="Script" path="res://Scripts/Balloon.gd" id="1_smai3"]
+[ext_resource type="Texture2D" uid="uid://bfo6acw2tueo5" path="res://Assets/Shilla_shelly.png" id="2_dhf7s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_klp3r"]
+albedo_texture = ExtResource("2_dhf7s")
+rim_enabled = true
+rim = 0.2
+rim_tint = 1.0
+clearcoat_enabled = true
+clearcoat_roughness = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_qwx3t"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yg0c6"]
+
+[node name="Balloon" type="Area3D"]
+transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, 0, 0, 0)
+script = ExtResource("1_smai3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_klp3r")
+mesh = SubResource("SphereMesh_qwx3t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_yg0c6")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

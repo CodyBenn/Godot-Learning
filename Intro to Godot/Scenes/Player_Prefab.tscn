@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c1ke8q6v7ud1m"]
 
-[ext_resource type="Texture2D" uid="uid://et35oertqn5a" path="res://Sprites/HUD-life-count.png" id="1_2ifpd"]
+[ext_resource type="Texture2D" uid="uid://et35oertqn5a" path="res://Assets/HUD-life-count.png" id="1_2ifpd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wlnsx"]
 size = Vector2(16, 16)

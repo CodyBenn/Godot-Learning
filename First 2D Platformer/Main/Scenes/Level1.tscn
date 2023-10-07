@@ -643,7 +643,7 @@ layer_0/tile_data = PackedInt32Array(1900545, 131073, 1, 1900547, 131073, 1, 190
 position = Vector2(29, 508)
 
 [node name="EndFlag" parent="." instance=ExtResource("3_1ujv3")]
-position = Vector2(744, 515)
+position = Vector2(722, 515)
 next_scene = "res://Main/Scenes/Level2.tscn"
 
 [node name="Enemies" type="Node" parent="."]
