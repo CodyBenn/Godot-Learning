@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbof2iarek5fl"]
+[gd_scene load_steps=10 format=3 uid="uid://cbof2iarek5fl"]
 
+[ext_resource type="Script" path="res://Scenes/GameManager.gd" id="1_t8yj7"]
 [ext_resource type="Texture2D" uid="uid://deufgbatoetes" path="res://Assets/tilemap.png" id="1_tc2wo"]
 [ext_resource type="Script" path="res://Scripts/EnemyUnit.gd" id="3_4v6e7"]
 [ext_resource type="PackedScene" uid="uid://c6y1mfneuq3hr" path="res://Scenes/PlayerUnit.tscn" id="3_c670a"]
@@ -155,6 +156,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32
 outlines = Array[PackedVector2Array]([PackedVector2Array(143, -95, 143, -54, 143, 5, 143, 63, 89.097, 63, 31, 63, 31, 78, 7, 78, 7, 48.711, 7, 22, 31, 22, 71, 22, 72, -23, 72, -58, 41.4314, -58, 7, -58, 7, -95, 101, -93)])
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_t8yj7")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4uhlk")
