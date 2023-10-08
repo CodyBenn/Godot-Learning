@@ -175,26 +175,30 @@ navigation_polygon = SubResource("NavigationPolygon_gkebv")
 [node name="NavigationRegion2D2" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_r47s2")
 
-[node name="PlayerUnit" parent="." instance=ExtResource("3_c670a")]
+[node name="PlayerUnits" type="Node" parent="."]
+
+[node name="PlayerUnit" parent="PlayerUnits" instance=ExtResource("3_c670a")]
 position = Vector2(-100, -26)
 
-[node name="EnemyUnit" parent="." instance=ExtResource("3_g7nb4")]
-position = Vector2(117, -18)
-
-[node name="PlayerUnit2" parent="." instance=ExtResource("3_c670a")]
+[node name="PlayerUnit2" parent="PlayerUnits" instance=ExtResource("3_c670a")]
 position = Vector2(-104, -46)
 
-[node name="PlayerUnit3" parent="." instance=ExtResource("3_c670a")]
+[node name="PlayerUnit3" parent="PlayerUnits" instance=ExtResource("3_c670a")]
 position = Vector2(-98, -5)
 
-[node name="PlayerUnit4" parent="." instance=ExtResource("3_c670a")]
+[node name="PlayerUnit4" parent="PlayerUnits" instance=ExtResource("3_c670a")]
 position = Vector2(-105, 16)
 
-[node name="Unit" parent="." instance=ExtResource("3_g7nb4")]
+[node name="EnemyUnits" type="Node" parent="."]
+
+[node name="EnemyUnit" parent="EnemyUnits" instance=ExtResource("3_g7nb4")]
+position = Vector2(117, -18)
+
+[node name="EnemyUnit2" parent="EnemyUnits" instance=ExtResource("3_g7nb4")]
 position = Vector2(122, 3)
 
-[node name="Unit2" parent="." instance=ExtResource("3_g7nb4")]
+[node name="EnemyUnit3" parent="EnemyUnits" instance=ExtResource("3_g7nb4")]
 position = Vector2(120, -42)
 
-[node name="Unit3" parent="." instance=ExtResource("3_g7nb4")]
+[node name="EnemyUnit4" parent="EnemyUnits" instance=ExtResource("3_g7nb4")]
 position = Vector2(128, 24)
