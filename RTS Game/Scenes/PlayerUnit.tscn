@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6y1mfneuq3hr"]
+
+[ext_resource type="PackedScene" uid="uid://beorubh7w3343" path="res://Scenes/Unit.tscn" id="1_4e7g4"]
+[ext_resource type="Texture2D" uid="uid://gcfifvefg44l" path="res://Assets/tile_0060.png" id="2_a5a0m"]
+[ext_resource type="Script" path="res://Scripts/PlayerUnit.gd" id="2_lx528"]
+[ext_resource type="Texture2D" uid="uid://cn8fli60qrj2v" path="res://Assets/tile_0097.png" id="4_p8r5b"]
+
+[node name="PlayerUnit" instance=ExtResource("1_4e7g4")]
+script = ExtResource("2_lx528")
+
+[node name="SelectionVisual" type="Sprite2D" parent="." index="0"]
+visible = false
+self_modulate = Color(1, 1, 0, 0.607843)
+position = Vector2(0, 6)
+scale = Vector2(1.82164, 1)
+texture = ExtResource("2_a5a0m")
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource("4_p8r5b")

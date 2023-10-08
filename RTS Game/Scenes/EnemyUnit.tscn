@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://pejsntadf34d"]
+
+[ext_resource type="PackedScene" uid="uid://beorubh7w3343" path="res://Scenes/Unit.tscn" id="1_8eixl"]
+[ext_resource type="Texture2D" uid="uid://bfyx3wn57uby1" path="res://Assets/tile_0110.png" id="2_5gm0l"]
+
+[node name="Unit" instance=ExtResource("1_8eixl")]
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource("2_5gm0l")
+
+[node name="Collider" parent="." index="1"]
+position = Vector2(0, 0)
