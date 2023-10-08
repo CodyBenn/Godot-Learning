@@ -18,6 +18,13 @@ func _ready():
 	agent = $NavigationAgent2D
 	sprite = $Sprite
 	
+	var gm = get_node("/root/Main")
+	
+	if is_player:
+		gm.players.append(self)
+	else:
+		gm.enemies.append(self)
+	
 func _physics_process(delta):
 	if agent.is_navigation_finished():
 		return
@@ -59,3 +66,7 @@ func take_damage(damage_to_take):
 	
 	if health <= 0:
 		queue_free()
+	
+	sprite.modulate = Color.DARK_RED
+	await get_tree().create_timer(0.1).timeout
+	sprite.modulate = Color.WHITE
