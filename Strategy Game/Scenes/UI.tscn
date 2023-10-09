@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://bc60g3iolii2v"]
+
+[ext_resource type="FontFile" uid="uid://bee4lflhh1n7p" path="res://Font/Roboto-Bold.ttf" id="1_yfe6y"]
+[ext_resource type="FontFile" uid="uid://xhfebkh1n0xh" path="res://Font/Roboto-Regular.ttf" id="2_v1nha"]
+[ext_resource type="Texture2D" uid="uid://cdmnjuk0gy8ee" path="res://Assets/Mine.png" id="3_jbo62"]
+[ext_resource type="Texture2D" uid="uid://d2bbdjucealjx" path="res://Assets/Greenhouse.png" id="4_7ecsp"]
+[ext_resource type="Texture2D" uid="uid://ds11l2sck1up2" path="res://Assets/SolarPanel.png" id="5_svt5g"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 576.0
+offset_right = 40.0
+offset_bottom = 616.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(32, 3.6)
+color = Color(0.219608, 0.219608, 0.219608, 1)
+
+[node name="EndTurnButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1056.0
+offset_top = 24.0
+offset_right = 1128.0
+offset_bottom = 51.0
+scale = Vector2(2.67875, 3.58889)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_yfe6y")
+text = "End Turn"
+
+[node name="TurnText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 48.0
+offset_right = 919.0
+offset_bottom = 71.0
+scale = Vector2(3.24, 2.09778)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_v1nha")
+text = "Turn 1"
+
+[node name="BuildingButtons" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 276.0
+offset_bottom = 115.0
+alignment = 1
+
+[node name="MineButton" type="Button" parent="BuildingButtons"]
+layout_mode = 2
+icon = ExtResource("3_jbo62")
+
+[node name="GreenhouseButton" type="Button" parent="BuildingButtons"]
+layout_mode = 2
+icon = ExtResource("4_7ecsp")
+
+[node name="SolarPanelButton" type="Button" parent="BuildingButtons"]
+layout_mode = 2
+icon = ExtResource("5_svt5g")

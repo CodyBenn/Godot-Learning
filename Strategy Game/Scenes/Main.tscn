@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfqqde6bj72ns"]
+[gd_scene load_steps=3 format=3 uid="uid://bfqqde6bj72ns"]
 
 [ext_resource type="PackedScene" uid="uid://cr7lwxkn33u54" path="res://Scenes/Tile.tscn" id="1_mlh62"]
+[ext_resource type="PackedScene" uid="uid://bc60g3iolii2v" path="res://Scenes/UI.tscn" id="2_64k0a"]
 
 [node name="Main" type="Node2D"]
 
@@ -544,3 +545,5 @@ position = Vector2(1184, 544)
 
 [node name="Tile266" parent="TileNodes" instance=ExtResource("1_mlh62")]
 position = Vector2(1248, 544)
+
+[node name="UI" parent="." instance=ExtResource("2_64k0a")]
