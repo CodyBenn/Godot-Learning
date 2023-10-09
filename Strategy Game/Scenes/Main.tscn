@@ -1,3 +1,546 @@
-[gd_scene format=3 uid="uid://bfqqde6bj72ns"]
+[gd_scene load_steps=2 format=3 uid="uid://bfqqde6bj72ns"]
+
+[ext_resource type="PackedScene" uid="uid://cr7lwxkn33u54" path="res://Scenes/Tile.tscn" id="1_mlh62"]
 
 [node name="Main" type="Node2D"]
+
+[node name="TileNodes" type="Node" parent="."]
+
+[node name="Tile" parent="TileNodes" instance=ExtResource("1_mlh62")]
+
+[node name="Tile2" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(96, 32)
+
+[node name="Tile3" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(160, 32)
+
+[node name="Tile4" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(32, 96)
+
+[node name="Tile5" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(96, 96)
+
+[node name="Tile6" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(160, 96)
+
+[node name="Tile7" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(224, 32)
+
+[node name="Tile8" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(288, 32)
+
+[node name="Tile9" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(352, 32)
+
+[node name="Tile10" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(224, 96)
+
+[node name="Tile11" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(288, 96)
+
+[node name="Tile12" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(352, 96)
+
+[node name="Tile13" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(32, 160)
+
+[node name="Tile14" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(96, 160)
+
+[node name="Tile15" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(160, 160)
+
+[node name="Tile16" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(32, 224)
+
+[node name="Tile17" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(96, 224)
+
+[node name="Tile18" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(160, 224)
+
+[node name="Tile19" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(224, 160)
+
+[node name="Tile20" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(288, 160)
+
+[node name="Tile21" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(352, 160)
+
+[node name="Tile22" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(224, 224)
+
+[node name="Tile23" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(288, 224)
+
+[node name="Tile24" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(352, 224)
+
+[node name="Tile25" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(416, 32)
+
+[node name="Tile26" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(480, 32)
+
+[node name="Tile27" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(544, 32)
+
+[node name="Tile28" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(416, 96)
+
+[node name="Tile29" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(480, 96)
+
+[node name="Tile30" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(544, 96)
+
+[node name="Tile31" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(608, 32)
+
+[node name="Tile32" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(672, 32)
+
+[node name="Tile33" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(736, 32)
+
+[node name="Tile34" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(608, 96)
+
+[node name="Tile35" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(672, 96)
+
+[node name="Tile36" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(736, 96)
+
+[node name="Tile37" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(416, 160)
+
+[node name="Tile38" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(480, 160)
+
+[node name="Tile39" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(544, 160)
+
+[node name="Tile40" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(416, 224)
+
+[node name="Tile41" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(480, 224)
+
+[node name="Tile42" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(544, 224)
+
+[node name="Tile43" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(608, 160)
+
+[node name="Tile44" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(672, 160)
+
+[node name="Tile45" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(736, 160)
+
+[node name="Tile46" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(608, 224)
+
+[node name="Tile47" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(672, 224)
+
+[node name="Tile48" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(736, 224)
+
+[node name="Tile49" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(32, 288)
+
+[node name="Tile50" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(96, 288)
+
+[node name="Tile51" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(160, 288)
+
+[node name="Tile52" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(32, 352)
+
+[node name="Tile53" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(96, 352)
+
+[node name="Tile54" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(160, 352)
+
+[node name="Tile55" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(224, 288)
+
+[node name="Tile56" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(288, 288)
+
+[node name="Tile57" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(352, 288)
+
+[node name="Tile58" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(224, 352)
+
+[node name="Tile59" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(288, 352)
+
+[node name="Tile60" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(352, 352)
+
+[node name="Tile61" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(32, 416)
+
+[node name="Tile62" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(96, 416)
+
+[node name="Tile63" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(160, 416)
+
+[node name="Tile64" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(32, 480)
+
+[node name="Tile65" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(96, 480)
+
+[node name="Tile66" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(160, 480)
+
+[node name="Tile67" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(224, 416)
+
+[node name="Tile68" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(288, 416)
+
+[node name="Tile69" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(352, 416)
+
+[node name="Tile70" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(224, 480)
+
+[node name="Tile71" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(288, 480)
+
+[node name="Tile72" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(352, 480)
+
+[node name="Tile73" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(416, 288)
+
+[node name="Tile74" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(480, 288)
+
+[node name="Tile75" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(544, 288)
+
+[node name="Tile76" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(416, 352)
+
+[node name="Tile77" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(480, 352)
+
+[node name="Tile78" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(544, 352)
+
+[node name="Tile79" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(608, 288)
+
+[node name="Tile80" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(672, 288)
+
+[node name="Tile81" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(736, 288)
+
+[node name="Tile82" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(608, 352)
+
+[node name="Tile83" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(672, 352)
+
+[node name="Tile84" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(736, 352)
+
+[node name="Tile85" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(416, 416)
+
+[node name="Tile86" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(480, 416)
+
+[node name="Tile87" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(544, 416)
+
+[node name="Tile88" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(416, 480)
+
+[node name="Tile89" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(480, 480)
+
+[node name="Tile90" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(544, 480)
+
+[node name="Tile91" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(608, 416)
+
+[node name="Tile92" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(672, 416)
+
+[node name="Tile93" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(736, 416)
+
+[node name="Tile94" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(608, 480)
+
+[node name="Tile95" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(672, 480)
+
+[node name="Tile96" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(736, 480)
+
+[node name="Tile97" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(32, 544)
+
+[node name="Tile98" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(96, 544)
+
+[node name="Tile99" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(160, 544)
+
+[node name="Tile103" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(224, 544)
+
+[node name="Tile104" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(288, 544)
+
+[node name="Tile105" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(352, 544)
+
+[node name="Tile121" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(416, 544)
+
+[node name="Tile122" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(480, 544)
+
+[node name="Tile123" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(544, 544)
+
+[node name="Tile127" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(608, 544)
+
+[node name="Tile128" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(672, 544)
+
+[node name="Tile129" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(736, 544)
+
+[node name="Tile145" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(800, 32)
+
+[node name="Tile146" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(864, 32)
+
+[node name="Tile147" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(928, 32)
+
+[node name="Tile148" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(800, 96)
+
+[node name="Tile149" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(864, 96)
+
+[node name="Tile150" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(928, 96)
+
+[node name="Tile151" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(992, 32)
+
+[node name="Tile152" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1056, 32)
+
+[node name="Tile153" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1120, 32)
+
+[node name="Tile154" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(992, 96)
+
+[node name="Tile155" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1056, 96)
+
+[node name="Tile156" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1120, 96)
+
+[node name="Tile157" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(800, 160)
+
+[node name="Tile158" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(864, 160)
+
+[node name="Tile159" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(928, 160)
+
+[node name="Tile160" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(800, 224)
+
+[node name="Tile161" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(864, 224)
+
+[node name="Tile162" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(928, 224)
+
+[node name="Tile163" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(992, 160)
+
+[node name="Tile164" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1056, 160)
+
+[node name="Tile165" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1120, 160)
+
+[node name="Tile166" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(992, 224)
+
+[node name="Tile167" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1056, 224)
+
+[node name="Tile168" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1120, 224)
+
+[node name="Tile169" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1184, 32)
+
+[node name="Tile170" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1248, 32)
+
+[node name="Tile172" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1184, 96)
+
+[node name="Tile173" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1248, 96)
+
+[node name="Tile181" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1184, 160)
+
+[node name="Tile182" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1248, 160)
+
+[node name="Tile184" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1184, 224)
+
+[node name="Tile185" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1248, 224)
+
+[node name="Tile193" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(800, 288)
+
+[node name="Tile194" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(864, 288)
+
+[node name="Tile195" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(928, 288)
+
+[node name="Tile196" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(800, 352)
+
+[node name="Tile197" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(864, 352)
+
+[node name="Tile198" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(928, 352)
+
+[node name="Tile199" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(992, 288)
+
+[node name="Tile200" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1056, 288)
+
+[node name="Tile201" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1120, 288)
+
+[node name="Tile202" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(992, 352)
+
+[node name="Tile203" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1056, 352)
+
+[node name="Tile204" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1120, 352)
+
+[node name="Tile205" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(800, 416)
+
+[node name="Tile206" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(864, 416)
+
+[node name="Tile207" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(928, 416)
+
+[node name="Tile208" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(800, 480)
+
+[node name="Tile209" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(864, 480)
+
+[node name="Tile210" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(928, 480)
+
+[node name="Tile211" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(992, 416)
+
+[node name="Tile212" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1056, 416)
+
+[node name="Tile213" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1120, 416)
+
+[node name="Tile214" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(992, 480)
+
+[node name="Tile215" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1056, 480)
+
+[node name="Tile216" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1120, 480)
+
+[node name="Tile217" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1184, 288)
+
+[node name="Tile218" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1248, 288)
+
+[node name="Tile220" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1184, 352)
+
+[node name="Tile221" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1248, 352)
+
+[node name="Tile229" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1184, 416)
+
+[node name="Tile230" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1248, 416)
+
+[node name="Tile232" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1184, 480)
+
+[node name="Tile233" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1248, 480)
+
+[node name="Tile241" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(800, 544)
+
+[node name="Tile242" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(864, 544)
+
+[node name="Tile243" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(928, 544)
+
+[node name="Tile247" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(992, 544)
+
+[node name="Tile248" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1056, 544)
+
+[node name="Tile249" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1120, 544)
+
+[node name="Tile265" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1184, 544)
+
+[node name="Tile266" parent="TileNodes" instance=ExtResource("1_mlh62")]
+position = Vector2(1248, 544)

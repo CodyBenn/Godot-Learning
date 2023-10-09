@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr7lwxkn33u54"]
+
+[ext_resource type="Texture2D" uid="uid://d018xdhbbfjgw" path="res://Assets/Ground.png" id="1_dpsg5"]
+[ext_resource type="Texture2D" uid="uid://d0dd11orpjil4" path="res://Assets/TileHighlight.png" id="2_mo1cm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkbm4"]
+size = Vector2(64, 64)
+
+[node name="Tile" type="Area2D"]
+position = Vector2(32, 32)
+
+[node name="Ground" type="Sprite2D" parent="."]
+texture = ExtResource("1_dpsg5")
+
+[node name="Highlight" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(6.4, 6.4)
+texture = ExtResource("2_mo1cm")
+
+[node name="BuildingIcon" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gkbm4")
