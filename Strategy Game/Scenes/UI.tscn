@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bc60g3iolii2v"]
 
 [ext_resource type="FontFile" uid="uid://bee4lflhh1n7p" path="res://Font/Roboto-Bold.ttf" id="1_yfe6y"]
-[ext_resource type="FontFile" uid="uid://xhfebkh1n0xh" path="res://Font/Roboto-Regular.ttf" id="2_v1nha"]
+[ext_resource type="FontFile" uid="uid://xhfebkh1n0xh" path="res://Scripts/Roboto-Regular.ttf" id="2_4ckrt"]
 [ext_resource type="Texture2D" uid="uid://cdmnjuk0gy8ee" path="res://Assets/Mine.png" id="3_jbo62"]
 [ext_resource type="Texture2D" uid="uid://d2bbdjucealjx" path="res://Assets/Greenhouse.png" id="4_7ecsp"]
 [ext_resource type="Texture2D" uid="uid://ds11l2sck1up2" path="res://Assets/SolarPanel.png" id="5_svt5g"]
@@ -41,15 +41,15 @@ scale = Vector2(3.24, 2.09778)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_v1nha")
+theme_override_fonts/font = ExtResource("2_4ckrt")
 text = "Turn 1"
 
 [node name="BuildingButtons" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 40.0
-offset_top = 40.0
+offset_top = 24.0
 offset_right = 276.0
-offset_bottom = 115.0
+offset_bottom = 99.0
 alignment = 1
 
 [node name="MineButton" type="Button" parent="BuildingButtons"]
@@ -63,3 +63,47 @@ icon = ExtResource("4_7ecsp")
 [node name="SolarPanelButton" type="Button" parent="BuildingButtons"]
 layout_mode = 2
 icon = ExtResource("5_svt5g")
+
+[node name="HeaderFootMetal" type="Label" parent="."]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 24.0
+offset_right = 376.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("1_yfe6y")
+text = "Food :
+Metal :"
+horizontal_alignment = 2
+
+[node name="FoodMetalText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 24.0
+offset_right = 488.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0.797375, 0.658503, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("1_yfe6y")
+text = "25 (+80)
+25 (+80)"
+
+[node name="HeaderOxygenEnergy" type="Label" parent="."]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 68.0
+offset_right = 376.0
+offset_bottom = 112.0
+theme_override_fonts/font = ExtResource("1_yfe6y")
+text = "Oxygen :
+Energy :"
+horizontal_alignment = 2
+
+[node name="OxygenEnergyText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 68.0
+offset_right = 488.0
+offset_bottom = 112.0
+theme_override_colors/font_color = Color(0.797375, 0.658503, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("1_yfe6y")
+text = "25 (+80)
+25 (+80)"
