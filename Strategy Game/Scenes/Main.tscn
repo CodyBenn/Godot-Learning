@@ -245,6 +245,7 @@ position = Vector2(608, 288)
 
 [node name="Tile80" parent="TileNodes" instance=ExtResource("1_mlh62")]
 position = Vector2(672, 288)
+startTile = true
 
 [node name="Tile81" parent="TileNodes" instance=ExtResource("1_mlh62")]
 position = Vector2(736, 288)
