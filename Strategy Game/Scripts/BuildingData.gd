@@ -1,7 +1,22 @@
+extends Node
+
 var base = Building.new(0, preload("res://Assets/Base.png"), 0, 0, 0, 0)
 var mine = Building.new(1, preload("res://Assets/Mine.png"), 2, 1, 4, 1)
 var greenhouse = Building.new(2, preload("res://Assets/Greenhouse.png"), 1, 1, 0, 0)
 var solarpanel = Building.new(3, preload("res://Assets/SolarPanel.png"), 4, 1, 0, 0)
+
+# --- Building Types ---
+# base			= 0
+# mine			= 1
+# greenhouse	= 2
+# solarpanel	= 3
+
+# --- Resources ---
+# none			= 0
+# food			= 1
+# metal			= 2
+# oxygen		= 3
+# energy		= 4
 
 class Building:
 	
@@ -27,4 +42,3 @@ class Building:
 		self.prodResourceAmount = prodResourceAmount
 		self.upkeepResource = upkeepResource
 		self.upkeepResourceAmount = upkeepResourceAmount
-		

@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfqqde6bj72ns"]
+[gd_scene load_steps=5 format=3 uid="uid://bfqqde6bj72ns"]
 
+[ext_resource type="Script" path="res://Scenes/GameManager.gd" id="1_4ofgl"]
 [ext_resource type="PackedScene" uid="uid://cr7lwxkn33u54" path="res://Scenes/Tile.tscn" id="1_mlh62"]
 [ext_resource type="Script" path="res://Scripts/Map.gd" id="1_mlom3"]
 [ext_resource type="PackedScene" uid="uid://bc60g3iolii2v" path="res://Scenes/UI.tscn" id="2_64k0a"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_mlom3")
+script = ExtResource("1_4ofgl")
 
 [node name="Tiles" type="Node" parent="."]
+script = ExtResource("1_mlom3")
 
 [node name="Tile" parent="Tiles" instance=ExtResource("1_mlh62")]
 
@@ -550,3 +552,4 @@ position = Vector2(1184, 544)
 position = Vector2(1248, 544)
 
 [node name="UI" parent="." instance=ExtResource("2_64k0a")]
+metadata/_edit_use_anchors_ = true
