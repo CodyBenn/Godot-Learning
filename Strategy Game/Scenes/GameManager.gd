@@ -20,23 +20,26 @@ var buildingToPlace : int
 @onready var ui : Node = get_node("UI")
 @onready var map : Node = get_node("Tiles")
 
+func _ready():
+	ui.update_resource_text()
+	ui.on_end_turn()
+	
+func end_turn():
+	curFood += foodPerTurn
+	curMetal += metalPerTurn
+	curOxygen += oxygenPerTurn
+	curEnergy += energyPerTurn
+	
+	curTurn += 1
+	
+	ui.update_resource_text()
+	ui.on_end_turn()
+
 func on_select_building(buildingType):
 	currentlyPlacingBuilding = true
 	buildingToPlace = buildingType
 	
 	map.highlight_available_tiles()
-
-func add_to_resource_per_turn(resource, amount):
-	if resource == 0:
-		return
-	elif resource == 1:
-		foodPerTurn += amount
-	elif metalPerTurn == 2:
-		metalPerTurn += amount
-	elif oxygenPerTurn == 3:
-		oxygenPerTurn += amount
-	elif energyPerTurn == 4:
-		energyPerTurn += amount
 
 func place_building(tileToPlaceOn):
 	
@@ -65,10 +68,17 @@ func place_building(tileToPlaceOn):
 		add_to_resource_per_turn(BuildingData.solarpanel.prodResource, BuildingData.solarpanel.prodResourceAmount)
 		add_to_resource_per_turn(BuildingData.solarpanel.upkeepResource, BuildingData.solarpanel.upkeepResourceAmount)	
 		
-func end_turn():
-	curFood += foodPerTurn
-	curMetal += metalPerTurn
-	curOxygen += oxygenPerTurn
-	curEnergy += energyPerTurn
+	map.place_building(tileToPlaceOn, texture)
+	ui.update_resource_text()
 	
-	curTurn += 1
+func add_to_resource_per_turn(resource, amount):
+	if resource == 0:
+		return
+	elif resource == 1:
+		foodPerTurn += amount
+	elif resource == 2:
+		metalPerTurn += amount
+	elif resource == 3:
+		oxygenPerTurn += amount
+	elif resource == 4:
+		energyPerTurn += amount

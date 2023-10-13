@@ -35,4 +35,8 @@ func place_building(buildingTexture):
 
 #Called when an inpur event takes place of the tile
 func _on_input_event(viewport, event, shape_idx):
-	pass
+	if event is InputEventMouseButton and event.pressed:
+		var gameManager = get_node("/root/Main")
+		
+		if gameManager.currentlyPlacingBuilding and canPlaceBuilding:
+			gameManager.place_building(self)

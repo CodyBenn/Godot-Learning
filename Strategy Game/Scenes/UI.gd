@@ -16,17 +16,30 @@ func on_end_turn():
 
 func update_resource_text():
 	
-	var foodMetal = " "
-	foodMetal += str(gameManager.curFood) + "( " + ("+" if gameManager.foodPerTurn >= 0 else " ") + str(gameManager.foodPerTurn) + " )\n"
-	foodMetal += str(gameManager.curMetal) + "( " + ("+" if gameManager.metalPerTurn >= 0 else " ") + str(gameManager.metalPerTurn) + " )"
+	var foodMetal = ""
+	foodMetal += str(gameManager.curFood) + " ( " + ("+" if gameManager.foodPerTurn >= 0 else " ") + str(gameManager.foodPerTurn) + " )\n"
+	foodMetal += str(gameManager.curMetal) + " ( " + ("+" if gameManager.metalPerTurn >= 0 else " ") + str(gameManager.metalPerTurn) + " )"
 	
 	foodMetalText.text = foodMetal
 	
-	var oxygenEnergy = " "
-	oxygenEnergy += str(gameManager.curOxygen) + "( " + ("+" if gameManager.oxygenPerTurn >= 0 else " ") + str(gameManager.oxygenPerTurn) + " )\n"
-	oxygenEnergy += str(gameManager.curEnergy) + "( " + ("+" if gameManager.energyPerTurn >= 0 else " ") + str(gameManager.energyPerTurn) + " )"
+	var oxygenEnergy = ""
+	oxygenEnergy += str(gameManager.curOxygen) + " ( " + ("+" if gameManager.oxygenPerTurn >= 0 else " ") + str(gameManager.oxygenPerTurn) + " )\n"
+	oxygenEnergy += str(gameManager.curEnergy) + " ( " + ("+" if gameManager.energyPerTurn >= 0 else " ") + str(gameManager.energyPerTurn) + " )"
 	
-	oxygenEnergy.text = oxygenEnergy
+	oxygenEnergyText.text = oxygenEnergy
 	
 func _on_end_turn_button_pressed():
 	gameManager.end_turn()
+	
+func _on_mine_button_pressed():
+	buildingButtons.visible = false
+	gameManager.on_select_building(1)
+
+func _on_greenhouse_button_pressed():
+	buildingButtons.visible = false
+	gameManager.on_select_building(2)
+	
+func _on_solar_panel_button_pressed():
+	buildingButtons.visible = false
+	gameManager.on_select_building(3)
+	
