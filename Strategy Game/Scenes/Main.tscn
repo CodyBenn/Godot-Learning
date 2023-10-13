@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfqqde6bj72ns"]
 
 [ext_resource type="PackedScene" uid="uid://cr7lwxkn33u54" path="res://Scenes/Tile.tscn" id="1_mlh62"]
-[ext_resource type="Script" path="res://Scenes/Main.gd" id="1_w07xn"]
+[ext_resource type="Script" path="res://Scripts/Map.gd" id="1_mlom3"]
 [ext_resource type="PackedScene" uid="uid://bc60g3iolii2v" path="res://Scenes/UI.tscn" id="2_64k0a"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_w07xn")
+script = ExtResource("1_mlom3")
 
 [node name="Tiles" type="Node" parent="."]
 
