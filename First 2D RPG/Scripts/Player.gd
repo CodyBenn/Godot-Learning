@@ -18,7 +18,7 @@ var xpToLevelIncreaseRate : float = 1.2
 #Distance to interact with objects
 var interactDist : int = 70
 
-#Movement
+#Movement velocity
 var vel : Vector2 = Vector2()
 
 #Determines direction to face
@@ -44,7 +44,7 @@ func _process(delta):
 		$AnimatedSprite.play("walk_down")	
 	elif input == Vector2(0, -1):
 		$AnimatedSprite.play("walk_up")
-		
+	
 	#Stops animation if no Input
 	if input == Vector2(0, 0):
 		$AnimatedSprite.stop()

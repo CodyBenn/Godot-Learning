@@ -1,7 +1,46 @@
-[gd_scene load_steps=2 format=3 uid="uid://bq8nghofmntxk"]
+[gd_scene load_steps=5 format=3 uid="uid://bq8nghofmntxk"]
 
 [ext_resource type="PackedScene" uid="uid://2mdnxyeew3lk" path="res://Scenes/Player.tscn" id="1_61og3"]
+[ext_resource type="Texture2D" uid="uid://d227re82citu1" path="res://Assets/Tiles/rpgTile002.png" id="2_giyb5"]
+[ext_resource type="Texture2D" uid="uid://bg7h2atdlncsg" path="res://Assets/Tiles/rpgTile006.png" id="3_s6wky"]
+[ext_resource type="Texture2D" uid="uid://c1mnt4nppmgim" path="res://Assets/Tiles/rpgTile008.png" id="4_8o11d"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_61og3")]
+
+[node name="RpgTile002" type="Sprite2D" parent="."]
+position = Vector2(-94, 32)
+texture = ExtResource("2_giyb5")
+
+[node name="RpgTile006" type="Sprite2D" parent="."]
+position = Vector2(251, -118)
+texture = ExtResource("3_s6wky")
+
+[node name="RpgTile008" type="Sprite2D" parent="."]
+position = Vector2(168, 158)
+texture = ExtResource("4_8o11d")
+
+[node name="RpgTile003" type="Sprite2D" parent="."]
+position = Vector2(-314, -8)
+texture = ExtResource("2_giyb5")
+
+[node name="RpgTile007" type="Sprite2D" parent="."]
+position = Vector2(31, -158)
+texture = ExtResource("3_s6wky")
+
+[node name="RpgTile009" type="Sprite2D" parent="."]
+position = Vector2(-52, 118)
+texture = ExtResource("4_8o11d")
+
+[node name="RpgTile004" type="Sprite2D" parent="."]
+position = Vector2(-239, 185)
+texture = ExtResource("2_giyb5")
+
+[node name="RpgTile010" type="Sprite2D" parent="."]
+position = Vector2(106, 35)
+texture = ExtResource("3_s6wky")
+
+[node name="RpgTile011" type="Sprite2D" parent="."]
+position = Vector2(23, 311)
+texture = ExtResource("4_8o11d")
