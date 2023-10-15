@@ -3,7 +3,7 @@ extends CharacterBody2D
 #Base Stats
 var curHP : int = 10
 var maxHP : int = 10
-var move_Speed : float = 100.0
+var move_Speed : float = 250.0
 var damage : int = 1
 
 #Currency
