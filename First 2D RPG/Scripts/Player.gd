@@ -24,7 +24,8 @@ var vel : Vector2 = Vector2()
 #Determines direction to face
 var facingDir : Vector2 = Vector2()
 
-@onready var rayCast = get_node("RayCast2D")
+@onready var rayCast = $RayCast2D
+@onready var anim = $AnimatedSprite
 
 func _process(delta):
 	
