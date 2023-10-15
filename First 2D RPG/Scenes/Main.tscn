@@ -84,6 +84,7 @@ animations = [{
 [node name="Main" type="Node2D"]
 
 [node name="AnimatedPlayer" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(104, 47)
 sprite_frames = SubResource("SpriteFrames_yi24s")
 
