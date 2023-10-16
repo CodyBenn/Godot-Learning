@@ -1,19 +1,19 @@
 extends CharacterBody2D
 
 #Base Stats
-var curHP : int = 10
-var maxHP : int = 10
-var move_Speed : float = 250.0
-var damage : int = 1
+@export var curHP : int = 10
+@export var maxHP : int = 10
+@export var move_Speed : float = 250.0
+@export var damage : int = 1
 
 #Currency
 var gold : int = 0
 
 #Experience and levels
-var curLevel : int = 0
-var curXP : int = 0
-var xpToNextLevel : int = 50
-var xpToLevelIncreaseRate : float = 1.2
+@export var curLevel : int = 0
+@export var curXP : int = 0
+@export var xpToNextLevel : int = 50
+@export var xpToLevelIncreaseRate : float = 1.2
 
 #Distance to interact with objects
 var interactDist : int = 70

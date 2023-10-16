@@ -86,20 +86,18 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ucmwk"]
-radius = 19.0
+radius = 18.0
 height = 52.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ei5la")
+move_Speed = 350.0
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6dv6v")
-animation = &"walk_left"
-frame_progress = 0.90704
+animation = &"walk_down"
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_ucmwk")
-
-[node name="Camera2D" type="Camera2D" parent="."]
