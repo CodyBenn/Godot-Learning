@@ -49,5 +49,5 @@ func _process(delta):
 	#Stops animation if no Input
 	if input == Vector2(0, 0):
 		$AnimatedSprite.stop()
-	
+		
 	move_and_slide()

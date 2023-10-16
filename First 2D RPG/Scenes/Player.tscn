@@ -18,6 +18,9 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("1_l1wy6")
+}, {
+"duration": 1.0,
 "texture": ExtResource("3_6yf1r")
 }, {
 "duration": 1.0,
@@ -25,15 +28,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_y8cct")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_l1wy6")
 }],
 "loop": true,
 "name": &"walk_down",
 "speed": 10.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8eb76")
+}, {
 "duration": 1.0,
 "texture": ExtResource("6_1f6lj")
 }, {
@@ -42,15 +45,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_xmaxj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_8eb76")
 }],
 "loop": true,
 "name": &"walk_left",
 "speed": 10.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_fgjkc")
+}, {
 "duration": 1.0,
 "texture": ExtResource("9_vn3ta")
 }, {
@@ -59,15 +62,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("10_q14dp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_fgjkc")
 }],
 "loop": true,
 "name": &"walk_right",
 "speed": 10.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_0abkk")
+}, {
 "duration": 1.0,
 "texture": ExtResource("12_glx4v")
 }, {
@@ -76,9 +79,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_aio7d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_0abkk")
 }],
 "loop": true,
 "name": &"walk_up",
@@ -94,7 +94,8 @@ script = ExtResource("1_ei5la")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6dv6v")
-animation = &"walk_down"
+animation = &"walk_left"
+frame_progress = 0.90704
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 
