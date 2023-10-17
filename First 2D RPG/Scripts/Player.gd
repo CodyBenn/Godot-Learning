@@ -80,6 +80,9 @@ func level_up():
 	curXp = overflowXp
 	curLevel += 1
 	
+func give_gold(amount):
+	gold += amount
+	
 func take_damage(dmgToTake):
 	curHp -= dmgToTake
 	self.modulate = Color.DARK_RED
