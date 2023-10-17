@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://2mdnxyeew3lk"]
+[gd_scene load_steps=20 format=3 uid="uid://2mdnxyeew3lk"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_ei5la"]
 [ext_resource type="Texture2D" uid="uid://bi8vhgpj7dlio" path="res://Assets/Player/player_s_0.png" id="1_l1wy6"]
@@ -13,6 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://dmklcubqfjeth" path="res://Assets/Player/player_n_0.png" id="11_0abkk"]
 [ext_resource type="Texture2D" uid="uid://dn6r736p6g82a" path="res://Assets/Player/player_n_1.png" id="12_glx4v"]
 [ext_resource type="Texture2D" uid="uid://cqw6paxrn4ufn" path="res://Assets/Player/player_n_2.png" id="13_aio7d"]
+[ext_resource type="Texture2D" uid="uid://btei3ohc5x8o7" path="res://Assets/Player/Punch1.png" id="14_6hw6h"]
+[ext_resource type="Texture2D" uid="uid://fc34pkmxkch4" path="res://Assets/Player/Punch2.png" id="15_kow51"]
+[ext_resource type="Texture2D" uid="uid://brrtfeyeke52p" path="res://Assets/Player/Punch3.png" id="16_347dh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6dv6v"]
 animations = [{
@@ -85,6 +88,29 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_aeqkk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_6hw6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kow51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_347dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kow51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_6hw6h")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 15.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ucmwk"]
 radius = 18.0
 height = 52.0
@@ -99,6 +125,15 @@ animation = &"walk_down"
 offset = Vector2(0, -20)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="RayCast2D"]
+visible = false
+position = Vector2(0, 34)
+rotation = 1.57079
+sprite_frames = SubResource("SpriteFrames_aeqkk")
+animation = &"attack"
+frame = 4
+frame_progress = 1.0
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, -20)
