@@ -1,4 +1,4 @@
-[gd_scene load_steps=137 format=3 uid="uid://bq8nghofmntxk"]
+[gd_scene load_steps=138 format=3 uid="uid://bq8nghofmntxk"]
 
 [ext_resource type="PackedScene" uid="uid://2mdnxyeew3lk" path="res://Scenes/Player.tscn" id="1_61og3"]
 [ext_resource type="Texture2D" uid="uid://tj02wnvwfe6u" path="res://Assets/Tiles/rpgTile000.png" id="1_dujtt"]
@@ -68,6 +68,7 @@
 [ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="65_8wlq6"]
 [ext_resource type="PackedScene" uid="uid://ctp4kkldqyqbx" path="res://Scenes/Monster.tscn" id="67_2iplk"]
 [ext_resource type="PackedScene" uid="uid://six4in0qi5ri" path="res://Scenes/Chest.tscn" id="68_q35pf"]
+[ext_resource type="PackedScene" uid="uid://byakyc2g872vl" path="res://Scenes/UI.tscn" id="69_5q2y7"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_a75rk"]
 
@@ -782,6 +783,7 @@ position = Vector2(-1474, -1140)
 collision_layer = 3
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
 script = ExtResource("65_8wlq6")
 
 [node name="Monster" parent="." instance=ExtResource("67_2iplk")]
@@ -791,4 +793,8 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="Chest" parent="." instance=ExtResource("68_q35pf")]
-position = Vector2(-1471, -948)
+position = Vector2(-1312, -773)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("69_5q2y7")]

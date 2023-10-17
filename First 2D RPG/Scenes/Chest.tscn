@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://six4in0qi5ri"]
 
-[ext_resource type="Script" path="res://Chest.gd" id="1_y2k0f"]
+[ext_resource type="Script" path="res://Scripts/Chest.gd" id="1_wckwp"]
 [ext_resource type="Texture2D" uid="uid://euophlmxbjm8" path="res://Assets/Tiles/rpgTile163.png" id="2_r8ph8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o11f2"]
 size = Vector2(42, 47)
 
 [node name="Chest" type="StaticBody2D"]
-script = ExtResource("1_y2k0f")
+script = ExtResource("1_wckwp")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_r8ph8")

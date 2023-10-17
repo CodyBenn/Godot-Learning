@@ -1,0 +1,169 @@
+[gd_scene load_steps=6 format=3 uid="uid://byakyc2g872vl"]
+
+[ext_resource type="Texture2D" uid="uid://dexcn6bvhv6a1" path="res://Assets/UI/UI_Square.png" id="1_nvi0k"]
+
+[sub_resource type="FontFile" id="FontFile_gudry"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/35/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/25/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/35/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/35/0 = Vector2(0, 0)
+cache/0/50/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/40/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/35/0 = Vector2(0, 0)
+cache/0/40/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/35/0/ascent = 0.0
+cache/0/35/0/descent = 0.0
+cache/0/35/0/underline_position = 0.0
+cache/0/35/0/underline_thickness = 0.0
+cache/0/35/0/scale = 1.0
+cache/0/35/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/35/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/35/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/35/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/35/0/kerning_overrides/35/0 = Vector2(0, 0)
+cache/0/35/0/kerning_overrides/30/0 = Vector2(0, 0)
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/30/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/50/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/40/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/35/0 = Vector2(0, 0)
+cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oonv3"]
+font = SubResource("FontFile_gudry")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontFile" id="FontFile_0mouq"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gc2i4"]
+font = SubResource("FontFile_0mouq")
+font_color = Color(0.752941, 0.741176, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -128.0
+offset_right = 124.0
+offset_bottom = -69.0
+color = Color(0.162066, 0.162066, 0.162066, 1)
+
+[node name="LevelBG" type="ColorRect" parent="BG"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 52.0
+offset_bottom = 54.0
+color = Color(0.592157, 0.592157, 0.592157, 1)
+
+[node name="LevelText" type="Label" parent="BG/LevelBG"]
+layout_mode = 0
+offset_right = 47.0
+offset_bottom = 49.0
+text = "25"
+label_settings = SubResource("LabelSettings_oonv3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HpBar" type="TextureProgressBar" parent="BG"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 5.0
+offset_right = 241.5
+offset_bottom = 40.0
+scale = Vector2(1.00816, 1)
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_nvi0k")
+texture_progress = ExtResource("1_nvi0k")
+tint_under = Color(0.219501, 0.219501, 0.219501, 1)
+tint_progress = Color(0.85098, 0.113725, 0, 1)
+
+[node name="XpBar" type="TextureProgressBar" parent="BG"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 45.0
+offset_right = 241.5
+offset_bottom = 54.0
+scale = Vector2(1.00816, 1)
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_nvi0k")
+texture_progress = ExtResource("1_nvi0k")
+tint_under = Color(0.219501, 0.219501, 0.219501, 1)
+tint_progress = Color(0, 0.560679, 0.137923, 1)
+
+[node name="GoldText" type="Label" parent="BG"]
+layout_mode = 0
+offset_left = 86.0
+offset_top = -26.0
+offset_right = 162.0
+text = "Gold : 500"
+label_settings = SubResource("LabelSettings_gc2i4")
