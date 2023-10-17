@@ -39,12 +39,16 @@ func _process(delta):
 	#Animates character if Input
 	if input == Vector2(1, 0):
 		$AnimatedSprite.play("walk_right")
+		facingDir = Vector2(1, 0)
 	elif input == Vector2(-1, 0):
 		$AnimatedSprite.play("walk_left")	
+		facingDir = Vector2(-1, 0)
 	elif input == Vector2(0, 1):
 		$AnimatedSprite.play("walk_down")	
+		facingDir = Vector2(0, 1)
 	elif input == Vector2(0, -1):
 		$AnimatedSprite.play("walk_up")
+		facingDir = Vector2(0, -1)
 	
 	#Stops animation if no Input
 	if input == Vector2(0, 0):
@@ -52,6 +56,18 @@ func _process(delta):
 		
 	move_and_slide()
 	
+	rayCast.target_position = facingDir * interactDist
+	if Input.is_action_just_pressed("interact"):
+		try_interact()
+		
+func try_interact():
+	
+	if rayCast.is_colliding():
+		if rayCast.get_collider() is CharacterBody2D:
+			rayCast.get_collider().take_damage(damage)
+		elif rayCast.get_collider().has_method("on_interact"):
+			rayCast.get_collider().on_interact(self)
+			
 func give_xp(amount):
 	curXp += amount
 	
