@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 #Base Stats
-@export var curHP : int = 10
-@export var maxHP : int = 10
+@export var curHp : int = 10
+@export var maxHp : int = 10
 @export var move_Speed : float = 250.0
 @export var damage : int = 1
 
@@ -11,7 +11,7 @@ var gold : int = 0
 
 #Experience and levels
 @export var curLevel : int = 0
-@export var curXP : int = 0
+@export var curXp : int = 0
 @export var xpToNextLevel : int = 50
 @export var xpToLevelIncreaseRate : float = 1.2
 
@@ -51,3 +51,28 @@ func _process(delta):
 		$AnimatedSprite.stop()
 	
 	move_and_slide()
+	
+func give_xp(amount):
+	curXp += amount
+	
+	if curXp >= xpToNextLevel:
+		level_up()
+		
+func level_up():
+	var overflowXp = curXp - xpToNextLevel
+	
+	xpToNextLevel *= xpToLevelIncreaseRate
+	curXp = overflowXp
+	curLevel += 1
+	
+func take_damage(dmgToTake):
+	curHp -= dmgToTake
+	self.modulate = Color.DARK_RED
+	await get_tree().create_timer(0.1).timeout
+	self.modulate = Color.WHITE
+	
+	if curHp <= 0:
+		die()
+		
+func die():
+	get_tree().reload_current_scene()

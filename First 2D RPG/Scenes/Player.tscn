@@ -96,8 +96,10 @@ move_Speed = 350.0
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6dv6v")
 animation = &"walk_down"
+offset = Vector2(0, -20)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 
 [node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, -20)
 shape = SubResource("CapsuleShape2D_ucmwk")
