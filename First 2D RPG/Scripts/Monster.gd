@@ -29,7 +29,7 @@ func _physics_process(delta):
 	if distToPlayer > attackDist and chaseDist and player_chase:
 		velocity = (player.position - position).normalized() * moveSpeed
 		move_and_slide()
-	
+		
 func _on_detection_area_body_entered(body):
 	player = body
 	player_chase = true
@@ -41,7 +41,7 @@ func _on_detection_area_body_exited(body):
 	$MonsterAnimatedSprite.play("Idle")
 	
 func _on_timer_timeout():
-	if position.distance_to(target.position) <= attackDist:
+	if position.distance_to(target.position) <= attackDist and curHp >= 1:
 		target.take_damage(damage)
 		
 func take_damage(dmgToTake):
@@ -55,7 +55,7 @@ func take_damage(dmgToTake):
 		die()
 		
 func die ():
-	target.give_xp(xpToGive)
 	$MonsterAnimatedSprite.play("Death")
 	await get_tree().create_timer(1).timeout
+	target.give_xp(xpToGive)
 	queue_free()

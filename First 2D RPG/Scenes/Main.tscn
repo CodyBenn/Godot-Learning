@@ -778,23 +778,23 @@ layer_3/y_sort_origin = 0
 layer_3/z_index = 0
 layer_3/tile_data = PackedInt32Array(65531, 47, 0, -458762, 47, 0, -589830, 47, 0, -262148, 47, 0, 65525, 47, 0, -327687, 47, 0, -327675, 47, 0, -655355, 47, 0, -589811, 47, 0, -327668, 47, 0, -655351, 47, 0, -327660, 47, 0, -524271, 47, 0, -524267, 47, 0, -720877, 47, 0, -524258, 47, 0, -589800, 47, 0, -655331, 47, 0, -262119, 47, 0, 131095, 47, 0, 262172, 47, 0, 65570, 47, 0, 196643, 47, 0, -131030, 45, 0, -524244, 47, 0, -720857, 47, 0, -524254, 47, 0, -196575, 47, 0, -262104, 47, 0, 196658, 47, 0, 196652, 47, 0, -327630, 47, 0, -655313, 47, 0, -720846, 47, 0, 327710, 45, 0, 65575, 45, 0, -65490, 45, 0, 196656, 45, 0, 50, 45, 0, -262096, 45, 0, -458708, 45, 0, -393177, 45, 0, -655315, 45, 0, -589791, 45, 0, -786399, 45, 0, -589801, 45, 0, -458725, 45, 0, -655343, 45, 0, -655347, 45, 0, -458733, 45, 0, -393203, 45, 0, -589818, 45, 0, -393211, 45, 0, -655352, 45, 0, -786425, 45, 0, -786429, 45, 0, -655370, 45, 0, -655366, 45, 0, -262156, 45, 0, -458758, 45, 0, -327686, 45, 0, -524298, 45, 0, -65547, 45, 0, -65541, 45, 0, 131063, 45, 0, -8, 45, 0, 262143, 45, 0, 196616, 45, 0, 196623, 45, 0)
 
-[node name="Player" parent="." instance=ExtResource("1_61og3")]
-position = Vector2(-1474, -1140)
-collision_layer = 3
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 324)
 script = ExtResource("65_8wlq6")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("69_5q2y7")]
+
+[node name="Player" parent="." instance=ExtResource("1_61og3")]
+position = Vector2(-1474, -1140)
+collision_layer = 3
+
 [node name="Monster" parent="." instance=ExtResource("67_2iplk")]
-position = Vector2(-876, -629)
+position = Vector2(-1472, -769)
 scale = Vector2(2, 2)
 collision_layer = 3
 collision_mask = 3
 
 [node name="Chest" parent="." instance=ExtResource("68_q35pf")]
 position = Vector2(-1312, -773)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="UI" parent="CanvasLayer" instance=ExtResource("69_5q2y7")]

@@ -24,8 +24,17 @@ var vel : Vector2 = Vector2()
 #Determines direction to face
 var facingDir : Vector2 = Vector2()
 
+#Allows player to interact facingDir
 @onready var rayCast = $RayCast2D
 
+@onready var ui = $"../CanvasLayer/UI"
+
+func _ready():
+	ui.update_level_text(curLevel)
+	ui.update_health_text(curHp, maxHp)
+	ui.update_xp_text(curXp, xpToNextLevel)
+	ui.update_gold_text(gold)
+	
 func _process(delta):
 	
 	#Player movement
@@ -70,6 +79,8 @@ func try_interact():
 func give_xp(amount):
 	curXp += amount
 	
+	ui.update_xp_text(curXp, xpToNextLevel)
+	
 	if curXp >= xpToNextLevel:
 		level_up()
 		
@@ -79,15 +90,20 @@ func level_up():
 	xpToNextLevel *= xpToLevelIncreaseRate
 	curXp = overflowXp
 	curLevel += 1
+	ui.update_xp_text(curXp, xpToNextLevel)
+	ui.update_level_text(curLevel)
 	
 func give_gold(amount):
 	gold += amount
+	ui.update_gold_text(gold)
 	
 func take_damage(dmgToTake):
 	curHp -= dmgToTake
 	self.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
 	self.modulate = Color.WHITE
+	
+	ui.update_health_text(curHp, maxHp)
 	
 	if curHp <= 0:
 		die()

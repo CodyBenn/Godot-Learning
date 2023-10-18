@@ -1,8 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://byakyc2g872vl"]
+[gd_scene load_steps=7 format=3 uid="uid://byakyc2g872vl"]
 
 [ext_resource type="Texture2D" uid="uid://dexcn6bvhv6a1" path="res://Assets/UI/UI_Square.png" id="1_nvi0k"]
+[ext_resource type="Script" path="res://Scenes/UI.gd" id="1_w1qeb"]
 
 [sub_resource type="FontFile" id="FontFile_gudry"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -79,6 +83,9 @@ outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="FontFile" id="FontFile_0mouq"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -101,6 +108,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_w1qeb")
 
 [node name="BG" type="ColorRect" parent="."]
 layout_mode = 1
