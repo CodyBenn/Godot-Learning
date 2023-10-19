@@ -83,6 +83,7 @@ func give_xp(amount):
 	
 	if curXp >= xpToNextLevel:
 		level_up()
+		damage += 1
 		
 func level_up():
 	var overflowXp = curXp - xpToNextLevel

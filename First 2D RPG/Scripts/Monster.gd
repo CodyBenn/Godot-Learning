@@ -50,6 +50,7 @@ func take_damage(dmgToTake):
 	self.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
 	self.modulate = Color.WHITE
+	print(curHp)
 	
 	if curHp <= 0:
 		die()
