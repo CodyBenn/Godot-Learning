@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=3 uid="uid://ctp4kkldqyqbx"]
+
+[ext_resource type="Texture2D" uid="uid://dn2aiadd6uxro" path="res://Assets/Monsters/character_0000.png" id="1_2koji"]
+[ext_resource type="Script" path="res://Scripts/Monster.gd" id="1_3l7u4"]
+[ext_resource type="Texture2D" uid="uid://d4mfttfywegnb" path="res://Assets/Monsters/character_0001_death.png" id="2_kc1ns"]
+[ext_resource type="Texture2D" uid="uid://c6j5yk23q86or" path="res://Assets/Monsters/character_0001.png" id="2_tqmie"]
+[ext_resource type="Texture2D" uid="uid://b3h3ty45im8u3" path="res://Assets/Monsters/character_0000_death1.png" id="3_diqlh"]
+[ext_resource type="Texture2D" uid="uid://cdakixchbddjo" path="res://Assets/Monsters/character_0000_death2.png" id="4_j1lnf"]
+[ext_resource type="Texture2D" uid="uid://cwn2dfkw5fa7" path="res://Assets/Monsters/character_0000_death3.png" id="5_1xrqf"]
+[ext_resource type="Texture2D" uid="uid://bvemlvybte0lk" path="res://Assets/Monsters/character_0000_death4.png" id="6_1c48f"]
+[ext_resource type="Texture2D" uid="uid://k3s3vo7n23em" path="res://Assets/Monsters/character_0000_death5.png" id="7_y4w2n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_puown"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kc1ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_diqlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j1lnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1xrqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1c48f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_y4w2n")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2koji")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2koji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tqmie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_2koji")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bq262"]
+radius = 171.003
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ed320"]
+radius = 9.0
+height = 20.0
+
+[node name="Monster" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_3l7u4")
+moveSpeed = 80.0
+
+[node name="MonsterAnimatedSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_puown")
+animation = &"Idle"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_bq262")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_ed320")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

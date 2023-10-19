@@ -66,11 +66,11 @@
 [ext_resource type="Texture2D" uid="uid://d4nr6gqow0nmr" path="res://Assets/Tiles/rpgTile216.png" id="61_mn7dr"]
 [ext_resource type="Texture2D" uid="uid://detud2je8xua0" path="res://Assets/Tiles/rpgTile007.png" id="63_teylq"]
 [ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="65_8wlq6"]
-[ext_resource type="PackedScene" uid="uid://ctp4kkldqyqbx" path="res://Scenes/Monster.tscn" id="67_2iplk"]
+[ext_resource type="PackedScene" uid="uid://ctp4kkldqyqbx" path="res://Scenes/Monster_Scenes/Monster_Small.tscn" id="67_2iplk"]
 [ext_resource type="PackedScene" uid="uid://c0v0hkq3tyjo1" path="res://Scenes/Meds.tscn" id="68_gdjt1"]
 [ext_resource type="PackedScene" uid="uid://six4in0qi5ri" path="res://Scenes/Chest.tscn" id="68_q35pf"]
 [ext_resource type="PackedScene" uid="uid://byakyc2g872vl" path="res://Scenes/UI.tscn" id="69_5q2y7"]
-[ext_resource type="PackedScene" uid="uid://cosiepf62maxf" path="res://Scenes/Monster_Medium.tscn" id="70_m55dj"]
+[ext_resource type="PackedScene" uid="uid://cosiepf62maxf" path="res://Scenes/Monster_Scenes/Monster_Medium.tscn" id="70_m55dj"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_a75rk"]
 
