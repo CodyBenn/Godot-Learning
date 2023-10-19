@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cosiepf62maxf"]
 
-[ext_resource type="PackedScene" uid="uid://ctp4kkldqyqbx" path="res://Scenes/Monster.tscn" id="1_q8ec4"]
+[ext_resource type="PackedScene" uid="uid://ctp4kkldqyqbx" path="res://Scenes/Monster_Scenes/Monster_Small.tscn" id="1_q8ec4"]
 [ext_resource type="Texture2D" uid="uid://bqy7f1sduhrlj" path="res://Assets/Monsters/character_0006_death1.png" id="2_ddq3a"]
 [ext_resource type="Texture2D" uid="uid://0lyb8ohj1v2q" path="res://Assets/Monsters/character_0006.png" id="2_hdpv6"]
 [ext_resource type="Texture2D" uid="uid://drql00bhgx4qx" path="res://Assets/Monsters/character_0006_death2.png" id="3_dxp3l"]

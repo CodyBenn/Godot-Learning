@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://ctp4kkldqyqbx"]
+[gd_scene load_steps=12 format=3 uid="uid://ctp4kkldqyqbx"]
 
 [ext_resource type="Texture2D" uid="uid://dn2aiadd6uxro" path="res://Assets/Monsters/character_0000.png" id="1_2koji"]
 [ext_resource type="Script" path="res://Scripts/Monster.gd" id="1_3l7u4"]
-[ext_resource type="Texture2D" uid="uid://d4mfttfywegnb" path="res://Assets/Monsters/character_0001_death.png" id="2_kc1ns"]
 [ext_resource type="Texture2D" uid="uid://c6j5yk23q86or" path="res://Assets/Monsters/character_0001.png" id="2_tqmie"]
 [ext_resource type="Texture2D" uid="uid://b3h3ty45im8u3" path="res://Assets/Monsters/character_0000_death1.png" id="3_diqlh"]
 [ext_resource type="Texture2D" uid="uid://cdakixchbddjo" path="res://Assets/Monsters/character_0000_death2.png" id="4_j1lnf"]
@@ -10,12 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bvemlvybte0lk" path="res://Assets/Monsters/character_0000_death4.png" id="6_1c48f"]
 [ext_resource type="Texture2D" uid="uid://k3s3vo7n23em" path="res://Assets/Monsters/character_0000_death5.png" id="7_y4w2n"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_puown"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_n1h3p"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_kc1ns")
-}, {
 "duration": 1.0,
 "texture": ExtResource("3_diqlh")
 }, {
@@ -31,9 +27,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_y4w2n")
 }],
-"loop": false,
+"loop": true,
 "name": &"Death",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -71,7 +67,7 @@ script = ExtResource("1_3l7u4")
 moveSpeed = 80.0
 
 [node name="MonsterAnimatedSprite" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_puown")
+sprite_frames = SubResource("SpriteFrames_n1h3p")
 animation = &"Idle"
 
 [node name="Timer" type="Timer" parent="."]
