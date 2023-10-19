@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://cx6o453ro6g4n"]
+
+[ext_resource type="PackedScene" uid="uid://ctp4kkldqyqbx" path="res://Scenes/Monster_Scenes/Monster_Small.tscn" id="1_caknl"]
+[ext_resource type="Texture2D" uid="uid://b0ed2j14domki" path="res://Assets/Monsters/character_0004.png" id="2_1f3da"]
+[ext_resource type="Texture2D" uid="uid://bqy7f1sduhrlj" path="res://Assets/Monsters/character_0006_death1.png" id="2_bjrmr"]
+[ext_resource type="Texture2D" uid="uid://drql00bhgx4qx" path="res://Assets/Monsters/character_0006_death2.png" id="3_fr5jh"]
+[ext_resource type="Texture2D" uid="uid://r4rckb4oe1fw" path="res://Assets/Monsters/character_0005.png" id="3_sio8r"]
+[ext_resource type="Texture2D" uid="uid://upsdsmkqlykb" path="res://Assets/Monsters/character_0006_death3.png" id="4_6565i"]
+[ext_resource type="Texture2D" uid="uid://bhusycv2ng63a" path="res://Assets/Monsters/character_0006_death4.png" id="5_vytag"]
+[ext_resource type="Texture2D" uid="uid://bl2e4u2rppbcm" path="res://Assets/Monsters/character_0006_death5.png" id="6_c7r5o"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_35xjk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bjrmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fr5jh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6565i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vytag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c7r5o")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1f3da")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1f3da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sio8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1f3da")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[node name="Monster" groups=["Boss"] instance=ExtResource("1_caknl")]
+scale = Vector2(4, 4)
+moveSpeed = 100.0
+nextScene = "res://Scenes/Main.tscn"
+
+[node name="MonsterAnimatedSprite" parent="." index="0"]
+modulate = Color(1, 0.490196, 0.490196, 1)
+sprite_frames = SubResource("SpriteFrames_35xjk")

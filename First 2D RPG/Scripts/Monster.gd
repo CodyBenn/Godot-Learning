@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Monster
 
 @export var curHp : int = 5
 @export var maxHp : int = 5
@@ -17,6 +18,8 @@ var player = null
 
 @onready var timer = $Timer
 @onready var target = $"../../Player"
+
+@export_file("*.tscn") var nextScene
 
 func _ready():
 	timer.wait_time = attackRate
@@ -55,8 +58,19 @@ func take_damage(dmgToTake):
 	if curHp <= 0:
 		die()
 		
+func next_scene(nextScene):
+	print("Boss has died, loading next scene")
+	get_tree().change_scene_to_file(nextScene)
+	print("Next Scene is loaded")
+	
 func die ():
 	$MonsterAnimatedSprite.play("Death")
 	await get_tree().create_timer(1).timeout
 	target.give_xp(xpToGive)
-	queue_free()
+	
+	if is_in_group("Boss"):
+		print("Boss has died, loading next scene")
+		get_tree().change_scene_to_file(nextScene)
+		print("Next Scene is loaded")
+	else:
+		queue_free()

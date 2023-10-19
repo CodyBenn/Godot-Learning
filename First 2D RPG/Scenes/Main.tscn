@@ -1,4 +1,4 @@
-[gd_scene load_steps=140 format=3 uid="uid://bq8nghofmntxk"]
+[gd_scene load_steps=141 format=3 uid="uid://bq8nghofmntxk"]
 
 [ext_resource type="PackedScene" uid="uid://2mdnxyeew3lk" path="res://Scenes/Player.tscn" id="1_61og3"]
 [ext_resource type="Texture2D" uid="uid://tj02wnvwfe6u" path="res://Assets/Tiles/rpgTile000.png" id="1_dujtt"]
@@ -71,6 +71,7 @@
 [ext_resource type="PackedScene" uid="uid://six4in0qi5ri" path="res://Scenes/Chest.tscn" id="68_q35pf"]
 [ext_resource type="PackedScene" uid="uid://byakyc2g872vl" path="res://Scenes/UI.tscn" id="69_5q2y7"]
 [ext_resource type="PackedScene" uid="uid://cosiepf62maxf" path="res://Scenes/Monster_Scenes/Monster_Medium.tscn" id="70_m55dj"]
+[ext_resource type="PackedScene" uid="uid://cx6o453ro6g4n" path="res://Scenes/Monster_Scenes/Monster_Boss_1.tscn" id="72_oq5vr"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_a75rk"]
 
@@ -789,10 +790,14 @@ script = ExtResource("65_8wlq6")
 [node name="UI" parent="CanvasLayer" instance=ExtResource("69_5q2y7")]
 
 [node name="Player" parent="." instance=ExtResource("1_61og3")]
-position = Vector2(-1464, -1320)
+position = Vector2(-1840, 1448)
 collision_layer = 3
+damage = 40
 
 [node name="Mobs" type="Node" parent="."]
+
+[node name="Monster_Small_" parent="Mobs" instance=ExtResource("67_2iplk")]
+position = Vector2(536, -1104)
 
 [node name="Monster_Small_1" parent="Mobs" instance=ExtResource("67_2iplk")]
 position = Vector2(272, -576)
@@ -811,8 +816,18 @@ position = Vector2(1560, -968)
 [node name="Monster_Small_5" parent="Mobs" instance=ExtResource("67_2iplk")]
 position = Vector2(1624, -432)
 
+[node name="Monster_Small_6" parent="Mobs" instance=ExtResource("67_2iplk")]
+position = Vector2(-1960, -528)
+
+[node name="Monster_Small_7" parent="Mobs" instance=ExtResource("67_2iplk")]
+position = Vector2(-1936, -912)
+
 [node name="Monster_Med_1" parent="Mobs" instance=ExtResource("70_m55dj")]
 position = Vector2(915, -48)
+
+[node name="Monster_Boss_1" parent="Mobs" instance=ExtResource("72_oq5vr")]
+position = Vector2(-1792, 2528)
+damage = 4
 
 [node name="Chests" type="Node" parent="."]
 
@@ -846,6 +861,15 @@ position = Vector2(1080, 680)
 [node name="Chest10" parent="Chests" instance=ExtResource("68_q35pf")]
 position = Vector2(1080, 736)
 
+[node name="Chest11" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-2184, -1280)
+
+[node name="Chest12" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-2128, -1280)
+
+[node name="Chest13" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-2184, -1216)
+
 [node name="Meds" type="Node" parent="."]
 
 [node name="Meds" parent="Meds" instance=ExtResource("68_gdjt1")]
@@ -863,26 +887,8 @@ position = Vector2(-2160, 48)
 [node name="Meds5" parent="Meds" instance=ExtResource("68_gdjt1")]
 position = Vector2(1080, 616)
 
-[node name="Meds2" parent="." instance=ExtResource("68_gdjt1")]
-position = Vector2(1112, -1176)
-
-[node name="Monster" parent="." instance=ExtResource("67_2iplk")]
-position = Vector2(536, -1104)
-
-[node name="Monster2" parent="." instance=ExtResource("67_2iplk")]
-position = Vector2(-1936, -912)
-
-[node name="Monster3" parent="." instance=ExtResource("67_2iplk")]
-position = Vector2(-1960, -528)
-
-[node name="Meds3" parent="." instance=ExtResource("68_gdjt1")]
+[node name="Meds6" parent="Meds" instance=ExtResource("68_gdjt1")]
 position = Vector2(-2200, -456)
 
-[node name="Chest" parent="." instance=ExtResource("68_q35pf")]
-position = Vector2(-2184, -1280)
-
-[node name="Chest2" parent="." instance=ExtResource("68_q35pf")]
-position = Vector2(-2128, -1280)
-
-[node name="Chest3" parent="." instance=ExtResource("68_q35pf")]
-position = Vector2(-2184, -1216)
+[node name="Meds7" parent="Meds" instance=ExtResource("68_gdjt1")]
+position = Vector2(1112, -1176)
