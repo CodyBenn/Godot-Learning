@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://byakyc2g872vl"]
 
+[ext_resource type="Script" path="res://Scripts/UI.gd" id="1_gy68k"]
 [ext_resource type="Texture2D" uid="uid://dexcn6bvhv6a1" path="res://Assets/UI/UI_Square.png" id="1_nvi0k"]
-[ext_resource type="Script" path="res://Scenes/UI.gd" id="1_w1qeb"]
 
 [sub_resource type="FontFile" id="FontFile_gudry"]
 subpixel_positioning = 0
@@ -108,7 +108,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_w1qeb")
+script = ExtResource("1_gy68k")
 
 [node name="BG" type="ColorRect" parent="."]
 layout_mode = 1

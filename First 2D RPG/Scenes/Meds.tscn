@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0v0hkq3tyjo1"]
+
+[ext_resource type="Script" path="res://Scripts/Meds.gd" id="1_5oco7"]
+[ext_resource type="Texture2D" uid="uid://ui17wyquvpom" path="res://Assets/Tiles/Med.png" id="2_chetu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocaji"]
+size = Vector2(58, 57)
+
+[node name="Meds" type="StaticBody2D"]
+position = Vector2(-1257, -769)
+script = ExtResource("1_5oco7")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_chetu")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ocaji")

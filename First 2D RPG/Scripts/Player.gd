@@ -98,6 +98,10 @@ func give_gold(amount):
 	gold += amount
 	ui.update_gold_text(gold)
 	
+func give_hp(heal):
+	curHp += heal
+	ui.update_health_text(curHp, maxHp)
+	
 func take_damage(dmgToTake):
 	curHp -= dmgToTake
 	self.modulate = Color.DARK_RED

@@ -1,4 +1,4 @@
-[gd_scene load_steps=139 format=3 uid="uid://bq8nghofmntxk"]
+[gd_scene load_steps=140 format=3 uid="uid://bq8nghofmntxk"]
 
 [ext_resource type="PackedScene" uid="uid://2mdnxyeew3lk" path="res://Scenes/Player.tscn" id="1_61og3"]
 [ext_resource type="Texture2D" uid="uid://tj02wnvwfe6u" path="res://Assets/Tiles/rpgTile000.png" id="1_dujtt"]
@@ -67,6 +67,7 @@
 [ext_resource type="Texture2D" uid="uid://detud2je8xua0" path="res://Assets/Tiles/rpgTile007.png" id="63_teylq"]
 [ext_resource type="Script" path="res://Scripts/Camera2D.gd" id="65_8wlq6"]
 [ext_resource type="PackedScene" uid="uid://ctp4kkldqyqbx" path="res://Scenes/Monster.tscn" id="67_2iplk"]
+[ext_resource type="PackedScene" uid="uid://c0v0hkq3tyjo1" path="res://Scenes/Meds.tscn" id="68_gdjt1"]
 [ext_resource type="PackedScene" uid="uid://six4in0qi5ri" path="res://Scenes/Chest.tscn" id="68_q35pf"]
 [ext_resource type="PackedScene" uid="uid://byakyc2g872vl" path="res://Scenes/UI.tscn" id="69_5q2y7"]
 [ext_resource type="PackedScene" uid="uid://cosiepf62maxf" path="res://Scenes/Monster_Medium.tscn" id="70_m55dj"]
@@ -791,18 +792,20 @@ script = ExtResource("65_8wlq6")
 position = Vector2(-1474, -1140)
 collision_layer = 3
 
+[node name="Meds" parent="." instance=ExtResource("68_gdjt1")]
+
 [node name="Chest" parent="." instance=ExtResource("68_q35pf")]
 position = Vector2(-1312, -773)
 
 [node name="Mobs" type="Node" parent="."]
 
 [node name="Small_Mob" parent="Mobs" instance=ExtResource("67_2iplk")]
-position = Vector2(-1472, -769)
+position = Vector2(154, -1142)
 collision_layer = 3
 collision_mask = 3
 
 [node name="Small_Mob2" parent="Mobs" instance=ExtResource("67_2iplk")]
-position = Vector2(-1170, -559)
+position = Vector2(-426, -1108)
 
 [node name="Small_Mob3" parent="Mobs" instance=ExtResource("67_2iplk")]
 position = Vector2(-810, -611)
