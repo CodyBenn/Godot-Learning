@@ -7,7 +7,6 @@ func on_interact(player):
 	if player.curHp > player.maxHp:
 		player.curHp = player.maxHp
 		
-	print("player gains hp")
 	print("current hp : " + str(player.curHp))
 	print("max hp : " + str(player.maxHp))
 	queue_free()

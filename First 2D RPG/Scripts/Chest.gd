@@ -4,4 +4,5 @@ extends StaticBody2D
 
 func on_interact(player):
 	player.give_gold(goldToGive)
+	print("current gold : " + str(player.gold))
 	queue_free()
