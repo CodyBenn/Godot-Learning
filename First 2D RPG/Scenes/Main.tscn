@@ -790,7 +790,7 @@ script = ExtResource("65_8wlq6")
 [node name="UI" parent="CanvasLayer" instance=ExtResource("69_5q2y7")]
 
 [node name="Player" parent="." instance=ExtResource("1_61og3")]
-position = Vector2(-1840, 1448)
+position = Vector2(-1488, -1256)
 collision_layer = 3
 damage = 40
 
