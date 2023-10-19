@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://cosiepf62maxf"]
+
+[ext_resource type="PackedScene" uid="uid://ctp4kkldqyqbx" path="res://Scenes/Monster.tscn" id="1_q8ec4"]
+[ext_resource type="Texture2D" uid="uid://0lyb8ohj1v2q" path="res://Assets/Monsters/character_0006.png" id="2_hdpv6"]
+[ext_resource type="Texture2D" uid="uid://b2fu5r5dqpm20" path="res://Assets/Monsters/character_0007.png" id="3_gdyvv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4pgds"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hdpv6")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hdpv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gdyvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hdpv6")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[node name="Monster" instance=ExtResource("1_q8ec4")]
+curHp = 10
+maxHp = 10
+moveSpeed = 200.0
+xpToGive = 50
+damage = 2
+attackDist = 50
+
+[node name="MonsterAnimatedSprite" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_4pgds")
+animation = &"Walk"
+frame = 1
+frame_progress = 0.594602

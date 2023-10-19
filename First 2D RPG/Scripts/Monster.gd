@@ -16,7 +16,7 @@ var player_chase = false
 var player = null
 
 @onready var timer = $Timer
-@onready var target = $"../Player"
+@onready var target = $"../../Player"
 
 func _ready():
 	timer.wait_time = attackRate
