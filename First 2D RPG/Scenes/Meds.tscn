@@ -7,7 +7,6 @@
 size = Vector2(58, 57)
 
 [node name="Meds" type="StaticBody2D"]
-position = Vector2(-1257, -769)
 script = ExtResource("1_5oco7")
 
 [node name="Sprite" type="Sprite2D" parent="."]

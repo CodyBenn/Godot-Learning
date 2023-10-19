@@ -57,7 +57,7 @@ animations = [{
 [node name="Monster" instance=ExtResource("1_q8ec4")]
 curHp = 10
 maxHp = 10
-moveSpeed = 200.0
+moveSpeed = 100.0
 xpToGive = 50
 damage = 2
 attackDist = 50

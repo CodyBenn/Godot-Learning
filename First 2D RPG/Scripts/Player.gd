@@ -37,6 +37,8 @@ func _ready():
 	
 func _process(delta):
 	
+	ui.update_health_text(curHp, maxHp)
+	
 	#Player movement
 	var y_axis = Input.get_axis("move_up", "move_down")
 	var x_axis = Input.get_axis("move_left", "move_right")

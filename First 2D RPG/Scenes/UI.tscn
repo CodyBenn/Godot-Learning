@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://byakyc2g872vl"]
+[gd_scene load_steps=10 format=3 uid="uid://byakyc2g872vl"]
 
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="1_gy68k"]
 [ext_resource type="Texture2D" uid="uid://dexcn6bvhv6a1" path="res://Assets/UI/UI_Square.png" id="1_nvi0k"]
+[ext_resource type="FontFile" uid="uid://bm2rw4c3vn73o" path="res://Assets/Font/Roboto-Regular.ttf" id="3_dxo03"]
 
 [sub_resource type="FontFile" id="FontFile_gudry"]
 subpixel_positioning = 0
@@ -78,9 +79,27 @@ cache/0/30/0/kerning_overrides/30/0 = Vector2(0, 0)
 font = SubResource("FontFile_gudry")
 font_size = 30
 font_color = Color(0, 0, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0.223529, 0.223529, 0.223529, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_clkpq"]
+font = ExtResource("3_dxo03")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0.117647, 0.117647, 0.117647, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nnupn"]
+font_size = 11
+font_color = Color(0, 0, 0, 1)
 outline_size = 1
 outline_color = Color(0, 0, 0, 1)
-shadow_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0.196078, 0.196078, 0.196078, 1)
 
 [sub_resource type="FontFile" id="FontFile_0mouq"]
 subpixel_positioning = 0
@@ -154,6 +173,16 @@ texture_progress = ExtResource("1_nvi0k")
 tint_under = Color(0.219501, 0.219501, 0.219501, 1)
 tint_progress = Color(0.85098, 0.113725, 0, 1)
 
+[node name="HpText" type="Label" parent="BG/HpBar"]
+layout_mode = 0
+offset_top = -3.0
+offset_right = 184.5
+offset_bottom = 38.0
+text = "25 / 25"
+label_settings = SubResource("LabelSettings_clkpq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="XpBar" type="TextureProgressBar" parent="BG"]
 layout_mode = 0
 offset_left = 57.0
@@ -167,6 +196,16 @@ texture_under = ExtResource("1_nvi0k")
 texture_progress = ExtResource("1_nvi0k")
 tint_under = Color(0.219501, 0.219501, 0.219501, 1)
 tint_progress = Color(0, 0.560679, 0.137923, 1)
+
+[node name="XpText" type="Label" parent="BG/XpBar"]
+layout_mode = 0
+offset_left = 0.991913
+offset_top = -4.0
+offset_right = 184.992
+offset_bottom = 15.0
+text = "5 / 10"
+label_settings = SubResource("LabelSettings_nnupn")
+horizontal_alignment = 1
 
 [node name="GoldText" type="Label" parent="BG"]
 layout_mode = 0
