@@ -799,7 +799,7 @@ collision_mask = 3
 position = Vector2(-1312, -773)
 
 [node name="Monster2" parent="." instance=ExtResource("67_2iplk")]
-position = Vector2(-1156, -632)
+position = Vector2(-1156, -628)
 
 [node name="Monster3" parent="." instance=ExtResource("67_2iplk")]
 position = Vector2(-810, -611)
