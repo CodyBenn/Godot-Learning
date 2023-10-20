@@ -808,10 +808,10 @@ collision_mask = 3
 position = Vector2(-426, -1108)
 
 [node name="Monster_Small_3" parent="Mobs" instance=ExtResource("67_2iplk")]
-position = Vector2(-810, -611)
+position = Vector2(-1336, -552)
 
 [node name="Monster_Small_4" parent="Mobs" instance=ExtResource("67_2iplk")]
-position = Vector2(1560, -968)
+position = Vector2(1400, -1000)
 
 [node name="Monster_Small_5" parent="Mobs" instance=ExtResource("67_2iplk")]
 position = Vector2(1624, -432)
@@ -820,7 +820,13 @@ position = Vector2(1624, -432)
 position = Vector2(-1960, -528)
 
 [node name="Monster_Small_7" parent="Mobs" instance=ExtResource("67_2iplk")]
-position = Vector2(-1936, -912)
+position = Vector2(-1936, -1064)
+
+[node name="Monster_Small_9" parent="Mobs" instance=ExtResource("67_2iplk")]
+position = Vector2(960, -600)
+
+[node name="Monster_Small_8" parent="Mobs" instance=ExtResource("67_2iplk")]
+position = Vector2(-528, -456)
 
 [node name="Monster_Med_" parent="Mobs" instance=ExtResource("70_m55dj")]
 position = Vector2(392, 800)
@@ -871,16 +877,16 @@ position = Vector2(-808, 952)
 position = Vector2(-712, 912)
 
 [node name="Monster_Lrg__Large_9" parent="Mobs" instance=ExtResource("73_lkmvp")]
-position = Vector2(-1776, 560)
+position = Vector2(-1664, 496)
 
 [node name="Monster_Lrg__Large_10" parent="Mobs" instance=ExtResource("73_lkmvp")]
-position = Vector2(-1416, 872)
+position = Vector2(-1512, 1032)
 
 [node name="Monster_Lrg__Large_11" parent="Mobs" instance=ExtResource("73_lkmvp")]
-position = Vector2(-2152, 1272)
+position = Vector2(-2032, 1160)
 
 [node name="Monster_Lrg__Large_12" parent="Mobs" instance=ExtResource("73_lkmvp")]
-position = Vector2(-1616, 1696)
+position = Vector2(-1720, 1544)
 
 [node name="Monster_Boss_1" parent="Mobs" instance=ExtResource("72_oq5vr")]
 position = Vector2(-1840, 2592)
