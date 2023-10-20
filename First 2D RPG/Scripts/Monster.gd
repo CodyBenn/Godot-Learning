@@ -58,7 +58,7 @@ func take_damage(dmgToTake):
 	if curHp <= 0:
 		die()
 		
-func next_scene(nextScene):
+func next_scene():
 	print("Boss has died, loading next scene")
 	get_tree().change_scene_to_file(nextScene)
 	print("Next Scene is loaded")

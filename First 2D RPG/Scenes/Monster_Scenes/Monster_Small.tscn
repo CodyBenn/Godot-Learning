@@ -64,7 +64,10 @@ height = 20.0
 [node name="Monster" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_3l7u4")
+curHp = 6
+maxHp = 6
 moveSpeed = 80.0
+xpToGive = 25
 
 [node name="MonsterAnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_n1h3p")
