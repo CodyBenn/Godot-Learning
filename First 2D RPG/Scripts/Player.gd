@@ -27,6 +27,10 @@ var facingDir : Vector2 = Vector2()
 #Allows player to interact facingDir
 @onready var rayCast = $RayCast2D
 
+#Player attack anim
+var ATTACK = preload("res://Scenes/AttackAnim.tscn")
+
+#Loads the player UI
 @onready var ui = $"../CanvasLayer/UI"
 
 func _ready():
