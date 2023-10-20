@@ -846,15 +846,6 @@ position = Vector2(-864, 2600)
 [node name="Monster_Med_6" parent="Mobs" instance=ExtResource("70_m55dj")]
 position = Vector2(-576, 2160)
 
-[node name="Monster_Boss_1" parent="Mobs" instance=ExtResource("72_oq5vr")]
-position = Vector2(-1968, 2392)
-curHp = 100
-maxHp = 100
-moveSpeed = 50.0
-xpToGive = 0
-damage = 4
-attackDist = 100
-
 [node name="Monster_Lrg__Large_" parent="Mobs" instance=ExtResource("73_lkmvp")]
 position = Vector2(-1136, 1928)
 
@@ -890,6 +881,15 @@ position = Vector2(-2152, 1272)
 
 [node name="Monster_Lrg__Large_12" parent="Mobs" instance=ExtResource("73_lkmvp")]
 position = Vector2(-1616, 1696)
+
+[node name="Monster_Boss_1" parent="Mobs" instance=ExtResource("72_oq5vr")]
+position = Vector2(-1840, 2592)
+curHp = 100
+maxHp = 100
+moveSpeed = 50.0
+xpToGive = 0
+damage = 4
+attackDist = 100
 
 [node name="Chests" type="Node" parent="."]
 
@@ -962,6 +962,48 @@ position = Vector2(-576, 2576)
 [node name="Chest23" parent="Chests" instance=ExtResource("68_q35pf")]
 position = Vector2(-1016, 2296)
 
+[node name="Chest24" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-808, 1152)
+
+[node name="Chest25" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-810, 1088)
+
+[node name="Chest26" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-744, 1088)
+
+[node name="Chest27" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-680, 1088)
+
+[node name="Chest28" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-680, 1152)
+
+[node name="Chest29" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-1136, 1120)
+
+[node name="Chest30" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-1136, 1184)
+
+[node name="Chest31" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-32, 1112)
+
+[node name="Chest32" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-280, 784)
+
+[node name="Chest33" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-592, 136)
+
+[node name="Chest34" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-1056, 496)
+
+[node name="Chest35" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-1576, 712)
+
+[node name="Chest36" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-1736, 1072)
+
+[node name="Chest37" parent="Chests" instance=ExtResource("68_q35pf")]
+position = Vector2(-2184, 1584)
+
 [node name="Meds" type="Node" parent="."]
 
 [node name="Meds" parent="Meds" instance=ExtResource("68_gdjt1")]
@@ -987,3 +1029,21 @@ position = Vector2(-904, 2080)
 
 [node name="Meds8" parent="Meds" instance=ExtResource("68_gdjt1")]
 position = Vector2(-1128, 1696)
+
+[node name="Meds9" parent="Meds" instance=ExtResource("68_gdjt1")]
+position = Vector2(-136, 1528)
+
+[node name="Meds10" parent="Meds" instance=ExtResource("68_gdjt1")]
+position = Vector2(-2184, 1512)
+
+[node name="Meds11" parent="Meds" instance=ExtResource("68_gdjt1")]
+position = Vector2(-1312, 160)
+
+[node name="Meds12" parent="Meds" instance=ExtResource("68_gdjt1")]
+position = Vector2(-744, 1160)
+
+[node name="Meds13" parent="Meds" instance=ExtResource("68_gdjt1")]
+position = Vector2(-1528, 1240)
+
+[node name="Meds14" parent="Meds" instance=ExtResource("68_gdjt1")]
+position = Vector2(-1768, 1816)
