@@ -71,7 +71,7 @@ xpToGive = 25
 
 [node name="MonsterAnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_n1h3p")
-animation = &"Idle"
+animation = &"Walk"
 
 [node name="Timer" type="Timer" parent="."]
 
