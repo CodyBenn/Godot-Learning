@@ -9,10 +9,12 @@ func _on_button_start_pressed():
 	get_tree().change_scene_to_file(nextScene)
 
 func _on_button_controls_pressed():
-	pass # Replace with function body.
-
-func _on_button_quit_button_up():
-	pass # Replace with function body.
-
+	main.visible = false
+	controls.visible = true
+	
 func _on_button_quit_pressed():
-	pass # Replace with function body.
+	get_tree().quit()
+	
+func _on_button_return_pressed():
+	main.visible = true
+	controls.visible = false

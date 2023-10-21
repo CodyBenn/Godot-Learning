@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://co57vhdvgh4n7"]
+[gd_scene load_steps=8 format=3 uid="uid://co57vhdvgh4n7"]
 
-[ext_resource type="Script" path="res://CanvasLayer.gd" id="1_m0fud"]
+[ext_resource type="Script" path="res://Scripts/CanvasLayer.gd" id="1_o3fx5"]
+[ext_resource type="Theme" uid="uid://chhuld0flc2tc" path="res://MainTheme.tres" id="2_7mj4l"]
 
 [sub_resource type="Gradient" id="Gradient_2jo7i"]
 offsets = PackedFloat32Array(0, 0.490323, 1)
@@ -14,6 +15,9 @@ fill_from = Vector2(0.334862, 1)
 fill_to = Vector2(1, 0.00917431)
 
 [sub_resource type="FontFile" id="FontFile_o14t3"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -93,7 +97,7 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_y007l")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("1_m0fud")
+script = ExtResource("1_o3fx5")
 nextScene = "res://Scenes/Main.tscn"
 
 [node name="MainMenu" type="Control" parent="CanvasLayer"]
@@ -103,6 +107,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_7mj4l")
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/MainMenu"]
 layout_mode = 1
@@ -163,6 +168,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_7mj4l")
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/ControlsMenu"]
 layout_mode = 1
@@ -212,13 +218,13 @@ label_settings = SubResource("LabelSettings_h4tkg")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ButtonQuit" type="Button" parent="CanvasLayer/ControlsMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="ButtonReturn" type="Button" parent="CanvasLayer/ControlsMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 40
-text = "Quit"
+text = "Return"
 
 [connection signal="pressed" from="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonStart" to="CanvasLayer" method="_on_button_start_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonControls" to="CanvasLayer" method="_on_button_controls_pressed"]
-[connection signal="button_up" from="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonQuit" to="CanvasLayer" method="_on_button_quit_button_up"]
-[connection signal="pressed" from="CanvasLayer/ControlsMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonQuit" to="CanvasLayer" method="_on_button_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonQuit" to="CanvasLayer" method="_on_button_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/ControlsMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonReturn" to="CanvasLayer" method="_on_button_return_pressed"]
