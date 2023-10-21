@@ -52,29 +52,15 @@ func _process(delta):
 		$AnimatedSprite.play("walk_right")
 		facingDir = Vector2(1, 0)
 	elif input == Vector2(-1, 0):
-		$AnimatedSprite.play("walk_left")	
+		$AnimatedSprite.play("walk_left")
 		facingDir = Vector2(-1, 0)
 	elif input == Vector2(0, 1):
-		$AnimatedSprite.play("walk_down")	
+		$AnimatedSprite.play("walk_down")
 		facingDir = Vector2(0, 1)
 	elif input == Vector2(0, -1):
 		$AnimatedSprite.play("walk_up")
-		facingDir = Vector2(0, -1)	
+		facingDir = Vector2(0, -1)
 		
-#	#Attack animation for character if Input
-#	if input == Vector2(1, 0):
-#		$AnimatedSprite.play("attack_right")
-#		facingDir = Vector2(1, 0)
-#	elif input == Vector2(-1, 0):
-#		$AnimatedSprite.play("attack_left")	
-#		facingDir = Vector2(-1, 0)
-#	elif input == Vector2(0, 1):
-#		$AnimatedSprite.play("attack_down")	
-#		facingDir = Vector2(0, 1)
-#	elif input == Vector2(0, -1):
-#		$AnimatedSprite.play("attack_up")
-#		facingDir = Vector2(0, -1)
-	
 	#Stops animation if no Input
 	if input == Vector2(0, 0):
 		$AnimatedSprite.stop()
