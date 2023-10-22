@@ -29,7 +29,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Death",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -62,3 +62,4 @@ attackDist = 80
 
 [node name="MonsterAnimatedSprite" parent="." index="0"]
 sprite_frames = SubResource("SpriteFrames_1hsex")
+animation = &"Idle"

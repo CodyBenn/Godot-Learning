@@ -896,6 +896,7 @@ moveSpeed = 50.0
 xpToGive = 0
 damage = 4
 attackDist = 100
+nextScene = "res://Scenes/EndScene.tscn"
 
 [node name="Chests" type="Node" parent="."]
 
