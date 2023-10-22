@@ -1,10 +1,54 @@
-[gd_resource type="Theme" format=3 uid="uid://chhuld0flc2tc"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://chhuld0flc2tc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cpajr"]
+bg_color = Color(0.0431373, 0.180392, 0.0745098, 0.721569)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dudpn"]
+bg_color = Color(0.0431373, 0.180392, 0.0745098, 0.721569)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v5k0x"]
+bg_color = Color(0.0431373, 0.180392, 0.0745098, 0.721569)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cy7e4"]
+bg_color = Color(0.101961, 0.32549, 0.152941, 0.721569)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtnx4"]
+bg_color = Color(0.156863, 0.317647, 0.188235, 1)
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+border_color = Color(0, 0.141176, 0, 1)
+border_blend = true
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_color = Color(0, 0, 0, 0.572549)
+shadow_size = 32
+shadow_offset = Vector2(0, 16)
 
 [resource]
 AcceptDialog/constants/buttons_separation = 0
 AcceptDialog/styles/panel = null
 BoxContainer/constants/separation = 0
-Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_disabled_color = Color(0, 0, 0, 1)
 Button/colors/font_focus_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_color = Color(0, 0, 0, 1)
@@ -23,10 +67,10 @@ Button/constants/outline_size = 0
 Button/font_sizes/font_size = 16
 Button/fonts/font = null
 Button/styles/disabled = null
-Button/styles/focus = null
-Button/styles/hover = null
-Button/styles/normal = null
-Button/styles/pressed = null
+Button/styles/focus = SubResource("StyleBoxFlat_cpajr")
+Button/styles/hover = SubResource("StyleBoxFlat_dudpn")
+Button/styles/normal = SubResource("StyleBoxFlat_v5k0x")
+Button/styles/pressed = SubResource("StyleBoxFlat_cy7e4")
 CheckBox/colors/font_color = Color(0, 0, 0, 1)
 CheckBox/colors/font_disabled_color = Color(0, 0, 0, 1)
 CheckBox/colors/font_focus_color = Color(0, 0, 0, 1)
@@ -269,7 +313,7 @@ ItemList/styles/hovered = null
 ItemList/styles/panel = null
 ItemList/styles/selected = null
 ItemList/styles/selected_focus = null
-Label/colors/font_color = Color(0, 0, 0, 1)
+Label/colors/font_color = Color(1, 1, 1, 1)
 Label/colors/font_outline_color = Color(0, 0, 0, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 1)
 Label/constants/line_spacing = 0
@@ -367,7 +411,7 @@ OptionButton/styles/normal_mirrored = null
 OptionButton/styles/pressed = null
 OptionButton/styles/pressed_mirrored = null
 Panel/styles/panel = null
-PanelContainer/styles/panel = null
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_xtnx4")
 PopupDialog/styles/panel = null
 PopupMenu/colors/font_accelerator_color = Color(0, 0, 0, 1)
 PopupMenu/colors/font_color = Color(0, 0, 0, 1)

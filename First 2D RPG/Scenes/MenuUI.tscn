@@ -1,76 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://co57vhdvgh4n7"]
+[gd_scene load_steps=7 format=3 uid="uid://co57vhdvgh4n7"]
 
+[ext_resource type="Texture2D" uid="uid://dyrcfofrwq6x3" path="res://MainMenuBackground.tres" id="1_4qsfm"]
 [ext_resource type="Script" path="res://Scripts/CanvasLayer.gd" id="1_o3fx5"]
 [ext_resource type="Theme" uid="uid://chhuld0flc2tc" path="res://MainTheme.tres" id="2_7mj4l"]
-
-[sub_resource type="Gradient" id="Gradient_2jo7i"]
-offsets = PackedFloat32Array(0, 0.490323, 1)
-colors = PackedColorArray(0, 0, 0, 1, 1.51612e-06, 0.488247, 0.225944, 1, 0.208414, 0.730262, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_y007l"]
-gradient = SubResource("Gradient_2jo7i")
-width = 1280
-height = 920
-fill_from = Vector2(0.334862, 1)
-fill_to = Vector2(1, 0.00917431)
-
-[sub_resource type="FontFile" id="FontFile_o14t3"]
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/50/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/75/0 = Vector2(0, 0)
-cache/0/16/0/kerning_overrides/70/0 = Vector2(0, 0)
-cache/0/20/0/ascent = 0.0
-cache/0/20/0/descent = 0.0
-cache/0/20/0/underline_position = 0.0
-cache/0/20/0/underline_thickness = 0.0
-cache/0/20/0/scale = 1.0
-cache/0/20/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/50/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/75/0 = Vector2(0, 0)
-cache/0/20/0/kerning_overrides/70/0 = Vector2(0, 0)
-cache/0/50/0/ascent = 0.0
-cache/0/50/0/descent = 0.0
-cache/0/50/0/underline_position = 0.0
-cache/0/50/0/underline_thickness = 0.0
-cache/0/50/0/scale = 1.0
-cache/0/50/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/50/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/50/0/kerning_overrides/50/0 = Vector2(0, 0)
-cache/0/50/0/kerning_overrides/75/0 = Vector2(0, 0)
-cache/0/50/0/kerning_overrides/70/0 = Vector2(0, 0)
-cache/0/75/0/ascent = 0.0
-cache/0/75/0/descent = 0.0
-cache/0/75/0/underline_position = 0.0
-cache/0/75/0/underline_thickness = 0.0
-cache/0/75/0/scale = 1.0
-cache/0/75/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/75/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/75/0/kerning_overrides/50/0 = Vector2(0, 0)
-cache/0/75/0/kerning_overrides/75/0 = Vector2(0, 0)
-cache/0/75/0/kerning_overrides/70/0 = Vector2(0, 0)
-cache/0/70/0/ascent = 0.0
-cache/0/70/0/descent = 0.0
-cache/0/70/0/underline_position = 0.0
-cache/0/70/0/underline_thickness = 0.0
-cache/0/70/0/scale = 1.0
-cache/0/70/0/kerning_overrides/16/0 = Vector2(0, 0)
-cache/0/70/0/kerning_overrides/20/0 = Vector2(0, 0)
-cache/0/70/0/kerning_overrides/50/0 = Vector2(0, 0)
-cache/0/70/0/kerning_overrides/75/0 = Vector2(0, 0)
-cache/0/70/0/kerning_overrides/70/0 = Vector2(0, 0)
+[ext_resource type="FontFile" uid="uid://dnwpbneyuyd1n" path="res://new_font_file.tres" id="3_4bj6e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4nsx8"]
-font = SubResource("FontFile_o14t3")
+font = ExtResource("3_4bj6e")
 font_size = 75
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
@@ -94,7 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture2D_y007l")
+texture = ExtResource("1_4qsfm")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_o3fx5")

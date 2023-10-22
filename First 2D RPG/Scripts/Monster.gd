@@ -70,6 +70,7 @@ func die ():
 	
 	if is_in_group("Boss"):
 		print("Boss has died, loading next scene")
+		await get_tree().create_timer(.8).timeout
 		get_tree().change_scene_to_file(nextScene)
 		print("Next Scene is loaded")
 	else:

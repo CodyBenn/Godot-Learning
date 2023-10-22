@@ -791,8 +791,9 @@ script = ExtResource("65_8wlq6")
 [node name="UI" parent="CanvasLayer" instance=ExtResource("69_5q2y7")]
 
 [node name="Player" parent="." instance=ExtResource("1_61og3")]
-position = Vector2(-1472, -1288)
+position = Vector2(-1848, 2128)
 collision_layer = 3
+damage = 50
 
 [node name="Mobs" type="Node" parent="."]
 
@@ -896,7 +897,7 @@ moveSpeed = 50.0
 xpToGive = 0
 damage = 4
 attackDist = 100
-nextScene = "res://Scenes/MenuUI.tscn"
+nextScene = "res://Scenes/EndScene.tscn"
 
 [node name="Chests" type="Node" parent="."]
 
