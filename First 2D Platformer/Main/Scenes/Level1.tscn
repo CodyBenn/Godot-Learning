@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqcjqjqha4kqn"]
+[gd_scene load_steps=10 format=3 uid="uid://cqcjqjqha4kqn"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Main/Assets/Tiles/tiles_packed.png" id="1_tp10m"]
 [ext_resource type="PackedScene" uid="uid://d1ji6h8kbqbjy" path="res://Main/Scenes/Player.tscn" id="2_ide1p"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c3eu6rdyet5ec" path="res://Main/Scenes/Coin.tscn" id="4_2xc6j"]
 [ext_resource type="PackedScene" uid="uid://vqkiyoty7bs" path="res://Main/Scenes/spikes.tscn" id="5_5dgf1"]
 [ext_resource type="PackedScene" uid="uid://nowwxtd5jt5k" path="res://Main/Scenes/Enemy.tscn" id="6_oq2rj"]
+[ext_resource type="PackedScene" uid="uid://dwjhtv2gu8e06" path="res://Main/Scenes/Boundary.tscn" id="7_j3a46"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b5l23"]
 texture = ExtResource("1_tp10m")
@@ -645,6 +646,9 @@ position = Vector2(28, 514)
 [node name="EndFlag" parent="." instance=ExtResource("3_1ujv3")]
 position = Vector2(722, 515)
 next_scene = "res://Main/Scenes/Level2.tscn"
+
+[node name="WorldBoundary" parent="." instance=ExtResource("7_j3a46")]
+position = Vector2(450, 560)
 
 [node name="Enemies" type="Node" parent="."]
 

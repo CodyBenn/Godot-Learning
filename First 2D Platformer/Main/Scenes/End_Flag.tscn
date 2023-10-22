@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cop47aoytyxtb" path="res://Main/Assets/Objects/tile_0112.png" id="1_1nrsx"]
 [ext_resource type="Script" path="res://Main/Scripts/End_Flag.gd" id="1_cu57y"]
-[ext_resource type="AudioStream" uid="uid://0ptr8bkhm1nv" path="res://Sounds/Win.mp3" id="3_6krod"]
+[ext_resource type="PackedScene" uid="uid://br2wc3w0wra3b" path="res://Sounds/Win_Sound.tscn" id="3_4ckla"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smcba"]
 size = Vector2(18, 18)
@@ -16,9 +16,7 @@ texture = ExtResource("1_1nrsx")
 [node name="Collider" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_smcba")
 
-[node name="Win" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_6krod")
-volume_db = -12.0
-pitch_scale = 1.3
+[node name="Win" parent="." instance=ExtResource("3_4ckla")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="Win" to="." method="_on_win_finished"]

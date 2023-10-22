@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dukiiph4yu22j"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_687h2"]
-normal = Vector2(0, 1)
-
-[node name="WorldBoundary" type="CollisionShape2D"]
-scale = Vector2(5.6, 1)
-shape = SubResource("WorldBoundaryShape2D_687h2")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://br2wc3w0wra3b"]
+
+[ext_resource type="AudioStream" uid="uid://0ptr8bkhm1nv" path="res://Sounds/Win.mp3" id="1_yw7pj"]
+
+[node name="Win" type="AudioStreamPlayer"]
+stream = ExtResource("1_yw7pj")
+volume_db = -12.0
+pitch_scale = 1.3

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://malkmswc7cbp"]
+[gd_scene load_steps=15 format=3 uid="uid://malkmswc7cbp"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Main/Assets/Tiles/tiles_packed.png" id="1_k45bq"]
 [ext_resource type="PackedScene" uid="uid://d1ji6h8kbqbjy" path="res://Main/Scenes/Player.tscn" id="2_pm5ue"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c3eu6rdyet5ec" path="res://Main/Scenes/Coin.tscn" id="6_4rgwb"]
 [ext_resource type="PackedScene" uid="uid://badw6nthjqsqr" path="res://Main/Scenes/PlatformNew.tscn" id="6_aydoh"]
 [ext_resource type="PackedScene" uid="uid://vqkiyoty7bs" path="res://Main/Scenes/spikes.tscn" id="7_gveng"]
+[ext_resource type="PackedScene" uid="uid://dwjhtv2gu8e06" path="res://Main/Scenes/Boundary.tscn" id="8_5jrjf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_avrar"]
 texture = ExtResource("1_k45bq")
@@ -778,3 +779,6 @@ scale = Vector2(1.28001, 1)
 [node name="Platform3" parent="Platforms" instance=ExtResource("6_aydoh")]
 position = Vector2(1061, 260)
 scale = Vector2(3.56, 1.68)
+
+[node name="WorldBoundary" parent="." instance=ExtResource("8_5jrjf")]
+position = Vector2(669, 488)

@@ -44,15 +44,18 @@ func _physics_process(delta):
 			$JumpSound.play()
 			
 	move_and_slide()
-	
-	if global_position.y > 550:
-		game_over()
 		
 func game_over():
+	velocity.x = 0
+	velocity.y = 0
 	$Death.play()
+	$AnimatedSprite2D.visible = false
 	await get_tree().create_timer(0.1).timeout
 	get_tree().reload_current_scene()
-	
+		
 func add_score(amount):
 	score += amount
 	score_text.text = str("Score : ", score)
+	
+func _on_death_finished():
+	game_over()

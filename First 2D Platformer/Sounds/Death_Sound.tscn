@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dph5uif7untvw"]
+
+[ext_resource type="AudioStream" uid="uid://32poj07spc26" path="res://Sounds/Death.mp3" id="1_37l73"]
+
+[node name="Death" type="AudioStreamPlayer"]
+stream = ExtResource("1_37l73")
+volume_db = -20.0
+pitch_scale = 2.0
