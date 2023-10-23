@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cckdogeltguw3"]
+
+[ext_resource type="AudioStream" uid="uid://caru1qasdmfpj" path="res://Sounds/Coin.mp3" id="1_vw6ao"]
+
+[node name="CoinCollect" type="AudioStreamPlayer"]
+stream = ExtResource("1_vw6ao")
+volume_db = -10.0
+pitch_scale = 1.5

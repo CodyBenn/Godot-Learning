@@ -14,5 +14,10 @@ func _process(delta):
 	
 func _on_body_entered(body):
 	if body.is_in_group("Player"):
+		$CoinCollect.play()
+		$Collider.queue_free()
+		$Sprite.visible = false
 		body.add_score(1)
-		queue_free()
+		
+func _on_coin_collect_finished():
+	queue_free()
