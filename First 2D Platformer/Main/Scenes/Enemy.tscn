@@ -1,20 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://nowwxtd5jt5k"]
+[gd_scene load_steps=7 format=3 uid="uid://nowwxtd5jt5k"]
 
 [ext_resource type="Script" path="res://Main/Scripts/Enemy_Script.gd" id="1_a0138"]
 [ext_resource type="Texture2D" uid="uid://dpfw6ck4mow1p" path="res://Main/Assets/Characters/character_0024.png" id="2_8qkeh"]
+[ext_resource type="Texture2D" uid="uid://cmuj56kflday4" path="res://Main/Assets/Characters/character_0025.png" id="3_l0xgl"]
+[ext_resource type="Texture2D" uid="uid://b7v77tpl04fsy" path="res://Main/Assets/Characters/character_0026.png" id="4_53oqv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dyqsc"]
 radius = 6.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m73bc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8qkeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l0xgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_53oqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l0xgl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Enemy" type="Area2D"]
 script = ExtResource("1_a0138")
 move_speed = 50.0
 
-[node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_8qkeh")
-
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_dyqsc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_m73bc")
+frame_progress = 0.572614
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

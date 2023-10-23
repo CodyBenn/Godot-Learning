@@ -10,6 +10,7 @@ var target_pos : Vector2
 func _ready():
 	start_pos = global_position
 	target_pos = start_pos + move_dir
+	$AnimatedSprite2D.play("default")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
