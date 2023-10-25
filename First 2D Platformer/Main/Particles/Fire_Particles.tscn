@@ -20,6 +20,6 @@ orbit_velocity_max = 0.0
 color_ramp = SubResource("GradientTexture1D_jo7bs")
 
 [node name="GPUParticles2D" type="GPUParticles2D"]
-position = Vector2(0, -1)
+position = Vector2(1, -1)
 process_material = SubResource("ParticleProcessMaterial_m7iuh")
 texture = ExtResource("1_mv35y")
