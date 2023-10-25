@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyhot4yroaqw1"]
+
+[ext_resource type="Texture2D" uid="uid://b6in5n0te73xs" path="res://Main/Assets/Objects/RunParticle_2_-Sheet.png" id="1_76e8v"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dikfs"]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_o0fep"]
+particle_flag_disable_z = true
+direction = Vector3(5, 0, 0)
+spread = 0.0
+gravity = Vector3(-100, 0, 0)
+initial_velocity_min = -10.0
+initial_velocity_max = -10.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 0.5
+scale_max = 0.5
+color = Color(0.827451, 0.827451, 0.827451, 1)
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[node name="RunParticles" type="GPUParticles2D"]
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_dikfs")
+position = Vector2(-14, 0)
+amount = 7
+process_material = SubResource("ParticleProcessMaterial_o0fep")
+texture = ExtResource("1_76e8v")
+lifetime = 0.05

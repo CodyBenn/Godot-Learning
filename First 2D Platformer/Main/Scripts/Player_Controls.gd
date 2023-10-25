@@ -12,6 +12,8 @@ var score : int = 0
 
 func _physics_process(delta):
 	if not is_on_floor() :
+		$RunParticlesLeft.emitting = false
+		$RunParticlesRight.emitting = false
 		velocity.y += gravity * delta
 		
 	velocity.x = 0
@@ -20,12 +22,18 @@ func _physics_process(delta):
 		velocity.x += move_speed
 		$AnimatedSprite2D.flip_h = true
 		$AnimatedSprite2D.play("Walk")
+		if is_on_floor():
+			$RunParticlesRight.emitting = true
 	if Input.is_action_pressed("ui_left"):
 		velocity.x -= move_speed
 		$AnimatedSprite2D.flip_h = false
 		$AnimatedSprite2D.play("Walk")
+		if is_on_floor():
+			$RunParticlesLeft.emitting = true
 	if velocity.x == 0:
 		$AnimatedSprite2D.play("Idle")
+		$RunParticlesLeft.emitting = false
+		$RunParticlesRight.emitting = false
 	if is_in_group("Player") and not is_on_floor():
 		$AnimatedSprite2D.play("Jump")
 		if Input.is_action_just_pressed("ui_accept"):
