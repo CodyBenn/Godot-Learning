@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d1ji6h8kbqbjy"]
+[gd_scene load_steps=14 format=3 uid="uid://d1ji6h8kbqbjy"]
 
 [ext_resource type="Script" path="res://Main/Scripts/Player_Controls.gd" id="1_7d7gi"]
 [ext_resource type="Texture2D" uid="uid://c3nvqgsbwhv3a" path="res://Main/Assets/Characters/character_0004.png" id="2_4bwek"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://da7mkjj1f64l4" path="res://Main/Assets/Characters/character_0004_Idle2.png" id="3_m6kca"]
 [ext_resource type="PackedScene" uid="uid://bikwql11m38j0" path="res://Sounds/Jump_Sound.tscn" id="7_sbx1c"]
 [ext_resource type="PackedScene" uid="uid://dph5uif7untvw" path="res://Sounds/Death_Sound.tscn" id="8_73afn"]
+[ext_resource type="PackedScene" uid="uid://h0bd6du4wx4x" path="res://Main/Particles/RunParticlesRight.tscn" id="9_qi7hq"]
+[ext_resource type="PackedScene" uid="uid://cyhot4yroaqw1" path="res://Main/Particles/RunParticlesLeft.tscn" id="10_s3pef"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a7vbt"]
 animations = [{
@@ -66,11 +68,13 @@ shadow_size = 6
 shadow_color = Color(0, 0, 0, 1)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+top_level = true
 script = ExtResource("1_7d7gi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_a7vbt")
-animation = &"DoubleJump"
+animation = &"Walk"
+flip_h = true
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
@@ -92,5 +96,11 @@ label_settings = SubResource("LabelSettings_m22pt")
 [node name="JumpSound" parent="." instance=ExtResource("7_sbx1c")]
 
 [node name="Death" parent="." instance=ExtResource("8_73afn")]
+
+[node name="RunParticlesRight" parent="." instance=ExtResource("9_qi7hq")]
+position = Vector2(-11, 9)
+
+[node name="RunParticlesLeft" parent="." instance=ExtResource("10_s3pef")]
+position = Vector2(11, 9)
 
 [connection signal="finished" from="Death" to="." method="_on_death_finished"]
