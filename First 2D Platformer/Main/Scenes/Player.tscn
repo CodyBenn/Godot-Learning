@@ -68,11 +68,13 @@ shadow_size = 6
 shadow_color = Color(0, 0, 0, 1)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+top_level = true
 script = ExtResource("1_7d7gi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_a7vbt")
-animation = &"Idle"
+animation = &"Walk"
+flip_h = true
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)

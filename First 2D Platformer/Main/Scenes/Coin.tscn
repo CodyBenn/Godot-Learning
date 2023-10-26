@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3eu6rdyet5ec"]
+[gd_scene load_steps=6 format=3 uid="uid://c3eu6rdyet5ec"]
 
 [ext_resource type="Script" path="res://Main/Scripts/Coin.gd" id="1_nbh7j"]
 [ext_resource type="Texture2D" uid="uid://ydbe1tyhvygu" path="res://Main/Assets/Objects/tile_0151.png" id="2_msyi2"]
 [ext_resource type="PackedScene" uid="uid://cckdogeltguw3" path="res://Sounds/Coin_Sound.tscn" id="3_wgsqu"]
+[ext_resource type="PackedScene" uid="uid://dx7312q1p4xg8" path="res://Main/Particles/CoinParticle.tscn" id="4_hpcql"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_itjy5"]
 radius = 8.0
@@ -17,6 +18,8 @@ shape = SubResource("CircleShape2D_itjy5")
 texture = ExtResource("2_msyi2")
 
 [node name="CoinCollect" parent="." instance=ExtResource("3_wgsqu")]
+
+[node name="CoinParticle" parent="." instance=ExtResource("4_hpcql")]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="finished" from="CoinCollect" to="." method="_on_coin_collect_finished"]
