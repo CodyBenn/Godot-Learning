@@ -658,7 +658,7 @@ position = Vector2(-25, 242)
 
 [node name="EndFlag" parent="." instance=ExtResource("3_arx3u")]
 position = Vector2(1214, 243)
-next_scene = "res://Main/Scenes/Level1.tscn"
+next_scene = "res://Main/Scenes/EndScreen.tscn"
 
 [node name="Enemies" type="Node" parent="."]
 

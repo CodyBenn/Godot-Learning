@@ -1,0 +1,174 @@
+[gd_scene load_steps=8 format=3 uid="uid://co57vhdvgh4n7"]
+
+[ext_resource type="Theme" uid="uid://chhuld0flc2tc" path="res://MainTheme.tres" id="2_7mj4l"]
+[ext_resource type="Script" path="res://Main/Scripts/CanvasLayer.gd" id="2_iqqqx"]
+[ext_resource type="FontFile" uid="uid://dnwpbneyuyd1n" path="res://new_font_file.tres" id="3_4bj6e"]
+
+[sub_resource type="Gradient" id="Gradient_pn7eb"]
+offsets = PackedFloat32Array(0, 0.636364, 1)
+colors = PackedColorArray(6.01634e-09, 0.0495987, 0.192639, 1, 1.92523e-06, 0.544845, 0.665206, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wjxfc"]
+gradient = SubResource("Gradient_pn7eb")
+fill_from = Vector2(0.567961, 1)
+fill_to = Vector2(0.529126, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4nsx8"]
+font = ExtResource("3_4bj6e")
+font_size = 75
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 4
+shadow_color = Color(0.176471, 0.176471, 0.176471, 1)
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_h4tkg"]
+font_size = 24
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 4
+shadow_color = Color(0.2, 0.2, 0.2, 1)
+shadow_offset = Vector2(2, 2)
+
+[node name="MainMenu" type="Node"]
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7mj4l")
+texture = SubResource("GradientTexture2D_wjxfc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("2_iqqqx")
+nextScene = "res://Main/Scenes/Level1.tscn"
+
+[node name="MainMenu" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7mj4l")
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/MainMenu/CenterContainer"]
+custom_minimum_size = Vector2(512, 300)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu/CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer"]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="GameTitle" type="Label" parent="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "AN EYE FOR ADVENTURE"
+label_settings = SubResource("LabelSettings_4nsx8")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="ButtonStart" type="Button" parent="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+text = "Start Game"
+
+[node name="ButtonControls" type="Button" parent="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+text = "Controls"
+
+[node name="ButtonQuit" type="Button" parent="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+
+[node name="ControlsMenu" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7mj4l")
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/ControlsMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/ControlsMenu/CenterContainer"]
+custom_minimum_size = Vector2(512, 300)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ControlsMenu/CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ControlsMenu/CenterContainer/PanelContainer/MarginContainer"]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="CanvasLayer/ControlsMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Controls"
+label_settings = SubResource("LabelSettings_4nsx8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Descriptor" type="Label" parent="CanvasLayer/ControlsMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Movement : A / D or
+Left / Right arrowkeys
+Jump : Space
+Doublejump : Space while in air
+
+Collect coins to raise your score
+
+Touch the flag at the end to advance
+to the next stage"
+label_settings = SubResource("LabelSettings_h4tkg")
+vertical_alignment = 1
+
+[node name="ButtonReturn" type="Button" parent="CanvasLayer/ControlsMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+text = "Return"
+
+[connection signal="pressed" from="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonStart" to="CanvasLayer" method="_on_button_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonControls" to="CanvasLayer" method="_on_button_controls_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonQuit" to="CanvasLayer" method="_on_button_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer/ControlsMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonReturn" to="CanvasLayer" method="_on_button_return_pressed"]
