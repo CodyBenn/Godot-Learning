@@ -81,7 +81,7 @@ theme_override_constants/separation = 16
 [node name="GameTitle" type="Label" parent="CanvasLayer/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "AN EYE FOR ADVENTURE"
+text = "AN EYE FOR PLATFORMS"
 label_settings = SubResource("LabelSettings_4nsx8")
 horizontal_alignment = 1
 vertical_alignment = 1
