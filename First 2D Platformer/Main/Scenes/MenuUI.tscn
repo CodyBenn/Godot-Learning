@@ -1,17 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://co57vhdvgh4n7"]
+[gd_scene load_steps=7 format=3 uid="uid://co57vhdvgh4n7"]
 
+[ext_resource type="Texture2D" uid="uid://rrm6tblougwn" path="res://Main/Assets/Background/Screenshot 2023-10-28 182215.png" id="2_0vxej"]
 [ext_resource type="Theme" uid="uid://chhuld0flc2tc" path="res://MainTheme.tres" id="2_7mj4l"]
 [ext_resource type="Script" path="res://Main/Scripts/CanvasLayer.gd" id="2_iqqqx"]
 [ext_resource type="FontFile" uid="uid://dnwpbneyuyd1n" path="res://new_font_file.tres" id="3_4bj6e"]
-
-[sub_resource type="Gradient" id="Gradient_pn7eb"]
-offsets = PackedFloat32Array(0, 0.636364, 1)
-colors = PackedColorArray(6.01634e-09, 0.0495987, 0.192639, 1, 1.92523e-06, 0.544845, 0.665206, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_wjxfc"]
-gradient = SubResource("Gradient_pn7eb")
-fill_from = Vector2(0.567961, 1)
-fill_to = Vector2(0.529126, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4nsx8"]
 font = ExtResource("3_4bj6e")
@@ -39,7 +31,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_7mj4l")
-texture = SubResource("GradientTexture2D_wjxfc")
+texture = ExtResource("2_0vxej")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("2_iqqqx")

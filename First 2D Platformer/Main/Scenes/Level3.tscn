@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://malkmswc7cbp"]
+[gd_scene load_steps=16 format=3 uid="uid://malkmswc7cbp"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Main/Assets/Tiles/tiles_packed.png" id="1_k45bq"]
 [ext_resource type="PackedScene" uid="uid://d1ji6h8kbqbjy" path="res://Main/Scenes/Player.tscn" id="2_pm5ue"]
 [ext_resource type="PackedScene" uid="uid://d3dr5qjqrpja0" path="res://Main/Scenes/End_Flag.tscn" id="3_arx3u"]
+[ext_resource type="PackedScene" uid="uid://blfqq2n8i5o1k" path="res://Main/Scenes/Background.tscn" id="3_swhp2"]
 [ext_resource type="PackedScene" uid="uid://nowwxtd5jt5k" path="res://Main/Scenes/Enemy.tscn" id="4_feu3m"]
 [ext_resource type="PackedScene" uid="uid://c3eu6rdyet5ec" path="res://Main/Scenes/Coin.tscn" id="6_4rgwb"]
 [ext_resource type="PackedScene" uid="uid://badw6nthjqsqr" path="res://Main/Scenes/PlatformNew.tscn" id="6_aydoh"]
@@ -655,6 +656,10 @@ layer_0/tile_data = PackedInt32Array(917504, 196608, 0, 983039, 131072, 0, 98303
 
 [node name="Player" parent="." instance=ExtResource("2_pm5ue")]
 position = Vector2(-25, 242)
+
+[node name="Background-hills1" parent="." instance=ExtResource("3_swhp2")]
+position = Vector2(549, 298)
+scale = Vector2(4.87981, 1.9375)
 
 [node name="EndFlag" parent="." instance=ExtResource("3_arx3u")]
 position = Vector2(1214, 243)

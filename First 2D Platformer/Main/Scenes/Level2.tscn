@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://qs4vacif1fck"]
+[gd_scene load_steps=11 format=3 uid="uid://qs4vacif1fck"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Main/Assets/Tiles/tiles_packed.png" id="1_cprgl"]
 [ext_resource type="PackedScene" uid="uid://nowwxtd5jt5k" path="res://Main/Scenes/Enemy.tscn" id="2_ettb1"]
 [ext_resource type="PackedScene" uid="uid://d1ji6h8kbqbjy" path="res://Main/Scenes/Player.tscn" id="3_5fuiw"]
 [ext_resource type="PackedScene" uid="uid://vqkiyoty7bs" path="res://Main/Scenes/spikes.tscn" id="4_sd3n7"]
+[ext_resource type="PackedScene" uid="uid://blfqq2n8i5o1k" path="res://Main/Scenes/Background.tscn" id="5_b327q"]
 [ext_resource type="PackedScene" uid="uid://c3eu6rdyet5ec" path="res://Main/Scenes/Coin.tscn" id="5_yujhv"]
 [ext_resource type="PackedScene" uid="uid://d3dr5qjqrpja0" path="res://Main/Scenes/End_Flag.tscn" id="6_uvs76"]
 [ext_resource type="PackedScene" uid="uid://dwjhtv2gu8e06" path="res://Main/Scenes/Boundary.tscn" id="7_644n0"]
@@ -640,6 +641,10 @@ move_dir = Vector2(0, -100)
 [node name="Enemy3" parent="Enemies" instance=ExtResource("2_ettb1")]
 position = Vector2(809, 549)
 move_dir = Vector2(0, -100)
+
+[node name="Background-hills1" parent="." instance=ExtResource("5_b327q")]
+position = Vector2(584, 335.75)
+scale = Vector2(3.14423, 1.95781)
 
 [node name="Spikes" type="Node" parent="."]
 
