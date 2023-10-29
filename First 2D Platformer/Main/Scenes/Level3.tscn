@@ -658,6 +658,7 @@ layer_0/tile_data = PackedInt32Array(917504, 196608, 0, 983039, 131072, 0, 98303
 position = Vector2(-25, 242)
 
 [node name="Background-hills1" parent="." instance=ExtResource("3_swhp2")]
+modulate = Color(0.67451, 0.443137, 0.603922, 1)
 position = Vector2(549, 298)
 scale = Vector2(4.87981, 1.9375)
 
