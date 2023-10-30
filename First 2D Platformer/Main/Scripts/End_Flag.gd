@@ -2,7 +2,10 @@ extends Area2D
 
 @export_file("*.tscn") var next_scene
 
-func _on_body_entered(body):	
+func _ready():
+	$AnimatedSprite2D.play("default")
+	
+func _on_body_entered(body):
 	if body.is_in_group("Player"):
 		$Win.play()
 		
