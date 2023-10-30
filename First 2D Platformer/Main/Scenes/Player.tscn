@@ -80,9 +80,6 @@ flip_h = true
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_k62ac")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ScoreText" type="Label" parent="CanvasLayer"]
