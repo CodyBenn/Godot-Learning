@@ -18,6 +18,6 @@ func set_next_animation(fading_out : bool):
 func _on_end_flag_body_entered(body):
 	if body.is_in_group("Player"):
 		animation_player.queue("fade_out")
-
+		
 func _on_main_ready():
 	animation_player.queue("fade_in")
