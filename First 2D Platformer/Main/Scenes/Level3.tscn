@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://malkmswc7cbp"]
+[gd_scene load_steps=19 format=3 uid="uid://malkmswc7cbp"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Main/Assets/Tiles/tiles_packed.png" id="1_k45bq"]
 [ext_resource type="PackedScene" uid="uid://d1ji6h8kbqbjy" path="res://Main/Scenes/Player.tscn" id="2_pm5ue"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://badw6nthjqsqr" path="res://Main/Scenes/PlatformNew.tscn" id="6_aydoh"]
 [ext_resource type="PackedScene" uid="uid://vqkiyoty7bs" path="res://Main/Scenes/spikes.tscn" id="7_gveng"]
 [ext_resource type="PackedScene" uid="uid://dwjhtv2gu8e06" path="res://Main/Scenes/Boundary.tscn" id="8_5jrjf"]
+[ext_resource type="PackedScene" uid="uid://cduvpkwfc5ycn" path="res://Main/Scenes/Scene_Transition.tscn" id="11_rsi65"]
+[ext_resource type="Script" path="res://Main/Scripts/TransitionButton.gd" id="12_cbv5p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_avrar"]
 texture = ExtResource("1_k45bq")
@@ -647,7 +649,7 @@ _data = {
 "RESET": SubResource("Animation_tpihj")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Main" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(1, 0.998412)
@@ -656,19 +658,22 @@ format = 2
 layer_0/tile_data = PackedInt32Array(917504, 196608, 0, 983039, 131072, 0, 983038, 131072, 0, 983037, 131072, 0, 983036, 65536, 0, 1179652, 65536, 0, 1179653, 131072, 0, 1179654, 196608, 0, 983050, 65536, 0, 983051, 131072, 0, 983052, 196608, 0, 851984, 65536, 0, 851985, 131072, 0, 851986, 196608, 0, 851991, 65536, 0, 851992, 131072, 0, 851993, 196608, 0, 851998, 65536, 0, 851999, 131072, 0, 852000, 196608, 0, 852005, 65536, 0, 852006, 131072, 0, 852007, 196608, 0, 393260, 983040, 4, 458796, 983040, 5, 524332, 983040, 5, 589868, 983040, 5, 655404, 983040, 5, 720940, 983040, 5, 786476, 983040, 5, 852012, 983040, 5, 917548, 983040, 5, 983084, 983040, 5, 1048620, 983040, 5, 1114156, 983040, 6, 1179689, 851968, 6, 1179690, 851968, 6, 1179691, 917504, 6, 1179688, 851968, 4, 1179692, 917504, 5, 1245224, 983040, 5, 1310760, 983040, 5, 1376296, 983040, 6, 1376293, 983040, 4, 1441829, 983040, 5, 1507365, 983040, 6, 1572901, 851968, 5, 1572902, 786432, 6, 1572903, 851968, 6, 1572904, 851968, 6, 1572905, 851968, 6, 1572906, 851968, 6, 1572907, 917504, 6, 1572912, 65536, 1, 1572913, 131072, 1, 1572914, 196608, 1, 1638448, 65536, 6, 1703984, 65536, 6, 1769520, 65536, 6, 1835056, 65536, 6, 1835058, 196608, 6, 1769522, 196608, 6, 1703986, 196608, 6, 1638450, 196608, 6, 1638449, 131072, 6, 1703985, 131072, 6, 1769521, 131072, 6, 1835057, 131072, 6, 1114116, 327680, 6, 1114117, 262144, 6, 917501, 262144, 6, 851968, 262144, 6, 917503, 524288, 6, 917500, 524288, 6, 917516, 524288, 6, 917515, 458752, 6, 786449, 262144, 6, 1310757, 262144, 6, 1507377, 262144, 6, 1507378, 327680, 6, 1966072, 65536, 6, 1900536, 65536, 6, 1835000, 65536, 6, 1769464, 65536, 6, 1703928, 65536, 6, 1638392, 65536, 6, 1572856, 65536, 6, 1507320, 65536, 6, 1441784, 65536, 6, 1376248, 65536, 6, 1310712, 65536, 6, 1245176, 65536, 6, 1179640, 65536, 6, 1114104, 65536, 6, 1048568, 65536, 6, 983032, 65536, 6, 917496, 65536, 6, 851960, 65536, 6, 786424, 65536, 6, 720888, 65536, 6, 655352, 65536, 6, 589816, 65536, 6, 524280, 65536, 6, 458744, 65536, 6, 393208, 65536, 6, 327672, 65536, 6, 262136, 65536, 5, 262137, 196608, 5, 327673, 196608, 6, 393209, 196608, 6, 458745, 196608, 6, 524281, 196608, 6, 589817, 196608, 6, 655353, 196608, 6, 720889, 196608, 6, 786425, 196608, 6, 851961, 196608, 6, 917497, 196608, 6, 983033, 196608, 6, 1048569, 196608, 6, 1114105, 196608, 6, 1179641, 196608, 6, 1245177, 196608, 6, 1310713, 196608, 6, 1376249, 196608, 6, 1441785, 196608, 6, 1507321, 196608, 6, 1572857, 196608, 6, 1638393, 196608, 6, 1703929, 196608, 6, 1769465, 196608, 6, 1835001, 196608, 6, 1900537, 196608, 6, 1966073, 196608, 6, 196683, 65536, 5, 262219, 65536, 6, 327755, 65536, 6, 393291, 65536, 6, 458827, 65536, 6, 524363, 65536, 6, 589899, 65536, 6, 655435, 65536, 6, 720971, 65536, 6, 786507, 65536, 6, 852043, 65536, 6, 917579, 65536, 6, 983115, 65536, 6, 1048651, 65536, 6, 1114187, 65536, 6, 1179723, 65536, 6, 1245259, 65536, 6, 1310795, 65536, 6, 1376331, 65536, 6, 1441867, 65536, 6, 1507403, 65536, 6, 1572939, 65536, 6, 1638475, 65536, 6, 1704011, 65536, 6, 1769547, 65536, 6, 1835083, 65536, 6, 196684, 196608, 5, 262220, 196608, 6, 327756, 196608, 6, 393292, 196608, 6, 458828, 196608, 6, 524364, 196608, 6, 589900, 196608, 6, 655436, 196608, 6, 720972, 196608, 6, 786508, 196608, 6, 852044, 196608, 6, 917580, 196608, 6, 983116, 196608, 6, 1048652, 196608, 6, 1114188, 196608, 6, 1179724, 196608, 6, 1245260, 196608, 6, 1310796, 196608, 6, 1376332, 196608, 6, 1441868, 196608, 6, 1507404, 196608, 6, 1572940, 196608, 6, 1638476, 196608, 6, 1704012, 196608, 6, 1769548, 196608, 6, 1835084, 196608, 6, 786498, 65536, 0, 786499, 131072, 0, 786500, 196608, 0, 917585, 196608, 6, 917588, 196608, 6)
 
 [node name="Player" parent="." instance=ExtResource("2_pm5ue")]
-position = Vector2(-27, 239)
+position = Vector2(-29, 237)
 
 [node name="Camera" parent="Player" node_paths=PackedStringArray("tilemap") instance=ExtResource("3_35tu8")]
 tilemap = NodePath("../../TileMap")
+
+[node name="EndFlag" parent="." instance=ExtResource("3_arx3u")]
+position = Vector2(1215, 208)
+next_scene = "res://Main/Scenes/EndScreen.tscn"
+
+[node name="WorldBoundary" parent="." instance=ExtResource("8_5jrjf")]
+position = Vector2(669, 488)
 
 [node name="Background-hills1" parent="." instance=ExtResource("3_swhp2")]
 modulate = Color(0.67451, 0.443137, 0.603922, 1)
 position = Vector2(620.5, 299)
 scale = Vector2(3.66587, 1.94375)
-
-[node name="EndFlag" parent="." instance=ExtResource("3_arx3u")]
-position = Vector2(1215, 208)
-next_scene = "res://Main/Scenes/EndScreen.tscn"
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -706,6 +711,17 @@ move_dir = Vector2(0, -100)
 [node name="Enemy8" parent="Enemies" instance=ExtResource("4_feu3m")]
 position = Vector2(634, 290)
 move_dir = Vector2(0, -100)
+
+[node name="Spikes" type="Node" parent="."]
+
+[node name="Spikes" parent="Spikes" instance=ExtResource("7_gveng")]
+position = Vector2(442, 226)
+
+[node name="Spikes2" parent="Spikes" instance=ExtResource("7_gveng")]
+position = Vector2(568, 226)
+
+[node name="Spikes3" parent="Spikes" instance=ExtResource("7_gveng")]
+position = Vector2(693, 226)
 
 [node name="Coins" type="Node" parent="."]
 
@@ -752,17 +768,6 @@ position = Vector2(205, 248)
 [node name="Coin9" parent="Coins" instance=ExtResource("6_4rgwb")]
 position = Vector2(316, 221)
 
-[node name="Spikes" type="Node" parent="."]
-
-[node name="Spikes" parent="Spikes" instance=ExtResource("7_gveng")]
-position = Vector2(442, 226)
-
-[node name="Spikes2" parent="Spikes" instance=ExtResource("7_gveng")]
-position = Vector2(568, 226)
-
-[node name="Spikes3" parent="Spikes" instance=ExtResource("7_gveng")]
-position = Vector2(693, 226)
-
 [node name="Platforms" type="Node" parent="."]
 
 [node name="Platform" parent="Platforms" instance=ExtResource("6_aydoh")]
@@ -790,5 +795,18 @@ scale = Vector2(1.28001, 1)
 position = Vector2(1061, 260)
 scale = Vector2(3.56, 1.68)
 
-[node name="WorldBoundary" parent="." instance=ExtResource("8_5jrjf")]
-position = Vector2(669, 488)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SceneTransitions" parent="CanvasLayer" instance=ExtResource("11_rsi65")]
+
+[node name="TransitionButton" type="CheckButton" parent="CanvasLayer"]
+offset_left = 9.0
+offset_top = 40.0
+offset_right = 53.0
+offset_bottom = 64.0
+focus_mode = 0
+script = ExtResource("12_cbv5p")
+
+[connection signal="ready" from="." to="CanvasLayer/SceneTransitions" method="_on_main_ready"]
+[connection signal="body_entered" from="EndFlag" to="CanvasLayer/SceneTransitions" method="_on_end_flag_body_entered"]
+[connection signal="toggled" from="CanvasLayer/TransitionButton" to="CanvasLayer/TransitionButton" method="_on_toggled" flags=18]
