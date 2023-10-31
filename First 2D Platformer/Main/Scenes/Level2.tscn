@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://qs4vacif1fck"]
+[gd_scene load_steps=14 format=3 uid="uid://qs4vacif1fck"]
 
 [ext_resource type="Texture2D" uid="uid://biwond464pw3f" path="res://Main/Assets/Tiles/tiles_packed.png" id="1_cprgl"]
 [ext_resource type="PackedScene" uid="uid://nowwxtd5jt5k" path="res://Main/Scenes/Enemy.tscn" id="2_ettb1"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://c3eu6rdyet5ec" path="res://Main/Scenes/Coin.tscn" id="5_yujhv"]
 [ext_resource type="PackedScene" uid="uid://d3dr5qjqrpja0" path="res://Main/Scenes/End_Flag.tscn" id="6_uvs76"]
 [ext_resource type="PackedScene" uid="uid://dwjhtv2gu8e06" path="res://Main/Scenes/Boundary.tscn" id="7_644n0"]
+[ext_resource type="PackedScene" uid="uid://cduvpkwfc5ycn" path="res://Main/Scenes/Scene_Transition.tscn" id="10_2hgjj"]
+[ext_resource type="Script" path="res://Main/Scripts/TransitionButton.gd" id="11_xf35e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_avrar"]
 texture = ExtResource("1_cprgl")
@@ -624,7 +626,7 @@ layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array(2031628, 851968, 2, 2097164, 851968, 3, 2031629, 851968, 2, 2097165, 851968, 3, 2031630, 851968, 2, 2097166, 851968, 3, 2031631, 851968, 2, 2097167, 851968, 3, 2031632, 851968, 2, 2097168, 851968, 3, 2031633, 851968, 2, 2097169, 851968, 3, 2031634, 851968, 2, 2097170, 851968, 3, 2031635, 851968, 2, 2097171, 851968, 3, 2162700, 851968, 3, 2162701, 851968, 3, 2162702, 851968, 3, 2162703, 851968, 3, 2162704, 851968, 3, 2162705, 851968, 3, 2162706, 851968, 3, 2162707, 851968, 3, 2228243, 851968, 3, 2293779, 851968, 3, 2293778, 851968, 3, 2293777, 851968, 3, 2293776, 851968, 3, 2293775, 851968, 3, 2293774, 851968, 3, 2293773, 851968, 3, 2228237, 851968, 3, 2228236, 851968, 3, 2293772, 851968, 3, 2228238, 851968, 3, 2228239, 851968, 3, 2228240, 851968, 3, 2228241, 851968, 3, 2228242, 851968, 3, 2031654, 851968, 2, 2097190, 851968, 3, 2031655, 851968, 2, 2097191, 851968, 3, 2031656, 851968, 2, 2097192, 851968, 3, 2031657, 851968, 2, 2097193, 851968, 3, 2031658, 851968, 2, 2097194, 851968, 3, 2031659, 851968, 2, 2097195, 851968, 3, 2031660, 851968, 2, 2097196, 851968, 3, 2031661, 851968, 2, 2097197, 851968, 3, 2031662, 851968, 2, 2097198, 851968, 3, 2031663, 851968, 2, 2097199, 851968, 3, 2162726, 851968, 3, 2162727, 851968, 3, 2162728, 851968, 3, 2162729, 851968, 3, 2162730, 851968, 3, 2162731, 851968, 3, 2162732, 851968, 3, 2162733, 851968, 3, 2162734, 851968, 3, 2162735, 851968, 3, 2228271, 851968, 3, 2293807, 851968, 3, 2293806, 851968, 3, 2293805, 851968, 3, 2293804, 851968, 3, 2293803, 851968, 3, 2293802, 851968, 3, 2293801, 851968, 3, 2293800, 851968, 3, 2293799, 851968, 3, 2293798, 851968, 3, 2228262, 851968, 3, 2228263, 851968, 3, 2228264, 851968, 3, 2228265, 851968, 3, 2228266, 851968, 3, 2228267, 851968, 3, 2228268, 851968, 3, 2228269, 851968, 3, 2228270, 851968, 3)
 
 [node name="Player" parent="." instance=ExtResource("3_5fuiw")]
-position = Vector2(30, 508)
+position = Vector2(36, 510)
 
 [node name="Camera" parent="Player" node_paths=PackedStringArray("tilemap") instance=ExtResource("3_b5o5r")]
 tilemap = NodePath("../../TileMap")
@@ -632,6 +634,13 @@ tilemap = NodePath("../../TileMap")
 [node name="EndFlag" parent="." instance=ExtResource("6_uvs76")]
 position = Vector2(1125, 513)
 next_scene = "res://Main/Scenes/Level3.tscn"
+
+[node name="WorldBoundary" parent="." instance=ExtResource("7_644n0")]
+position = Vector2(564, 574)
+
+[node name="Background-hills1" parent="." instance=ExtResource("5_b327q")]
+position = Vector2(585.5, 334.25)
+scale = Vector2(3.15144, 1.94844)
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -646,10 +655,6 @@ move_dir = Vector2(0, -100)
 [node name="Enemy3" parent="Enemies" instance=ExtResource("2_ettb1")]
 position = Vector2(809, 549)
 move_dir = Vector2(0, -100)
-
-[node name="Background-hills1" parent="." instance=ExtResource("5_b327q")]
-position = Vector2(585.5, 334.25)
-scale = Vector2(3.15144, 1.94844)
 
 [node name="Spikes" type="Node" parent="."]
 
@@ -808,5 +813,18 @@ position = Vector2(1035, 441)
 [node name="Coin47" parent="Coins" instance=ExtResource("5_yujhv")]
 position = Vector2(1053, 441)
 
-[node name="WorldBoundary" parent="." instance=ExtResource("7_644n0")]
-position = Vector2(564, 574)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SceneTransitions" parent="CanvasLayer" instance=ExtResource("10_2hgjj")]
+
+[node name="TransitionButton" type="CheckButton" parent="CanvasLayer"]
+offset_left = 9.0
+offset_top = 40.0
+offset_right = 53.0
+offset_bottom = 64.0
+focus_mode = 0
+script = ExtResource("11_xf35e")
+
+[connection signal="ready" from="." to="CanvasLayer/SceneTransitions" method="_on_main_ready"]
+[connection signal="body_entered" from="EndFlag" to="CanvasLayer/SceneTransitions" method="_on_end_flag_body_entered"]
+[connection signal="toggled" from="CanvasLayer/TransitionButton" to="CanvasLayer/TransitionButton" method="_on_toggled" flags=18]
