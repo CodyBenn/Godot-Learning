@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://35wd1ylw1hyy"]
+
+[ext_resource type="AudioStream" uid="uid://ert04bjxjjrw" path="res://Sounds/BackgroundMusic.mp3" id="1_pgta2"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_pgta2")
+volume_db = -15.0
+autoplay = true
