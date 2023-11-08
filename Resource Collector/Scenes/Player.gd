@@ -4,6 +4,8 @@ extends CharacterBody2D
 var isInteracting : bool
 var facingDir = "none"
 
+@onready var equipCollider = $HandEquip/EquipSprite/Area2D/EquipCollider
+
 func _ready():
 	pass
 
