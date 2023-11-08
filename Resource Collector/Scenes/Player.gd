@@ -38,7 +38,6 @@ func _physics_process(delta):
 	# Handle interaction
 	if Input.is_action_just_pressed("ui_accept") and !isInteracting:
 		isInteracting = true
-		try_interact()
 		
 		# Play the attack animation based on facing direction
 		if facingDir == "right":
