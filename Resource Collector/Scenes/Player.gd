@@ -4,6 +4,8 @@ extends CharacterBody2D
 var isInteracting : bool
 var facingDir = "none"
 
+@onready var equipCollider = $HandEquip/EquipSprite/Area2D/EquipCollider
+
 func _ready():
 	pass
 
@@ -36,6 +38,7 @@ func _physics_process(delta):
 	# Handle interaction
 	if Input.is_action_just_pressed("ui_accept") and !isInteracting:
 		isInteracting = true
+		try_interact()
 		
 		# Play the attack animation based on facing direction
 		if facingDir == "right":

@@ -8,7 +8,7 @@ func _ready():
 	pass
 	
 func _physics_process(delta):
-
+	
 	#Movement if not interacting
 	if isInteracting == false:
 		#Assigns movement physics

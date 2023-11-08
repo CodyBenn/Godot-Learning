@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cnb4h2vjpwl74"]
+[gd_scene load_steps=29 format=3 uid="uid://cnb4h2vjpwl74"]
 
 [ext_resource type="Texture2D" uid="uid://c0sgn4enfdcag" path="res://Assets/Objects/Basic Grass Biom things 1.png" id="1_bhqln"]
 [ext_resource type="Texture2D" uid="uid://b36ykunbswnjc" path="res://Assets/Objects/Basic Furniture.png" id="2_yr0je"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://um8xmm2nl6ty" path="res://Assets/Objects/Chest.png" id="11_771gj"]
 [ext_resource type="Texture2D" uid="uid://dl8jt3i1hw87s" path="res://Assets/Tilesets/Fences.png" id="12_0pkjp"]
 [ext_resource type="PackedScene" uid="uid://0bysuk16rwtt" path="res://Scenes/Player.tscn" id="13_ykm0t"]
+[ext_resource type="PackedScene" uid="uid://kxptyql1n81k" path="res://Scenes/WoodResource.tscn" id="14_ke8uy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ecc48"]
 texture = ExtResource("1_bhqln")
@@ -1299,3 +1300,8 @@ position = Vector2(71, -65)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(71, -65)
 zoom = Vector2(3, 3)
+
+[node name="ResourcesNode" type="Node" parent="."]
+
+[node name="Resource" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+position = Vector2(123, -111)
