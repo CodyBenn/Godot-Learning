@@ -1,23 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://kxptyql1n81k"]
 
+[ext_resource type="Script" path="res://Scripts/Resource.gd" id="1_1owsj"]
 [ext_resource type="Texture2D" uid="uid://c0sgn4enfdcag" path="res://Assets/Objects/Basic Grass Biom things 1.png" id="1_4di56"]
-[ext_resource type="Script" path="res://Scenes/Resource.gd" id="1_m1ge2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hqle"]
-size = Vector2(20, 13)
+size = Vector2(16, 7)
 
 [node name="Resource" type="Node2D"]
-script = ExtResource("1_m1ge2")
+script = ExtResource("1_1owsj")
 woodAmount = 5
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 show_behind_parent = true
 
 [node name="Collider" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -1.5)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_3hqle")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="StaticBody2D"]
 texture = ExtResource("1_4di56")
 hframes = 9
 vframes = 5
