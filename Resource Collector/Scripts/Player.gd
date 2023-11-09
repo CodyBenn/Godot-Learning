@@ -28,8 +28,10 @@ func _physics_process(delta):
 			facingDir = "left"
 			$AnimationPlayer.play("walk_left")
 		elif direction.y > 0:
+			facingDir = "down"
 			$AnimationPlayer.play("walk_down")
 		elif direction.y < 0:
+			facingDir = "up"
 			$AnimationPlayer.play("walk_up")
 	else:
 		# If no movement input, set velocity to zero
@@ -44,6 +46,10 @@ func _physics_process(delta):
 			$AnimationPlayer.play("swing_right")
 		if facingDir == "left":
 			$AnimationPlayer.play("swing_left")
+		if facingDir == "down":
+			$AnimationPlayer.play("swing_down")
+		if facingDir == "up":
+			$AnimationPlayer.play("swing_up")
 
 	# If not interacting and no movement input, play the idle animation
 	if direction == Vector2(0, 0) and !isInteracting:
@@ -52,5 +58,5 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _on_animation_player_animation_finished(animFinish):
-	if animFinish == "swing_left" or animFinish == "swing_right":
+	if animFinish == "swing_left" or "swing_right" or "swing_down" or "swing_up":
 		isInteracting = false
