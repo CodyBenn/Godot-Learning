@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+# Uses animationTree to animate character, couldnt get the swing anim to stop 
+# playing so I swapped back to hard coded anims (Player2.gd)
+
 @export var move_speed: float = 100.0
 
 @onready var equipCollider = $HandEquip/EquipSprite/Area2D/EquipCollider

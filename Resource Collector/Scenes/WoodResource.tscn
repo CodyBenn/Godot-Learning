@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hqle"]
 size = Vector2(16, 7)
 
-[node name="Resource" type="Node2D"]
+[node name="Resource" type="Node2D" groups=["Resource"]]
 script = ExtResource("1_1owsj")
 woodAmount = 5
 
