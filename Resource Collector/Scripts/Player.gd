@@ -1,62 +1,58 @@
 extends CharacterBody2D
 
-@export var move_speed : float = 100.0
-var isInteracting : bool
-var facingDir = "none"
+@export var move_speed: float = 100.0
 
 @onready var equipCollider = $HandEquip/EquipSprite/Area2D/EquipCollider
+@onready var animationTree = $AnimationTree
+var isInteracting: bool = false
+var canMove: bool = true
+
+var direction: Vector2 = Vector2.ZERO
 
 func _ready():
 	pass
 
 func _physics_process(delta):
-
 	# Get the character's input direction
-	var direction = Vector2(0, 0)
-	if isInteracting == false:
+	if canMove:
 		direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-
-	# Movement input
-	if direction != Vector2(0, 0):
 		velocity = direction * move_speed
 
-		# Set the facing direction for animation
-		if direction.x > 0:
-			facingDir = "right"
-			$AnimationPlayer.play("walk_right")
-		elif direction.x < 0:
-			facingDir = "left"
-			$AnimationPlayer.play("walk_left")
-		elif direction.y > 0:
-			facingDir = "down"
-			$AnimationPlayer.play("walk_down")
-		elif direction.y < 0:
-			facingDir = "up"
-			$AnimationPlayer.play("walk_up")
-	else:
-		# If no movement input, set velocity to zero
-		velocity = Vector2(0, 0)
-
-	# Handle interaction
-	if Input.is_action_just_pressed("ui_accept") and !isInteracting:
-		isInteracting = true
-		
-		# Play the attack animation based on facing direction
-		if facingDir == "right":
-			$AnimationPlayer.play("swing_right")
-		if facingDir == "left":
-			$AnimationPlayer.play("swing_left")
-		if facingDir == "down":
-			$AnimationPlayer.play("swing_down")
-		if facingDir == "up":
-			$AnimationPlayer.play("swing_up")
-
-	# If not interacting and no movement input, play the idle animation
-	if direction == Vector2(0, 0) and !isInteracting:
-		$AnimationPlayer.play("idle")
-
+	update_animation_parameters()
 	move_and_slide()
 
-func _on_animation_player_animation_finished(animFinish):
-	if animFinish == "swing_left" or "swing_right" or "swing_down" or "swing_up":
+func update_animation_parameters():
+	if velocity == Vector2.ZERO:
+		animationTree["parameters/conditions/idle"] = true
+		animationTree["parameters/conditions/is_moving"] = false
+	else:
+		animationTree["parameters/conditions/idle"] = false
+		animationTree["parameters/conditions/is_moving"] = true
+
+	if Input.is_action_just_pressed("ui_accept"):
+		if not isInteracting:
+			isInteracting = true
+			canMove = false
+			animationTree["parameters/conditions/swing"] = true
+
+	if direction != Vector2.ZERO:
+		animationTree["parameters/Idle/blend_position"] = direction
+		animationTree["parameters/Walk/blend_position"] = direction
+		animationTree["parameters/Swing/blend_position"] = direction
+#
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "Swing":
+		print("This is working")
 		isInteracting = false
+		canMove = true
+		animationTree["parameters/conditions/swing"] = false
+		animationTree["parameters/conditions/idle"] = true
+
+
+func _on_animation_tree_animation_finished(anim_name):
+	if anim_name == "Swing":
+		print("This is working")
+		isInteracting = false
+		canMove = true
+		animationTree["parameters/conditions/swing"] = false
+		animationTree["parameters/conditions/idle"] = true
