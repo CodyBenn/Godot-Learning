@@ -54,14 +54,7 @@ func _physics_process(delta):
 
 	# If not interacting and no movement input, play the idle animation
 	if direction == Vector2(0, 0) and !isInteracting:
-		if facingDir == "right":
-			$AnimationPlayer.play("idle_right")
-		if facingDir == "left":
-			$AnimationPlayer.play("idle_left")
-		if facingDir == "down":
-			$AnimationPlayer.play("idle_down")
-		if facingDir == "up":
-			$AnimationPlayer.play("idle_up")
+		$AnimationPlayer.play("idle")
 
 	move_and_slide()
 
