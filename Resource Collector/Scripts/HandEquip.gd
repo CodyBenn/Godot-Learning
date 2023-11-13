@@ -1,6 +1,7 @@
 extends Sprite2D
 
-@export var equippedItem : Resource
+@export var equippedItem : EquippableItem
+
 var correctEquip
 var pickaxe
 var woodAxe

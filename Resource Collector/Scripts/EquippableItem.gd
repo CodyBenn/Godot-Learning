@@ -1,5 +1,4 @@
 extends Resource
-
 class_name EquippableItem
 
 @export var display_name : String

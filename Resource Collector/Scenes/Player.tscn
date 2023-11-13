@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://bwxrcscfhax35"]
+[gd_scene load_steps=22 format=3 uid="uid://bwxrcscfhax35"]
 
 [ext_resource type="Script" path="res://Scripts/Player2.gd" id="1_aqa5d"]
 [ext_resource type="Texture2D" uid="uid://dnhd1mofbxt3x" path="res://Assets/Characters/Basic Charakter Spritesheet.png" id="1_yhncl"]
 [ext_resource type="Texture2D" uid="uid://5vdjdg70a4o5" path="res://Assets/Characters/Tools.png" id="2_ynvyg"]
 [ext_resource type="Script" path="res://Scripts/HandEquip.gd" id="3_becka"]
+[ext_resource type="Resource" uid="uid://ccalvtfbq73ey" path="res://Items/AxeEquip.tres" id="5_r3ohd"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w64w4"]
 radius = 5.0
@@ -1387,6 +1388,7 @@ hframes = 6
 vframes = 6
 frame = 21
 script = ExtResource("3_becka")
+equippedItem = ExtResource("5_r3ohd")
 
 [node name="Area2D" type="Area2D" parent="HandEquip"]
 position = Vector2(10.3443, -2.69118)
