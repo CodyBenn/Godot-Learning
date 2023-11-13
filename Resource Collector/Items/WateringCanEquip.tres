@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="EquippableItem" load_steps=3 format=3 uid="uid://b36re1jgs2ydf"]
 
 [ext_resource type="Script" path="res://Scripts/EquippableItem.gd" id="1_ioott"]
-[ext_resource type="Texture2D" uid="uid://n71naggj1y" path="res://Assets/Characters/WaterCan.png" id="2_1ythv"]
+[ext_resource type="Texture2D" uid="uid://wkviop30gixk" path="res://Assets/Characters/WaterCan-export.png" id="2_vs84w"]
 
 [resource]
 script = ExtResource("1_ioott")
 display_name = "WateringCan"
-texture = ExtResource("2_1ythv")
+texture = ExtResource("2_vs84w")

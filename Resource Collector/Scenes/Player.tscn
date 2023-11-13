@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/Player2.gd" id="1_aqa5d"]
 [ext_resource type="Texture2D" uid="uid://dnhd1mofbxt3x" path="res://Assets/Characters/Basic Charakter Spritesheet.png" id="1_yhncl"]
-[ext_resource type="Texture2D" uid="uid://5vdjdg70a4o5" path="res://Assets/Characters/Tools.png" id="2_ynvyg"]
 [ext_resource type="Script" path="res://Scripts/HandEquip.gd" id="3_becka"]
-[ext_resource type="Resource" uid="uid://ccalvtfbq73ey" path="res://Items/AxeEquip.tres" id="5_r3ohd"]
+[ext_resource type="Texture2D" uid="uid://wkviop30gixk" path="res://Assets/Characters/WaterCan-export.png" id="3_l0cte"]
+[ext_resource type="Resource" uid="uid://b36re1jgs2ydf" path="res://Items/WateringCanEquip.tres" id="5_h1g6q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w64w4"]
 radius = 5.0
@@ -229,26 +229,26 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Body:frame")
+tracks/1/path = NodePath("Body:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [8, 9]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Body:texture")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("1_yhncl")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [8, 9]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -505,26 +505,26 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Body:frame")
+tracks/1/path = NodePath("Body:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Body:texture")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("1_yhncl")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -545,10 +545,10 @@ tracks/4/path = NodePath("HandEquip:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(6, 0), Vector2(4, -4), Vector2(11, 11)]
+"values": [Vector2(6, 0), Vector2(4, -4), Vector2(11, 11), Vector2(11, 11)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -617,26 +617,26 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Body:frame")
+tracks/1/path = NodePath("Body:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [8, 9]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Body:texture")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("1_yhncl")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [8, 9]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -729,26 +729,26 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Body:frame")
+tracks/1/path = NodePath("Body:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [12, 13]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Body:texture")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("1_yhncl")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [12, 13]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -841,26 +841,26 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Body:frame")
+tracks/1/path = NodePath("Body:texture")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [4, 5]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Body:texture")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("1_yhncl")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 5]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -997,7 +997,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(6, 5.96046e-08), Vector2(6, 1), Vector2(7, -1.19209e-07), Vector2(7, -1)]
+"values": [Vector2(7, 4), Vector2(7, 5), Vector2(7, 3), Vector2(7, 2)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1039,6 +1039,7 @@ tracks/7/keys = {
 [sub_resource type="Animation" id="Animation_fxk75"]
 resource_name = "walk_left"
 length = 0.80001
+loop_mode = 1
 step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1098,7 +1099,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.1974, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(-2, 2), Vector2(-2, 2), Vector2(5.96046e-08, 1), Vector2(-5.96046e-08, 2), Vector2(-2, 1)]
+"values": [Vector2(-1.19209e-07, 4), Vector2(-2, 2), Vector2(1, 4), Vector2(-1, 4), Vector2(-3, 4)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1140,6 +1141,7 @@ tracks/7/keys = {
 [sub_resource type="Animation" id="Animation_uj6oj"]
 resource_name = "walk_right"
 length = 0.8
+loop_mode = 1
 step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1199,7 +1201,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(2, -5.96046e-08), Vector2(3, -3.55271e-15), Vector2(0.999999, 0), Vector2(-9.53674e-07, -5.96046e-08)]
+"values": [Vector2(2, 4), Vector2(5, 3), Vector2(2, 4), Vector2(3, 4)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1241,6 +1243,7 @@ tracks/7/keys = {
 [sub_resource type="Animation" id="Animation_8tlik"]
 resource_name = "walk_up"
 length = 0.8
+loop_mode = 1
 step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1300,7 +1303,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(-6, 8), Vector2(-4, 7), Vector2(-6, 9), Vector2(-6, 11)]
+"values": [Vector2(-7, 5), Vector2(-7, 3), Vector2(-7, 5), Vector2(-7, 7)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1383,12 +1386,9 @@ visible = false
 show_behind_parent = true
 position = Vector2(5, 0)
 scale = Vector2(-1, 1)
-texture = ExtResource("2_ynvyg")
-hframes = 6
-vframes = 6
-frame = 21
+texture = ExtResource("3_l0cte")
 script = ExtResource("3_becka")
-equippedItem = ExtResource("5_r3ohd")
+equippedItem = ExtResource("5_h1g6q")
 
 [node name="Area2D" type="Area2D" parent="HandEquip"]
 position = Vector2(10.3443, -2.69118)
