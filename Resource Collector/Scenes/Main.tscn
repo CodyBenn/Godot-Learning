@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://sapag2hulgil" path="res://Assets/Objects/Free_Chicken_House.png" id="10_y5g6h"]
 [ext_resource type="Texture2D" uid="uid://um8xmm2nl6ty" path="res://Assets/Objects/Chest.png" id="11_771gj"]
 [ext_resource type="Texture2D" uid="uid://dl8jt3i1hw87s" path="res://Assets/Tilesets/Fences.png" id="12_0pkjp"]
-[ext_resource type="PackedScene" uid="uid://mmxee262hgjs" path="res://Scenes/Player.tscn" id="13_ykm0t"]
+[ext_resource type="PackedScene" uid="uid://bwxrcscfhax35" path="res://Scenes/Player.tscn" id="13_ykm0t"]
 [ext_resource type="PackedScene" uid="uid://kxptyql1n81k" path="res://Scenes/WoodResource.tscn" id="14_ke8uy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ecc48"]
