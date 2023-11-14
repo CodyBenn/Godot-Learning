@@ -5,7 +5,10 @@ extends Sprite2D
 	set(nextEquipped):
 		equippedItem = nextEquipped
 		self.texture = equippedItem.texture
+		sprite_2d.texture = nextEquipped.texture
 		
+@export var sprite_2d : Sprite2D
+
 var pickaxe
 var woodAxe
 var waterCan
