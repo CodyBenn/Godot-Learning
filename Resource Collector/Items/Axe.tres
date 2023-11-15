@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HarvestTool" load_steps=4 format=3 uid="uid://cgibsu3xyh2nn"]
+
+[ext_resource type="Script" path="res://Items/HarvestingTool.gd" id="1_r8tkg"]
+[ext_resource type="Resource" uid="uid://rgl4a0bjaku2" path="res://Assets/Resources/BaseWoodLog.tres" id="1_yjkea"]
+[ext_resource type="Texture2D" uid="uid://boduv533wh2b0" path="res://Assets/Characters/Axe-export.png" id="2_eqsdy"]
+
+[resource]
+script = ExtResource("1_r8tkg")
+effected_types = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([ExtResource("1_yjkea")])
+min_damage = null
+max_damage = null
+display_name = "Axe"
+texture = ExtResource("2_eqsdy")

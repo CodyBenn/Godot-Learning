@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dnhd1mofbxt3x" path="res://Assets/Characters/Basic Charakter Spritesheet.png" id="1_yhncl"]
 [ext_resource type="Script" path="res://Scripts/HandEquip.gd" id="3_becka"]
 [ext_resource type="Texture2D" uid="uid://boduv533wh2b0" path="res://Assets/Characters/Axe-export.png" id="3_k0tqs"]
-[ext_resource type="Resource" uid="uid://ccalvtfbq73ey" path="res://Items/AxeEquip.tres" id="5_yjmfg"]
+[ext_resource type="Resource" uid="uid://cgibsu3xyh2nn" path="res://Items/Axe.tres" id="5_63rnu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w64w4"]
 radius = 5.0
@@ -548,7 +548,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(6, 0), Vector2(4, -4), Vector2(11, 11), Vector2(11, 11)]
+"values": [Vector2(6, 0), Vector2(4, -4), Vector2(4, 12), Vector2(11, 11)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -593,9 +593,9 @@ tracks/8/path = NodePath("HandEquip/Area2D/EquipCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
+"update": 1,
 "values": [true, false]
 }
 
@@ -657,10 +657,10 @@ tracks/4/path = NodePath("HandEquip:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-3, 0), Vector2(6, -7), Vector2(-10, -6)]
+"values": [Vector2(-3, 0), Vector2(6, -7), Vector2(-12, 2), Vector2(-12, -2)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -705,9 +705,9 @@ tracks/8/path = NodePath("HandEquip/Area2D/EquipCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
+"update": 1,
 "values": [true, false]
 }
 
@@ -769,10 +769,10 @@ tracks/4/path = NodePath("HandEquip:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(3, 0), Vector2(-6, -7), Vector2(10, -6)]
+"values": [Vector2(3, 0), Vector2(-6, -7), Vector2(12, 2), Vector2(12, -4)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -817,9 +817,9 @@ tracks/8/path = NodePath("HandEquip/Area2D/EquipCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
+"update": 1,
 "values": [true, false]
 }
 
@@ -881,10 +881,10 @@ tracks/4/path = NodePath("HandEquip:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-7, 8), Vector2(-9, 9), Vector2(-9.10585, -7.99999)]
+"values": [Vector2(-7, 8), Vector2(-9, 9), Vector2(-3, -8), Vector2(-7, -6)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -929,9 +929,9 @@ tracks/8/path = NodePath("HandEquip/Area2D/EquipCollider:disabled")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
-"update": 0,
+"update": 1,
 "values": [true, false]
 }
 
@@ -1360,7 +1360,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_txv1b"]
-size = Vector2(5.63934, 4.41177)
+size = Vector2(6.80396, 6.01086)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
@@ -1388,14 +1388,15 @@ position = Vector2(5, 0)
 scale = Vector2(-1, 1)
 texture = ExtResource("3_k0tqs")
 script = ExtResource("3_becka")
-equippedItem = ExtResource("5_yjmfg")
+equipped_item = ExtResource("5_63rnu")
 
 [node name="Area2D" type="Area2D" parent="HandEquip"]
 position = Vector2(10.3443, -2.69118)
 scale = Vector2(1.525, 1.7)
 
 [node name="EquipCollider" type="CollisionShape2D" parent="HandEquip/Area2D"]
-position = Vector2(-3.04544, 5.25952)
+position = Vector2(-5.81859, 2.83274)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_txv1b")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

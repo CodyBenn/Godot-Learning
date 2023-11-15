@@ -4,11 +4,12 @@ extends CharacterBody2D
 var isInteracting : bool
 var facingDir = "none"
 
-@onready var equipCollider = $HandEquip/EquipSprite/Area2D/EquipCollider
-@onready var animationTree = $AnimationTree
+@onready var equipCollider = $HandEquip/Area2D/EquipCollider
+@onready var animationTree = $AnimationPlayer
 
 func _ready():
-	pass
+	$AnimationPlayer.play("idle_down")
+	facingDir = "down"
 
 func _physics_process(delta):
 
