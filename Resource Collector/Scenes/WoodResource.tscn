@@ -1,17 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://kxptyql1n81k"]
+[gd_scene load_steps=5 format=3 uid="uid://kxptyql1n81k"]
 
 [ext_resource type="Script" path="res://Scripts/Resource.gd" id="1_1owsj"]
 [ext_resource type="Texture2D" uid="uid://c0sgn4enfdcag" path="res://Assets/Objects/Basic Grass Biom things 1.png" id="1_4di56"]
+[ext_resource type="Resource" uid="uid://rgl4a0bjaku2" path="res://Assets/Resources/BaseWoodLog.tres" id="2_1e3pr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hqle"]
 size = Vector2(16, 7)
 
-[node name="Resource" type="Node2D" groups=["Resource"]]
-script = ExtResource("1_1owsj")
-woodAmount = 5
+[node name="Resource" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Resource"]]
 show_behind_parent = true
+script = ExtResource("1_1owsj")
+resourceType = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([ExtResource("2_1e3pr")])
 
 [node name="Collider" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 1)

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=2 format=3 uid="uid://rgl4a0bjaku2"]
+
+[ext_resource type="Script" path="res://Assets/Resources/ResourceNodeType.gd" id="1_kpbtc"]
+
+[resource]
+script = ExtResource("1_kpbtc")
+display_name = "BaseWoodLog"
