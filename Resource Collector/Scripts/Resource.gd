@@ -7,7 +7,7 @@ class_name ResourceNode
 @export var stoneAmount : int
 @export var dirtAmount : int
 var currentResourceAmount : int 
-
+	
 func _ready():
 	currentResourceAmount = resourceAmount
 	
