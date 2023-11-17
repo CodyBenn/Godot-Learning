@@ -5,6 +5,9 @@ class_name HarvestTool
 @export var min_damage : int = 1
 @export var max_damage : int = 1
 
+#if the body interacts with resource node that matches effected type
+#set for this tool, then resource node will harvest between min/max damage
+
 func interact_with_body(body):
 	if(body is ResourceNode):
 		for type in effected_types:
