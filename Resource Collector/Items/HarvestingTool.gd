@@ -9,7 +9,5 @@ func interact_with_body(body):
 	if(body is ResourceNode):
 		for type in effected_types:
 			if(body.resourceType.has(type)) :
-				print("HarvestingTool.gd match found at type " + type.display_name + " on " + body.name)
-				
-func harvest (resource_node):
-	pass
+				print_debug("HarvestingTool.gd match found at type " + type.display_name + " on " + body.name)
+				body.harvest(randi_range(min_damage, max_damage))
