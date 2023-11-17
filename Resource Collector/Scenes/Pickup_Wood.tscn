@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_opg5b"]
 radius = 7.0
 
-[node name="Pickup_Wood" type="StaticBody2D"]
+[node name="Pickup_Wood" type="Area2D"]
 script = ExtResource("1_lh0f6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

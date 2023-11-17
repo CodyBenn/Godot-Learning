@@ -14,7 +14,7 @@ size = Vector2(16, 7)
 show_behind_parent = true
 script = ExtResource("1_al4a8")
 resourceType = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([ExtResource("2_fol46")])
-resourceAmount = 2
+resourceAmount = 5
 pickupType = ExtResource("3_xgi34")
 
 [node name="Collider" type="CollisionShape2D" parent="StaticBody2D"]
