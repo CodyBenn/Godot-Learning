@@ -13,6 +13,7 @@ size = Vector2(16, 7)
 show_behind_parent = true
 script = ExtResource("1_al4a8")
 resourceType = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([ExtResource("2_1e3pr")])
+resourceAmount = 2
 
 [node name="Collider" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 1)
