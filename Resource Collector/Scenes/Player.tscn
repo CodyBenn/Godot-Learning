@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=3 uid="uid://bwxrcscfhax35"]
+[gd_scene load_steps=23 format=3 uid="uid://bwxrcscfhax35"]
 
 [ext_resource type="Script" path="res://Scripts/Player2.gd" id="1_aqa5d"]
 [ext_resource type="Texture2D" uid="uid://dnhd1mofbxt3x" path="res://Assets/Characters/Basic Charakter Spritesheet.png" id="1_yhncl"]
 [ext_resource type="Script" path="res://Scripts/HandEquip.gd" id="3_becka"]
 [ext_resource type="Texture2D" uid="uid://boduv533wh2b0" path="res://Assets/Characters/Axe-export.png" id="3_k0tqs"]
 [ext_resource type="Resource" uid="uid://cgibsu3xyh2nn" path="res://Items/Axe.tres" id="5_63rnu"]
+[ext_resource type="Script" path="res://Scripts/Inventory.gd" id="6_xb7da"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w64w4"]
 radius = 5.0
@@ -1397,6 +1398,9 @@ scale = Vector2(1.525, 1.7)
 [node name="EquipCollider" type="CollisionShape2D" parent="HandEquip/Area2D"]
 position = Vector2(-5.81859, 2.83274)
 shape = SubResource("RectangleShape2D_txv1b")
+
+[node name="Inventory" type="Node" parent="."]
+script = ExtResource("6_xb7da")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="HandEquip/Area2D" to="HandEquip" method="_on_area_2d_body_entered"]
