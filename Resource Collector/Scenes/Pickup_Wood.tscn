@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dx6ecotu2qvxx"]
+[gd_scene load_steps=5 format=3 uid="uid://dx6ecotu2qvxx"]
 
 [ext_resource type="Script" path="res://Scripts/Pickup.gd" id="1_lh0f6"]
 [ext_resource type="Texture2D" uid="uid://clrcf8y0ekv82" path="res://Assets/Objects/Basic tools and meterials.png" id="2_4eahi"]
+[ext_resource type="Resource" uid="uid://cjn5i775c554i" path="res://Items/Resources/Resource_Wood.tres" id="2_n3ueg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_opg5b"]
 radius = 7.0
 
 [node name="Pickup_Wood" type="Area2D"]
 script = ExtResource("1_lh0f6")
+resource_type = ExtResource("2_n3ueg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_4eahi")
