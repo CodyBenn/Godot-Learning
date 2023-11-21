@@ -1363,7 +1363,7 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_txv1b"]
 size = Vector2(6.80396, 6.01086)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 1
 script = ExtResource("1_aqa5d")
 move_speed = 80.0
