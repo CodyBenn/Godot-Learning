@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cnb4h2vjpwl74"]
+[gd_scene load_steps=31 format=3 uid="uid://cnb4h2vjpwl74"]
 
 [ext_resource type="PackedScene" uid="uid://cc7wfy3rrnhrh" path="res://UI/ResourceDisplay.tscn" id="1_8ykvg"]
 [ext_resource type="Texture2D" uid="uid://c0sgn4enfdcag" path="res://Assets/Objects/Basic Grass Biom things 1.png" id="1_bhqln"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dl8jt3i1hw87s" path="res://Assets/Tilesets/Fences.png" id="12_0pkjp"]
 [ext_resource type="PackedScene" uid="uid://bwxrcscfhax35" path="res://Scenes/Player.tscn" id="13_ykm0t"]
 [ext_resource type="PackedScene" uid="uid://kxptyql1n81k" path="res://Scenes/WoodResource.tscn" id="14_ke8uy"]
+[ext_resource type="PackedScene" uid="uid://b367ccwt4muuh" path="res://Scenes/Pickup_Rock.tscn" id="15_rnnwm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ecc48"]
 texture = ExtResource("1_bhqln")
@@ -1320,6 +1321,15 @@ position = Vector2(101, -91)
 
 [node name="Resource4" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
 position = Vector2(101, -119)
+
+[node name="Pickup_Rock" parent="ResourcesNode" instance=ExtResource("15_rnnwm")]
+position = Vector2(16, -50)
+
+[node name="Pickup_Rock2" parent="ResourcesNode" instance=ExtResource("15_rnnwm")]
+position = Vector2(40, -26)
+
+[node name="Pickup_Rock3" parent="ResourcesNode" instance=ExtResource("15_rnnwm")]
+position = Vector2(16, -27)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
