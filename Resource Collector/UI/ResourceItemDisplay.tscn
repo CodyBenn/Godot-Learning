@@ -1,17 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://b18sqtvlnokg2"]
 
 [ext_resource type="Script" path="res://UI/ResourceItemDisplay.gd" id="1_n2u1s"]
-[ext_resource type="Texture2D" uid="uid://r7shtw63lf3u" path="res://Assets/Objects/WoodPickup.png" id="2_n1sfl"]
+[ext_resource type="Texture2D" uid="uid://dh5vxyiuv12ee" path="res://Assets/Objects/RockPickup.png" id="2_kssld"]
 
 [node name="ResourceItemDisplay" type="HBoxContainer"]
 script = ExtResource("1_n2u1s")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
-texture = ExtResource("2_n1sfl")
+texture = ExtResource("2_kssld")
 expand_mode = 3
 stretch_mode = 4
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
-text = "x 0"
