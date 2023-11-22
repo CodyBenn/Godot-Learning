@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="ResourceItem" load_steps=3 format=3 uid="uid://d324ymhnbp1vc"]
 
 [ext_resource type="Script" path="res://Items/Resources/resource_item.gd" id="1_3usrq"]
-[ext_resource type="Texture2D" uid="uid://dh5vxyiuv12ee" path="res://Assets/Objects/RockPickup.png" id="2_4ef7o"]
+[ext_resource type="Texture2D" uid="uid://dldh1b56f6vgu" path="res://Assets/Objects/RockPickup-export.png" id="2_151hh"]
 
 [resource]
 script = ExtResource("1_3usrq")
 display_name = "Stone"
-texture = ExtResource("2_4ef7o")
+texture = ExtResource("2_151hh")

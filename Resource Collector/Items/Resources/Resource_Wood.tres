@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="ResourceItem" load_steps=3 format=3 uid="uid://cjn5i775c554i"]
 
 [ext_resource type="Script" path="res://Items/Resources/resource_item.gd" id="1_oxheq"]
-[ext_resource type="Texture2D" uid="uid://r7shtw63lf3u" path="res://Assets/Objects/WoodPickup.png" id="2_tkc6l"]
+[ext_resource type="Texture2D" uid="uid://b1roefy7278nk" path="res://Assets/Objects/WoodPickup-export.png" id="2_fke3w"]
 
 [resource]
 script = ExtResource("1_oxheq")
 display_name = "Wood"
-texture = ExtResource("2_tkc6l")
+texture = ExtResource("2_fke3w")

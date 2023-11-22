@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dh5vxyiuv12ee" path="res://Assets/Objects/RockPickup.png" id="2_kssld"]
 
 [node name="ResourceItemDisplay" type="HBoxContainer"]
+theme_override_constants/separation = 2
 script = ExtResource("1_n2u1s")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -14,3 +15,9 @@ stretch_mode = 4
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1
