@@ -3,15 +3,16 @@
 [ext_resource type="Script" path="res://UI/ResourceDisplay.gd" id="1_kq2gi"]
 [ext_resource type="PackedScene" uid="uid://b18sqtvlnokg2" path="res://UI/ResourceItemDisplay.tscn" id="2_85u02"]
 
-[node name="ResourceDisplay" type="GridContainer"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="ResourceDisplay" type="MarginContainer"]
+offset_right = 73.0
+offset_bottom = 46.0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
 script = ExtResource("1_kq2gi")
 item_display_template = ExtResource("2_85u02")
 
-[node name="DisplayContainer" type="MarginContainer" parent="."]
+[node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+columns = 5

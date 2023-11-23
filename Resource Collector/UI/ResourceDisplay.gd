@@ -1,7 +1,7 @@
-extends GridContainer
+extends MarginContainer
 
 @export var item_display_template : PackedScene
-@onready var display_container : MarginContainer = $DisplayContainer
+@onready var grid_container : GridContainer = $GridContainer
 
 var displays : Array[ResourceItemDisplay]
 var player_inventory : Inventory
@@ -26,7 +26,7 @@ func _on_player_inventory_resource_changed(type : ResourceItem, new_count : int)
 	#if none exists, create a new one
 	if(current_display == null):
 		var new_display : ResourceItemDisplay = item_display_template.instantiate() as ResourceItemDisplay
-		display_container.add_child(new_display)
+		grid_container.add_child(new_display)
 		new_display.resource_type = type
 		new_display.update_count(new_count)
 		displays.append(new_display)
