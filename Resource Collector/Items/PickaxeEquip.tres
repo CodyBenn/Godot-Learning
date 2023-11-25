@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EquippableItem" load_steps=3 format=3 uid="uid://bfoaa6mw8no57"]
+
+[ext_resource type="Script" path="res://Scripts/EquippableItem.gd" id="1_4aulu"]
+[ext_resource type="Texture2D" uid="uid://x8dkdeiaqbjn" path="res://Assets/Characters/Hoe-export.png" id="2_payh4"]
+
+[resource]
+script = ExtResource("1_4aulu")
+display_name = "Hoe"
+texture = ExtResource("2_payh4")

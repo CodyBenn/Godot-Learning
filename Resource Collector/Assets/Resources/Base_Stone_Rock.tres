@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ResourceNodeType" load_steps=2 format=3 uid="uid://doucrbm8ps5ia"]
+
+[ext_resource type="Script" path="res://Assets/Resources/ResourceNodeType.gd" id="1_ub8ao"]
+
+[resource]
+script = ExtResource("1_ub8ao")
+display_name = "Base_Stone_Rock"
