@@ -1310,16 +1310,16 @@ drag_bottom_margin = 0.1
 
 [node name="ResourcesNode" type="Node" parent="."]
 
-[node name="Resource" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+[node name="Wood_Log" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
 position = Vector2(127, -107)
 
-[node name="Resource2" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+[node name="Wood_Log2" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
 position = Vector2(71, -105)
 
-[node name="Resource3" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+[node name="Wood_Log3" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
 position = Vector2(101, -91)
 
-[node name="Resource4" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+[node name="Wood_Log4" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
 position = Vector2(101, -119)
 
 [node name="Pickup_Rock" parent="ResourcesNode" instance=ExtResource("15_rnnwm")]

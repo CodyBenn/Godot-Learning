@@ -8,20 +8,18 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hqle"]
 size = Vector2(16, 7)
 
-[node name="Resource" type="Node2D"]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Resource"]]
+[node name="Wood_Log" type="StaticBody2D" groups=["Resource"]]
 show_behind_parent = true
 script = ExtResource("1_al4a8")
 resourceType = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([ExtResource("2_fol46")])
 resourceAmount = 5
 pickupType = ExtResource("3_xgi34")
 
-[node name="Collider" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_3hqle")
 
-[node name="Sprite" type="Sprite2D" parent="StaticBody2D"]
+[node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_4di56")
 hframes = 9
 vframes = 5
