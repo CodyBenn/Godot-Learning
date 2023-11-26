@@ -14,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://um8xmm2nl6ty" path="res://Assets/Objects/Chest.png" id="11_771gj"]
 [ext_resource type="Texture2D" uid="uid://dl8jt3i1hw87s" path="res://Assets/Tilesets/Fences.png" id="12_0pkjp"]
 [ext_resource type="PackedScene" uid="uid://bwxrcscfhax35" path="res://Scenes/Player.tscn" id="13_ykm0t"]
-[ext_resource type="PackedScene" uid="uid://kxptyql1n81k" path="res://Scenes/WoodResource.tscn" id="14_ke8uy"]
-[ext_resource type="PackedScene" uid="uid://b367ccwt4muuh" path="res://Scenes/Pickup_Rock.tscn" id="15_rnnwm"]
+[ext_resource type="PackedScene" uid="uid://kxptyql1n81k" path="res://Scenes/Wood_Resource.tscn" id="14_ke8uy"]
+[ext_resource type="PackedScene" uid="uid://xthsi6ulrfvw" path="res://Scenes/Rock_Resource.tscn" id="15_lyp2j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ecc48"]
 texture = ExtResource("1_bhqln")
@@ -1310,26 +1310,29 @@ drag_bottom_margin = 0.1
 
 [node name="ResourcesNode" type="Node" parent="."]
 
-[node name="Resource" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+[node name="Wood_Log" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
 position = Vector2(127, -107)
 
-[node name="Resource2" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+[node name="Wood_Log2" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
 position = Vector2(71, -105)
 
-[node name="Resource3" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+[node name="Wood_Log3" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
 position = Vector2(101, -91)
 
-[node name="Resource4" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+[node name="Wood_Log4" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
 position = Vector2(101, -119)
 
-[node name="Pickup_Rock" parent="ResourcesNode" instance=ExtResource("15_rnnwm")]
-position = Vector2(16, -50)
+[node name="Stone_Rock" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(17, -38)
 
-[node name="Pickup_Rock2" parent="ResourcesNode" instance=ExtResource("15_rnnwm")]
-position = Vector2(40, -26)
+[node name="Stone_Rock2" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(17, -23)
 
-[node name="Pickup_Rock3" parent="ResourcesNode" instance=ExtResource("15_rnnwm")]
-position = Vector2(16, -27)
+[node name="Stone_Rock3" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(40, -23)
+
+[node name="Stone_Rock4" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(40, -38)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
