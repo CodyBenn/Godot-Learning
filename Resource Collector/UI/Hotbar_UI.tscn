@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdbcmgjpvfa73"]
+
+[ext_resource type="Script" path="res://UI/Hotbar_UI.gd" id="1_5idjk"]
+[ext_resource type="Texture2D" uid="uid://boduv533wh2b0" path="res://Assets/Characters/Axe-export.png" id="1_xmqh3"]
+[ext_resource type="Texture2D" uid="uid://x8dkdeiaqbjn" path="res://Assets/Characters/Hoe-export.png" id="2_lly6p"]
+[ext_resource type="Texture2D" uid="uid://wkviop30gixk" path="res://Assets/Characters/WaterCan-export.png" id="3_ak56f"]
+[ext_resource type="Script" path="res://UI/ItemButton.gd" id="3_dkyl7"]
+
+[node name="Hotbar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5idjk")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_top = 6.0
+offset_right = 40.0
+offset_bottom = 30.0
+grow_horizontal = 2
+columns = 10
+
+[node name="ItemButton" type="Button" parent="GridContainer"]
+layout_mode = 2
+icon = ExtResource("1_xmqh3")
+script = ExtResource("3_dkyl7")
+
+[node name="ItemButton2" type="Button" parent="GridContainer"]
+layout_mode = 2
+icon = ExtResource("2_lly6p")
+
+[node name="ItemButton3" type="Button" parent="GridContainer"]
+layout_mode = 2
+icon = ExtResource("3_ak56f")
