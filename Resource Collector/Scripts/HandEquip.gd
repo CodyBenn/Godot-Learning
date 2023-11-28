@@ -1,7 +1,8 @@
 @tool
 extends Sprite2D
+class_name HandEquip
 
-@export var equipped_item : EquippableItem :
+@export var equipped_item : EquipableItem :
 	set(next_equipped):
 		equipped_item = next_equipped
 		self.texture = equipped_item.texture
