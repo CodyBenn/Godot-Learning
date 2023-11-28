@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="EquippableItem" load_steps=3 format=3 uid="uid://b36re1jgs2ydf"]
 
-[ext_resource type="Script" path="res://Scripts/EquippableItem.gd" id="1_ioott"]
+[ext_resource type="Script" path="res://Items/Resources/EquippableItem.gd" id="1_ioott"]
 [ext_resource type="Texture2D" uid="uid://wkviop30gixk" path="res://Assets/Characters/WaterCan-export.png" id="2_vs84w"]
 
 [resource]

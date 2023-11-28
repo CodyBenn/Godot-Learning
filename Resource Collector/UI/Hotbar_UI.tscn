@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdbcmgjpvfa73"]
+[gd_scene load_steps=8 format=3 uid="uid://cdbcmgjpvfa73"]
 
-[ext_resource type="Script" path="res://UI/Hotbar_UI.gd" id="1_5idjk"]
-[ext_resource type="Texture2D" uid="uid://boduv533wh2b0" path="res://Assets/Characters/Axe-export.png" id="1_xmqh3"]
+[ext_resource type="Script" path="res://UI/HotbarUI.gd" id="1_wvv7g"]
 [ext_resource type="Texture2D" uid="uid://x8dkdeiaqbjn" path="res://Assets/Characters/Hoe-export.png" id="2_lly6p"]
+[ext_resource type="PackedScene" uid="uid://nmcyn6q6koad" path="res://UI/Item_Button.tscn" id="2_xk8pw"]
 [ext_resource type="Texture2D" uid="uid://wkviop30gixk" path="res://Assets/Characters/WaterCan-export.png" id="3_ak56f"]
-[ext_resource type="Script" path="res://UI/ItemButton.gd" id="3_dkyl7"]
+[ext_resource type="Resource" uid="uid://ccalvtfbq73ey" path="res://Items/AxeEquip.tres" id="3_fk076"]
+[ext_resource type="Resource" uid="uid://bfoaa6mw8no57" path="res://Items/PickaxeEquip.tres" id="5_8qrj0"]
+[ext_resource type="Resource" uid="uid://b36re1jgs2ydf" path="res://Items/WateringCanEquip.tres" id="7_frfqw"]
 
 [node name="Hotbar" type="Control"]
 layout_mode = 3
@@ -13,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_5idjk")
+script = ExtResource("1_wvv7g")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
@@ -27,15 +29,16 @@ offset_bottom = 30.0
 grow_horizontal = 2
 columns = 10
 
-[node name="ItemButton" type="Button" parent="GridContainer"]
+[node name="ItemButton" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
-icon = ExtResource("1_xmqh3")
-script = ExtResource("3_dkyl7")
+item = ExtResource("3_fk076")
 
-[node name="ItemButton2" type="Button" parent="GridContainer"]
+[node name="ItemButton2" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
 icon = ExtResource("2_lly6p")
+item = ExtResource("5_8qrj0")
 
-[node name="ItemButton3" type="Button" parent="GridContainer"]
+[node name="ItemButton3" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
 icon = ExtResource("3_ak56f")
+item = ExtResource("7_frfqw")
