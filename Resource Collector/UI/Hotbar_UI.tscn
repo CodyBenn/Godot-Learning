@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://UI/HotbarUI.gd" id="1_wvv7g"]
 [ext_resource type="Texture2D" uid="uid://x8dkdeiaqbjn" path="res://Assets/Characters/Hoe-export.png" id="2_lly6p"]
 [ext_resource type="PackedScene" uid="uid://nmcyn6q6koad" path="res://UI/Item_Button.tscn" id="2_xk8pw"]
-[ext_resource type="Resource" uid="uid://ccalvtfbq73ey" path="res://Items/EquipableItems/AxeEquip.tres" id="3_7hpcm"]
 [ext_resource type="Texture2D" uid="uid://wkviop30gixk" path="res://Assets/Characters/WaterCan-export.png" id="3_ak56f"]
-[ext_resource type="Resource" uid="uid://bfoaa6mw8no57" path="res://Items/EquipableItems/PickaxeEquip.tres" id="5_o6833"]
-[ext_resource type="Resource" uid="uid://b36re1jgs2ydf" path="res://Items/EquipableItems/WateringCanEquip.tres" id="7_q3hne"]
+[ext_resource type="Resource" uid="uid://cgibsu3xyh2nn" path="res://Items/Axe.tres" id="3_u7jpt"]
+[ext_resource type="Resource" uid="uid://cuxnocsm238ck" path="res://Items/Pickaxe.tres" id="5_0gnx5"]
+[ext_resource type="Resource" uid="uid://dh76ulsr24176" path="res://Items/WateringCan.tres" id="7_a3x0x"]
 
 [node name="Hotbar" type="Control" groups=["Player"]]
 layout_mode = 3
@@ -31,14 +31,15 @@ columns = 10
 
 [node name="ItemButton" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
-item = ExtResource("3_7hpcm")
+focus_mode = 0
+item = ExtResource("3_u7jpt")
 
 [node name="ItemButton2" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
 icon = ExtResource("2_lly6p")
-item = ExtResource("5_o6833")
+item = ExtResource("5_0gnx5")
 
 [node name="ItemButton3" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
 icon = ExtResource("3_ak56f")
-item = ExtResource("7_q3hne")
+item = ExtResource("7_a3x0x")

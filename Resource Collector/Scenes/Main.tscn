@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cnb4h2vjpwl74"]
+[gd_scene load_steps=32 format=3 uid="uid://cnb4h2vjpwl74"]
 
 [ext_resource type="PackedScene" uid="uid://cc7wfy3rrnhrh" path="res://UI/ResourceDisplay.tscn" id="1_8ykvg"]
 [ext_resource type="Texture2D" uid="uid://c0sgn4enfdcag" path="res://Assets/Objects/Basic Grass Biom things 1.png" id="1_bhqln"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bwxrcscfhax35" path="res://Scenes/Player.tscn" id="13_ykm0t"]
 [ext_resource type="PackedScene" uid="uid://kxptyql1n81k" path="res://Scenes/Wood_Resource.tscn" id="14_ke8uy"]
 [ext_resource type="PackedScene" uid="uid://xthsi6ulrfvw" path="res://Scenes/Rock_Resource.tscn" id="15_lyp2j"]
+[ext_resource type="PackedScene" uid="uid://cdbcmgjpvfa73" path="res://UI/Hotbar_UI.tscn" id="17_qh6pd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ecc48"]
 texture = ExtResource("1_bhqln")
@@ -1339,3 +1340,5 @@ position = Vector2(40, -38)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ResourceDisplay" parent="CanvasLayer" instance=ExtResource("1_8ykvg")]
+
+[node name="Hotbar" parent="CanvasLayer" instance=ExtResource("17_qh6pd")]
