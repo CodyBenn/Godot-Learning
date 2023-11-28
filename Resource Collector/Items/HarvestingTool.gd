@@ -1,4 +1,4 @@
-extends EquippableItem
+extends EquipableItem
 class_name HarvestTool
 
 @export var effected_types : Array[ResourceNodeType]

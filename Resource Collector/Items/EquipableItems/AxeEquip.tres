@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="EquippableItem" load_steps=3 format=3 uid="uid://ccalvtfbq73ey"]
 
-[ext_resource type="Script" path="res://Items/Resources/EquippableItem.gd" id="1_8usn8"]
+[ext_resource type="Script" path="res://Items/EquipableItems/EquipableItem.gd" id="1_8usn8"]
 [ext_resource type="Texture2D" uid="uid://boduv533wh2b0" path="res://Assets/Characters/Axe-export.png" id="2_hpkv3"]
 
 [resource]
