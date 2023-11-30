@@ -31,7 +31,6 @@ columns = 10
 
 [node name="ItemButton" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
-focus_mode = 0
 item = ExtResource("3_u7jpt")
 
 [node name="ItemButton2" parent="GridContainer" instance=ExtResource("2_xk8pw")]

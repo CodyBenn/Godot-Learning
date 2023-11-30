@@ -10,9 +10,11 @@ class_name ItemButton
 var hand_equip : HandEquip
 
 func _ready():
-	connect("pressed", _on_pressed)
+	if(not Engine.is_editor_hint()):
+		connect("pressed", _on_pressed)
 
 func _on_pressed():
-	if(item is EquipableItem):
-		if(hand_equip != null):
-			hand_equip.equipped_item = item
+	if(not Engine.is_editor_hint()):
+		if(item is EquipableItem):
+			if(hand_equip != null):
+				hand_equip.equipped_item = item
