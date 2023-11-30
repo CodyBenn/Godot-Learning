@@ -23,23 +23,31 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -40.0
-offset_top = 6.0
+offset_top = 3.0
 offset_right = 40.0
-offset_bottom = 30.0
+offset_bottom = 27.0
 grow_horizontal = 2
 columns = 10
 
 [node name="ItemButton" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
-focus_mode = 0
+icon_alignment = 1
 item = ExtResource("3_u7jpt")
 
 [node name="ItemButton2" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
 icon = ExtResource("2_lly6p")
+icon_alignment = 1
 item = ExtResource("5_0gnx5")
 
 [node name="ItemButton3" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
 icon = ExtResource("3_ak56f")
+icon_alignment = 1
+item = ExtResource("7_a3x0x")
+
+[node name="ItemButton4" parent="GridContainer" instance=ExtResource("2_xk8pw")]
+layout_mode = 2
+icon = null
+icon_alignment = 1
 item = ExtResource("7_a3x0x")
