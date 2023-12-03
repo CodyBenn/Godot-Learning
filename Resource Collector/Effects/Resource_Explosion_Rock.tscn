@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cy7si8gd5kstl"]
+[gd_scene load_steps=6 format=3 uid="uid://cukop66u7aadk"]
 
-[ext_resource type="Script" path="res://Effects/Resource_Explosion.gd" id="1_nltod"]
+[ext_resource type="Script" path="res://Effects/Resource_Explosion.gd" id="1_iwatu"]
 
 [sub_resource type="Gradient" id="Gradient_pr6oh"]
 offsets = PackedFloat32Array(0, 0.5, 0.80102)
@@ -24,7 +24,7 @@ color_ramp = SubResource("GradientTexture1D_f502u")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ffhgu"]
 
-[node name="ResourceExplosionWood" type="GPUParticles2D"]
+[node name="ResourceExplosionRock" type="GPUParticles2D"]
 emitting = false
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_ygojh")
@@ -33,7 +33,7 @@ lifetime = 0.4
 one_shot = true
 speed_scale = 0.5
 explosiveness = 1.0
-script = ExtResource("1_nltod")
+script = ExtResource("1_iwatu")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5

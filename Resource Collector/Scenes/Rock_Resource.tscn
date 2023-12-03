@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://xthsi6ulrfvw"]
+[gd_scene load_steps=7 format=3 uid="uid://xthsi6ulrfvw"]
 
 [ext_resource type="Script" path="res://Scripts/ResourceNode.gd" id="1_ddk8l"]
 [ext_resource type="Resource" uid="uid://doucrbm8ps5ia" path="res://Assets/Resources/Base_Stone_Rock.tres" id="2_pg2rw"]
 [ext_resource type="PackedScene" uid="uid://b367ccwt4muuh" path="res://Scenes/Pickup_Rock.tscn" id="3_brkrm"]
+[ext_resource type="PackedScene" uid="uid://cukop66u7aadk" path="res://Effects/Resource_Explosion_Rock.tscn" id="4_03r5b"]
 [ext_resource type="Texture2D" uid="uid://c0sgn4enfdcag" path="res://Assets/Objects/Basic Grass Biom things 1.png" id="4_fbti1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hqle"]
@@ -14,6 +15,7 @@ script = ExtResource("1_ddk8l")
 resourceType = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([ExtResource("2_pg2rw")])
 resourceAmount = 5
 pickupType = ExtResource("3_brkrm")
+depleted_effect = ExtResource("4_03r5b")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
