@@ -4,18 +4,24 @@ class_name ResourceNode
 @export var resourceType : Array[ResourceNodeType]
 @export var resourceAmount: int = 1
 @export var pickupType : PackedScene
+@export var depleted_effect : PackedScene
 @export var launchSpeed : float = 50
 @export var launchDuration : float = .25
 @export var woodAmount : int
 @export var stoneAmount : int
 @export var dirtAmount : int
 
-@onready var levelParent = get_parent()
+@onready var level_parent = get_parent()
 
 var currentResourceAmount : int :
 	set(resourceCount):
 		currentResourceAmount = resourceCount
 		if(resourceCount <= 0):
+			#spawn particle effect before removing the node
+			var effect_instance : GPUParticles2D = depleted_effect.instantiate()
+			effect_instance.position = position
+			level_parent.add_child(effect_instance)
+			effect_instance.emitting = true
 			queue_free()
 	
 func _ready():
@@ -29,7 +35,7 @@ func harvest(amount : int):
 
 func spawn_resource():
 	var pickup_instance : Pickup = pickupType.instantiate() as Pickup
-	levelParent.add_child(pickup_instance)
+	level_parent.add_child(pickup_instance)
 	pickup_instance.position = position
 	
 	var direction : Vector2 = Vector2(

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://kxptyql1n81k"]
+[gd_scene load_steps=7 format=3 uid="uid://kxptyql1n81k"]
 
 [ext_resource type="Texture2D" uid="uid://c0sgn4enfdcag" path="res://Assets/Objects/Basic Grass Biom things 1.png" id="1_4di56"]
 [ext_resource type="Script" path="res://Scripts/ResourceNode.gd" id="1_al4a8"]
 [ext_resource type="Resource" uid="uid://rgl4a0bjaku2" path="res://Assets/Resources/BaseWoodLog.tres" id="2_fol46"]
 [ext_resource type="PackedScene" uid="uid://dx6ecotu2qvxx" path="res://Scenes/Pickup_Wood.tscn" id="3_xgi34"]
+[ext_resource type="PackedScene" uid="uid://cy7si8gd5kstl" path="res://Effects/Resource_Explosion_Wood.tscn" id="4_un5xb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hqle"]
 size = Vector2(16, 7)
@@ -14,6 +15,7 @@ script = ExtResource("1_al4a8")
 resourceType = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([ExtResource("2_fol46")])
 resourceAmount = 5
 pickupType = ExtResource("3_xgi34")
+depleted_effect = ExtResource("4_un5xb")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
