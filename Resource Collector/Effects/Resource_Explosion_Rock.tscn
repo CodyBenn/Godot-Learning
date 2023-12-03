@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://Effects/Resource_Explosion.gd" id="1_iwatu"]
 
 [sub_resource type="Gradient" id="Gradient_pr6oh"]
-offsets = PackedFloat32Array(0, 0.5, 0.80102)
-colors = PackedColorArray(0.494032, 0.372242, 0.206961, 1, 0.558727, 0.428686, 0.252903, 1, 0.556863, 0.427451, 0.25098, 0)
+offsets = PackedFloat32Array(0, 0.59949, 0.80102)
+colors = PackedColorArray(0.6, 0.6, 0.6, 1, 0.26, 0.26, 0.26, 1, 0.2, 0.2, 0.2, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_f502u"]
 gradient = SubResource("Gradient_pr6oh")
