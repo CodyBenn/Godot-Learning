@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://djolnjvds8kfj"]
+
+[ext_resource type="Script" path="res://Scripts/ResourceNode.gd" id="1_t81lw"]
+[ext_resource type="Resource" uid="uid://rgl4a0bjaku2" path="res://Assets/Resources/BaseWoodLog.tres" id="2_wgc70"]
+[ext_resource type="PackedScene" uid="uid://dx6ecotu2qvxx" path="res://Scenes/Pickup_Wood.tscn" id="3_ywnu2"]
+[ext_resource type="PackedScene" uid="uid://cy7si8gd5kstl" path="res://Effects/Resource_Explosion_Wood.tscn" id="4_ae1jy"]
+[ext_resource type="Texture2D" uid="uid://bjq4j4yfyf83j" path="res://Assets/Objects/Tree.png" id="5_fr0nx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hqle"]
+size = Vector2(10, 8)
+
+[node name="Tree_Wood" type="StaticBody2D" groups=["Resource"]]
+show_behind_parent = true
+script = ExtResource("1_t81lw")
+resourceType = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([ExtResource("2_wgc70")])
+resourceAmount = 5
+pickupType = ExtResource("3_ywnu2")
+depleted_effect = ExtResource("4_ae1jy")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_3hqle")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("5_fr0nx")

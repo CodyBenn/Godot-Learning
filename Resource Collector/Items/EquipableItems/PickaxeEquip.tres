@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="EquippableItem" load_steps=3 format=3 uid="uid://bfoaa6mw8no57"]
+[gd_resource type="Resource" script_class="EquipableItem" load_steps=3 format=3 uid="uid://bfoaa6mw8no57"]
 
 [ext_resource type="Script" path="res://Items/EquipableItems/EquipableItem.gd" id="1_4aulu"]
-[ext_resource type="Texture2D" uid="uid://x8dkdeiaqbjn" path="res://Assets/Characters/Hoe-export.png" id="2_payh4"]
+[ext_resource type="Texture2D" uid="uid://ctj3owypk2rlc" path="res://Assets/Characters/Pickaxe.png" id="2_uq3xh"]
 
 [resource]
 script = ExtResource("1_4aulu")
-display_name = "Hoe"
-texture = ExtResource("2_payh4")
+display_name = "Pickaxe"
+texture = ExtResource("2_uq3xh")

@@ -13,7 +13,7 @@ size = Vector2(16, 7)
 show_behind_parent = true
 script = ExtResource("1_ddk8l")
 resourceType = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([ExtResource("2_pg2rw")])
-resourceAmount = 5
+resourceAmount = 2
 pickupType = ExtResource("3_brkrm")
 depleted_effect = ExtResource("4_03r5b")
 
