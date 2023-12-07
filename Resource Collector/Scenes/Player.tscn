@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://bwxrcscfhax35"]
 
-[ext_resource type="Script" path="res://Scripts/Player2.gd" id="1_aqa5d"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_p7qn5"]
 [ext_resource type="Texture2D" uid="uid://dnhd1mofbxt3x" path="res://Assets/Characters/Basic Charakter Spritesheet.png" id="1_yhncl"]
 [ext_resource type="Script" path="res://Scripts/HandEquip.gd" id="3_becka"]
 [ext_resource type="Texture2D" uid="uid://boduv533wh2b0" path="res://Assets/Characters/Axe-export.png" id="3_k0tqs"]
@@ -273,7 +273,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(-1, 5), Vector2(0, 4)]
+"values": [Vector2(1, 5), Vector2(1, 3)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1010,7 +1010,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(7, 4), Vector2(7, 5), Vector2(7, 3), Vector2(7, 2)]
+"values": [Vector2(8, 4), Vector2(8, 5), Vector2(8, 4), Vector2(7, 2)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1034,7 +1034,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(0.75, 0.85), Vector2(0.75, 0.85), Vector2(0.75, 0.85), Vector2(0.75, 0.85)]
+"values": [Vector2(0.75, 0.8), Vector2(0.75, 0.8), Vector2(0.75, 0.8), Vector2(0.75, 0.8)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -1052,7 +1052,6 @@ tracks/7/keys = {
 [sub_resource type="Animation" id="Animation_fxk75"]
 resource_name = "walk_left"
 length = 0.80001
-loop_mode = 1
 step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1076,7 +1075,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [8, 10, 8, 11]
+"values": [8, 11, 8, 10]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -1112,7 +1111,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.1974, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(-1.19209e-07, 4), Vector2(-2, 2), Vector2(1, 4), Vector2(-1, 4), Vector2(-3, 4)]
+"values": [Vector2(1, 5), Vector2(-2, 2), Vector2(-3, 4), Vector2(1, 5), Vector2(2, 4)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1136,7 +1135,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(-0.75, 0.85), Vector2(-0.75, 0.85), Vector2(-0.75, 0.85), Vector2(-0.75, 0.85)]
+"values": [Vector2(-0.75, 0.8), Vector2(-0.75, 0.8), Vector2(-0.75, 0.8), Vector2(-0.75, 0.8)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -1154,7 +1153,6 @@ tracks/7/keys = {
 [sub_resource type="Animation" id="Animation_uj6oj"]
 resource_name = "walk_right"
 length = 0.8
-loop_mode = 1
 step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1214,7 +1212,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(2, 4), Vector2(5, 3), Vector2(2, 4), Vector2(3, 4)]
+"values": [Vector2(3, 4), Vector2(5, 3), Vector2(3, 4), Vector2(4, 3)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1238,7 +1236,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(0.75, 0.85), Vector2(0.75, 0.85), Vector2(0.75, 0.85), Vector2(0.75, 0.85)]
+"values": [Vector2(0.75, 0.8), Vector2(0.75, 0.8), Vector2(0.75, 0.8), Vector2(0.75, 0.8)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -1256,7 +1254,6 @@ tracks/7/keys = {
 [sub_resource type="Animation" id="Animation_8tlik"]
 resource_name = "walk_up"
 length = 0.8
-loop_mode = 1
 step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -1316,7 +1313,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(-8, 5), Vector2(-7, 3), Vector2(-7, 5), Vector2(-8, 7), Vector2(-8, 5)]
+"values": [Vector2(-8, 5), Vector2(-7, 3), Vector2(-8, 5), Vector2(-8, 7), Vector2(-8, 5)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1377,7 +1374,7 @@ size = Vector2(6.80396, 6.01086)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 z_index = 1
-script = ExtResource("1_aqa5d")
+script = ExtResource("1_p7qn5")
 move_speed = 80.0
 
 [node name="Collider" type="CollisionShape2D" parent="."]
