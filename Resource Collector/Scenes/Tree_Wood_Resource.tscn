@@ -11,6 +11,7 @@ size = Vector2(10, 8)
 
 [node name="Tree_Wood" type="StaticBody2D" groups=["Resource"]]
 show_behind_parent = true
+z_index = 1
 script = ExtResource("1_t81lw")
 resourceType = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([ExtResource("2_wgc70")])
 resourceAmount = 5
