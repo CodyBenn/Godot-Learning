@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cnb4h2vjpwl74"]
+[gd_scene load_steps=36 format=3 uid="uid://cnb4h2vjpwl74"]
 
 [ext_resource type="PackedScene" uid="uid://cc7wfy3rrnhrh" path="res://UI/ResourceDisplay.tscn" id="1_8ykvg"]
 [ext_resource type="Texture2D" uid="uid://c0sgn4enfdcag" path="res://Assets/Objects/Basic Grass Biom things 1.png" id="1_bhqln"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cdbcmgjpvfa73" path="res://UI/Hotbar_UI.tscn" id="17_qh6pd"]
 [ext_resource type="PackedScene" uid="uid://cy7si8gd5kstl" path="res://Effects/Resource_Explosion_Wood.tscn" id="18_n2cj8"]
 [ext_resource type="PackedScene" uid="uid://djolnjvds8kfj" path="res://Scenes/Tree_Wood_Resource.tscn" id="19_w25fv"]
+[ext_resource type="PackedScene" uid="uid://dgwgvty4e6685" path="res://Scenes/House.tscn" id="20_gjdrj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ecc48"]
 texture = ExtResource("1_bhqln")
@@ -1347,46 +1348,88 @@ drag_bottom_margin = 0.1
 y_sort_enabled = true
 
 [node name="Wood_Log" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+y_sort_enabled = true
 position = Vector2(127, -107)
 
 [node name="Wood_Log2" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+y_sort_enabled = true
 position = Vector2(71, -105)
 
 [node name="Wood_Log3" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+y_sort_enabled = true
 position = Vector2(101, -91)
 
 [node name="Wood_Log4" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+y_sort_enabled = true
 position = Vector2(101, -119)
 
 [node name="Stone_Rock" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+y_sort_enabled = true
 position = Vector2(17, -38)
 
 [node name="Stone_Rock2" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+y_sort_enabled = true
 position = Vector2(17, -23)
 
 [node name="Stone_Rock3" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+y_sort_enabled = true
 position = Vector2(40, -23)
 
 [node name="Stone_Rock4" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+y_sort_enabled = true
 position = Vector2(40, -38)
 
 [node name="Tree_Wood" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
 position = Vector2(256, -166)
 
 [node name="Tree_Wood2" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
 position = Vector2(-112, -214)
 
 [node name="Tree_Wood3" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
 position = Vector2(258, -224)
 
 [node name="Tree_Wood4" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
 position = Vector2(0, -236)
 
 [node name="Tree_Wood5" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
 position = Vector2(-117, -315)
 
 [node name="Tree_Wood6" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
 position = Vector2(209, -305)
+
+[node name="Tree_Wood7" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
+position = Vector2(-39, -310)
+
+[node name="Tree_Wood8" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
+position = Vector2(262, -282)
+
+[node name="Tree_Wood9" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
+position = Vector2(130, -280)
+
+[node name="Tree_Wood10" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
+position = Vector2(-51, -175)
+
+[node name="Tree_Wood11" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
+position = Vector2(32, -171)
+
+[node name="Tree_Wood12" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
+position = Vector2(-77, -259)
+
+[node name="Tree_Wood13" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+y_sort_enabled = true
+position = Vector2(125, -195)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1397,23 +1440,5 @@ position = Vector2(209, -305)
 [node name="ResourceExplosion" parent="." instance=ExtResource("18_n2cj8")]
 position = Vector2(101, -91)
 
-[node name="Tree_Wood" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(-39, -310)
-
-[node name="Tree_Wood2" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(262, -282)
-
-[node name="Tree_Wood3" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(130, -280)
-
-[node name="Tree_Wood4" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(-51, -175)
-
-[node name="Tree_Wood5" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(32, -171)
-
-[node name="Tree_Wood6" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(-77, -259)
-
-[node name="Tree_Wood7" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(125, -195)
+[node name="Node2D" parent="." instance=ExtResource("20_gjdrj")]
+position = Vector2(63, -273)
