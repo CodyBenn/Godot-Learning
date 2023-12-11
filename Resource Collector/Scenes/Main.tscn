@@ -1440,5 +1440,5 @@ position = Vector2(125, -195)
 [node name="ResourceExplosion" parent="." instance=ExtResource("18_n2cj8")]
 position = Vector2(101, -91)
 
-[node name="Node2D" parent="." instance=ExtResource("20_gjdrj")]
+[node name="House" parent="." instance=ExtResource("20_gjdrj")]
 position = Vector2(63, -273)
