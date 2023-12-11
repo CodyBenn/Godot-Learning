@@ -5,15 +5,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4e76n"]
 size = Vector2(39, 14)
 
-[node name="Node2D" type="StaticBody2D"]
+[node name="House" type="StaticBody2D"]
 top_level = true
 z_index = 1
 y_sort_enabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -27)
-texture = ExtResource("1_1f7nf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -7)
 shape = SubResource("RectangleShape2D_4e76n")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -27)
+texture = ExtResource("1_1f7nf")
