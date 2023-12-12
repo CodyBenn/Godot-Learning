@@ -3,18 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://byktbwdw5mxo8" path="res://Assets/Objects/House.png" id="1_1f7nf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4e76n"]
-size = Vector2(38.875, 14)
+size = Vector2(38.875, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0wu5"]
 size = Vector2(12.5, 14)
 
 [node name="House" type="StaticBody2D"]
-top_level = true
 z_index = 1
 y_sort_enabled = true
 
 [node name="House_Collider" type="CollisionShape2D" parent="."]
-position = Vector2(0, -7)
+position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_4e76n")
 
 [node name="Door_Collider" type="CollisionShape2D" parent="."]
