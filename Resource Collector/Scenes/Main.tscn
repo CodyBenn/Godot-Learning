@@ -1365,11 +1365,11 @@ position = Vector2(101, -119)
 
 [node name="Stone_Rock" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
 y_sort_enabled = true
-position = Vector2(17, -38)
+position = Vector2(-23, -25)
 
 [node name="Stone_Rock2" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
 y_sort_enabled = true
-position = Vector2(17, -23)
+position = Vector2(22, -58)
 
 [node name="Stone_Rock3" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
 y_sort_enabled = true
@@ -1377,7 +1377,7 @@ position = Vector2(40, -23)
 
 [node name="Stone_Rock4" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
 y_sort_enabled = true
-position = Vector2(40, -38)
+position = Vector2(70, -59)
 
 [node name="Tree_Wood" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
 y_sort_enabled = true
