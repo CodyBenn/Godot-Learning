@@ -1349,19 +1349,15 @@ y_sort_enabled = true
 
 [node name="Wood_Log" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
 y_sort_enabled = true
-position = Vector2(127, -107)
-
-[node name="Wood_Log2" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
-y_sort_enabled = true
-position = Vector2(71, -105)
+position = Vector2(122, -127)
 
 [node name="Wood_Log3" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
 y_sort_enabled = true
-position = Vector2(101, -91)
+position = Vector2(116, -92)
 
 [node name="Wood_Log4" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
 y_sort_enabled = true
-position = Vector2(101, -119)
+position = Vector2(28, -129)
 
 [node name="Stone_Rock" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
 y_sort_enabled = true
@@ -1431,6 +1427,78 @@ position = Vector2(-77, -259)
 y_sort_enabled = true
 position = Vector2(125, -195)
 
+[node name="Tree_Wood14" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+position = Vector2(-91, -70)
+
+[node name="Tree_Wood15" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+position = Vector2(-167, -24)
+
+[node name="Tree_Wood16" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+position = Vector2(-92, 38)
+
+[node name="Tree_Wood17" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+position = Vector2(122, -39)
+
+[node name="Tree_Wood18" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+position = Vector2(21, -104)
+
+[node name="Tree_Wood19" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+position = Vector2(-152, 32)
+
+[node name="Stone_Rock5" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(-82, 22)
+
+[node name="Stone_Rock6" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(-175, 21)
+
+[node name="Stone_Rock7" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(-161, -46)
+
+[node name="Stone_Rock8" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(-97, -20)
+
+[node name="Stone_Rock9" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(-39, -69)
+
+[node name="Stone_Rock10" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(89, -31)
+
+[node name="Stone_Rock11" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(124, -60)
+
+[node name="Stone_Rock12" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(-97, -168)
+
+[node name="Stone_Rock13" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(-113, -265)
+
+[node name="Stone_Rock14" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(-42, -218)
+
+[node name="Stone_Rock15" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(139, -161)
+
+[node name="Stone_Rock16" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(267, -187)
+
+[node name="Stone_Rock17" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(165, -301)
+
+[node name="Stone_Rock18" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(246, -307)
+
+[node name="Stone_Rock19" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(-3, -292)
+
+[node name="Stone_Rock20" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(-71, -313)
+
+[node name="Stone_Rock21" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(1, -176)
+
+[node name="Stone_Rock22" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(129, -243)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ResourceDisplay" parent="CanvasLayer" instance=ExtResource("1_8ykvg")]
@@ -1442,75 +1510,3 @@ position = Vector2(101, -91)
 
 [node name="House" parent="." instance=ExtResource("20_gjdrj")]
 position = Vector2(63, -273)
-
-[node name="Tree_Wood" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(-91, -70)
-
-[node name="Tree_Wood2" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(-167, -24)
-
-[node name="Tree_Wood3" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(-92, 38)
-
-[node name="Tree_Wood4" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(122, -39)
-
-[node name="Tree_Wood5" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(21, -104)
-
-[node name="Tree_Wood6" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(-152, 32)
-
-[node name="Stone_Rock" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(-82, 22)
-
-[node name="Stone_Rock2" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(-175, 21)
-
-[node name="Stone_Rock3" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(-161, -46)
-
-[node name="Stone_Rock4" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(-97, -20)
-
-[node name="Stone_Rock5" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(-39, -69)
-
-[node name="Stone_Rock6" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(89, -31)
-
-[node name="Stone_Rock7" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(124, -60)
-
-[node name="Stone_Rock8" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(-97, -168)
-
-[node name="Stone_Rock9" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(-113, -265)
-
-[node name="Stone_Rock10" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(-42, -218)
-
-[node name="Stone_Rock11" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(139, -161)
-
-[node name="Stone_Rock12" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(267, -187)
-
-[node name="Stone_Rock13" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(165, -301)
-
-[node name="Stone_Rock14" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(246, -307)
-
-[node name="Stone_Rock15" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(-3, -292)
-
-[node name="Stone_Rock16" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(-71, -313)
-
-[node name="Stone_Rock17" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(1, -176)
-
-[node name="Stone_Rock18" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(129, -243)
