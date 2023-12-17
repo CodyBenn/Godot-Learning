@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cukop66u7aadk" path="res://Effects/Resource_Explosion_Rock.tscn" id="4_03r5b"]
 [ext_resource type="Texture2D" uid="uid://c0sgn4enfdcag" path="res://Assets/Objects/Basic Grass Biom things 1.png" id="4_fbti1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hqle"]
-size = Vector2(16, 7)
+[sub_resource type="CircleShape2D" id="CircleShape2D_1iatc"]
+radius = 7.00446
 
 [node name="Stone_Rock" type="StaticBody2D" groups=["Resource"]]
 show_behind_parent = true
@@ -18,8 +18,8 @@ pickupType = ExtResource("3_brkrm")
 depleted_effect = ExtResource("4_03r5b")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_3hqle")
+position = Vector2(0, -0.75)
+shape = SubResource("CircleShape2D_1iatc")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("4_fbti1")
