@@ -1499,6 +1499,18 @@ position = Vector2(1, -176)
 [node name="Stone_Rock22" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
 position = Vector2(129, -243)
 
+[node name="Stone_Rock23" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(228, -266)
+
+[node name="Stone_Rock24" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(230, -165)
+
+[node name="Stone_Rock25" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(171, -165)
+
+[node name="Stone_Rock26" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
+position = Vector2(176, -227)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ResourceDisplay" parent="CanvasLayer" instance=ExtResource("1_8ykvg")]
@@ -1510,15 +1522,3 @@ position = Vector2(101, -91)
 
 [node name="House" parent="." instance=ExtResource("20_gjdrj")]
 position = Vector2(63, -273)
-
-[node name="Stone_Rock" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(228, -266)
-
-[node name="Stone_Rock2" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(230, -165)
-
-[node name="Stone_Rock3" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(171, -165)
-
-[node name="Stone_Rock4" parent="." instance=ExtResource("15_lyp2j")]
-position = Vector2(176, -227)
