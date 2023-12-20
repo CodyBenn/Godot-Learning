@@ -1361,11 +1361,11 @@ position = Vector2(28, -129)
 
 [node name="Stone_Rock" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
 y_sort_enabled = true
-position = Vector2(-23, -25)
+position = Vector2(12, -28)
 
 [node name="Stone_Rock3" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
 y_sort_enabled = true
-position = Vector2(40, -23)
+position = Vector2(72, -38)
 
 [node name="Tree_Wood" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
 y_sort_enabled = true
@@ -1407,10 +1407,6 @@ position = Vector2(130, -280)
 y_sort_enabled = true
 position = Vector2(-51, -175)
 
-[node name="Tree_Wood11" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
-position = Vector2(32, -171)
-
 [node name="Tree_Wood12" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
 y_sort_enabled = true
 position = Vector2(-77, -259)
@@ -1441,13 +1437,13 @@ position = Vector2(-152, 32)
 position = Vector2(-82, 22)
 
 [node name="Stone_Rock6" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
-position = Vector2(-175, 21)
+position = Vector2(-131, -1)
 
 [node name="Stone_Rock7" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
 position = Vector2(-161, -46)
 
 [node name="Stone_Rock8" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
-position = Vector2(-97, -20)
+position = Vector2(-175, 53)
 
 [node name="Stone_Rock9" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
 position = Vector2(-39, -69)
