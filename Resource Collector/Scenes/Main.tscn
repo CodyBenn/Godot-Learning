@@ -1496,17 +1496,8 @@ position = Vector2(63, -273)
 [node name="Pickup_Rock2" parent="." instance=ExtResource("21_bhern")]
 position = Vector2(93, -73)
 
-[node name="Pickup_Rock" parent="." instance=ExtResource("21_bhern")]
-position = Vector2(-102, -35)
-
-[node name="Pickup_Wood" parent="." instance=ExtResource("22_8mgd4")]
-position = Vector2(-42, -44)
-
 [node name="Pickup_Rock3" parent="." instance=ExtResource("21_bhern")]
 position = Vector2(88, -44)
-
-[node name="Pickup_Rock4" parent="." instance=ExtResource("21_bhern")]
-position = Vector2(28, -59)
 
 [node name="Pickup_Wood2" parent="." instance=ExtResource("22_8mgd4")]
 position = Vector2(29, -168)
