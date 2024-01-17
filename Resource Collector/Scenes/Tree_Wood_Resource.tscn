@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://djolnjvds8kfj"]
+[gd_scene load_steps=8 format=3 uid="uid://djolnjvds8kfj"]
 
 [ext_resource type="Script" path="res://Scripts/ResourceNode.gd" id="1_t81lw"]
 [ext_resource type="Resource" uid="uid://rgl4a0bjaku2" path="res://Assets/Resources/BaseWoodLog.tres" id="2_wgc70"]
 [ext_resource type="PackedScene" uid="uid://dx6ecotu2qvxx" path="res://Scenes/Pickup_Wood.tscn" id="3_ywnu2"]
 [ext_resource type="PackedScene" uid="uid://cy7si8gd5kstl" path="res://Scenes/Effects/Resource_Explosion_Wood.tscn" id="4_ae1jy"]
 [ext_resource type="Texture2D" uid="uid://bjq4j4yfyf83j" path="res://Assets/Objects/Tree.png" id="5_fr0nx"]
+[ext_resource type="PackedScene" uid="uid://d1ak0573rbiwa" path="res://Scenes/Effects/Resource_Hit_Wood.tscn" id="5_uy5h3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hqle"]
 size = Vector2(10, 8)
@@ -17,6 +18,7 @@ resourceType = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([Ex
 resourceAmount = 5
 pickupType = ExtResource("3_ywnu2")
 depleted_effect = ExtResource("4_ae1jy")
+hit_effect = ExtResource("5_uy5h3")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11)
