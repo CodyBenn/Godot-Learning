@@ -8,6 +8,7 @@
 radius = 7.0
 
 [node name="Pickup_Wood" type="Area2D"]
+z_index = 1
 script = ExtResource("1_lh0f6")
 resource_type = ExtResource("2_n3ueg")
 

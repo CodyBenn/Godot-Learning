@@ -5,6 +5,7 @@ class_name ResourceNode
 @export var resourceAmount: int = 1
 @export var pickupType : PackedScene
 @export var depleted_effect : PackedScene
+@export var hit_effect : PackedScene
 @export var launchSpeed : float = 50
 @export var launchDuration : float = .25
 @export var woodAmount : int
@@ -23,7 +24,13 @@ var currentResourceAmount : int :
 			level_parent.add_child(effect_instance)
 			effect_instance.emitting = true
 			queue_free()
-	
+#		if(resourceCount >= 1):
+#			#spawn particle effect after player tool collides with resource
+#			var effect_instance : GPUParticles2D = hit_effect.instantiate()
+#			effect_instance.position = position
+#			level_parent.add_child(effect_instance)
+#			effect_instance.emitting = true
+			
 func _ready():
 	currentResourceAmount = resourceAmount
 	

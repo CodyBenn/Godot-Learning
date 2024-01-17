@@ -33,23 +33,23 @@ columns = 10
 
 [node name="ItemButton" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
-icon_alignment = 1
+text = "1"
 item = ExtResource("3_u7jpt")
 
 [node name="ItemButton2" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
+text = "2"
 icon = ExtResource("4_6ow8c")
-icon_alignment = 1
 item = ExtResource("5_0gnx5")
 
 [node name="ItemButton3" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
+text = "3"
 icon = ExtResource("2_lly6p")
-icon_alignment = 1
 item = ExtResource("6_uwtdn")
 
 [node name="ItemButton4" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
+text = "4"
 icon = ExtResource("3_ak56f")
-icon_alignment = 1
 item = ExtResource("7_a3x0x")
