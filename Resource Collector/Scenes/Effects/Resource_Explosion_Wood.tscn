@@ -25,6 +25,7 @@ color_ramp = SubResource("GradientTexture1D_f502u")
 [sub_resource type="CanvasTexture" id="CanvasTexture_ffhgu"]
 
 [node name="ResourceExplosionWood" type="GPUParticles2D"]
+top_level = true
 emitting = false
 amount = 50
 process_material = SubResource("ParticleProcessMaterial_ygojh")

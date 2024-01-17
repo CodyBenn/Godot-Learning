@@ -21,8 +21,8 @@ depleted_effect = ExtResource("4_ae1jy")
 hit_effect = ExtResource("5_uy5h3")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
-position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_3hqle")
 
 [node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -11)
 texture = ExtResource("5_fr0nx")
