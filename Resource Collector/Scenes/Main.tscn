@@ -1490,3 +1490,12 @@ position = Vector2(101, -91)
 
 [node name="House" parent="." instance=ExtResource("20_gjdrj")]
 position = Vector2(63, -273)
+
+[node name="Tree_Wood" parent="." instance=ExtResource("19_w25fv")]
+position = Vector2(52, -22)
+
+[node name="Wood_Log" parent="." instance=ExtResource("14_ke8uy")]
+position = Vector2(27, -142)
+
+[node name="Wood_Log2" parent="." instance=ExtResource("14_ke8uy")]
+position = Vector2(-128, -50)
