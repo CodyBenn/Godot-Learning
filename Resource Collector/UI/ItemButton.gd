@@ -8,6 +8,7 @@ class_name ItemButton
 		icon = item.texture
 		
 var hand_equip : HandEquip
+var equip_button 
 
 func _ready():
 	if(not Engine.is_editor_hint()):

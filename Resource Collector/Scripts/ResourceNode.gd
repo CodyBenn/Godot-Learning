@@ -24,6 +24,7 @@ var currentResourceAmount : int :
 			level_parent.add_child(effect_instance)
 			effect_instance.emitting = true
 			queue_free()
+			
 #		if(resourceCount >= 1):
 #			#spawn particle effect after player tool collides with resource
 #			var effect_instance : GPUParticles2D = hit_effect.instantiate()
