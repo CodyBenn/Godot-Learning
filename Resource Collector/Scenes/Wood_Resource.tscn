@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/ResourceNode.gd" id="1_al4a8"]
 [ext_resource type="Resource" uid="uid://rgl4a0bjaku2" path="res://Assets/Resources/BaseWoodLog.tres" id="2_fol46"]
 [ext_resource type="PackedScene" uid="uid://dx6ecotu2qvxx" path="res://Scenes/Pickup_Wood.tscn" id="3_xgi34"]
-[ext_resource type="PackedScene" uid="uid://cy7si8gd5kstl" path="res://Effects/Resource_Explosion_Wood.tscn" id="4_un5xb"]
+[ext_resource type="PackedScene" uid="uid://cy7si8gd5kstl" path="res://Scenes/Effects/Resource_Explosion_Wood.tscn" id="4_un5xb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hqle"]
 size = Vector2(16, 7)

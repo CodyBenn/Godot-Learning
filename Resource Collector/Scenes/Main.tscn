@@ -1348,11 +1348,9 @@ drag_bottom_margin = 0.1
 y_sort_enabled = true
 
 [node name="Wood_Log" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
-y_sort_enabled = true
 position = Vector2(122, -127)
 
 [node name="Wood_Log3" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
-y_sort_enabled = true
 position = Vector2(116, -92)
 
 [node name="Stone_Rock" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
