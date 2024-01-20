@@ -1466,16 +1466,16 @@ position = Vector2(-71, -313)
 position = Vector2(1, -176)
 
 [node name="Stone_Rock23" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
-position = Vector2(228, -266)
+position = Vector2(256, -259)
 
 [node name="Stone_Rock24" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
-position = Vector2(230, -165)
+position = Vector2(100, -307)
 
 [node name="Stone_Rock25" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
-position = Vector2(171, -165)
+position = Vector2(134, -161)
 
 [node name="Stone_Rock26" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
-position = Vector2(176, -227)
+position = Vector2(136, -235)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
