@@ -1358,51 +1358,39 @@ y_sort_enabled = true
 position = Vector2(12, -28)
 
 [node name="Tree_Wood" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
 position = Vector2(256, -166)
 
 [node name="Tree_Wood2" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
 position = Vector2(-112, -214)
 
 [node name="Tree_Wood3" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
 position = Vector2(258, -224)
 
 [node name="Tree_Wood4" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
 position = Vector2(0, -236)
 
 [node name="Tree_Wood5" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
 position = Vector2(-117, -315)
 
 [node name="Tree_Wood6" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
 position = Vector2(209, -305)
 
 [node name="Tree_Wood7" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
 position = Vector2(-39, -310)
 
 [node name="Tree_Wood8" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
 position = Vector2(262, -282)
 
 [node name="Tree_Wood9" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
 position = Vector2(130, -280)
 
 [node name="Tree_Wood10" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
 position = Vector2(-51, -175)
 
 [node name="Tree_Wood12" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
 position = Vector2(-77, -259)
 
 [node name="Tree_Wood13" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
-y_sort_enabled = true
 position = Vector2(125, -195)
 
 [node name="Tree_Wood14" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
@@ -1477,6 +1465,15 @@ position = Vector2(134, -161)
 [node name="Stone_Rock26" parent="ResourcesNode" instance=ExtResource("15_lyp2j")]
 position = Vector2(136, -235)
 
+[node name="Tree_Wood11" parent="ResourcesNode" instance=ExtResource("19_w25fv")]
+position = Vector2(52, -22)
+
+[node name="Wood_Log2" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+position = Vector2(27, -142)
+
+[node name="Wood_Log4" parent="ResourcesNode" instance=ExtResource("14_ke8uy")]
+position = Vector2(-128, -50)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ResourceDisplay" parent="CanvasLayer" instance=ExtResource("1_8ykvg")]
@@ -1488,12 +1485,3 @@ position = Vector2(101, -91)
 
 [node name="House" parent="." instance=ExtResource("20_gjdrj")]
 position = Vector2(63, -273)
-
-[node name="Tree_Wood" parent="." instance=ExtResource("19_w25fv")]
-position = Vector2(52, -22)
-
-[node name="Wood_Log" parent="." instance=ExtResource("14_ke8uy")]
-position = Vector2(27, -142)
-
-[node name="Wood_Log2" parent="." instance=ExtResource("14_ke8uy")]
-position = Vector2(-128, -50)
