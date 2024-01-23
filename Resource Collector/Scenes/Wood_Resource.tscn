@@ -1,13 +1,102 @@
-[gd_scene load_steps=7 format=3 uid="uid://kxptyql1n81k"]
+[gd_scene load_steps=12 format=3 uid="uid://kxptyql1n81k"]
 
-[ext_resource type="Texture2D" uid="uid://c0sgn4enfdcag" path="res://Assets/Objects/Basic Grass Biom things 1.png" id="1_4di56"]
 [ext_resource type="Script" path="res://Scripts/ResourceNode.gd" id="1_al4a8"]
 [ext_resource type="Resource" uid="uid://rgl4a0bjaku2" path="res://Assets/Resources/BaseWoodLog.tres" id="2_fol46"]
 [ext_resource type="PackedScene" uid="uid://dx6ecotu2qvxx" path="res://Scenes/Pickup_Wood.tscn" id="3_xgi34"]
 [ext_resource type="PackedScene" uid="uid://cy7si8gd5kstl" path="res://Scenes/Effects/Resource_Explosion_Wood.tscn" id="4_un5xb"]
+[ext_resource type="PackedScene" uid="uid://d1ak0573rbiwa" path="res://Scenes/Effects/Resource_Hit_Wood.tscn" id="5_wwmdk"]
+[ext_resource type="Texture2D" uid="uid://rcrtvdu0ioaj" path="res://Assets/Objects/Log.png" id="6_7hv8e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hqle"]
 size = Vector2(16, 7)
+
+[sub_resource type="Animation" id="Animation_k6lko"]
+resource_name = "Default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_a4alf"]
+resource_name = "Hit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1sgrj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8kiyi"]
+_data = {
+"Default": SubResource("Animation_k6lko"),
+"Hit": SubResource("Animation_a4alf"),
+"RESET": SubResource("Animation_1sgrj")
+}
 
 [node name="Wood_Log" type="StaticBody2D" groups=["Resource"]]
 show_behind_parent = true
@@ -15,13 +104,16 @@ script = ExtResource("1_al4a8")
 resourceType = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([ExtResource("2_fol46")])
 pickupType = ExtResource("3_xgi34")
 depleted_effect = ExtResource("4_un5xb")
+hit_effect = ExtResource("5_wwmdk")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_3hqle")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_4di56")
-hframes = 9
-vframes = 5
-frame = 23
+texture = ExtResource("6_7hv8e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8kiyi")
+}

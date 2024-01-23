@@ -4,7 +4,6 @@ class_name HarvestTool
 @export var effected_types : Array[ResourceNodeType]
 @export var min_damage : int = 1
 @export var max_damage : int = 1
-
 #if the body interacts with resource node that matches effected type
 #set for this tool, then resource node will harvest between min/max damage
 

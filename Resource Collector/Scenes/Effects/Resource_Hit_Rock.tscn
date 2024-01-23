@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1ak0573rbiwa"]
+[gd_scene load_steps=6 format=3 uid="uid://lhpjlpd73c56"]
 
-[ext_resource type="Script" path="res://Scenes/Effects/Resource_Explosion.gd" id="1_8gvjk"]
+[ext_resource type="Script" path="res://Scenes/Effects/Resource_Explosion.gd" id="1_bvyap"]
 
 [sub_resource type="Gradient" id="Gradient_pr6oh"]
-offsets = PackedFloat32Array(0, 0.5, 0.80102)
-colors = PackedColorArray(0.494032, 0.372242, 0.206961, 1, 0.558727, 0.428686, 0.252903, 1, 0.556863, 0.427451, 0.25098, 0)
+offsets = PackedFloat32Array(0, 0.59949, 0.80102)
+colors = PackedColorArray(0.6, 0.6, 0.6, 1, 0.26, 0.26, 0.26, 1, 0.2, 0.2, 0.2, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_f502u"]
 gradient = SubResource("Gradient_pr6oh")
@@ -24,9 +24,7 @@ color_ramp = SubResource("GradientTexture1D_f502u")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_ffhgu"]
 
-[node name="ResourceHitWood" type="GPUParticles2D"]
-z_index = 3
-y_sort_enabled = true
+[node name="ResourceHitRock" type="GPUParticles2D"]
 emitting = false
 amount = 20
 process_material = SubResource("ParticleProcessMaterial_ygojh")
@@ -35,7 +33,7 @@ lifetime = 0.2
 one_shot = true
 speed_scale = 0.5
 explosiveness = 1.0
-script = ExtResource("1_8gvjk")
+script = ExtResource("1_bvyap")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
