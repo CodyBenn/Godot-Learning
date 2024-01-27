@@ -748,6 +748,7 @@ position = Vector2(710, -116)
 [node name="SceneTransitions" parent="CanvasLayer" instance=ExtResource("10_2dqxk")]
 
 [node name="TransitionButton" type="CheckButton" parent="CanvasLayer" node_paths=PackedStringArray("transitioner")]
+visible = false
 offset_left = 9.0
 offset_top = 40.0
 offset_right = 53.0
@@ -756,7 +757,7 @@ focus_mode = 0
 script = ExtResource("11_4s6fk")
 transitioner = NodePath("../SceneTransitions")
 
-[connection signal="ready" from="." to="CanvasLayer/SceneTransitions" method="_on_main_ready"]
 [connection signal="ready" from="." to="CanvasLayer/SceneTransitions" method="_on_node_2d_ready"]
+[connection signal="ready" from="." to="CanvasLayer/SceneTransitions" method="_on_main_ready"]
 [connection signal="body_entered" from="EndFlag" to="CanvasLayer/SceneTransitions" method="_on_end_flag_body_entered"]
 [connection signal="toggled" from="CanvasLayer/TransitionButton" to="CanvasLayer/TransitionButton" method="_on_toggled" flags=18]

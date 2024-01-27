@@ -800,6 +800,7 @@ scale = Vector2(3.56, 1.68)
 [node name="SceneTransitions" parent="CanvasLayer" instance=ExtResource("11_rsi65")]
 
 [node name="TransitionButton" type="CheckButton" parent="CanvasLayer"]
+visible = false
 offset_left = 9.0
 offset_top = 40.0
 offset_right = 53.0
