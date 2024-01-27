@@ -818,6 +818,7 @@ position = Vector2(1053, 441)
 [node name="SceneTransitions" parent="CanvasLayer" instance=ExtResource("10_2hgjj")]
 
 [node name="TransitionButton" type="CheckButton" parent="CanvasLayer"]
+visible = false
 offset_left = 9.0
 offset_top = 40.0
 offset_right = 53.0
