@@ -17,30 +17,6 @@ current = true
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 4.11511, 3.46521)
 
-[node name="Balloon" parent="." instance=ExtResource("2_o7lou")]
-transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, 2.25623, 1.81141, -0.18946)
-clicks_to_pop = 8
-score_to_give = 4
-
-[node name="Balloon2" parent="." instance=ExtResource("2_o7lou")]
-transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, 1.65569, 0, 0.426684)
-
-[node name="Balloon3" parent="." instance=ExtResource("2_o7lou")]
-transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, -0.70001, -1.15815, 0.981172)
-
-[node name="Balloon4" parent="." instance=ExtResource("2_o7lou")]
-transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, -0.694278, 1.68358, 1.00129)
-
-[node name="Balloon5" parent="." instance=ExtResource("2_o7lou")]
-transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, -2.42703, 2.19687, 0.638633)
-
-[node name="Balloon6" parent="." instance=ExtResource("2_o7lou")]
-transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, 0.159944, 0, -0.937652)
-
-[node name="Balloon7" parent="." instance=ExtResource("2_o7lou")]
-transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, -3.34789, -1.52043, -0.529834)
-size_increase = 0.4
-
 [node name="UI" type="Label" parent="."]
 offset_left = 23.0
 offset_top = 20.0
@@ -48,3 +24,29 @@ offset_right = 411.0
 offset_bottom = 107.0
 text = "Score : 0"
 label_settings = SubResource("LabelSettings_cl6vs")
+
+[node name="Balloons" type="Node" parent="."]
+
+[node name="Balloon" parent="Balloons" instance=ExtResource("2_o7lou")]
+transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, 2.25623, 1.81141, -0.18946)
+clicks_to_pop = 8
+score_to_give = 4
+
+[node name="Balloon2" parent="Balloons" instance=ExtResource("2_o7lou")]
+transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, 1.65569, 0, 0.426684)
+
+[node name="Balloon3" parent="Balloons" instance=ExtResource("2_o7lou")]
+transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, -0.70001, -1.15815, 0.981172)
+
+[node name="Balloon4" parent="Balloons" instance=ExtResource("2_o7lou")]
+transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, -0.694278, 1.68358, 1.00129)
+
+[node name="Balloon5" parent="Balloons" instance=ExtResource("2_o7lou")]
+transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, -2.42703, 2.19687, 0.638633)
+
+[node name="Balloon6" parent="Balloons" instance=ExtResource("2_o7lou")]
+transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, 0.159944, 0, -0.937652)
+
+[node name="Balloon7" parent="Balloons" instance=ExtResource("2_o7lou")]
+transform = Transform3D(-0.996493, 0, -0.0836779, 0, 1, 0, 0.0836779, 0, -0.996493, -3.34789, -1.52043, -0.529834)
+size_increase = 0.4
