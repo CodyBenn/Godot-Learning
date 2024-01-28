@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxvkvtcxds8jx"]
+
+[ext_resource type="PackedScene" uid="uid://cc7wfy3rrnhrh" path="res://UI/ResourceDisplay.tscn" id="1_lgett"]
+[ext_resource type="PackedScene" uid="uid://cdbcmgjpvfa73" path="res://UI/Hotbar_UI.tscn" id="2_7qjy7"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="ResourceDisplay" parent="." instance=ExtResource("1_lgett")]
+
+[node name="Hotbar" parent="." instance=ExtResource("2_7qjy7")]

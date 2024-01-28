@@ -1,25 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgwgvty4e6685"]
+[gd_scene load_steps=5 format=3 uid="uid://dgwgvty4e6685"]
 
 [ext_resource type="Texture2D" uid="uid://byktbwdw5mxo8" path="res://Assets/Objects/House.png" id="1_1f7nf"]
+[ext_resource type="Script" path="res://Scripts/EnterBuilding.gd" id="1_fw712"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4e76n"]
 size = Vector2(38.875, 22)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0wu5"]
-size = Vector2(12.5, 14)
+[sub_resource type="CircleShape2D" id="CircleShape2D_vjkeb"]
 
-[node name="House" type="StaticBody2D"]
+[node name="House" type="Area2D"]
 z_index = 1
 y_sort_enabled = true
+script = ExtResource("1_fw712")
+next_scene = "res://Scenes/House_Interior.tscn"
 
-[node name="House_Collider" type="CollisionShape2D" parent="."]
+[node name="HouseCollision" type="StaticBody2D" parent="."]
+
+[node name="HouseCollider" type="CollisionShape2D" parent="HouseCollision"]
 position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_4e76n")
 
-[node name="Door_Collider" type="CollisionShape2D" parent="."]
-position = Vector2(0, -7)
-shape = SubResource("RectangleShape2D_v0wu5")
+[node name="DoorCollider" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2)
+shape = SubResource("CircleShape2D_vjkeb")
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -27)
 texture = ExtResource("1_1f7nf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
