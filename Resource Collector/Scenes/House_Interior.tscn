@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpvhpvejifmc"]
+[gd_scene load_steps=11 format=3 uid="uid://bpvhpvejifmc"]
 
 [ext_resource type="Texture2D" uid="uid://bqv4s7aprb1hh" path="res://Assets/Tilesets/Wooden House.png" id="1_iquob"]
 [ext_resource type="PackedScene" uid="uid://bwxrcscfhax35" path="res://Scenes/Player.tscn" id="2_cky0h"]
 [ext_resource type="Script" path="res://Scripts/EnterBuilding.gd" id="3_d0f23"]
+[ext_resource type="Texture2D" uid="uid://b41lmnafqvlk4" path="res://Assets/Objects/Phone.png" id="4_2kdua"]
+[ext_resource type="Texture2D" uid="uid://b36ykunbswnjc" path="res://Assets/Objects/Basic Furniture.png" id="4_ydbhn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hxohl"]
 texture = ExtResource("1_iquob")
@@ -115,6 +117,12 @@ sources/0 = SubResource("TileSetAtlasSource_hxohl")
 [sub_resource type="CircleShape2D" id="CircleShape2D_35vxi"]
 radius = 14.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdbme"]
+size = Vector2(14, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4jb7t"]
+radius = 26.0768
+
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -146,8 +154,7 @@ layer_3/z_index = 0
 layer_3/tile_data = PackedInt32Array()
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(118, 79)
-zoom = Vector2(0.5, 0.5)
+position = Vector2(120, 82)
 editor_draw_screen = false
 editor_draw_limits = true
 
@@ -162,6 +169,30 @@ next_scene = "res://Scenes/Main.tscn"
 [node name="DoorCollider" type="CollisionShape2D" parent="DoorExit"]
 position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_35vxi")
+
+[node name="TableBody" type="StaticBody2D" parent="."]
+position = Vector2(120, 80)
+
+[node name="TableSprite" type="Sprite2D" parent="TableBody"]
+texture = ExtResource("4_ydbhn")
+hframes = 9
+vframes = 6
+frame = 30
+
+[node name="TableCollider" type="CollisionShape2D" parent="TableBody"]
+shape = SubResource("RectangleShape2D_bdbme")
+
+[node name="PhoneBody" type="Area2D" parent="."]
+position = Vector2(120, 78)
+
+[node name="PhoneSprite" type="Sprite2D" parent="PhoneBody"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_2kdua")
+
+[node name="PhoneCollider" type="CollisionShape2D" parent="PhoneBody"]
+position = Vector2(0, 2)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_4jb7t")
 
 [connection signal="body_entered" from="DoorExit" to="DoorExit" method="_on_body_entered"]
 [connection signal="body_exited" from="DoorExit" to="DoorExit" method="_on_body_exited"]
