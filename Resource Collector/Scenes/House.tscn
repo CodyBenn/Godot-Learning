@@ -21,7 +21,7 @@ position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_4e76n")
 
 [node name="DoorCollider" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -2)
+position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_vjkeb")
 
 [node name="Sprite" type="Sprite2D" parent="."]
