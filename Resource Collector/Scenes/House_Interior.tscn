@@ -1,12 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bpvhpvejifmc"]
+[gd_scene load_steps=11 format=3 uid="uid://bpvhpvejifmc"]
 
 [ext_resource type="Texture2D" uid="uid://bqv4s7aprb1hh" path="res://Assets/Tilesets/Wooden House.png" id="1_iquob"]
 [ext_resource type="PackedScene" uid="uid://bwxrcscfhax35" path="res://Scenes/Player.tscn" id="2_cky0h"]
 [ext_resource type="Script" path="res://Scripts/EnterBuilding.gd" id="3_d0f23"]
 [ext_resource type="Texture2D" uid="uid://b41lmnafqvlk4" path="res://Assets/Objects/Phone.png" id="4_2kdua"]
 [ext_resource type="Texture2D" uid="uid://b36ykunbswnjc" path="res://Assets/Objects/Basic Furniture.png" id="4_ydbhn"]
-[ext_resource type="Texture2D" uid="uid://ctj3owypk2rlc" path="res://Assets/Characters/Pickaxe.png" id="6_m54to"]
-[ext_resource type="Texture2D" uid="uid://bj2t1lays71dp" path="res://Assets/Characters/Hoe.png" id="7_n0366"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hxohl"]
 texture = ExtResource("1_iquob")
@@ -195,14 +193,6 @@ texture = ExtResource("4_2kdua")
 position = Vector2(0, 2)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("CircleShape2D_4jb7t")
-
-[node name="Pickaxe" type="Sprite2D" parent="."]
-position = Vector2(165, 125)
-texture = ExtResource("6_m54to")
-
-[node name="Hoe" type="Sprite2D" parent="."]
-position = Vector2(41, 107)
-texture = ExtResource("7_n0366")
 
 [connection signal="body_entered" from="DoorExit" to="DoorExit" method="_on_body_entered"]
 [connection signal="body_exited" from="DoorExit" to="DoorExit" method="_on_body_exited"]
