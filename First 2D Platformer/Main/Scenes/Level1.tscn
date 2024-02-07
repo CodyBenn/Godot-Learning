@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://nowwxtd5jt5k" path="res://Main/Scenes/Enemy.tscn" id="6_oq2rj"]
 [ext_resource type="PackedScene" uid="uid://dwjhtv2gu8e06" path="res://Main/Scenes/Boundary.tscn" id="7_j3a46"]
 [ext_resource type="PackedScene" uid="uid://cduvpkwfc5ycn" path="res://Main/Scenes/Scene_Transition.tscn" id="10_2dqxk"]
-[ext_resource type="Script" path="res://Main/Scripts/TransitionButton.gd" id="11_4s6fk"]
+[ext_resource type="Script" path="res://Main/Scripts/Transition_Button.gd" id="11_ppky7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b5l23"]
 texture = ExtResource("1_tp10m")
@@ -754,7 +754,7 @@ offset_top = 40.0
 offset_right = 53.0
 offset_bottom = 64.0
 focus_mode = 0
-script = ExtResource("11_4s6fk")
+script = ExtResource("11_ppky7")
 transitioner = NodePath("../SceneTransitions")
 
 [connection signal="ready" from="." to="CanvasLayer/SceneTransitions" method="_on_main_ready"]
