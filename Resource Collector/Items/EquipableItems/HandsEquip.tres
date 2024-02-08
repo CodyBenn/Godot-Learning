@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="EquipableItem" load_steps=2 format=3 uid="uid://dqpm13dfrnytt"]
+
+[ext_resource type="Script" path="res://Items/EquipableItems/EquipableItem.gd" id="1_cuqjn"]
+
+[resource]
+script = ExtResource("1_cuqjn")
+display_name = "Hands"
