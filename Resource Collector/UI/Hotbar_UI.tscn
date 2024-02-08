@@ -1,36 +1,44 @@
-[gd_scene load_steps=18 format=3 uid="uid://cdbcmgjpvfa73"]
+[gd_scene load_steps=22 format=3 uid="uid://cdbcmgjpvfa73"]
 
 [ext_resource type="Script" path="res://UI/HotbarUI.gd" id="1_wvv7g"]
 [ext_resource type="Texture2D" uid="uid://x8dkdeiaqbjn" path="res://Assets/Characters/Hoe-export.png" id="2_lly6p"]
 [ext_resource type="PackedScene" uid="uid://nmcyn6q6koad" path="res://UI/Item_Button.tscn" id="2_xk8pw"]
 [ext_resource type="Texture2D" uid="uid://wkviop30gixk" path="res://Assets/Characters/WaterCan-export.png" id="3_ak56f"]
 [ext_resource type="Resource" uid="uid://cgibsu3xyh2nn" path="res://Items/Axe.tres" id="3_u7jpt"]
+[ext_resource type="Resource" uid="uid://dqpm13dfrnytt" path="res://Items/EquipableItems/HandsEquip.tres" id="4_1o52l"]
 [ext_resource type="Texture2D" uid="uid://ctj3owypk2rlc" path="res://Assets/Characters/Pickaxe.png" id="4_6ow8c"]
 [ext_resource type="Resource" uid="uid://cuxnocsm238ck" path="res://Items/Pickaxe.tres" id="5_0gnx5"]
 [ext_resource type="Resource" uid="uid://crn6kff6e1chj" path="res://Items/EquipableItems/HoeEquip.tres" id="6_uwtdn"]
 [ext_resource type="Resource" uid="uid://dh76ulsr24176" path="res://Items/WateringCan.tres" id="7_a3x0x"]
+[ext_resource type="Texture2D" uid="uid://r7shtw63lf3u" path="res://Assets/Objects/WoodPickup.png" id="10_gkfu5"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_d2o53"]
+action = &"Hotbar Shortcut 1"
+
+[sub_resource type="Shortcut" id="Shortcut_seoyl"]
+events = [SubResource("InputEventAction_d2o53")]
 
 [sub_resource type="InputEventAction" id="InputEventAction_pwv5r"]
-action = &"Hotbar Shortcut 1"
+action = &"Hotbar Shortcut 2"
 pressed = true
 
 [sub_resource type="Shortcut" id="Shortcut_3omk6"]
 events = [SubResource("InputEventAction_pwv5r")]
 
 [sub_resource type="InputEventAction" id="InputEventAction_ylyi6"]
-action = &"Hotbar Shortcut 2"
+action = &"Hotbar Shortcut 3"
 
 [sub_resource type="Shortcut" id="Shortcut_ac64h"]
 events = [SubResource("InputEventAction_ylyi6")]
 
 [sub_resource type="InputEventAction" id="InputEventAction_baby5"]
-action = &"Hotbar Shortcut 3"
+action = &"Hotbar Shortcut 4"
 
 [sub_resource type="Shortcut" id="Shortcut_04c0n"]
 events = [SubResource("InputEventAction_baby5")]
 
 [sub_resource type="InputEventAction" id="InputEventAction_08syl"]
-action = &"Hotbar Shortcut 4"
+action = &"Hotbar Shortcut 5"
 
 [sub_resource type="Shortcut" id="Shortcut_imqwl"]
 events = [SubResource("InputEventAction_08syl")]
@@ -56,29 +64,36 @@ offset_bottom = 27.0
 grow_horizontal = 2
 columns = 10
 
-[node name="ItemButton" parent="GridContainer" instance=ExtResource("2_xk8pw")]
+[node name="ItemButton1" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
-shortcut = SubResource("Shortcut_3omk6")
+shortcut = SubResource("Shortcut_seoyl")
 text = "1"
-item = ExtResource("3_u7jpt")
+icon = ExtResource("10_gkfu5")
+item = ExtResource("4_1o52l")
 
 [node name="ItemButton2" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
-shortcut = SubResource("Shortcut_ac64h")
+shortcut = SubResource("Shortcut_3omk6")
 text = "2"
-icon = ExtResource("4_6ow8c")
-item = ExtResource("5_0gnx5")
+item = ExtResource("3_u7jpt")
 
 [node name="ItemButton3" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
-shortcut = SubResource("Shortcut_04c0n")
+shortcut = SubResource("Shortcut_ac64h")
 text = "3"
-icon = ExtResource("2_lly6p")
-item = ExtResource("6_uwtdn")
+icon = ExtResource("4_6ow8c")
+item = ExtResource("5_0gnx5")
 
 [node name="ItemButton4" parent="GridContainer" instance=ExtResource("2_xk8pw")]
 layout_mode = 2
-shortcut = SubResource("Shortcut_imqwl")
+shortcut = SubResource("Shortcut_04c0n")
 text = "4"
+icon = ExtResource("2_lly6p")
+item = ExtResource("6_uwtdn")
+
+[node name="ItemButton5" parent="GridContainer" instance=ExtResource("2_xk8pw")]
+layout_mode = 2
+shortcut = SubResource("Shortcut_imqwl")
+text = "5"
 icon = ExtResource("3_ak56f")
 item = ExtResource("7_a3x0x")

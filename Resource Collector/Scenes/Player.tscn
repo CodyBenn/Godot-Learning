@@ -1,10 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://bwxrcscfhax35"]
+[gd_scene load_steps=22 format=3 uid="uid://bwxrcscfhax35"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_p7qn5"]
 [ext_resource type="Texture2D" uid="uid://dnhd1mofbxt3x" path="res://Assets/Characters/Basic Charakter Spritesheet.png" id="1_yhncl"]
 [ext_resource type="Script" path="res://Scripts/HandEquip.gd" id="3_becka"]
-[ext_resource type="Texture2D" uid="uid://boduv533wh2b0" path="res://Assets/Characters/Axe-export.png" id="3_k0tqs"]
-[ext_resource type="Resource" uid="uid://cgibsu3xyh2nn" path="res://Items/Axe.tres" id="5_63rnu"]
+[ext_resource type="Resource" uid="uid://cebf7hfpiug1k" path="res://Items/Hands.tres" id="4_3yctw"]
 [ext_resource type="Script" path="res://Scripts/Inventory.gd" id="6_xb7da"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w64w4"]
@@ -1396,9 +1395,8 @@ visible = false
 show_behind_parent = true
 position = Vector2(5, 0)
 scale = Vector2(-1, 1)
-texture = ExtResource("3_k0tqs")
 script = ExtResource("3_becka")
-equipped_item = ExtResource("5_63rnu")
+equipped_item = ExtResource("4_3yctw")
 
 [node name="Area2D" type="Area2D" parent="HandEquip"]
 position = Vector2(10.3443, -2.69118)

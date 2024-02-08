@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="HarvestTool" load_steps=2 format=3 uid="uid://cebf7hfpiug1k"]
+
+[ext_resource type="Script" path="res://Items/HarvestingTool.gd" id="2_kg348"]
+
+[resource]
+script = ExtResource("2_kg348")
+effected_types = Array[Resource("res://Assets/Resources/ResourceNodeType.gd")]([])
+min_damage = null
+max_damage = null
+display_name = "Hands"
