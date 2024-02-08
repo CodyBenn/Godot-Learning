@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cdbcmgjpvfa73"]
+[gd_scene load_steps=21 format=3 uid="uid://cdbcmgjpvfa73"]
 
 [ext_resource type="Script" path="res://UI/HotbarUI.gd" id="1_wvv7g"]
 [ext_resource type="Texture2D" uid="uid://x8dkdeiaqbjn" path="res://Assets/Characters/Hoe-export.png" id="2_lly6p"]
@@ -10,7 +10,6 @@
 [ext_resource type="Resource" uid="uid://cuxnocsm238ck" path="res://Items/Pickaxe.tres" id="5_0gnx5"]
 [ext_resource type="Resource" uid="uid://crn6kff6e1chj" path="res://Items/EquipableItems/HoeEquip.tres" id="6_uwtdn"]
 [ext_resource type="Resource" uid="uid://dh76ulsr24176" path="res://Items/WateringCan.tres" id="7_a3x0x"]
-[ext_resource type="Texture2D" uid="uid://r7shtw63lf3u" path="res://Assets/Objects/WoodPickup.png" id="10_gkfu5"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_d2o53"]
 action = &"Hotbar Shortcut 1"
@@ -68,7 +67,7 @@ columns = 10
 layout_mode = 2
 shortcut = SubResource("Shortcut_seoyl")
 text = "1"
-icon = ExtResource("10_gkfu5")
+icon = null
 item = ExtResource("4_1o52l")
 
 [node name="ItemButton2" parent="GridContainer" instance=ExtResource("2_xk8pw")]
