@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cnb4h2vjpwl74"]
+[gd_scene load_steps=35 format=3 uid="uid://cnb4h2vjpwl74"]
 
 [ext_resource type="Texture2D" uid="uid://c0sgn4enfdcag" path="res://Assets/Objects/Basic Grass Biom things 1.png" id="1_bhqln"]
 [ext_resource type="Texture2D" uid="uid://b36ykunbswnjc" path="res://Assets/Objects/Basic Furniture.png" id="2_yr0je"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://kxptyql1n81k" path="res://Scenes/Wood_Resource.tscn" id="14_ke8uy"]
 [ext_resource type="PackedScene" uid="uid://xthsi6ulrfvw" path="res://Scenes/Rock_Resource.tscn" id="15_lyp2j"]
 [ext_resource type="PackedScene" uid="uid://dxvkvtcxds8jx" path="res://UI/UI_Full.tscn" id="17_j1rcr"]
+[ext_resource type="Texture2D" uid="uid://bjq4j4yfyf83j" path="res://Assets/Objects/Tree.png" id="19_kxxh8"]
 [ext_resource type="PackedScene" uid="uid://djolnjvds8kfj" path="res://Scenes/Tree_Wood_Resource.tscn" id="19_w25fv"]
 [ext_resource type="PackedScene" uid="uid://dgwgvty4e6685" path="res://Scenes/House.tscn" id="20_gjdrj"]
 
@@ -1476,5 +1477,9 @@ position = Vector2(-128, -50)
 
 [node name="House" parent="." instance=ExtResource("20_gjdrj")]
 position = Vector2(63, -273)
+
+[node name="Tree" type="Sprite2D" parent="."]
+position = Vector2(76, -75)
+texture = ExtResource("19_kxxh8")
 
 [editable path="CanvasLayer"]
