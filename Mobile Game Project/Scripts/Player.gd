@@ -9,7 +9,7 @@ var max_fall_velocity = 1000.0
 
 @onready var animator = $AnimationPlayer
 
-#Assignsthe container for camera limit
+#Assigns the container for camera limit
 var viewport_size
 
 func _ready():
@@ -32,6 +32,8 @@ func _process(delta):
 func _physics_process(delta):
 	#Assigns gravity to player
 	velocity.y += gravity
+	
+	#Assigns limit to fall distance
 	if velocity.y > max_fall_velocity:
 		velocity.y = max_fall_velocity
 		

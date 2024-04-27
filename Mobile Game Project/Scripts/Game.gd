@@ -1,11 +1,17 @@
 extends Node2D
 
+#Loads camera so it can be instantiated later
+var camera_scene = preload("res://Scenes/GameCamera.tscn")
 
-# Called when the node enters the scene tree for the first time.
+#Assign camera to "null"
+var camera = null
+
+
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	#Assigns camera to main scene and assigns camera as child of player
+	camera = camera_scene.instantiate()
+	camera.setup_camera($Player)
+	add_child(camera)
+	
 func _process(delta):
 	pass
