@@ -11,26 +11,16 @@ script = ExtResource("1_jy8p2")
 position = Vector2(272, 696)
 scale = Vector2(0.35, 0.35)
 
-[node name="Platform" parent="." instance=ExtResource("3_eu50y")]
+[node name="PlatformParent" type="Node2D" parent="."]
+
+[node name="Platform" parent="PlatformParent" instance=ExtResource("3_eu50y")]
 position = Vector2(0, 896)
 
-[node name="Platform2" parent="." instance=ExtResource("3_eu50y")]
+[node name="Platform2" parent="PlatformParent" instance=ExtResource("3_eu50y")]
 position = Vector2(136, 896)
 
-[node name="Platform3" parent="." instance=ExtResource("3_eu50y")]
+[node name="Platform3" parent="PlatformParent" instance=ExtResource("3_eu50y")]
 position = Vector2(272, 896)
 
-[node name="Platform4" parent="." instance=ExtResource("3_eu50y")]
+[node name="Platform4" parent="PlatformParent" instance=ExtResource("3_eu50y")]
 position = Vector2(408, 896)
-
-[node name="Platform5" parent="." instance=ExtResource("3_eu50y")]
-position = Vector2(352, 688)
-
-[node name="Platform6" parent="." instance=ExtResource("3_eu50y")]
-position = Vector2(-48, 400)
-
-[node name="Platform7" parent="." instance=ExtResource("3_eu50y")]
-position = Vector2(488, 192)
-
-[node name="Platform8" parent="." instance=ExtResource("3_eu50y")]
-position = Vector2(232, -32)
