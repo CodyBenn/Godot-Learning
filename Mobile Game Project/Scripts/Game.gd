@@ -8,9 +8,11 @@ var camera = null
 
 
 func _ready():
-	#Assigns camera to main scene and assigns camera as child of player
+	#Creates a camera to main scene
 	camera = camera_scene.instantiate()
+	#Performs func setup_camera which determines if player is "player" and assigns to "null"
 	camera.setup_camera($Player)
+	#Assigns camera as child of player
 	add_child(camera)
 	
 func _process(delta):

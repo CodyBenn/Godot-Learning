@@ -40,8 +40,9 @@ func _physics_process(delta):
 	#Check for player velocity
 	#print(velocity.y)
 	
-	#Movement controller for the player
+	#Movement controller for the player assigning left and right movement
 	var direction = Input.get_axis("move_left", "move_right")
+	#Movement velocity
 	if direction:
 		velocity.x = direction * speed
 	else:
@@ -50,8 +51,9 @@ func _physics_process(delta):
 	#Allows movement
 	move_and_slide()
 	
-	#Loops player from left and right on contact to other side
+	#Determines distance(px) to be used as a buffer for smooth transition
 	var margin = 25
+	#Loops player from left and right on contact to other side
 	if global_position.x > viewport_size.x + margin:
 		global_position.x = -margin
 		#print("Right to left")

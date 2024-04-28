@@ -8,7 +8,7 @@
 script = ExtResource("1_jy8p2")
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_f70u6")]
-position = Vector2(282, 201)
+position = Vector2(272, 696)
 scale = Vector2(0.35, 0.35)
 
 [node name="Platform" parent="." instance=ExtResource("3_eu50y")]
