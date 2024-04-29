@@ -2,6 +2,7 @@ extends Node2D
 
 #Assigns and instantiates to node PlatformParent for storing new platforms
 @onready var platform_parent = $PlatformParent
+@onready var player = $Player
 #Loads "Platform" scene so it can be instatiated later
 var platform_scene = preload("res://Scenes/Platform.tscn")
 #Loads "GameCamera" so it can be instantiated later
@@ -19,7 +20,6 @@ var camera = null
 #Declares viewport_size as global variable for use in other functions
 var viewport_size
 
-
 func _ready():
 	#Creates a camera to main scene
 	camera = camera_scene.instantiate()
@@ -28,8 +28,10 @@ func _ready():
 	#Assigns camera as child of player
 	add_child(camera)
 	
+	#Determine camera size and assign to viewport_size
 	viewport_size = get_viewport_rect().size
 	generated_platform_count = 0
+	#Generate floor platforms for player based on camera size and assign generate_ground to true
 	start_platform_y = viewport_size.y - (y_distance_between_platforms * 1)
 	generate_level(start_platform_y, true)
 	
@@ -39,7 +41,19 @@ func _process(delta):
 		get_tree().quit()
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
-
+	
+	#Procederal level generation
+	if player:
+		#Determines player location
+		var py = player.global_position.y
+		#Determines end of level location
+		var end_of_level_pos = start_platform_y - (generated_platform_count * y_distance_between_platforms)
+		#Determines when to start generating
+		var threshold = end_of_level_pos + (y_distance_between_platforms * 6)
+		#After player reaches threshold, generate new platform set at end of level position
+		if py <= threshold:
+			generate_level(end_of_level_pos, false)
+			
 func create_platform(location: Vector2):
 	#Instantiates a platform, sets it's position, set's as a child of "platform_parent", then returns it's value
 	var platform = platform_scene.instantiate()
@@ -72,5 +86,6 @@ func generate_level(start_y: float, generate_ground: bool):
 		#print(location)
 		#Generates a platform at location
 		create_platform(location)
+		#Adds 1 to "generated_platform_count"
 		generated_platform_count += 1
 	print(generated_platform_count)
