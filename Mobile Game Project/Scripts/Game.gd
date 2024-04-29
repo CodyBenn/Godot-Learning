@@ -42,20 +42,18 @@ func _process(delta):
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
 	
-	#Procederal level generation
+	#Procedural level generation
 	if player:
-		#Determines player location
+		#Determines player location, end of level location, and when to start generating
 		var py = player.global_position.y
-		#Determines end of level location
 		var end_of_level_pos = start_platform_y - (generated_platform_count * y_distance_between_platforms)
-		#Determines when to start generating
 		var threshold = end_of_level_pos + (y_distance_between_platforms * 6)
 		#After player reaches threshold, generate new platform set at end of level position
 		if py <= threshold:
 			generate_level(end_of_level_pos, false)
 			
 func create_platform(location: Vector2):
-	#Instantiates a platform, sets it's position, set's as a child of "platform_parent", then returns it's value
+	#Instantiates a platform, sets it's position, sets it as a child of "platform_parent", then returns it's value
 	var platform = platform_scene.instantiate()
 	platform.global_position = location
 	platform_parent.add_child(platform)
