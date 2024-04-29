@@ -8,7 +8,9 @@ script = ExtResource("1_jy8p2")
 y_distance_between_platforms = 150
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_f70u6")]
+z_index = 1
 position = Vector2(272, 696)
 scale = Vector2(0.35, 0.35)
 
 [node name="PlatformParent" type="Node2D" parent="."]
+z_index = -5
