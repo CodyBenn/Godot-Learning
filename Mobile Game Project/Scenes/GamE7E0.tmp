@@ -6,6 +6,7 @@
 [node name="Game" type="Node2D"]
 script = ExtResource("1_jy8p2")
 y_distance_between_platforms = 150
+level_size = 10
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_f70u6")]
 position = Vector2(272, 696)
