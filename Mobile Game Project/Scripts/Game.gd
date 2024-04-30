@@ -1,6 +1,6 @@
 extends Node2D
 
-#Assigns and instantiates to node PlatformParent for storing new platforms
+#Assigns to node PlatformParent for storing new platforms
 @onready var platform_parent = $PlatformParent
 @onready var player = $Player
 #Loads "Platform" scene so it can be instatiated later
