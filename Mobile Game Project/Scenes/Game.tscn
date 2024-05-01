@@ -13,4 +13,5 @@ position = Vector2(272, 696)
 scale = Vector2(0.35, 0.35)
 
 [node name="PlatformParent" type="Node2D" parent="."]
+visible = false
 z_index = -5
