@@ -17,7 +17,6 @@ var generated_platform_count = 0
 var viewport_size
 
 func _ready():
-	
 	#Determine camera size and assign to viewport_size
 	viewport_size = get_viewport_rect().size
 	generated_platform_count = 0
@@ -37,12 +36,6 @@ func _process(delta):
 		if py <= threshold:
 			generate_level(end_of_level_pos, false)
 			
-func create_platform(location: Vector2):
-	#Instantiates a platform, sets it's position, sets it as a child of "platform_parent", then returns it's value
-	var platform = platform_scene.instantiate()
-	platform.global_position = location
-	platform_parent.add_child(platform)
-	return platform
 			
 func generate_level(start_y: float, generate_ground: bool):
 	var platform_width = 138
@@ -72,3 +65,10 @@ func generate_level(start_y: float, generate_ground: bool):
 		#Adds 1 to "generated_platform_count"
 		generated_platform_count += 1
 	print(generated_platform_count)
+	
+func create_platform(location: Vector2):
+	#Instantiates a platform, sets it's position, sets it as a child of "platform_parent", then returns it's value
+	var platform = platform_scene.instantiate()
+	platform.global_position = location
+	platform_parent.add_child(platform)
+	return platform

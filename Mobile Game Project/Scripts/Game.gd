@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var player = $Player
+@onready var level_generator = $LevelGenerator
+
 #Loads "GameCamera" so it can be instantiated later
 var camera_scene = preload("res://Scenes/Game_Camera.tscn")
 
