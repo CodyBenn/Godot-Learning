@@ -2,7 +2,6 @@ extends Node2D
 
 #Assigns to node PlatformParent for storing new platforms
 @onready var platform_parent = $PlatformParent
-@onready var player = $"../Player"
 
 #Loads "Platform" scene so it can be instatiated later
 var platform_scene = preload("res://Scenes/Platform.tscn")
@@ -12,8 +11,13 @@ var platform_scene = preload("res://Scenes/Platform.tscn")
 @export var level_size = 50
 var start_platform_y
 var generated_platform_count = 0
-
 var viewport_size
+
+var player: Player = null
+
+func setup(_player: Player):
+	if _player:
+		player = _player
 
 func _ready():
 	#Determine camera size and assign to viewport_size
@@ -23,7 +27,7 @@ func _ready():
 	start_platform_y = viewport_size.y - (y_distance_between_platforms * 1)
 	generate_level(start_platform_y, true)
 	
-func _process(delta):
+func _process(_delta):
 	
 	#Procedural level generation
 	if player:
@@ -54,7 +58,7 @@ func generate_level(start_y: float, generate_ground: bool):
 		#Assigns "random_x" as a random number to spawn the platform along x axis
 		var random_x = randf_range(-50.0, max_x_position)
 		#Assigns "location" as Vector2 so we can assign x and y coordinates
-		var location : Vector2
+		var location: Vector2 = Vector2.ZERO
 		#Assigns x and y axis coordinates to "location"
 		location.x = random_x
 		location.y = start_y - (y_distance_between_platforms * i)

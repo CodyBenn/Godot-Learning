@@ -12,6 +12,8 @@ var max_fall_velocity = 1000.0
 #Assigns the container for camera limit
 var viewport_size
 
+var player: Player = null
+
 func _ready():
 	#Assigns camera limits
 	viewport_size = get_viewport_rect().size
@@ -19,7 +21,7 @@ func _ready():
 func jump():
 	velocity.y = jump_velocity
 	
-func _process(delta):
+func _process(_delta):
 	
 	#Jump animation controller for player
 	if velocity.y < 0:
@@ -29,7 +31,7 @@ func _process(delta):
 		if animator.current_animation != "Idle":
 			animator.play("Idle")
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	#Assigns gravity to player
 	velocity.y += gravity
 	
@@ -61,3 +63,7 @@ func _physics_process(delta):
 		global_position.x = viewport_size.x + margin
 		#print("Left to right")
 		
+#Determines player and assigns "null"
+func setup_player(_player: Player):
+	if _player != null:
+		player = _player

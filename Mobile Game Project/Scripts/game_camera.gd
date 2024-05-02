@@ -5,9 +5,9 @@ extends Camera2D
 
 #Assigns variable to only be of type Player with "null"
 var player: Player = null
-
-#Grabs screen size being used to stretch game accordingly
-var viewport_size = get_viewport_rect().size
+#
+##Grabs screen size being used to stretch game accordingly
+#var viewport_size = get_viewport_rect().size
 
 func _ready():
 	#Grabs screen size being used
@@ -30,13 +30,13 @@ func _ready():
 	rect_shape.set_size(rect_shape_size)
 	destroyer_shape.shape = rect_shape
 	
-func _process(delta):
+func _process(_delta):
 	if player:
 		#Create distance(px) from player to camera
 		var limit_distance = 420
 		#Moves and creates new limit for camera if player gains height
 		if limit_bottom > player.global_position.y + limit_distance:
-			limit_bottom = player.global_position.y + limit_distance
+			limit_bottom = int(player.global_position.y + limit_distance)
 			
 	#Deletes platforms after player passes certain distance
 	var overlapping_areas = destroyer.get_overlapping_areas()
@@ -51,6 +51,6 @@ func setup_camera(_player: Player):
 		player = _player
 		
 #Sets position of camera to follow player.y axis if player is "null"
-func _physics_process(delta):
+func _physics_process(_delta):
 	if player != null:
 		global_position.y = player.global_position.y
