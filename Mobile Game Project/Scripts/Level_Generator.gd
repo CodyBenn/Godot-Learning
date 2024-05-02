@@ -13,7 +13,6 @@ var platform_scene = preload("res://Scenes/Platform.tscn")
 var start_platform_y
 var generated_platform_count = 0
 
-#Declares viewport_size as global variable for use in other functions
 var viewport_size
 
 func _ready():
