@@ -1,16 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dw4cdb6q0gnrk"]
+[gd_scene load_steps=4 format=3 uid="uid://dw4cdb6q0gnrk"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_jy8p2"]
 [ext_resource type="PackedScene" uid="uid://b2picurp1leon" path="res://Scenes/Player.tscn" id="2_f70u6"]
+[ext_resource type="PackedScene" uid="uid://5bblipul566u" path="res://Scenes/Level_Generator.tscn" id="3_20tt7"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_jy8p2")
-y_distance_between_platforms = 150
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_f70u6")]
 z_index = 1
 position = Vector2(272, 696)
 scale = Vector2(0.35, 0.35)
 
-[node name="PlatformParent" type="Node2D" parent="."]
-z_index = -5
+[node name="LevelGenerator" parent="." instance=ExtResource("3_20tt7")]
+level_size = 10
