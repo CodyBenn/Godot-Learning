@@ -1,4 +1,5 @@
 extends Area2D
+class_name Platform
 
 #Assigns platform collision to the player body and has player jump
 func _on_body_entered(body):
