@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://chxt355fb6upd"]
+[gd_scene load_steps=5 format=3 uid="uid://chxt355fb6upd"]
 
 [ext_resource type="Script" path="res://Scripts/screens.gd" id="1_rdc3p"]
 [ext_resource type="Texture2D" uid="uid://bs3ufsyp0v1tp" path="res://Assets/Textures/ui/gear.png" id="2_p73r5"]
+[ext_resource type="PackedScene" uid="uid://cp06gfrspk3s5" path="res://Scenes/title_screen.tscn" id="3_3g4jo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_waif7"]
 font_size = 14
@@ -82,5 +83,7 @@ grow_vertical = 0
 texture_normal = ExtResource("2_p73r5")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="TitleScreen" parent="CanvasLayer" instance=ExtResource("3_3g4jo")]
 
 [connection signal="pressed" from="CanvasLayer/Debug/ToggleConsole" to="CanvasLayer" method="_on_toggle_console_pressed"]
