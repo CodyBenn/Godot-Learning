@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bs3ufsyp0v1tp" path="res://Assets/Textures/ui/gear.png" id="2_p73r5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_waif7"]
-font_size = 20
+font_size = 14
 
 [node name="Screens" type="Control"]
 layout_mode = 3
@@ -24,7 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ConsoleLog" type="Control" parent="CanvasLayer/Debug"]
+[node name="ConsoleLog" type="Control" parent="CanvasLayer/Debug" groups=["debug_console"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -68,7 +68,6 @@ size_flags_vertical = 3
 
 [node name="LogLabel" type="Label" parent="CanvasLayer/Debug/ConsoleLog/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "test"
 label_settings = SubResource("LabelSettings_waif7")
 autowrap_mode = 3
 
