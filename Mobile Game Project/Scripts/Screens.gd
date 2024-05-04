@@ -16,3 +16,5 @@ func _on_toggle_console_pressed():
 	#else:
 		#console.visible = false
 		#print("Console is turned off")
+		
+	
