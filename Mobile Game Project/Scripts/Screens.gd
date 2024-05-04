@@ -1,11 +1,20 @@
 extends CanvasLayer
 
+@onready var console = $Debug/ConsoleLog
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+	console.visible = false
+	
 func _process(_delta):
 	pass
+
+func _on_toggle_console_pressed():
+	console.visible = !console.visible
+	#if console.visible == false:
+		#console.visible = true
+		#print("Console is turned on")
+	#else:
+		#console.visible = false
+		#print("Console is turned off")
+		
+	

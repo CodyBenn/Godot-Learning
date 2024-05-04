@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://chxt355fb6upd"]
+[gd_scene load_steps=4 format=3 uid="uid://chxt355fb6upd"]
 
 [ext_resource type="Script" path="res://Scripts/screens.gd" id="1_rdc3p"]
+[ext_resource type="Texture2D" uid="uid://bs3ufsyp0v1tp" path="res://Assets/Textures/ui/gear.png" id="2_p73r5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_waif7"]
+font_size = 20
 
 [node name="Screens" type="Control"]
 layout_mode = 3
@@ -10,3 +14,74 @@ offset_bottom = 40.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource("1_rdc3p")
+
+[node name="Debug" type="Control" parent="CanvasLayer"]
+z_index = 4096
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ConsoleLog" type="Control" parent="CanvasLayer/Debug"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlackBG" type="ColorRect" parent="CanvasLayer/Debug/ConsoleLog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.588235)
+
+[node name="BuildNoLabel" type="Label" parent="CanvasLayer/Debug/ConsoleLog"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 11.0
+offset_right = 521.0
+offset_bottom = 34.0
+text = "Build 0.1.0"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Debug/ConsoleLog"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 52.0
+offset_right = -11.0
+offset_bottom = -52.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Debug/ConsoleLog/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LogLabel" type="Label" parent="CanvasLayer/Debug/ConsoleLog/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "test"
+label_settings = SubResource("LabelSettings_waif7")
+autowrap_mode = 3
+
+[node name="ToggleConsole" type="TextureButton" parent="CanvasLayer/Debug"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -47.0
+offset_right = 47.0
+grow_vertical = 0
+texture_normal = ExtResource("2_p73r5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="CanvasLayer/Debug/ToggleConsole" to="CanvasLayer" method="_on_toggle_console_pressed"]
