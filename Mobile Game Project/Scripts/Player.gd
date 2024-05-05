@@ -25,6 +25,7 @@ func _ready():
 	
 func jump():
 	velocity.y = jump_velocity
+	#MyUtility.add_log_message("Player jumped!")
 	
 func _process(_delta):
 	

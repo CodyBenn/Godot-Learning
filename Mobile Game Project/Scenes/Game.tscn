@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_jy8p2"]
 [ext_resource type="Texture2D" uid="uid://clwk0anhjfta0" path="res://Assets/Textures/bg/Ground.png" id="3_3pdx3"]
-[ext_resource type="PackedScene" uid="uid://5bblipul566u" path="res://Scenes/Level_Generator.tscn" id="3_20tt7"]
+[ext_resource type="PackedScene" uid="uid://5bblipul566u" path="res://Scenes/level_generator.tscn" id="3_20tt7"]
 [ext_resource type="Texture2D" uid="uid://b081kyxj5w2k6" path="res://Assets/Textures/bg/Layer1.png" id="4_llb0c"]
 [ext_resource type="Texture2D" uid="uid://cofcal71dk1f7" path="res://Assets/Textures/bg/Layer2.png" id="5_j2af6"]
 [ext_resource type="Texture2D" uid="uid://fju0gc1lnle3" path="res://Assets/Textures/bg/Layer3.png" id="6_arbnq"]

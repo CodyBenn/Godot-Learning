@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://chxt355fb6upd"]
+[gd_scene load_steps=7 format=3 uid="uid://chxt355fb6upd"]
 
 [ext_resource type="Script" path="res://Scripts/screens.gd" id="1_rdc3p"]
 [ext_resource type="Texture2D" uid="uid://bs3ufsyp0v1tp" path="res://Assets/Textures/ui/gear.png" id="2_p73r5"]
+[ext_resource type="PackedScene" uid="uid://cp06gfrspk3s5" path="res://Scenes/title_screen.tscn" id="3_3g4jo"]
+[ext_resource type="PackedScene" uid="uid://dmcgxciftadhg" path="res://Scenes/pause_screen.tscn" id="4_jqppi"]
+[ext_resource type="PackedScene" uid="uid://cs0gmtas14sts" path="res://Scenes/game_over_screen.tscn" id="5_4p2h4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_waif7"]
-font_size = 20
+font_size = 14
 
 [node name="Screens" type="Control"]
 layout_mode = 3
@@ -24,7 +27,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ConsoleLog" type="Control" parent="CanvasLayer/Debug"]
+[node name="ConsoleLog" type="Control" parent="CanvasLayer/Debug" groups=["debug_console"]]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -68,7 +71,6 @@ size_flags_vertical = 3
 
 [node name="LogLabel" type="Label" parent="CanvasLayer/Debug/ConsoleLog/ScrollContainer/VBoxContainer"]
 layout_mode = 2
-text = "test"
 label_settings = SubResource("LabelSettings_waif7")
 autowrap_mode = 3
 
@@ -83,5 +85,11 @@ grow_vertical = 0
 texture_normal = ExtResource("2_p73r5")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="TitleScreen" parent="CanvasLayer" instance=ExtResource("3_3g4jo")]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("4_jqppi")]
+
+[node name="GameOverScreen" parent="CanvasLayer" instance=ExtResource("5_4p2h4")]
 
 [connection signal="pressed" from="CanvasLayer/Debug/ToggleConsole" to="CanvasLayer" method="_on_toggle_console_pressed"]
