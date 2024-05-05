@@ -10,6 +10,7 @@ func _process(_delta):
 
 func _on_toggle_console_pressed():
 	console.visible = !console.visible
+	#Same line of code as above, done worse
 	#if console.visible == false:
 		#console.visible = true
 		#print("Console is turned on")
