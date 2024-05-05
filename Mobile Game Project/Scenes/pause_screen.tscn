@@ -1,0 +1,106 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmcgxciftadhg"]
+
+[ext_resource type="Texture2D" uid="uid://c8nr4emt0m7nq" path="res://Assets/Textures/ui/Box02.png" id="1_4mjh1"]
+[ext_resource type="Texture2D" uid="uid://cmgwjbo0whuwy" path="res://Assets/Textures/ui/PausedText.png" id="2_o3s77"]
+[ext_resource type="Texture2D" uid="uid://b6ibujgtcdvgb" path="res://Assets/Textures/ui/RestartBtn.png" id="3_7y0r5"]
+[ext_resource type="Texture2D" uid="uid://cbyh0v2wjrqrg" path="res://Assets/Textures/ui/menuBtn.png" id="4_lv6y6"]
+[ext_resource type="Texture2D" uid="uid://ddtof72rjictg" path="res://Assets/Textures/ui/Closebtn.png" id="5_53m4l"]
+
+[node name="PauseScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlackBG" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.666667)
+
+[node name="Box" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -203.0
+offset_right = 256.0
+offset_bottom = 203.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4mjh1")
+expand_mode = 1
+
+[node name="PauseText" type="TextureRect" parent="Box"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.0
+offset_top = -91.0
+offset_right = 190.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o3s77")
+
+[node name="PauseRestart" type="TextureButton" parent="Box"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = 27.0
+offset_right = -24.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_7y0r5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PauseMenu" type="TextureButton" parent="Box"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = 27.0
+offset_right = 122.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_lv6y6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PauseClose" type="TextureButton" parent="Box"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 159.0
+offset_top = -195.0
+offset_right = 236.0
+offset_bottom = -121.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_53m4l")
+ignore_texture_size = true
+stretch_mode = 0
