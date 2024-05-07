@@ -14,6 +14,7 @@ shadow_color = Color(0, 0, 0, 0.294118)
 shadow_offset = Vector2(3, 3)
 
 [node name="GameOverScreen" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,6 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BlackBG" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,6 +33,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.666667)
 
 [node name="Box" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -47,6 +50,7 @@ texture = ExtResource("1_nvhyk")
 expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="Box"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -63,6 +67,7 @@ texture = ExtResource("2_fsrsu")
 expand_mode = 1
 
 [node name="ScoreLabel" type="Label" parent="Box"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -80,6 +85,7 @@ label_settings = SubResource("LabelSettings_feqts")
 horizontal_alignment = 1
 
 [node name="HighScoreLabel" type="Label" parent="Box"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -97,6 +103,7 @@ label_settings = SubResource("LabelSettings_feqts")
 horizontal_alignment = 1
 
 [node name="GameOverRestart" type="TextureButton" parent="Box"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -114,6 +121,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="GameOverMenu" type="TextureButton" parent="Box"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
