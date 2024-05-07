@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmcgxciftadhg"]
+[gd_scene load_steps=7 format=3 uid="uid://dmcgxciftadhg"]
 
 [ext_resource type="Texture2D" uid="uid://c8nr4emt0m7nq" path="res://Assets/Textures/ui/Box02.png" id="1_4mjh1"]
+[ext_resource type="Script" path="res://Scripts/screen_button.gd" id="1_qxx3w"]
 [ext_resource type="Texture2D" uid="uid://cmgwjbo0whuwy" path="res://Assets/Textures/ui/PausedText.png" id="2_o3s77"]
 [ext_resource type="Texture2D" uid="uid://b6ibujgtcdvgb" path="res://Assets/Textures/ui/RestartBtn.png" id="3_7y0r5"]
 [ext_resource type="Texture2D" uid="uid://cbyh0v2wjrqrg" path="res://Assets/Textures/ui/menuBtn.png" id="4_lv6y6"]
@@ -54,7 +55,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_o3s77")
 
-[node name="PauseRestart" type="TextureButton" parent="Box"]
+[node name="PauseRestart" type="TextureButton" parent="Box" groups=["buttons"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -70,8 +71,9 @@ grow_vertical = 2
 texture_normal = ExtResource("3_7y0r5")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("1_qxx3w")
 
-[node name="PauseMenu" type="TextureButton" parent="Box"]
+[node name="PauseMenu" type="TextureButton" parent="Box" groups=["buttons"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -87,8 +89,9 @@ grow_vertical = 2
 texture_normal = ExtResource("4_lv6y6")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("1_qxx3w")
 
-[node name="PauseClose" type="TextureButton" parent="Box"]
+[node name="PauseClose" type="TextureButton" parent="Box" groups=["buttons"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -104,3 +107,8 @@ grow_vertical = 2
 texture_normal = ExtResource("5_53m4l")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("1_qxx3w")
+
+[connection signal="pressed" from="Box/PauseRestart" to="Box/PauseRestart" method="_on_pressed"]
+[connection signal="pressed" from="Box/PauseMenu" to="Box/PauseMenu" method="_on_pressed"]
+[connection signal="pressed" from="Box/PauseClose" to="Box/PauseClose" method="_on_pressed"]
