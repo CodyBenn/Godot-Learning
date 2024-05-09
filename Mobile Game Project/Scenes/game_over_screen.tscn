@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cs0gmtas14sts"]
+[gd_scene load_steps=8 format=3 uid="uid://cs0gmtas14sts"]
 
+[ext_resource type="Script" path="res://Scripts/base_screen.gd" id="1_k5r2s"]
 [ext_resource type="Texture2D" uid="uid://bhccg5qbdk6ik" path="res://Assets/Textures/ui/Box04.png" id="1_nvhyk"]
 [ext_resource type="Texture2D" uid="uid://bgoccrbribue6" path="res://Assets/Textures/ui/Welldone.png" id="2_fsrsu"]
 [ext_resource type="Texture2D" uid="uid://b6ibujgtcdvgb" path="res://Assets/Textures/ui/RestartBtn.png" id="3_1qjap"]
+[ext_resource type="Script" path="res://Scripts/screen_button.gd" id="4_lt1f8"]
 [ext_resource type="Texture2D" uid="uid://cbyh0v2wjrqrg" path="res://Assets/Textures/ui/menuBtn.png" id="4_q4oa4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_feqts"]
@@ -20,6 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_k5r2s")
 
 [node name="BlackBG" type="ColorRect" parent="."]
 layout_mode = 1
@@ -96,7 +99,7 @@ text = "Best: 9999"
 label_settings = SubResource("LabelSettings_feqts")
 horizontal_alignment = 1
 
-[node name="GameOverRestart" type="TextureButton" parent="Box"]
+[node name="GameOverRestart" type="TextureButton" parent="Box" groups=["buttons"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -112,8 +115,9 @@ grow_vertical = 2
 texture_normal = ExtResource("3_1qjap")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("4_lt1f8")
 
-[node name="GameOverMenu" type="TextureButton" parent="Box"]
+[node name="GameOverMenu" type="TextureButton" parent="Box" groups=["buttons"]]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -129,3 +133,7 @@ grow_vertical = 2
 texture_normal = ExtResource("4_q4oa4")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("4_lt1f8")
+
+[connection signal="pressed" from="Box/GameOverRestart" to="Box/GameOverRestart" method="_on_pressed"]
+[connection signal="pressed" from="Box/GameOverMenu" to="Box/GameOverMenu" method="_on_pressed"]

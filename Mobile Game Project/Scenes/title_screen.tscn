@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cp06gfrspk3s5"]
+[gd_scene load_steps=8 format=3 uid="uid://cp06gfrspk3s5"]
 
 [ext_resource type="Texture2D" uid="uid://dppe1lydb1wiu" path="res://Assets/Textures/ui/PlayBtn.png" id="1_4c1f4"]
+[ext_resource type="Script" path="res://Scripts/base_screen.gd" id="1_5sumh"]
 [ext_resource type="Texture2D" uid="uid://dtlwahmdj3a0g" path="res://Assets/Textures/ui/BigLogo.png" id="2_dpjj4"]
 [ext_resource type="PackedScene" uid="uid://b4qjgfipdmf08" path="res://Scenes/screen_button.tscn" id="2_in2fu"]
 
@@ -9,7 +10,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Play:size")
+tracks/0/path = NodePath("Control/TitlePlay:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -21,7 +22,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Control/Play:position")
+tracks/1/path = NodePath("Control/TitlePlay:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -38,7 +39,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/Play:size")
+tracks/0/path = NodePath("Control/TitlePlay:size")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -50,7 +51,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Control/Play:position")
+tracks/1/path = NodePath("Control/TitlePlay:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -73,6 +74,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5sumh")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
@@ -104,7 +106,7 @@ grow_vertical = 2
 texture = ExtResource("2_dpjj4")
 expand_mode = 1
 
-[node name="Play" parent="Control" instance=ExtResource("2_in2fu")]
+[node name="TitlePlay" parent="Control" instance=ExtResource("2_in2fu")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
