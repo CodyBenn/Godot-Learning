@@ -5,7 +5,7 @@ extends Camera2D
 
 #Assigns variable to only be of type Player with "null"
 var player: Player = null
-#
+
 ##Grabs screen size being used to stretch game accordingly
 #var viewport_size = get_viewport_rect().size
 
