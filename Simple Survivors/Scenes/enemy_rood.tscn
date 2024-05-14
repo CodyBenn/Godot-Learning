@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://btt5gvj7hcprw"]
+
+[ext_resource type="Texture2D" uid="uid://lwdduqvlx7wk" path="res://Assets/Rood.png" id="1_0ouwo"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_4r6rq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oegr0"]
+radius = 67.0298
+
+[node name="EnemyRood" type="CharacterBody2D" groups=["enemy"]]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_4r6rq")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oegr0")
+
+[node name="EnemySprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_0ouwo")

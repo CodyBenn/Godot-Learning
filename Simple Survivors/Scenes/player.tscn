@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://0cnp4lxeqgha"]
+[gd_scene load_steps=5 format=3 uid="uid://0cnp4lxeqgha"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_1p3yo"]
 [ext_resource type="Texture2D" uid="uid://bebqxign5hrol" path="res://Assets/Bloo.png" id="1_76qul"]
+[ext_resource type="PackedScene" uid="uid://b5b3in7mvrblb" path="res://Scenes/game_camera.tscn" id="3_kfc34"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jaiir"]
 radius = 61.0328
 
-[node name="PlayerBody" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+scale = Vector2(0.75, 0.75)
 script = ExtResource("1_1p3yo")
+
+[node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]
 
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_76qul")

@@ -33,6 +33,7 @@ func _ready():
 	
 	ground_sprite.global_position.x = viewport_size.x / 2
 	ground_sprite.global_position.y = viewport_size.y
+	
 	new_game()
 	
 func get_parallax_sprite_scale(parallax_sprite: Sprite2D):
