@@ -7,7 +7,8 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_jaiir"]
 radius = 61.0328
 
-[node name="PlayerBody" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+scale = Vector2(0.75, 0.75)
 script = ExtResource("1_1p3yo")
 
 [node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]

@@ -1,9 +1,14 @@
 extends CharacterBody2D
 class_name Player
 
-#Player and movement s
+#Player stats
 var player: Player = null
-var movespeed = 300.0
+var level = 1
+@export var movespeed = 300.0
+@export var health: int = 5
+@export var shield: int  = 0
+@export var attack_speed: float = 1.0
+@export var attack_damage: int = 20
 
 var viewport_size
 
@@ -25,4 +30,3 @@ func _process(_delta):
 		velocity.y = move_toward(velocity.y, 0, movespeed * .1)
 		
 	move_and_slide()
-	
