@@ -4,13 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://bebqxign5hrol" path="res://Assets/Bloo.png" id="1_76qul"]
 [ext_resource type="PackedScene" uid="uid://b5b3in7mvrblb" path="res://Scenes/game_camera.tscn" id="3_kfc34"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_l4y2e"]
-radius = 37.4285
+[sub_resource type="CircleShape2D" id="CircleShape2D_jaiir"]
+radius = 32.0278
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.75, 0.75)
 script = ExtResource("1_1p3yo")
-movespeed = 200.0
+
+[node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]
 
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_76qul")
@@ -18,11 +19,7 @@ texture = ExtResource("1_76qul")
 [node name="Hitbox" type="Area2D" parent="."]
 
 [node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
-shape = SubResource("CircleShape2D_l4y2e")
+shape = SubResource("CircleShape2D_jaiir")
 
-[node name="Collider" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_l4y2e")
-
-[node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]
-
-[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jaiir")

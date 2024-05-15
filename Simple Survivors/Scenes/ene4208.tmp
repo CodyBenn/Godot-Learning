@@ -1,30 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://btt5gvj7hcprw"]
+[gd_scene load_steps=4 format=3 uid="uid://btt5gvj7hcprw"]
 
 [ext_resource type="Texture2D" uid="uid://lwdduqvlx7wk" path="res://Assets/Rood.png" id="1_0ouwo"]
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_4r6rq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oegr0"]
-radius = 64.0312
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_cgf4b"]
-radius = 90.0
+radius = 67.0298
 
 [node name="EnemyRood" type="CharacterBody2D" groups=["enemy"]]
 z_index = 1
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_4r6rq")
-
-[node name="EnemySprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_0ouwo")
+movespeed = null
+max_health = null
+shield = null
+attack_speed = null
+attack_damage = null
 
 [node name="Hitbox" type="Area2D" parent="."]
 
 [node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_oegr0")
-one_way_collision = true
 
-[node name="Collider" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_cgf4b")
-one_way_collision = true
+[node name="EnemySprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_0ouwo")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
