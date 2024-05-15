@@ -10,6 +10,7 @@ radius = 37.4285
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.75, 0.75)
 script = ExtResource("1_1p3yo")
+movespeed = 200.0
 
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_76qul")
