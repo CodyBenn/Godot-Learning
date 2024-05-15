@@ -16,12 +16,15 @@ var current_attack_damage
 var player
 
 func _ready():
+	#Gets information to determine player's stats for calculations
 	player = get_node("/root/Main/Player")
 	
 func _physics_process(_delta):
+	#Combat AI to chase player's position
 	if player:
 		var direction = (player.global_position - global_position).normalized()
 		position += direction * movespeed * _delta  # Multiply by _delta for frame-independent movement
 		
+#Determines if player is in collision box to assign damage
 func _on_hitbox_body_entered(_body):
 	print("enemy group entered player")

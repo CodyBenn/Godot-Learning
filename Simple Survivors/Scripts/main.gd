@@ -30,16 +30,5 @@ func _process(_delta):
 		get_tree().reload_current_scene()
 		
 func new_game():
-	##Creates a player in main scene
-	#player = player_scene.instantiate()
-	##Performs func setup_player which determines if player is "player"
-	#player.global_position = player_spawn_pos
-	##Assigns player as child of Game
-	#add_child(player)
-	
 	#Creates a camera to main scene
 	camera = camera_scene.instantiate()
-	
-func game_over():
-	if player.health <= 0:
-		get_tree().reload_current_scene()
