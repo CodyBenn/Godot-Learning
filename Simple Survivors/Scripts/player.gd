@@ -15,18 +15,23 @@ var current_attack_speed: float
 @export var attack_damage: int = 20
 var current_attack_damage: int
 
+#Stores the items being equipped in an array
+var equipped_items = []
+
 #Used for camera size
 var viewport_size
 
 func _ready():
+	#Assigns to player group as a failsafe
+	add_to_group("player")
+	
 	#Assigns camera limits
 	viewport_size = get_viewport_rect().size
 	
 	#Assign player stats
 	character_stats()
 	
-	print("current health: ", current_health , " / " , "max health: ", max_health)
-	
+	print("Player's current health: ", current_health , " / " , "max health: ", max_health)
 	
 func _process(_delta):
 	#Movement controls
@@ -41,9 +46,9 @@ func _process(_delta):
 		velocity.y = axis_y * movespeed
 	else:
 		velocity.y = move_toward(velocity.y, 0, movespeed * .1)
-		
 	move_and_slide()
 	
+	#plays game_over function (resets game)
 	if current_health <= 0:
 		game_over()
 	
@@ -52,13 +57,16 @@ func take_damage(amount):
 	current_health -= amount
 	print("Take damage. Health pool: " + str(current_health) + " / " + str(max_health))
 	
-#Determines if enemy collides with play, and assigns damage
+#Determines what collides with player
 func _on_hitbox_body_entered(body):
 	if body.is_in_group("enemy"):
 		print("player group entered enemy")
-		take_damage(1)
 		
-#Assigns character stats to starting point for start
+	#Not really needed at the moment
+	elif body.is_in_group("weapon"):
+		print("player group entered weapon")
+	
+#Assigns character stats to starting point for spawn
 func character_stats():
 	current_health = max_health
 	current_attack_damage = attack_damage
