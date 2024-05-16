@@ -10,7 +10,6 @@ radius = 64.0312
 radius = 90.0
 
 [node name="EnemyRood" type="CharacterBody2D" groups=["enemy"]]
-z_index = 1
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_4r6rq")
 
@@ -21,7 +20,6 @@ texture = ExtResource("1_0ouwo")
 
 [node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_oegr0")
-one_way_collision = true
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_cgf4b")

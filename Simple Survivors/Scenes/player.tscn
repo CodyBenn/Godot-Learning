@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://0cnp4lxeqgha"]
+[gd_scene load_steps=6 format=3 uid="uid://0cnp4lxeqgha"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_1p3yo"]
 [ext_resource type="Texture2D" uid="uid://bebqxign5hrol" path="res://Assets/Bloo.png" id="1_76qul"]
 [ext_resource type="PackedScene" uid="uid://b5b3in7mvrblb" path="res://Scenes/game_camera.tscn" id="3_kfc34"]
+[ext_resource type="PackedScene" uid="uid://bvlo0k2mqsdxj" path="res://Scenes/weapon.tscn" id="4_ycybc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l4y2e"]
 radius = 37.4285
@@ -20,9 +21,8 @@ texture = ExtResource("1_76qul")
 [node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_l4y2e")
 
-[node name="Collider" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_l4y2e")
-
 [node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]
+
+[node name="Weapon" parent="." instance=ExtResource("4_ycybc")]
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

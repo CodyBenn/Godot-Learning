@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvlo0k2mqsdxj"]
+
+[ext_resource type="Script" path="res://Scripts/weapon.gd" id="1_34ri4"]
+[ext_resource type="Texture2D" uid="uid://bebqxign5hrol" path="res://Assets/Bloo.png" id="1_jl2tm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0iysr"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_smdud"]
+radius = 62.9442
+
+[node name="Weapon" type="StaticBody2D" groups=["weapon"]]
+scale = Vector2(2.44, 2.44)
+script = ExtResource("1_34ri4")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_0iysr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.309804)
+texture = ExtResource("1_jl2tm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_smdud")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
