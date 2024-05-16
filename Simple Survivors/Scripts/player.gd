@@ -60,6 +60,7 @@ func take_damage(amount):
 #Determines what collides with player
 func _on_hitbox_body_entered(body):
 	if body.is_in_group("enemy"):
+		take_damage(1)
 		print("player group entered enemy")
 		
 	#Not really needed at the moment
