@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4n58is2v4chv"]
+[gd_scene load_steps=7 format=3 uid="uid://b4n58is2v4chv"]
 
 [ext_resource type="PackedScene" uid="uid://0cnp4lxeqgha" path="res://Scenes/player.tscn" id="1_enl1x"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_n0wm6"]
 [ext_resource type="Texture2D" uid="uid://d0vl14kcd72lm" path="res://Assets/Grass.png" id="3_idf8c"]
 [ext_resource type="PackedScene" uid="uid://btt5gvj7hcprw" path="res://Scenes/enemy_rood.tscn" id="3_xstvg"]
-[ext_resource type="PackedScene" uid="uid://bvlo0k2mqsdxj" path="res://Scenes/weapon.tscn" id="5_thypp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0yeg"]
 texture = ExtResource("3_idf8c")
@@ -28,9 +27,14 @@ layer_0/tile_data = PackedInt32Array(-7143563, 0, 0, -7078027, 0, 0, -7012491, 0
 
 [node name="EnemyRood" parent="." instance=ExtResource("3_xstvg")]
 position = Vector2(680, 288)
-movespeed = 100.0
 
 [node name="Player" parent="." instance=ExtResource("1_enl1x")]
 
-[node name="Weapon" parent="." instance=ExtResource("5_thypp")]
-position = Vector2(344, -104)
+[node name="EnemyRood2" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(656, 192)
+
+[node name="EnemyRood3" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(600, 256)
+
+[node name="EnemyRood4" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(744, 232)
