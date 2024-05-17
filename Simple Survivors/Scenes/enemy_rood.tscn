@@ -23,6 +23,5 @@ shape = SubResource("CircleShape2D_oegr0")
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_cgf4b")
-one_way_collision = true
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
