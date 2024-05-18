@@ -63,7 +63,6 @@ reset={
 2d_render/layer_3="Hitbox"
 2d_render/layer_4="Enemy"
 2d_render/layer_5="Weapons"
-2d_render/layer_6="Weapons"
 
 [rendering]
 

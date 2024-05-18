@@ -36,15 +36,6 @@ func _physics_process(_delta):
 		
 	move_and_slide()
 		
-#Determines what is in collision box to assign damage
-func _on_hitbox_body_entered(body):
-	if body.is_in_group("player"):
-		print("enemy group entered player")
-		
-	elif body.is_in_group("weapon"):
-		take_damage(1)
-		print("Enemy took damage. Health pool: " + str(current_health) + " / " + str(max_health))
-		
 #Determines damage taken and deletes if health reaches 0
 func take_damage(damage_dealt):
 	current_health -= damage_dealt
@@ -69,3 +60,10 @@ func enemy_stats():
 func give_exp():
 	if current_health <= 0:
 		player.experience += experience_to_give
+		
+func _on_hitbox_area_entered(area):
+	if Hitbox and area.is_in_group("weapon"):
+		take_damage(damage)
+	if Hitbox and area.is_in_group("player"):
+		pass
+		
