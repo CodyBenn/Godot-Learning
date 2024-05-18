@@ -15,16 +15,11 @@ var experience_to_level:int = 10
 
 var invulnerable: bool = false
 
-#Used for camera size
-var viewport_size
-
 func _ready():
 	#Assigns to player group as a failsafe
 	add_to_group("player")
 	#Assign player stats
-	character_stats()
-	#Assigns camera limits
-	viewport_size = get_viewport_rect().size
+	setup_character_stats()
 	
 func _process(_delta):
 	#Movement controls
@@ -44,7 +39,6 @@ func _process(_delta):
 	if experience >= experience_to_level:
 		level_up()
 		
-		
 #Determines damage dealt to player
 func take_damage(damage_dealt):
 	if invulnerable:
@@ -62,7 +56,7 @@ func take_damage(damage_dealt):
 		become_invulnerable()
 		
 func die():
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 	
 func become_invulnerable():
 	invulnerable = true
@@ -70,7 +64,7 @@ func become_invulnerable():
 	invulnerable = false
 	
 #Assigns character stats to starting point for spawn
-func character_stats():
+func setup_character_stats():
 	current_health = max_health
 	current_shield = max_shield
 	current_movespeed = movespeed

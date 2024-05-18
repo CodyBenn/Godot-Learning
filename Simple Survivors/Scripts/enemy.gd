@@ -4,18 +4,15 @@ class_name Enemy
 #Enemy stats
 var level = 1
 @export var movespeed = 100.0
-var current_movespeed: float
 @export var max_health: int = 5
 var current_health:int
 @export var max_shield: int  = 0
 var current_shield: int
-@export var attack_speed: float = 1.0
-var current_attack_speed: float
-@export var attack_damage: int = 1
-var current_attack_damage
-var damage: int = 1
+@export var damage: int = 1
 @export var experience_to_give:int = 10
 @onready var soft_collision = $SoftCollisions
+
+var is_hit_by_player:bool = false
 
 var player
 
@@ -24,11 +21,11 @@ func _ready():
 	
 	#Gets information to determine player's stats for calculations
 	player = get_node("/root/Main/Player")
-	enemy_stats()
+	setup_enemy_stats()
 	
 func _physics_process(_delta):
 	#Combat AI to chase player's position
-	
+		
 	var direction = (player.global_position - global_position).normalized()
 	
 	if player:
@@ -53,12 +50,9 @@ func die():
 	queue_free()
 	
 #Assigns enemy stats to starting point for spawn
-func enemy_stats():
+func setup_enemy_stats():
 	current_health = max_health
-	current_attack_damage = attack_damage
-	current_attack_speed = attack_speed
 	current_shield = max_shield
-	current_movespeed = movespeed
 	
 func give_exp():
 	if current_health <= 0:
