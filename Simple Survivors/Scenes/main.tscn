@@ -47,3 +47,39 @@ position = Vector2(600, 256)
 
 [node name="EnemyRood4" parent="." instance=ExtResource("3_xstvg")]
 position = Vector2(744, 232)
+
+[node name="EnemyRood5" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(576, 168)
+
+[node name="EnemyRood6" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(552, 72)
+
+[node name="EnemyRood7" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(496, 136)
+
+[node name="EnemyRood8" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(640, 112)
+
+[node name="EnemyRood9" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(464, 288)
+
+[node name="EnemyRood10" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(440, 192)
+
+[node name="EnemyRood11" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(384, 256)
+
+[node name="EnemyRood12" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(528, 232)
+
+[node name="EnemyRood13" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(568, 408)
+
+[node name="EnemyRood14" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(544, 312)
+
+[node name="EnemyRood15" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(488, 376)
+
+[node name="EnemyRood16" parent="." instance=ExtResource("3_xstvg")]
+position = Vector2(632, 352)
