@@ -49,7 +49,7 @@ func _process(_delta):
 func take_damage(damage_dealt):
 	if invulnerable:
 		return
-	
+		
 	current_health -= damage_dealt
 	self.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
