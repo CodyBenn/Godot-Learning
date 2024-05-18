@@ -21,8 +21,8 @@ texture = ExtResource("1_76qul")
 [node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_l4y2e")
 
-[node name="Weapon" parent="." instance=ExtResource("4_ycybc")]
-
 [node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]
+
+[node name="Weapon" parent="." instance=ExtResource("4_ycybc")]
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

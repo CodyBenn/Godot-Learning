@@ -57,6 +57,14 @@ reset={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_2="Player"
+2d_render/layer_3="Hitbox"
+2d_render/layer_4="Enemy"
+2d_render/layer_5="Weapons"
+2d_render/layer_6="Weapons"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

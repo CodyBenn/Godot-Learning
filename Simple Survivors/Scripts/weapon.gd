@@ -1,7 +1,6 @@
-extends Node2D
+extends Area2D
 class_name Weapon
-
-func _on_area_2d_body_entered(body):
-	if body.is_in_group("enemy"):
-		print("weapon group entered enemy")
 		
+func _on_weapon_hitbox_area_entered(area):
+	if area.is_in_group("enemy"):
+		print("weapon group entered enemy")
