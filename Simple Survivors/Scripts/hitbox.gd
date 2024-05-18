@@ -8,7 +8,6 @@ func _on_hitbox_area_entered(area):
 			print("enemy group entered player")
 			
 		elif area.is_in_group("weapon_hitbox"):
-			var enemy = $Enemy
 			var enemy_hitbox = $Enemy
 			enemy_hitbox.take_damage(1)
 			
