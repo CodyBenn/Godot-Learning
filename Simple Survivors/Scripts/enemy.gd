@@ -27,15 +27,14 @@ func _ready():
 	enemy_stats()
 	
 func _physics_process(_delta):
-		
 	#Combat AI to chase player's position
+	
+	var direction = (player.global_position - global_position).normalized()
+	
 	if player:
-		var direction = (player.global_position - global_position).normalized()
-		position += direction * movespeed * _delta
-		
-	if soft_collision.is_colliding() and is_in_group("soft_collider"):
-		var push_vector = soft_collision.get_push_vector()
-		position += push_vector * 50 * _delta
+		velocity = direction * movespeed
+		if soft_collision.is_colliding() and is_in_group("soft_collider"):
+			position += soft_collision.get_push_vector() * 400
 		
 	move_and_slide()
 		
