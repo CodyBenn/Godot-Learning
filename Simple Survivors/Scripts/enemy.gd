@@ -20,19 +20,22 @@ var damage: int = 1
 var player
 
 func _ready():
+	add_to_group("enemy")
+	
 	#Gets information to determine player's stats for calculations
 	player = get_node("/root/Main/Player")
 	enemy_stats()
 	
 func _physics_process(_delta):
-	var direction = (player.global_position - global_position).normalized()
 		
 	#Combat AI to chase player's position
 	if player:
+		var direction = (player.global_position - global_position).normalized()
 		position += direction * movespeed * _delta
 		
 	if soft_collision.is_colliding() and is_in_group("soft_collider"):
-		position += soft_collision.get_push_vector() * _delta * 400
+		var push_vector = soft_collision.get_push_vector()
+		position += push_vector * 50 * _delta
 		
 	move_and_slide()
 		
@@ -42,6 +45,7 @@ func take_damage(damage_dealt):
 	self.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
 	self.modulate = Color.WHITE
+	print("Enemy took damage. Health pool: " + str(current_health) + " / " + str(max_health))
 	if current_health <= 0:
 		die()
 		
@@ -62,8 +66,8 @@ func give_exp():
 		player.experience += experience_to_give
 		
 func _on_hitbox_area_entered(area):
-	if Hitbox and area.is_in_group("weapon"):
+	if Hitbox and area.is_in_group("weapon_hitbox"):
 		take_damage(damage)
-	if Hitbox and area.is_in_group("player"):
+	if Hitbox and area.is_in_group("player_hitbox"):
 		pass
 		

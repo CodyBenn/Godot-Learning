@@ -61,6 +61,9 @@ func take_damage(damage_dealt):
 	else:
 		become_invulnerable()
 		
+func die():
+	get_tree().reload_current_scene()
+	
 func become_invulnerable():
 	invulnerable = true
 	print("Player is invulnerable")
@@ -74,9 +77,6 @@ func character_stats():
 	current_shield = max_shield
 	current_movespeed = movespeed
 	
-func die():
-	get_tree().reload_current_scene()
-	
 func level_up():
 	level += 1
 	experience = 0
@@ -85,5 +85,5 @@ func level_up():
 	print("Current exp: ", experience, " / ", experience_to_level)
 	
 func _on_hitbox_area_entered(area):
-	if Hitbox and area.is_in_group("enemy"):
+	if Hitbox and area.is_in_group("enemy_hitbox"):
 		take_damage(1)
