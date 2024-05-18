@@ -15,6 +15,7 @@ var current_attack_speed: float
 var current_attack_damage
 var damage: int = 1
 @export var experience_to_give:int = 10
+@onready var soft_collision = $SoftCollisions
 
 var player
 
@@ -24,10 +25,16 @@ func _ready():
 	enemy_stats()
 	
 func _physics_process(_delta):
+	var direction = (player.global_position - global_position).normalized()
+		
 	#Combat AI to chase player's position
 	if player:
-		var direction = (player.global_position - global_position).normalized()
 		position += direction * movespeed * _delta
+		
+	if soft_collision.is_colliding() and is_in_group("soft_collider"):
+		position += soft_collision.get_push_vector() * _delta * 400
+		
+	move_and_slide()
 		
 #Determines what is in collision box to assign damage
 func _on_hitbox_body_entered(body):
