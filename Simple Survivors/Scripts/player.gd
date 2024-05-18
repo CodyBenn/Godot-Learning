@@ -66,10 +66,8 @@ func die():
 	
 func become_invulnerable():
 	invulnerable = true
-	print("Player is invulnerable")
 	await get_tree().create_timer(1).timeout
 	invulnerable = false
-	print("Player is no longer invulnerable")
 	
 #Assigns character stats to starting point for spawn
 func character_stats():
@@ -81,8 +79,6 @@ func level_up():
 	level += 1
 	experience = 0
 	experience_to_level = experience_to_level * 2
-	print("Player gained a level. Current level : ", level)
-	print("Current exp: ", experience, " / ", experience_to_level)
 	
 func _on_hitbox_area_entered(area):
 	if Hitbox and area.is_in_group("enemy_hitbox"):
