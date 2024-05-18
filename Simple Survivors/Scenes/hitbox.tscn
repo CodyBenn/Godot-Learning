@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbch7jp3msncq"]
+
+[ext_resource type="Script" path="res://Scripts/hitbox.gd" id="1_rk303"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_itgjc"]
+radius = 64.0
+
+[node name="Hitbox" type="Area2D"]
+light_mask = 0
+collision_layer = 16
+collision_mask = 56
+script = ExtResource("1_rk303")
+
+[node name="HitboxCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_itgjc")

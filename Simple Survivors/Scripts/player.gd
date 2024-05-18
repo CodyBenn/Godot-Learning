@@ -61,6 +61,9 @@ func take_damage(damage_dealt):
 	else:
 		become_invulnerable()
 		
+func die():
+	get_tree().reload_current_scene()
+	
 func become_invulnerable():
 	invulnerable = true
 	print("Player is invulnerable")
@@ -68,23 +71,11 @@ func become_invulnerable():
 	invulnerable = false
 	print("Player is no longer invulnerable")
 	
-#Determines what collides with player
-func _on_hitbox_body_entered(body):
-	if body.is_in_group("enemy"):
-		take_damage(1)
-		
-	#Not really needed at the moment
-	elif body.is_in_group("weapon"):
-		print("player group entered weapon")
-	
 #Assigns character stats to starting point for spawn
 func character_stats():
 	current_health = max_health
 	current_shield = max_shield
 	current_movespeed = movespeed
-	
-func die():
-	get_tree().reload_current_scene()
 	
 func level_up():
 	level += 1
@@ -92,3 +83,7 @@ func level_up():
 	experience_to_level = experience_to_level * 2
 	print("Player gained a level. Current level : ", level)
 	print("Current exp: ", experience, " / ", experience_to_level)
+	
+func _on_hitbox_area_entered(area):
+	if Hitbox and area.is_in_group("enemy_hitbox"):
+		take_damage(1)
