@@ -16,7 +16,7 @@ script = ExtResource("1_4r6rq")
 [node name="EnemySprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_0ouwo")
 
-[node name="Hitbox" type="Area2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="." groups=["enemy"]]
 
 [node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_oegr0")
