@@ -1,16 +1,37 @@
-[gd_scene load_steps=8 format=3 uid="uid://0cnp4lxeqgha"]
+[gd_scene load_steps=10 format=3 uid="uid://0cnp4lxeqgha"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_1p3yo"]
 [ext_resource type="Texture2D" uid="uid://bebqxign5hrol" path="res://Assets/Bloo.png" id="1_76qul"]
 [ext_resource type="PackedScene" uid="uid://b5b3in7mvrblb" path="res://Scenes/game_camera.tscn" id="3_kfc34"]
-[ext_resource type="Script" path="res://Scripts/hitbox.gd" id="3_sgdxk"]
+[ext_resource type="PackedScene" uid="uid://x80n6yybbiku" path="res://Scenes/hurtbox.tscn" id="4_dw1lb"]
+[ext_resource type="PackedScene" uid="uid://dbch7jp3msncq" path="res://Scenes/hitbox.tscn" id="4_sd6ho"]
 [ext_resource type="PackedScene" uid="uid://bvlo0k2mqsdxj" path="res://Scenes/weapon.tscn" id="4_ycybc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfm7l"]
 radius = 30.7824
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_l4y2e"]
-radius = 37.4285
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe8lr"]
+bg_color = Color(0, 0, 0, 0.239216)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ercv"]
+bg_color = Color(0.760784, 0.313726, 0.101961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.479214, 0.278945, 0.00904141, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.75, 0.75)
@@ -24,16 +45,36 @@ texture = ExtResource("1_76qul")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bfm7l")
 
-[node name="Hitbox" type="Area2D" parent="." groups=["player_hitbox"]]
-collision_layer = 16
-collision_mask = 16
-script = ExtResource("3_sgdxk")
+[node name="Hitbox" parent="." groups=["player_hitbox"] instance=ExtResource("4_sd6ho")]
 
-[node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
-shape = SubResource("CircleShape2D_l4y2e")
+[node name="Hurtbox" parent="." instance=ExtResource("4_dw1lb")]
+unique_name_in_owner = true
+scale = Vector2(6.44, 6.44)
 
 [node name="Weapon" parent="." instance=ExtResource("4_ycybc")]
+scale = Vector2(2.08757, 2.08757)
+collision_mask = 16
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -104.0
+offset_right = 66.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_qe8lr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_7ercv")
+value = 50.0
+show_percentage = false
 
 [node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]
+
+[node name="MissingNode" parent="." instance=ExtResource("4_dw1lb")]
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

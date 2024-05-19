@@ -2,13 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://lwdduqvlx7wk" path="res://Assets/Rood.png" id="1_0ouwo"]
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_4r6rq"]
+[ext_resource type="PackedScene" uid="uid://dbch7jp3msncq" path="res://Scenes/hitbox.tscn" id="3_m7ejl"]
 [ext_resource type="Script" path="res://Scripts/soft_collision.gd" id="3_wbhgf"]
-[ext_resource type="Script" path="res://Scripts/hitbox.gd" id="3_xgutn"]
+[ext_resource type="PackedScene" uid="uid://x80n6yybbiku" path="res://Scenes/hurtbox.tscn" id="5_sdqe6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xj00u"]
-radius = 64.0312
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_oegr0"]
 radius = 64.0312
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cgf4b"]
@@ -26,13 +24,18 @@ texture = ExtResource("1_0ouwo")
 [node name="EnemyCollider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_xj00u")
 
-[node name="Hitbox" type="Area2D" parent="." groups=["enemy_hitbox"]]
-collision_layer = 16
-collision_mask = 16
-script = ExtResource("3_xgutn")
+[node name="Hitbox" parent="." groups=["enemy_hitbox"] instance=ExtResource("3_m7ejl")]
+collision_mask = 20
 
-[node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
-shape = SubResource("CircleShape2D_oegr0")
+[node name="Hurtbox" parent="." instance=ExtResource("5_sdqe6")]
+_import_path = NodePath("")
+unique_name_in_owner = true
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+editor_description = ""
+script = null
 
 [node name="SoftCollisions" type="Area2D" parent="." groups=["soft_collider"]]
 script = ExtResource("3_wbhgf")

@@ -5,12 +5,15 @@ class_name Hitbox
 func _on_hitbox_area_entered(area):
 	if area != null:
 		if area.is_in_group("player_hitbox"):
-			print("enemy group entered player")
+			print("player group entered hitbox")
 			
 		elif area.is_in_group("weapon_hitbox"):
-			var enemy_hitbox = $Enemy
-			enemy_hitbox.take_damage(1)
+			if area.has_method("take_damage"):
+				print("weapon group entered hitbox")
+				area.take_damage()
 			
 		elif area.is_in_group("enemy_hitbox"):
-			print("weapon group entered enemy")
+			if area.has_method("take_damage"):
+				print("enemy group entered hitbox")
+				area.take_damage()
 	
