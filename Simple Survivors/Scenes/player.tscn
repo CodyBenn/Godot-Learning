@@ -51,10 +51,10 @@ disabled = true
 [node name="Hurtbox" parent="." instance=ExtResource("4_dw1lb")]
 unique_name_in_owner = true
 scale = Vector2(6.44, 6.44)
-collision_mask = 16
+collision_mask = 24
 
 [node name="Weapon" parent="." instance=ExtResource("4_ycybc")]
-scale = Vector2(5.28757, 5.28757)
+scale = Vector2(1.8209, 1.8209)
 collision_layer = 16
 collision_mask = 32
 
