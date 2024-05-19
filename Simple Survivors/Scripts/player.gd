@@ -68,7 +68,7 @@ func die():
 	
 func become_invulnerable():
 	invulnerable = true
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(.1).timeout
 	invulnerable = false
 	
 func level_up():
