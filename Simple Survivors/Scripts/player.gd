@@ -5,11 +5,12 @@ class_name Player
 var player: Player = null
 var level = 1
 @export var movespeed:float = 300.0
-var current_movespeed: float
-@export var max_health: int = 5
+var current_movespeed:float
+@export var max_health:int = 5
 var current_health:int
-@export var max_shield: int  = 0
-var current_shield: int
+@export var max_shield:int  = 0
+var current_shield:int
+var damage:int = 1
 var experience:int = 0
 var experience_to_level:int = 10
 

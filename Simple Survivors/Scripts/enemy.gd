@@ -13,8 +13,8 @@ var current_shield: int
 @onready var soft_collision = $SoftCollisions
 
 var is_hit_by_player:bool = false
-
 var player
+@onready var target = get_node("res://Scenes/enemy_rood.tscn")
 
 func _ready():
 	add_to_group("enemy")
@@ -25,7 +25,6 @@ func _ready():
 	
 func _physics_process(_delta):
 	#Combat AI to chase player's position
-		
 	var direction = (player.global_position - global_position).normalized()
 	
 	if player:
@@ -35,7 +34,7 @@ func _physics_process(_delta):
 		
 	move_and_slide()
 		
-#Determines damage taken and deletes if health reaches 0
+#Determines damage dealt to player
 func take_damage(damage_dealt):
 	current_health -= damage_dealt
 	self.modulate = Color.DARK_RED
@@ -44,7 +43,7 @@ func take_damage(damage_dealt):
 	print("Enemy took damage. Health pool: " + str(current_health) + " / " + str(max_health))
 	if current_health <= 0:
 		die()
-		
+	
 func die():
 	give_exp()
 	queue_free()
@@ -63,4 +62,3 @@ func _on_hitbox_area_entered(area):
 		take_damage(damage)
 	if Hitbox and area.is_in_group("player_hitbox"):
 		pass
-		
