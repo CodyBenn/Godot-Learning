@@ -1,36 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://bvlo0k2mqsdxj"]
+[gd_scene load_steps=4 format=3 uid="uid://bvlo0k2mqsdxj"]
 
-[ext_resource type="Script" path="res://Scripts/hitbox.gd" id="1_1dnqu"]
 [ext_resource type="Script" path="res://Scripts/weapon.gd" id="1_34ri4"]
 [ext_resource type="Texture2D" uid="uid://bebqxign5hrol" path="res://Assets/Bloo.png" id="1_jl2tm"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_smdud"]
-radius = 3.88805
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0iysr"]
 radius = 64.0
 
-[node name="Weapon" type="StaticBody2D" groups=["weapon"]]
-scale = Vector2(2.44, 2.44)
+[node name="Weapon" type="Area2D" groups=["weapon_hitbox"]]
+light_mask = 0
 collision_layer = 16
-collision_mask = 16
+collision_mask = 56
 script = ExtResource("1_34ri4")
+
+[node name="WeaponCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0iysr")
 
 [node name="WeaponSprite" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.309804)
 texture = ExtResource("1_jl2tm")
-
-[node name="WeaponCollider" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_smdud")
-disabled = true
-
-[node name="Hitbox" type="Area2D" parent="." groups=["weapon_hitbox"]]
-light_mask = 0
-collision_layer = 16
-collision_mask = 16
-script = ExtResource("1_1dnqu")
-
-[node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
-shape = SubResource("CircleShape2D_0iysr")
-
-[connection signal="area_entered" from="Hitbox" to="." method="_on_weapon_hitbox_area_entered"]
