@@ -25,22 +25,15 @@ texture = ExtResource("1_0ouwo")
 shape = SubResource("CircleShape2D_xj00u")
 
 [node name="Hitbox" parent="." groups=["enemy_hitbox"] instance=ExtResource("3_m7ejl")]
-collision_mask = 20
+collision_mask = 48
 
 [node name="Hurtbox" parent="." instance=ExtResource("5_sdqe6")]
-_import_path = NodePath("")
 unique_name_in_owner = true
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-editor_description = ""
-script = null
+scale = Vector2(6.4, 6.4)
+collision_mask = 52
 
 [node name="SoftCollisions" type="Area2D" parent="." groups=["soft_collider"]]
 script = ExtResource("3_wbhgf")
 
 [node name="SoftCollider" type="CollisionShape2D" parent="SoftCollisions"]
 shape = SubResource("CircleShape2D_cgf4b")
-
-[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

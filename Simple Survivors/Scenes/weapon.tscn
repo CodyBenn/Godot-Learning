@@ -6,10 +6,10 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_0iysr"]
 radius = 64.0
 
-[node name="Weapon" type="Area2D" groups=["weapon_hitbox"]]
+[node name="Weapon" type="Area2D"]
 light_mask = 0
-collision_layer = 16
-collision_mask = 56
+collision_layer = 20
+collision_mask = 48
 script = ExtResource("1_34ri4")
 
 [node name="WeaponCollider" type="CollisionShape2D" parent="."]

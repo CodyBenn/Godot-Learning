@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bvlo0k2mqsdxj" path="res://Scenes/weapon.tscn" id="4_ycybc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfm7l"]
-radius = 30.7824
+radius = 49.3333
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe8lr"]
 bg_color = Color(0, 0, 0, 0.239216)
@@ -42,20 +42,23 @@ script = ExtResource("1_1p3yo")
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_76qul")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="PlayerCollider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bfm7l")
 
 [node name="Hitbox" parent="." groups=["player_hitbox"] instance=ExtResource("4_sd6ho")]
+collision_mask = 48
 
 [node name="Hurtbox" parent="." instance=ExtResource("4_dw1lb")]
 unique_name_in_owner = true
 scale = Vector2(6.44, 6.44)
+collision_mask = 48
 
 [node name="Weapon" parent="." instance=ExtResource("4_ycybc")]
 scale = Vector2(2.08757, 2.08757)
-collision_mask = 16
+collision_layer = 16
+collision_mask = 52
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="HealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 anchors_preset = 8
 anchor_left = 0.5
@@ -74,7 +77,3 @@ value = 50.0
 show_percentage = false
 
 [node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]
-
-[node name="MissingNode" parent="." instance=ExtResource("4_dw1lb")]
-
-[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
