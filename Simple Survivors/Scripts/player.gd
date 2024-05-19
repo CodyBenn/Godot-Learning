@@ -6,7 +6,7 @@ var player: Player = null
 var level = 1
 @export var movespeed:float = 300.0
 var current_movespeed:float
-@export var max_health:int = 5
+@export var max_health:int = 1000
 var current_health:int
 @export var max_shield:int  = 0
 var current_shield:int
@@ -14,6 +14,7 @@ var damage:int = 1
 var experience:int = 0
 var experience_to_level:int = 10
 
+var is_hit_by_enemy:bool = false
 var invulnerable: bool = false
 
 func _ready():
@@ -40,6 +41,9 @@ func _process(_delta):
 	if experience >= experience_to_level:
 		level_up()
 		
+	if is_hit_by_enemy == true:
+		take_damage(damage)
+		
 #Determines damage dealt to player
 func take_damage(damage_dealt):
 	if invulnerable:
@@ -51,6 +55,8 @@ func take_damage(damage_dealt):
 	self.modulate = Color.WHITE
 	print("Take damage. Health pool: " + str(current_health) + " / " + str(max_health))
 	
+	if current_health > 0:
+		is_hit_by_enemy = false
 	if current_health <= 0:
 		die()
 	else:
@@ -77,4 +83,4 @@ func level_up():
 	
 func _on_hitbox_area_entered(area):
 	if Hitbox and area.is_in_group("enemy_hitbox"):
-		take_damage(1)
+		is_hit_by_enemy = true
