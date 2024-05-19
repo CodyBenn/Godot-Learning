@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://btt5gvj7hcprw"]
+
+[ext_resource type="Texture2D" uid="uid://lwdduqvlx7wk" path="res://Assets/Rood.png" id="1_0ouwo"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_4r6rq"]
+[ext_resource type="Script" path="res://Scripts/soft_collision.gd" id="3_wbhgf"]
+[ext_resource type="Script" path="res://Scripts/hitbox.gd" id="3_xgutn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xj00u"]
+radius = 64.0312
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oegr0"]
+radius = 64.0312
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cgf4b"]
+radius = 64.0
+
+[node name="EnemyRood" type="CharacterBody2D" groups=["enemy"]]
+scale = Vector2(0.5, 0.5)
+collision_layer = 8
+collision_mask = 11
+script = ExtResource("1_4r6rq")
+
+[node name="EnemySprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_0ouwo")
+
+[node name="EnemyCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xj00u")
+
+[node name="Hitbox" type="Area2D" parent="." groups=["enemy_hitbox"]]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("3_xgutn")
+
+[node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_oegr0")
+
+[node name="SoftCollisions" type="Area2D" parent="." groups=["soft_collider"]]
+script = ExtResource("3_wbhgf")
+
+[node name="SoftCollider" type="CollisionShape2D" parent="SoftCollisions"]
+shape = SubResource("CircleShape2D_cgf4b")
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]

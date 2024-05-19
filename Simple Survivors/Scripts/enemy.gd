@@ -4,7 +4,7 @@ class_name Enemy
 #Enemy stats
 var level = 1
 @export var movespeed = 100.0
-@export var max_health: int = 5
+@export var max_health: int = 500
 var current_health:int
 @export var max_shield: int  = 0
 var current_shield: int
@@ -12,9 +12,8 @@ var current_shield: int
 @export var experience_to_give:int = 10
 @onready var soft_collision = $SoftCollisions
 
-var is_hit_by_player:bool = false
-
 var player
+var is_hit_by_player:bool = false
 
 func _ready():
 	add_to_group("enemy")
@@ -25,7 +24,6 @@ func _ready():
 	
 func _physics_process(_delta):
 	#Combat AI to chase player's position
-		
 	var direction = (player.global_position - global_position).normalized()
 	
 	if player:
@@ -34,17 +32,23 @@ func _physics_process(_delta):
 			position += soft_collision.get_push_vector() * 400
 		
 	move_and_slide()
+	
+	if is_hit_by_player == true:
+		take_damage(damage)
 		
-#Determines damage taken and deletes if health reaches 0
+#Determines damage dealt to player
 func take_damage(damage_dealt):
 	current_health -= damage_dealt
 	self.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
 	self.modulate = Color.WHITE
 	print("Enemy took damage. Health pool: " + str(current_health) + " / " + str(max_health))
+	
+	if current_health > 0:
+		is_hit_by_player = false
 	if current_health <= 0:
 		die()
-		
+	
 func die():
 	give_exp()
 	queue_free()
@@ -60,7 +64,4 @@ func give_exp():
 		
 func _on_hitbox_area_entered(area):
 	if Hitbox and area.is_in_group("weapon_hitbox"):
-		take_damage(damage)
-	if Hitbox and area.is_in_group("player_hitbox"):
-		pass
-		
+		is_hit_by_player = true

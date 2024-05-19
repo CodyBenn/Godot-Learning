@@ -26,14 +26,14 @@ shape = SubResource("CircleShape2D_bfm7l")
 
 [node name="Hitbox" type="Area2D" parent="." groups=["player_hitbox"]]
 collision_layer = 16
-collision_mask = 28
+collision_mask = 16
 script = ExtResource("3_sgdxk")
 
 [node name="HitboxCollider" type="CollisionShape2D" parent="Hitbox"]
 shape = SubResource("CircleShape2D_l4y2e")
 
-[node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]
-
 [node name="Weapon" parent="." instance=ExtResource("4_ycybc")]
+
+[node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
