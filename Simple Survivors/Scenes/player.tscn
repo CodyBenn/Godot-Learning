@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://0cnp4lxeqgha"]
+[gd_scene load_steps=14 format=3 uid="uid://0cnp4lxeqgha"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_1p3yo"]
 [ext_resource type="Texture2D" uid="uid://bebqxign5hrol" path="res://Assets/Bloo.png" id="1_76qul"]
@@ -33,6 +33,29 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="Theme" id="Theme_sbuys"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8lewh"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_size = 2
+
+[sub_resource type="FontVariation" id="FontVariation_deq33"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6vr3r"]
+font = SubResource("FontVariation_deq33")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.2)
+
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.75, 0.75)
 collision_layer = 4
@@ -48,14 +71,14 @@ disabled = true
 
 [node name="Hitbox" parent="." instance=ExtResource("4_sd6ho")]
 
-[node name="Hurtbox" parent="." instance=ExtResource("4_dw1lb")]
-unique_name_in_owner = true
-scale = Vector2(6.44, 6.44)
-collision_mask = 24
-
-[node name="Weapon" parent="." instance=ExtResource("4_ycybc")]
+[node name="Weapon" parent="." groups=["weapon_hitbox"] instance=ExtResource("4_ycybc")]
 scale = Vector2(1.8209, 1.8209)
 collision_layer = 16
+collision_mask = 32
+
+[node name="Hurtbox" parent="." instance=ExtResource("4_dw1lb")]
+unique_name_in_owner = true
+scale = Vector2(6.45333, 6.45333)
 collision_mask = 32
 
 [node name="HealthBar" type="ProgressBar" parent="."]
@@ -75,5 +98,37 @@ theme_override_styles/background = SubResource("StyleBoxFlat_qe8lr")
 theme_override_styles/fill = SubResource("StyleBoxFlat_7ercv")
 value = 50.0
 show_percentage = false
+
+[node name="ExperienceBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -424.0
+offset_top = -473.0
+offset_right = 425.0
+offset_bottom = -464.0
+grow_horizontal = 2
+theme = SubResource("Theme_sbuys")
+theme_override_styles/background = SubResource("StyleBoxFlat_qe8lr")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8lewh")
+value = 50.0
+show_percentage = false
+
+[node name="ExperienceLevel" type="Label" parent="ExperienceBar"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -9.5
+offset_top = 16.0
+offset_right = 9.5
+offset_bottom = 39.0
+grow_horizontal = 2
+text = "99"
+label_settings = SubResource("LabelSettings_6vr3r")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]

@@ -5,12 +5,10 @@ class_name Player
 var player: Player = null
 var level = 1
 @export var movespeed:float = 300.0
-var current_movespeed:float = movespeed
 @export var max_health:int = 100
 var current_health:int = max_health
 @export var max_shield:int  = 0
 var current_shield:int = max_shield
-var damage:int = 1
 var experience:int = 0
 var experience_to_level:int = 10
 
@@ -37,6 +35,9 @@ func _physics_process(delta):
 		velocity.y = move_toward(velocity.y, 0, movespeed * .1)
 	move_and_slide()
 		
+	%ExperienceBar.max_value = experience_to_level
+	%ExperienceBar.value = experience
+	%ExperienceBar/ExperienceLevel.text = str(level)
 	if experience >= experience_to_level:
 		level_up()
 		
@@ -75,3 +76,4 @@ func level_up():
 	level += 1
 	experience = 0
 	experience_to_level = experience_to_level * 2
+	print("You leveled up! Level: ", level)
