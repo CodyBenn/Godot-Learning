@@ -5,7 +5,8 @@ class_name Hitbox
 func _on_hitbox_area_entered(area):
 	if area != null:
 		if area.is_in_group("player_hitbox"):
-			print("player group entered hitbox")
+				print("weapon group entered hitbox")
+				area.take_damage()
 			
 		elif area.is_in_group("weapon_hitbox"):
 			if area.has_method("take_damage"):

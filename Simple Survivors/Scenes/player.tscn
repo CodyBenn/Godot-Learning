@@ -33,7 +33,7 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.75, 0.75)
 collision_layer = 4
 collision_mask = 3
@@ -44,19 +44,19 @@ texture = ExtResource("1_76qul")
 
 [node name="PlayerCollider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bfm7l")
+disabled = true
 
-[node name="Hitbox" parent="." groups=["player_hitbox"] instance=ExtResource("4_sd6ho")]
-collision_mask = 48
+[node name="Hitbox" parent="." instance=ExtResource("4_sd6ho")]
 
 [node name="Hurtbox" parent="." instance=ExtResource("4_dw1lb")]
 unique_name_in_owner = true
 scale = Vector2(6.44, 6.44)
-collision_mask = 48
+collision_mask = 16
 
 [node name="Weapon" parent="." instance=ExtResource("4_ycybc")]
-scale = Vector2(2.08757, 2.08757)
+scale = Vector2(5.28757, 5.28757)
 collision_layer = 16
-collision_mask = 52
+collision_mask = 32
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
