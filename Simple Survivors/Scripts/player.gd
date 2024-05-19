@@ -40,8 +40,8 @@ func _physics_process(delta):
 	if experience >= experience_to_level:
 		level_up()
 		
-	%ProgressBar.max_value = max_health
-	%ProgressBar.value = current_health
+	%HealthBar.max_value = max_health
+	%HealthBar.value = current_health
 	overlapping_mobs = %Hurtbox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		if invulnerable:
@@ -54,9 +54,9 @@ func take_damage():
 	self.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
 	self.modulate = Color.WHITE
-	print("Take damage. Health pool: " + str(current_health) + " / " + str(max_health))
-	%ProgressBar.value = current_health
-	print(%ProgressBar.value)
+	print("Player took damage. Health pool: " + str(current_health) + " / " + str(max_health))
+	%HealthBar.value = current_health
+	print(%HealthBar.value)
 	if current_health <= 0:
 		die()
 	else:
@@ -75,6 +75,3 @@ func level_up():
 	level += 1
 	experience = 0
 	experience_to_level = experience_to_level * 2
-	
-func _on_hitbox_area_entered(_area):
-	pass # Replace with function body.

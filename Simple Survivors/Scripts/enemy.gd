@@ -4,12 +4,14 @@ class_name Enemy
 #Enemy stats
 var level = 1
 @export var movespeed = 100.0
-@export var max_health: int = 3
+@export var max_health: int = 100
 var current_health:int = max_health
 @export var experience_to_give:int = 10
 
 @onready var soft_collision = $SoftCollisions
 @onready var player = get_node("/root/Main/Player")
+
+var overlapping_mobs
 
 func _ready():
 	add_to_group("enemy")
@@ -26,9 +28,10 @@ func _physics_process(delta):
 			position += soft_collision.get_push_vector() * 400
 		
 	move_and_slide()
-		
-	if $Hitbox.is_in_group("weapon_hitbox"):
-		current_health -= 1
+	
+	overlapping_mobs = %Hurtbox.get_overlapping_areas()
+	if overlapping_mobs.size() > 0:
+		current_health -= overlapping_mobs.size() * delta
 		take_damage()
 		
 #Determines damage dealt to player
@@ -36,7 +39,7 @@ func take_damage():
 	self.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
 	self.modulate = Color.WHITE
-	print("Take damage. Health pool: " + str(current_health) + " / " + str(max_health))
+	print("Enemy took damage. Health pool: " + str(current_health) + " / " + str(max_health))
 	if current_health <= 0:
 		die()
 		
@@ -51,10 +54,3 @@ func setup_enemy_stats():
 func give_exp():
 	if current_health <= 0:
 		player.experience += experience_to_give
-
-func _on_hitbox_area_entered(_area):
-	pass # Replace with function body.
-
-
-func _on_hurtbox_area_entered(_area):
-	pass # Replace with function body.

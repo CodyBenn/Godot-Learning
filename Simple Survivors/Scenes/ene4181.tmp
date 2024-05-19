@@ -12,7 +12,7 @@ radius = 64.0312
 [sub_resource type="CircleShape2D" id="CircleShape2D_cgf4b"]
 radius = 64.0
 
-[node name="EnemyRood" type="CharacterBody2D"]
+[node name="EnemyRood" type="CharacterBody2D" groups=["enemy"]]
 scale = Vector2(0.5, 0.5)
 collision_layer = 8
 collision_mask = 11
@@ -24,14 +24,13 @@ texture = ExtResource("1_0ouwo")
 [node name="EnemyCollider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_xj00u")
 
-[node name="Hitbox" parent="." instance=ExtResource("3_m7ejl")]
-collision_layer = 0
-collision_mask = 0
+[node name="Hitbox" parent="." groups=["enemy_hitbox"] instance=ExtResource("3_m7ejl")]
 
 [node name="Hurtbox" parent="." instance=ExtResource("5_sdqe6")]
 unique_name_in_owner = true
 scale = Vector2(6.4, 6.4)
-collision_mask = 16
+collision_layer = 16
+collision_mask = 32
 
 [node name="SoftCollisions" type="Area2D" parent="." groups=["soft_collider"]]
 script = ExtResource("3_wbhgf")
