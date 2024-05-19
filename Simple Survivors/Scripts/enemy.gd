@@ -4,7 +4,7 @@ class_name Enemy
 #Enemy stats
 var level = 1
 @export var movespeed = 100.0
-@export var max_health: int = 1000
+@export var max_health: int = 100
 var current_health:int = max_health
 @export var experience_to_give:int = 10
 
@@ -15,7 +15,6 @@ var overlapping_mobs
 
 func _ready():
 	add_to_group("enemy")
-	setup_enemy_stats()
 	
 func _physics_process(delta):
 	#Combat AI to chase player's position
@@ -44,13 +43,7 @@ func take_damage():
 		die()
 		
 func die():
-	give_exp()
-	queue_free()
-	
-#Assigns enemy stats to starting point for spawn
-func setup_enemy_stats():
-	current_health = max_health
-	
-func give_exp():
 	if current_health <= 0:
 		player.experience += experience_to_give
+		queue_free()
+	
