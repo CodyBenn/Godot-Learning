@@ -32,3 +32,12 @@ func _process(_delta):
 func new_game():
 	#Creates a camera to main scene
 	camera = camera_scene.instantiate()
+	
+func spawn_mob():
+	var new_enemy = preload("res://Scenes/enemy_rood.tscn").instantiate()
+	%EnemySpawnerPath.progress_ratio = randf()
+	new_enemy.global_position = %EnemySpawnerPath.global_position
+	add_child(new_enemy)
+	
+func _on_spawn_timer_timeout():
+	spawn_mob()
