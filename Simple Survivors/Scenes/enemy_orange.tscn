@@ -1,16 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://btj487dq4vc7f"]
+[gd_scene load_steps=8 format=3 uid="uid://ca36mvtsh80be"]
 
-[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_5fp4d"]
-[ext_resource type="Texture2D" uid="uid://c0eepqosjhaof" path="res://Assets/Orange.png" id="1_ah1a2"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_w1udt"]
+[ext_resource type="Texture2D" uid="uid://c0eepqosjhaof" path="res://Assets/Orange.png" id="2_ox83s"]
+[ext_resource type="PackedScene" uid="uid://dbch7jp3msncq" path="res://Scenes/hitbox.tscn" id="3_vff1c"]
+[ext_resource type="PackedScene" uid="uid://x80n6yybbiku" path="res://Scenes/hurtbox.tscn" id="4_61fb5"]
+[ext_resource type="Script" path="res://Scripts/soft_collision.gd" id="5_t3uyg"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_crtjg"]
-radius = 48.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_xj00u"]
+radius = 64.0312
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cgf4b"]
+radius = 64.0
 
 [node name="EnemyOrange" type="CharacterBody2D"]
-script = ExtResource("1_5fp4d")
+scale = Vector2(0.3, 0.3)
+collision_layer = 8
+collision_mask = 11
+script = ExtResource("1_w1udt")
+movespeed = 200.0
+max_health = 50
+knockback_strength = 100.0
 
 [node name="EnemySprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_ah1a2")
+texture = ExtResource("2_ox83s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_crtjg")
+[node name="EnemyCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xj00u")
+
+[node name="Hitbox" parent="." instance=ExtResource("3_vff1c")]
+
+[node name="Hurtbox" parent="." instance=ExtResource("4_61fb5")]
+unique_name_in_owner = true
+scale = Vector2(6.4, 6.4)
+
+[node name="SoftCollisions" type="Area2D" parent="." groups=["soft_collider"]]
+script = ExtResource("5_t3uyg")
+
+[node name="SoftCollider" type="CollisionShape2D" parent="SoftCollisions"]
+shape = SubResource("CircleShape2D_cgf4b")

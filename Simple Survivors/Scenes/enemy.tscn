@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://d2y1yof04k3x6"]
+
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_grkck"]
+[ext_resource type="PackedScene" uid="uid://dbch7jp3msncq" path="res://Scenes/hitbox.tscn" id="3_mrjmh"]
+[ext_resource type="PackedScene" uid="uid://x80n6yybbiku" path="res://Scenes/hurtbox.tscn" id="4_txad2"]
+[ext_resource type="Script" path="res://Scripts/soft_collision.gd" id="5_fpoth"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xj00u"]
+radius = 64.0312
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cgf4b"]
+radius = 64.0
+
+[node name="Enemy" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+collision_layer = 8
+collision_mask = 11
+script = ExtResource("1_grkck")
+knockback_strength = 75.0
+
+[node name="EnemySprite" type="Sprite2D" parent="."]
+
+[node name="EnemyCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xj00u")
+
+[node name="Hitbox" parent="." instance=ExtResource("3_mrjmh")]
+
+[node name="Hurtbox" parent="." instance=ExtResource("4_txad2")]
+unique_name_in_owner = true
+scale = Vector2(6.4, 6.4)
+
+[node name="SoftCollisions" type="Area2D" parent="." groups=["soft_collider"]]
+script = ExtResource("5_fpoth")
+
+[node name="SoftCollider" type="CollisionShape2D" parent="SoftCollisions"]
+shape = SubResource("CircleShape2D_cgf4b")
