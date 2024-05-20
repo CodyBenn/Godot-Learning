@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1q5fv1fxfpkk"]
+
+[ext_resource type="Texture2D" uid="uid://bebqxign5hrol" path="res://Assets/Bloo.png" id="1_4h72u"]
+[ext_resource type="Script" path="res://Scripts/item_button.gd" id="2_bkqyn"]
+
+[node name="ItemButton" type="TextureButton"]
+texture_normal = ExtResource("1_4h72u")
+script = ExtResource("2_bkqyn")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
