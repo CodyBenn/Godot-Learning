@@ -10,6 +10,7 @@ var current_health:int = max_health
 
 @onready var soft_collision = $SoftCollisions
 @onready var player = get_node("/root/Main/Player")
+@export var knockback_strength:float = 200
 
 var overlapping_mobs
 
@@ -32,6 +33,7 @@ func _physics_process(delta):
 	if overlapping_mobs.size() > 0:
 		current_health -= overlapping_mobs.size() * delta
 		take_damage()
+		knockback()
 		
 #Determines damage dealt to player
 func take_damage():
@@ -46,4 +48,8 @@ func die():
 	if current_health <= 0:
 		player.experience += experience_to_give
 		queue_free()
-	
+		
+func knockback():
+		var knockback_direction = -velocity.normalized() * knockback_strength
+		velocity = knockback_direction
+		move_and_slide()
