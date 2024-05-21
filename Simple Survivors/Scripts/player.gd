@@ -14,6 +14,7 @@ var experience_to_level:int = 10
 
 var overlapping_mobs
 var invulnerable: bool = false
+signal leveled_up(player)
 
 func _ready():
 	#Assigns to player group as a failsafe
@@ -28,11 +29,11 @@ func _physics_process(delta):
 	if axis_x:
 		velocity.x = axis_x * movespeed
 	else:
-		velocity.x = move_toward(velocity.x, 0, movespeed * 1)
+		velocity.x = move_toward(velocity.x, 0, movespeed * .1)
 	if axis_y:
 		velocity.y = axis_y * movespeed
 	else:
-		velocity.y = move_toward(velocity.y, 0, movespeed * 1)
+		velocity.y = move_toward(velocity.y, 0, movespeed * .1)
 	move_and_slide()
 		
 	%ExperienceBar.max_value = experience_to_level
@@ -77,3 +78,4 @@ func level_up():
 	experience = 0
 	experience_to_level = experience_to_level * 2
 	print("You leveled up! Level: ", level)
+	emit_signal("player_leveled_up")
