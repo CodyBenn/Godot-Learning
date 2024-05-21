@@ -17,3 +17,5 @@ func register_button():
 func _on_item_button_pressed(button):
 	print(button, " Selected")
 	item_select_screen.visible = false
+	get_tree().paused = false
+	

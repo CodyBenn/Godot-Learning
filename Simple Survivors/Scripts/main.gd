@@ -3,9 +3,8 @@ extends Node2D
 var viewport_size: Vector2
 
 #Player variables
-var player_scene = preload("res://Scenes/player.tscn")
-@onready var player = $Player
 var player_spawn_pos: Vector2
+@onready var player = $Player
 @onready var item_select_ui = $ScreensUI/Screens
 
 #Loads "GameCamera" so it can be instantiated later
@@ -46,5 +45,6 @@ func _on_spawn_timer_timeout():
 	spawn_mob()
 	
 func item_select():
+	get_tree().paused = true
 	item_select_ui.item_select_screen.visible = true
-
+	
