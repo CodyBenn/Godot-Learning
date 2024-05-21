@@ -14,17 +14,6 @@ grow_vertical = 2
 [node name="Screens" type="CanvasLayer" parent="."]
 script = ExtResource("1_1avhh")
 
-[node name="StaticBackground" type="ColorRect" parent="Screens"]
-visible = false
-modulate = Color(0.298039, 0.490196, 0.262745, 1)
-show_behind_parent = true
-z_index = -100
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="ItemHContainer" type="HBoxContainer" parent="Screens"]
 anchors_preset = 8
 anchor_left = 0.5
