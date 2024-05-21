@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4n58is2v4chv"]
+[gd_scene load_steps=9 format=3 uid="uid://b4n58is2v4chv"]
 
 [ext_resource type="PackedScene" uid="uid://0cnp4lxeqgha" path="res://Scenes/player.tscn" id="1_enl1x"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_n0wm6"]
 [ext_resource type="PackedScene" uid="uid://2pbb4e1colg1" path="res://Scenes/screens_ui.tscn" id="2_cdtkk"]
 [ext_resource type="Texture2D" uid="uid://d0vl14kcd72lm" path="res://Assets/Grass.png" id="3_idf8c"]
+[ext_resource type="Script" path="res://Scripts/pause_controller.gd" id="5_a6psr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0yeg"]
 texture = ExtResource("3_idf8c")
@@ -34,7 +35,12 @@ point_count = 6
 [node name="Main" type="Node2D"]
 script = ExtResource("1_n0wm6")
 
+[node name="PauseController" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("5_a6psr")
+
 [node name="ScreensUI" parent="." instance=ExtResource("2_cdtkk")]
+process_mode = 2
 y_sort_enabled = true
 anchors_preset = 0
 anchor_right = 0.0
