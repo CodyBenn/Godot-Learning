@@ -4,8 +4,9 @@ var viewport_size: Vector2
 
 #Player variables
 var player_scene = preload("res://Scenes/player.tscn")
-var player: Player = null
+@onready var player = $Player
 var player_spawn_pos: Vector2
+@onready var item_select_ui = $ScreensUI/Screens
 
 #Loads "GameCamera" so it can be instantiated later
 var camera_scene = preload("res://Scenes/game_camera.tscn")
@@ -19,6 +20,8 @@ func _ready():
 	#Sets player coordinates based on screen size
 	player_spawn_pos.x = viewport_size.x / 2.0
 	player_spawn_pos.y = viewport_size.y - player_spawn_pos_y_margin
+	
+	player.connect("player_leveled_up", item_select)
 	
 	new_game()
 	
@@ -41,3 +44,7 @@ func spawn_mob():
 	
 func _on_spawn_timer_timeout():
 	spawn_mob()
+	
+func item_select():
+	item_select_ui.item_select_screen.visible = true
+

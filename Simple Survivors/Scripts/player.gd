@@ -14,7 +14,7 @@ var experience_to_level:int = 10
 
 var overlapping_mobs
 var invulnerable: bool = false
-signal leveled_up(player)
+signal player_leveled_up
 
 func _ready():
 	#Assigns to player group as a failsafe
@@ -74,8 +74,9 @@ func become_invulnerable():
 	invulnerable = false
 	
 func level_up():
-	level += 1
-	experience = 0
-	experience_to_level = experience_to_level * 2
-	print("You leveled up! Level: ", level)
-	emit_signal("player_leveled_up")
+	if experience >= experience_to_level:
+		level += 1
+		experience = 0
+		experience_to_level = experience_to_level * 2
+		print("You leveled up! Level: ", level)
+		emit_signal("player_leveled_up")
