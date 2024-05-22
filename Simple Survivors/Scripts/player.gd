@@ -12,6 +12,8 @@ var current_shield:int = max_shield
 var experience:int = 0
 var experience_to_level:int = 10
 
+@export var weapon_list = [0, 1, 2, 3, 4, 5, 6, 7]
+
 var overlapping_mobs
 var invulnerable: bool = false
 signal player_leveled_up
@@ -53,9 +55,11 @@ func _physics_process(delta):
 		
 #Determines damage dealt to player
 func take_damage():
-	self.modulate = Color.DARK_RED
+	$PlayerSprite.modulate = Color.DARK_RED
+	$HealthBar.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
-	self.modulate = Color.WHITE
+	$PlayerSprite.modulate = Color.WHITE
+	$HealthBar.modulate = Color.WHITE
 	print("Player took damage. Health pool: " + str(current_health) + " / " + str(max_health))
 	%HealthBar.value = current_health
 	print(%HealthBar.value)
