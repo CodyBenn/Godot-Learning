@@ -12,7 +12,7 @@ var current_shield:int = max_shield
 var experience:int = 0
 var experience_to_level:int = 10
 
-@export var weapon_list = [0, 1, 2, 3, 4, 5, 6, 7]
+@export var weapon_list:PackedScene
 
 var overlapping_mobs
 var invulnerable: bool = false
@@ -38,14 +38,8 @@ func _physics_process(delta):
 		velocity.y = move_toward(velocity.y, 0, movespeed * .1)
 	move_and_slide()
 		
-	%ExperienceBar.max_value = experience_to_level
-	%ExperienceBar.value = experience
-	%ExperienceBar/ExperienceLevel.text = str(level)
-	if experience >= experience_to_level:
-		level_up()
-		
-	%HealthBar.max_value = max_health
-	%HealthBar.value = current_health
+	update_ui_bars()
+	
 	overlapping_mobs = %Hurtbox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		if invulnerable:
@@ -61,8 +55,7 @@ func take_damage():
 	$PlayerSprite.modulate = Color.WHITE
 	$HealthBar.modulate = Color.WHITE
 	print("Player took damage. Health pool: " + str(current_health) + " / " + str(max_health))
-	%HealthBar.value = current_health
-	print(%HealthBar.value)
+	
 	if current_health <= 0:
 		die()
 	else:
@@ -84,3 +77,14 @@ func level_up():
 		experience_to_level = experience_to_level * 2
 		print("You leveled up! Level: ", level)
 		emit_signal("player_leveled_up")
+		
+func update_ui_bars():
+	%ExperienceBar.max_value = experience_to_level
+	%ExperienceBar.value = experience
+	%ExperienceBar/ExperienceLevel.text = str(level)
+	
+	%HealthBar.max_value = max_health
+	%HealthBar.value = current_health
+	
+	if experience >= experience_to_level:
+		level_up()
