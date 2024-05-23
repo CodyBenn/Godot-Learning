@@ -70,13 +70,13 @@ shape = SubResource("CircleShape2D_bfm7l")
 disabled = true
 
 [node name="Hitbox" parent="." instance=ExtResource("4_sd6ho")]
-collision_layer = 48
-collision_mask = 32
+collision_mask = 0
 
 [node name="Weapon" parent="." groups=["weapon_hitbox"] instance=ExtResource("4_ycybc")]
 scale = Vector2(1.8209, 1.8209)
-collision_layer = 48
-collision_mask = 32
+collision_layer = 32
+collision_mask = 0
+script = null
 
 [node name="Hurtbox" parent="." instance=ExtResource("4_dw1lb")]
 unique_name_in_owner = true
