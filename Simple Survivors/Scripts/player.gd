@@ -17,9 +17,6 @@ var experience_to_level:int = 10
 var overlapping_mobs
 signal player_leveled_up
 
-func _ready():
-	pass
-	
 func _physics_process(_delta):
 	#Movement controls
 	var axis_x = Input.get_axis("left", "right")
@@ -37,7 +34,6 @@ func _physics_process(_delta):
 		
 	update_ui_bars()
 		
-	
 func level_up():
 	if experience >= experience_to_level:
 		level += 1

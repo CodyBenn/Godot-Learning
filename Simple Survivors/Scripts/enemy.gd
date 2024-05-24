@@ -4,7 +4,7 @@ class_name Enemy
 #Enemy stats
 var level = 1
 @export var movespeed = 100.0
-@export var max_health: int = 200
+@export var max_health: int = 100
 var current_health:int = max_health
 @export var experience_to_give:int = 10
 
@@ -25,4 +25,3 @@ func _physics_process(_delta):
 			position += soft_collision.get_push_vector() * 400
 		
 	move_and_slide()
-	
