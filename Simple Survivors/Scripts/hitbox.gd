@@ -2,14 +2,16 @@ extends Area2D
 class_name Hitbox
 
 @onready var player = get_node("/root/Main/Player")
-@export var knockback_strength:float = 200
+@export var knockback_strength:float = 50
 var enemy
 var overlapping_mobs
-var invulnerable: bool = false
+var invulnerable:bool = false
 var is_player:bool = false
 var is_enemy:bool = false
+var velocity:Vector2
 
 func _ready():
+	#Assigns hitbox parameters based on group of parent
 	if $"..".is_in_group("enemy"):
 		enemy = $".."
 		is_enemy = true
@@ -17,28 +19,34 @@ func _ready():
 		player = $".."
 		is_player = true
 	
-func _process(delta):
+func _physics_process(delta):
+	#Determines enemy velocity for knockback func
+	if is_enemy and enemy:
+		velocity = enemy.velocity
+		var direction = global_position.direction_to(player.global_position)
+		velocity = direction * 100.0
+	
+	#Monitors overlapping areas for Hurtbox to determine if group needs to take damage
 	overlapping_mobs = %Hurtbox.get_overlapping_areas()
 	if overlapping_mobs.size() > 0:
-		if is_enemy == true:
-			#print(overlapping_mobs, " in enemy overlapping areas")
+		if is_enemy:
+			#Assigns damage to enemy if overlapping with area
 			var current_health = enemy.current_health
-			enemy.current_health -= delta * .1
+			enemy.current_health -= overlapping_mobs.size() * delta * .1
 			enemy_take_damage()
-			#knockback()
-		if is_player == true:
-			#print(overlapping_mobs, " in player overlapping areas")
+			knockback()
+		if is_player and !invulnerable:
+			#Assigns damage to player if overlapping with area
 			var current_health = player.current_health
-			player.current_health -= delta
+			player.current_health -= overlapping_mobs.size() * delta * .1
 			player_take_damage()
 			
-#Determines damage dealt to player
 func enemy_take_damage():
 	var enemy_sprite = $"../EnemySprite"
 	enemy_sprite.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
 	enemy_sprite.modulate = Color.WHITE 
-	#print("Enemy took damage. Health pool: " + str(enemy.current_health) + " / " + str(enemy.max_health))
+	print("Enemy took damage. Health pool: " + str(enemy.current_health) + " / " + str(enemy.max_health))
 	if enemy.current_health <= 0:
 		die()
 		
@@ -71,7 +79,8 @@ func die():
 		print("You died")
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
 		
-#func knockback():
-		#enemy.knockback_direction = -enemy.velocity.normalized() * knockback_strength
-		#enemy.velocity = enemy.knockback_direction
-		#move_and_slide()
+func knockback():
+	if is_enemy and enemy:
+		var knockback_direction = -enemy.velocity.normalized() * knockback_strength
+		enemy.velocity = knockback_direction
+		enemy.move_and_slide()
