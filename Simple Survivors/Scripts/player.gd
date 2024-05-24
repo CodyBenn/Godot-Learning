@@ -10,18 +10,17 @@ var level = 1
 @export var max_shield:int  = 0
 @onready var current_shield:int = max_shield
 var experience:int = 0
-var experience_to_level:int = 100000
+var experience_to_level:int = 10
 
 @export var weapon_list:PackedScene
 
 var overlapping_mobs
-var invulnerable: bool = false
 signal player_leveled_up
 
 func _ready():
 	pass
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	#Movement controls
 	var axis_x = Input.get_axis("left", "right")
 	var axis_y = Input.get_axis("up", "down")
@@ -37,36 +36,7 @@ func _physics_process(delta):
 	move_and_slide()
 		
 	update_ui_bars()
-	
-	overlapping_mobs = %Hurtbox.get_overlapping_bodies()
-	if overlapping_mobs.size() > 0:
-		if invulnerable:
-			return
-		current_health -= overlapping_mobs.size() * delta
-		take_damage()
 		
-#Determines damage dealt to player
-func take_damage():
-	$PlayerSprite.modulate = Color.DARK_RED
-	$HealthBar.modulate = Color.DARK_RED
-	await get_tree().create_timer(0.1).timeout
-	$PlayerSprite.modulate = Color.WHITE
-	$HealthBar.modulate = Color.WHITE
-	print("Player took damage. Health pool: " + str(current_health) + " / " + str(max_health))
-	
-	if current_health <= 0:
-		die()
-	else:
-		become_invulnerable()
-		
-func die():
-	print("You died")
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
-	
-func become_invulnerable():
-	invulnerable = true
-	await get_tree().create_timer(.1).timeout
-	invulnerable = false
 	
 func level_up():
 	if experience >= experience_to_level:
