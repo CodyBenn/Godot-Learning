@@ -9,8 +9,8 @@ radius = 64.0
 [node name="Weapon" type="Area2D"]
 light_mask = 0
 scale = Vector2(1.32, 1.32)
-collision_layer = 16
-collision_mask = 16
+collision_layer = 32
+collision_mask = 0
 script = ExtResource("1_34ri4")
 
 [node name="WeaponCollider" type="CollisionShape2D" parent="."]
