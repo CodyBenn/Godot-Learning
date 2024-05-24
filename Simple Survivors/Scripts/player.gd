@@ -10,7 +10,7 @@ var level = 1
 @export var max_shield:int  = 0
 @onready var current_shield:int = max_shield
 var experience:int = 0
-var experience_to_level:int = 10
+var experience_to_level:int = 100000
 
 @export var weapon_list:PackedScene
 

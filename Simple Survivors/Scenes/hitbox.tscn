@@ -13,5 +13,3 @@ script = ExtResource("1_rk303")
 
 [node name="HitboxCollider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_itgjc")
-
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
