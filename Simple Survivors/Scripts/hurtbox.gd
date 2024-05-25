@@ -1,5 +1,5 @@
 extends Area2D
-class_name Hitbox
+class_name Hurtbox
 
 @onready var player = get_node("/root/Main/Player")
 @export var knockback_strength:float = 50
@@ -9,8 +9,6 @@ var invulnerable:bool = false
 var is_player:bool = false
 var is_enemy:bool = false
 var velocity:Vector2
-
-signal hit(damage: int)
 
 func _ready():
 	#Assigns hitbox parameters based on group of parent
@@ -73,11 +71,11 @@ func become_invulnerable():
 	invulnerable = false
 
 func die():
-	if is_enemy == true:
+	if is_enemy and enemy:
 		if enemy.current_health <= 0:
 			player.experience += enemy.experience_to_give
 			enemy.queue_free()
-	if is_player == true:
+	if is_player and player:
 		print("You died")
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
 			
@@ -86,3 +84,4 @@ func knockback():
 		var knockback_direction = -enemy.velocity.normalized() * knockback_strength
 		enemy.velocity = knockback_direction
 		enemy.move_and_slide()
+		
