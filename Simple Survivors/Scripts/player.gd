@@ -2,7 +2,6 @@ extends CharacterBody2D
 class_name Player
 
 #Player stats
-var player: Player = null
 var level = 1
 @export var movespeed:float = 300.0
 @export var max_health:int = 100
@@ -12,9 +11,6 @@ var level = 1
 var experience:int = 0
 var experience_to_level:int = 10
 
-@export var weapon_list:PackedScene
-
-var overlapping_mobs
 signal player_leveled_up
 
 func ready():
@@ -55,3 +51,4 @@ func update_ui_bars():
 	
 	if experience >= experience_to_level:
 		level_up()
+		

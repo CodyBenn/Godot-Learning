@@ -1,5 +1,5 @@
 extends CanvasLayer
-class_name Item
+class_name ItemSelector
 
 @onready var item_select_screen = $ItemHContainer
 
