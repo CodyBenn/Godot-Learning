@@ -17,6 +17,9 @@ var experience_to_level:int = 10
 var overlapping_mobs
 signal player_leveled_up
 
+func ready():
+	pass
+	
 func _physics_process(_delta):
 	#Movement controls
 	var axis_x = Input.get_axis("left", "right")
