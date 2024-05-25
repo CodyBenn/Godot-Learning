@@ -20,3 +20,5 @@ shape = SubResource("CircleShape2D_0iysr")
 [node name="GarlicSprite" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.309804)
 texture = ExtResource("2_t7xav")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -6,4 +6,3 @@ class_name ItemManager
 func _ready():
 	var garlic_instance = garlic.instantiate()
 	add_child(garlic_instance)
-

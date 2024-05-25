@@ -46,7 +46,7 @@ func enemy_take_damage():
 	enemy_sprite.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
 	enemy_sprite.modulate = Color.WHITE 
-	print("Enemy took damage. Health pool: " + str(enemy.current_health) + " / " + str(enemy.max_health))
+	#print("Enemy took damage. Health pool: " + str(enemy.current_health) + " / " + str(enemy.max_health))
 	if enemy.current_health <= 0:
 		die()
 		
@@ -58,7 +58,7 @@ func player_take_damage():
 	await get_tree().create_timer(0.1).timeout
 	player_sprite.modulate = Color.WHITE
 	health_bar.modulate = Color.WHITE
-	print("Player took damage. Health pool: " + str(player.current_health) + " / " + str(player.max_health))
+	#print("Player took damage. Health pool: " + str(player.current_health) + " / " + str(player.max_health))
 	
 	if player.current_health <= 0:
 		die()
