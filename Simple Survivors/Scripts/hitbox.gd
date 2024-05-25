@@ -10,6 +10,8 @@ var is_player:bool = false
 var is_enemy:bool = false
 var velocity:Vector2
 
+signal hit(damage: int)
+
 func _ready():
 	#Assigns hitbox parameters based on group of parent
 	if $"..".is_in_group("enemy"):
@@ -78,7 +80,7 @@ func die():
 	if is_player == true:
 		print("You died")
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
-		
+			
 func knockback():
 	if is_enemy and enemy:
 		var knockback_direction = -enemy.velocity.normalized() * knockback_strength

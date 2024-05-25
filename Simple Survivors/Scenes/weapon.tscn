@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvlo0k2mqsdxj"]
+[gd_scene load_steps=4 format=3 uid="uid://boj48td2ib81"]
 
 [ext_resource type="Script" path="res://Scripts/weapon.gd" id="1_34ri4"]
 [ext_resource type="Texture2D" uid="uid://bebqxign5hrol" path="res://Assets/Bloo.png" id="1_jl2tm"]
@@ -8,7 +8,7 @@ radius = 64.0
 
 [node name="Weapon" type="Area2D"]
 light_mask = 0
-scale = Vector2(1.32, 1.32)
+scale = Vector2(2.72757, 2.72757)
 collision_layer = 32
 collision_mask = 0
 script = ExtResource("1_34ri4")
