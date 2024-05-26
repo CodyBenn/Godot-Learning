@@ -7,6 +7,10 @@
 radius = 64.0078
 
 [node name="Garlic" type="Area2D"]
+show_behind_parent = true
+scale = Vector2(2.32, 2.32)
+collision_layer = 32
+collision_mask = 0
 script = ExtResource("1_l87sc")
 
 [node name="GarlicCollider" type="CollisionShape2D" parent="."]
