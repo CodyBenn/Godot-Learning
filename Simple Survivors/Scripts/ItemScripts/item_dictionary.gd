@@ -123,7 +123,7 @@ func get_random_item() -> String:
 		
 	if unselected_items.size() == 0:
 		return ""
-	
+		
 	var random_item = unselected_items[randi() % unselected_items.size()]
 	selected_items.append(random_item)
 	return random_item
