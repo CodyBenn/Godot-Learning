@@ -1,21 +1,25 @@
 extends Area2D
 class_name Garlic
 
+@onready var item_dictionary = ItemDictionary
 @onready var player = get_parent().get_parent()
 @onready var enemy = Enemy
 @onready var garlic_scene:PackedScene = preload("res://Scenes/Items/garlic.tscn")
 @onready var garlic = self
-var garlic_level:int = 1
-var garlic_damage:int = 1
-var garlic_range:Vector2
+
+var garlic_damage
+var garlic_range
 var enemy_hurtbox
 
 var enemies = {}
 
 func _ready():
-	garlic_range = garlic.scale
-	if player and player.has_signal("player_leveled_up"):
-		player.connect("player_leveled_up", _on_player_leveled_up)
+	var item_data = item_dictionary.get_item_data("garlic1")
+	if item_data:
+		garlic_damage = item_data["damage"]
+		garlic_range = item_data["range"]
+		print(garlic_range)
+	garlic.scale = Vector2(garlic_range, garlic_range)
 		
 func _physics_process(delta):
 	var overlapping_mobs = get_overlapping_areas()
@@ -32,13 +36,6 @@ func _physics_process(delta):
 				else:
 					hurtbox.enemy_take_damage()
 					
-func _on_player_leveled_up():
-	print("Garlic level up")
-	garlic_level += 1
-	garlic_damage += 1
-	garlic_range += Vector2(.25, .25)
-	garlic.scale = garlic_range
-	
 func _on_area_entered(area):
 	enemy = area.get_parent()
 	if enemy not in enemies:

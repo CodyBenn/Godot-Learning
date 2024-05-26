@@ -9,7 +9,9 @@ var items_in_dictionary = {
 		"details": "Stinky garlic that deals damage around you.",
 		"level": "Level: 1",
 		"prerequisite": [],
-		"type": "upgrade"
+		"type": "upgrade",
+		"damage": 5,
+		"range": 2
 	},
 	"garlic2": {
 		"icon": item_path + "Garlic.png",
@@ -17,7 +19,9 @@ var items_in_dictionary = {
 		"details": "Increase size by 10%.",
 		"level": "Level: 2",
 		"prerequisite": ["garlic1"],
-		"type": "upgrade"
+		"type": "upgrade",
+		"damage": 5,
+		"range": 2 * 1.1
 	},
 	"garlic3": {
 		"icon": item_path + "Garlic.png",
@@ -25,7 +29,9 @@ var items_in_dictionary = {
 		"details": "Increase damage by 10%.",
 		"level": "Level: 3",
 		"prerequisite": ["garlic2"],
-		"type": "upgrade"
+		"type": "upgrade",
+		"damage": 5 * 1.1,
+		"range": 2 * 1.1
 	},
 	"garlic4": {
 		"icon": item_path + "Garlic.png",
@@ -33,7 +39,9 @@ var items_in_dictionary = {
 		"details": "Increase size by 10%.",
 		"level": "Level: 4",
 		"prerequisite": ["garlic3"],
-		"type": "upgrade"
+		"type": "upgrade",
+		"damage": 5 * 1.1,
+		"range": 2 * 1.2
 	},
 	"garlic5": {
 		"icon": item_path + "Garlic.png",
@@ -41,7 +49,9 @@ var items_in_dictionary = {
 		"details": "Increase size by 10%.",
 		"level": "Level: 5",
 		"prerequisite": ["garlic4"],
-		"type": "upgrade"
+		"type": "upgrade",
+		"damage": 5 * 1.1,
+		"range": 2 * 1.3
 	},
 	"garlic6": {
 		"icon": item_path + "Garlic.png",
@@ -49,7 +59,9 @@ var items_in_dictionary = {
 		"details": "Increase damage by 10%.",
 		"level": "Level: 6",
 		"prerequisite": ["garlic5"],
-		"type": "upgrade"
+		"type": "upgrade",
+		"damage": 5 * 1.2,
+		"range": 2 * 1.3
 	},
 	"garlic7": {
 		"icon": item_path + "Garlic.png",
@@ -57,7 +69,9 @@ var items_in_dictionary = {
 		"details": "Increase size by 10%.",
 		"level": "Level: 6",
 		"prerequisite": ["garlic6"],
-		"type": "upgrade"
+		"type": "upgrade",
+		"damage": 5 * 1.2,
+		"range": 2 * 1.4
 	},
 	"garlic8": {
 		"icon": item_path + "Garlic.png",
@@ -65,7 +79,9 @@ var items_in_dictionary = {
 		"details": "Increase size by 10%.",
 		"level": "Level: 6",
 		"prerequisite": ["garlic7"],
-		"type": "upgrade"
+		"type": "upgrade",
+		"damage": 5 * 1.2,
+		"range": 2 * 1.5
 	},
 	"garlic9": {
 		"icon": item_path + "Garlic.png",
@@ -73,7 +89,9 @@ var items_in_dictionary = {
 		"details": "Increase damage by 10%.",
 		"level": "Level: 6",
 		"prerequisite": ["garlic8"],
-		"type": "upgrade"
+		"type": "upgrade",
+		"damage": 5 * 1.3,
+		"range": 2 * 1.5
 	},
 	"food": {
 		"icon": item_path + "Food.png",
@@ -84,3 +102,8 @@ var items_in_dictionary = {
 		"type": "item"
 	}
 }
+
+func get_item_data(item_name):
+	if item_name in items_in_dictionary:
+		return items_in_dictionary[item_name]
+	return null
