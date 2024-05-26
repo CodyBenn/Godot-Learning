@@ -29,10 +29,8 @@ func _physics_process(delta):
 	#Monitors overlapping areas for Hurtbox to determine if group needs to take damage
 	overlapping_mobs = %Hurtbox.get_overlapping_areas()
 	if overlapping_mobs.size() > 0:
+		#print(overlapping_mobs)
 		if is_enemy:
-			#Assigns damage to enemy if overlapping with area
-			var current_health = enemy.current_health
-			enemy.current_health -= overlapping_mobs.size() * delta * .1
 			enemy_take_damage()
 			knockback()
 		if is_player and !invulnerable:
@@ -47,8 +45,8 @@ func enemy_take_damage():
 	await get_tree().create_timer(0.1).timeout
 	enemy_sprite.modulate = Color.WHITE 
 	#print("Enemy took damage. Health pool: " + str(enemy.current_health) + " / " + str(enemy.max_health))
-	if enemy.current_health <= 0:
-		die()
+	#if enemy.current_health <= 0:
+		#die()
 		
 func player_take_damage():
 	var player_sprite = $"../PlayerSprite"
