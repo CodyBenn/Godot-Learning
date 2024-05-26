@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdk7y7po0v0ty"]
+
+[ext_resource type="Texture2D" uid="uid://dtmq7wmxmcwqu" path="res://Assets/Items/Garlic.png" id="1_ngerf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_egws7"]
+radius = 64.0078
+
+[node name="Item" type="Area2D"]
+
+[node name="ItemCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_egws7")
+
+[node name="ItemSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_ngerf")
