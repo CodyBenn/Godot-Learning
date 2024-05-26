@@ -27,9 +27,6 @@ var facingDir : Vector2 = Vector2()
 #Allows player to interact facingDir
 @onready var rayCast = $RayCast2D
 
-#Player attack anim
-var ATTACK = preload("res://Scenes/AttackAnim.tscn")
-
 #Loads the player UI
 @onready var ui = $"../CanvasLayer/UI"
 
@@ -50,20 +47,20 @@ func _process(delta):
 	
 	position += input * move_Speed * delta
 	
-	#Animates character if Input
+	#Walking animation for character if Input
 	if input == Vector2(1, 0):
 		$AnimatedSprite.play("walk_right")
 		facingDir = Vector2(1, 0)
 	elif input == Vector2(-1, 0):
-		$AnimatedSprite.play("walk_left")	
+		$AnimatedSprite.play("walk_left")
 		facingDir = Vector2(-1, 0)
 	elif input == Vector2(0, 1):
-		$AnimatedSprite.play("walk_down")	
+		$AnimatedSprite.play("walk_down")
 		facingDir = Vector2(0, 1)
 	elif input == Vector2(0, -1):
 		$AnimatedSprite.play("walk_up")
 		facingDir = Vector2(0, -1)
-	
+		
 	#Stops animation if no Input
 	if input == Vector2(0, 0):
 		$AnimatedSprite.stop()
@@ -73,7 +70,7 @@ func _process(delta):
 	rayCast.target_position = facingDir * interactDist
 	if Input.is_action_just_pressed("interact"):
 		try_interact()
-		
+	
 func try_interact():
 	
 	if rayCast.is_colliding():
