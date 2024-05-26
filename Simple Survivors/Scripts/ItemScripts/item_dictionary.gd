@@ -93,6 +93,26 @@ var items_in_dictionary = {
 		"damage": 5 * 1.3,
 		"range": 2 * 1.5
 	},
+	"sword1": {
+		"icon": item_path + "Food.png",
+		"displayname": "Sword",
+		"details": "Basic",
+		"level": "Level: 1",
+		"prerequisite": [],
+		"type": "upgrade",
+		"damage": 5,
+		"range": 2
+	},
+	"whip1": {
+		"icon": item_path + "Food.png",
+		"displayname": "Whip",
+		"details": "Indiana Jones it up",
+		"level": "Level: 1",
+		"prerequisite": [],
+		"type": "upgrade",
+		"damage": 5,
+		"range": 2
+	},
 	"food": {
 		"icon": item_path + "Food.png",
 		"displayname": "Food",
@@ -103,7 +123,7 @@ var items_in_dictionary = {
 	}
 }
 
-var selected_items = []
+var selected_items = ["garlic1"]
 
 func get_item_data(item_name:String) -> Dictionary:
 	if item_name in items_in_dictionary:
@@ -112,6 +132,8 @@ func get_item_data(item_name:String) -> Dictionary:
 	
 func prerequisite_fulfilled(item_name: String) -> bool:
 	var prerequisites = items_in_dictionary[item_name]["prerequisite"]
+	if prerequisites.size() == 0:
+		return true  # No prerequisites, always fulfilled
 	for prereq in prerequisites:
 		if prereq not in selected_items:
 			return false
