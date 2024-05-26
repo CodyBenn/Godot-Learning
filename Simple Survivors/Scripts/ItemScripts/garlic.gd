@@ -29,7 +29,9 @@ func _physics_process(delta):
 				if enemy.current_health <= 0:
 					if hurtbox.has_method("die"):
 						hurtbox.die()
-						
+				else:
+					hurtbox.enemy_take_damage()
+					
 func _on_player_leveled_up():
 	print("Garlic level up")
 	garlic_level += 1

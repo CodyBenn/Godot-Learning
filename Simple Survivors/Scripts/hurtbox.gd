@@ -31,7 +31,6 @@ func _physics_process(delta):
 	if overlapping_mobs.size() > 0:
 		#print(overlapping_mobs)
 		if is_enemy:
-			enemy_take_damage()
 			knockback()
 		if is_player and !invulnerable:
 			#Assigns damage to player if overlapping with area
@@ -44,9 +43,6 @@ func enemy_take_damage():
 	enemy_sprite.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
 	enemy_sprite.modulate = Color.WHITE 
-	#print("Enemy took damage. Health pool: " + str(enemy.current_health) + " / " + str(enemy.max_health))
-	#if enemy.current_health <= 0:
-		#die()
 		
 func player_take_damage():
 	var player_sprite = $"../PlayerSprite"
