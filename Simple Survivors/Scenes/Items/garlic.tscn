@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cih70gxnnbypt"]
+[gd_scene load_steps=4 format=3 uid="uid://cih70gxnnbypt"]
 
+[ext_resource type="Script" path="res://Scripts/ItemScripts/item.gd" id="1_l87sc"]
 [ext_resource type="Texture2D" uid="uid://dtmq7wmxmcwqu" path="res://Assets/Items/Garlic.png" id="1_wk5e6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_egws7"]
 radius = 64.0078
 
 [node name="Garlic" type="Area2D"]
+script = ExtResource("1_l87sc")
 
 [node name="GarlicCollider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_egws7")

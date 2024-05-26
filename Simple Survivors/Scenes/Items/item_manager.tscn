@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6aa6sqwpixrl"]
+[gd_scene load_steps=3 format=3 uid="uid://b6aa6sqwpixrl"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/item_manager.gd" id="1_p0c1y"]
+[ext_resource type="PackedScene" uid="uid://cih70gxnnbypt" path="res://Scenes/Items/garlic.tscn" id="2_k0n8e"]
 
 [node name="ItemManager" type="Node2D"]
 show_behind_parent = true
 y_sort_enabled = true
 script = ExtResource("1_p0c1y")
+garlic = ExtResource("2_k0n8e")
