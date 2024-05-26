@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1q5fv1fxfpkk"]
+[gd_scene load_steps=2 format=3 uid="uid://d1q5fv1fxfpkk"]
 
-[ext_resource type="Texture2D" uid="uid://dtmq7wmxmcwqu" path="res://Assets/Items/Garlic.png" id="1_reifu"]
 [ext_resource type="Script" path="res://Scripts/item_button.gd" id="2_bkqyn"]
 
 [node name="ItemButton" type="TextureButton" groups=["buttons"]]
-texture_normal = ExtResource("1_reifu")
 script = ExtResource("2_bkqyn")
 
 [node name="LabelText" type="Label" parent="."]

@@ -13,10 +13,20 @@ signal clicked(button)
 func _ready():
 	if item == null:
 		item = "food"
-	label_text.text = ItemDictionary.items_in_dictionary[item]["displayname"]
-	label_description.text = ItemDictionary.items_in_dictionary[item]["details"]
-	label_level.text = ItemDictionary.items_in_dictionary[item]["level"]
-	#item_icon.texture_normal = ItemDictionary.items_in_dictionary[item]["icon"]
+		
+	var item_data = ItemDictionary.items_in_dictionary[item]
+	label_text.text = item_data["displayname"]
+	label_description.text = item_data["details"]
+	label_level.text = item_data["level"]
+	
+	# Ensure that `item_data["icon"]` is a Texture or load it if it's a path
+	var icon_path = item_data["icon"]
+	if typeof(icon_path) == TYPE_STRING:
+		item_icon = load(icon_path)  # Load the texture resource from the path
+	else:
+		item_icon = icon_path  # Directly assign if it's already a texture
+		
+	self.texture_normal = item_icon
 	
 func _on_pressed():
 	clicked.emit(self)
