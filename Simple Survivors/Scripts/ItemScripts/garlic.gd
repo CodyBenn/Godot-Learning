@@ -19,6 +19,9 @@ func _ready():
 		garlic_damage = item_data["damage"]
 		garlic_range = item_data["range"]
 		print(garlic_range)
+		if upgrade():
+			pass
+			
 	garlic.scale = Vector2(garlic_range, garlic_range)
 		
 func _physics_process(delta):
@@ -40,3 +43,6 @@ func _on_area_entered(area):
 	enemy = area.get_parent()
 	if enemy not in enemies:
 		enemies[enemy] = enemy_hurtbox
+		
+func upgrade():
+	pass
