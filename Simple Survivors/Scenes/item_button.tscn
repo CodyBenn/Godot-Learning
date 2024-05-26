@@ -13,6 +13,7 @@ text = "Test"
 horizontal_alignment = 1
 
 [node name="LabelDescription" type="Label" parent="."]
+layout_mode = 0
 offset_top = 23.0
 offset_right = 40.0
 offset_bottom = 46.0
@@ -20,6 +21,7 @@ text = "Test"
 horizontal_alignment = 1
 
 [node name="LabelLevel" type="Label" parent="."]
+layout_mode = 0
 offset_top = 46.0
 offset_right = 40.0
 offset_bottom = 69.0
