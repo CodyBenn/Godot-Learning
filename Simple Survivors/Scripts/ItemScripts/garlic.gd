@@ -25,10 +25,7 @@ func _physics_process(delta):
 				if enemy_hurtbox.has_method("die"):
 					enemy_hurtbox.die()
 				else:
-					
 					print("There is no die")
-			else:
-				return
 				
 func _on_player_leveled_up():
 	print("Garlic level up")
@@ -38,5 +35,5 @@ func _on_player_leveled_up():
 	garlic.scale = garlic_range
 	
 func _on_area_entered(area):
-	enemy_hurtbox = area
+	enemy_hurtbox = area.get_parent().get_node("Hurtbox")
 	enemy = area.get_parent()
