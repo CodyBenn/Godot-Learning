@@ -14,26 +14,36 @@ grow_vertical = 2
 [node name="Screens" type="CanvasLayer" parent="."]
 script = ExtResource("1_1avhh")
 
-[node name="PanelContainer" type="PanelContainer" parent="Screens"]
+[node name="StaticBackground" type="ColorRect" parent="Screens"]
+visible = false
+modulate = Color(0.298039, 0.490196, 0.262745, 1)
+show_behind_parent = true
+z_index = -100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemHContainer" type="HBoxContainer" parent="Screens"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -4.0
-offset_top = -4.0
 offset_right = 4.0
-offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 3
 size_flags_vertical = 3
+alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Screens/PanelContainer"]
+[node name="ItemButton" parent="Screens/ItemHContainer" instance=ExtResource("2_0yn3l")]
 layout_mode = 2
 
-[node name="HBoxContainer" type="VBoxContainer" parent="Screens/PanelContainer/MarginContainer"]
+[node name="ItemButton2" parent="Screens/ItemHContainer" instance=ExtResource("2_0yn3l")]
 layout_mode = 2
 
-[node name="ItemButton" parent="Screens/PanelContainer/MarginContainer/HBoxContainer" instance=ExtResource("2_0yn3l")]
+[node name="ItemButton3" parent="Screens/ItemHContainer" instance=ExtResource("2_0yn3l")]
 layout_mode = 2

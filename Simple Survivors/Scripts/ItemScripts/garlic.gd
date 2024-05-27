@@ -4,7 +4,7 @@ class_name Garlic
 @onready var item_dictionary = ItemDictionary
 @onready var player = get_parent().get_parent()
 @onready var enemy = Enemy
-@onready var garlic_scene:PackedScene = preload("res://Scenes/Items/garlic.tscn")
+@onready var garlic_scene:PackedScene = preload("res://Scenes/garlic.tscn")
 @onready var garlic = self
 
 var garlic_damage
@@ -19,8 +19,6 @@ func _ready():
 		garlic_damage = item_data["damage"]
 		garlic_range = item_data["range"]
 		print(garlic_range)
-		if upgrade():
-			pass
 			
 	garlic.scale = Vector2(garlic_range, garlic_range)
 		

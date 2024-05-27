@@ -41,6 +41,7 @@ script = ExtResource("5_a6psr")
 
 [node name="ScreensUI" parent="." instance=ExtResource("2_cdtkk")]
 process_mode = 2
+visible = false
 y_sort_enabled = true
 anchors_preset = 0
 anchor_right = 0.0

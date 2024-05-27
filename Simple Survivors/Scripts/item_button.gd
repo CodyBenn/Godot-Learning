@@ -1,44 +1,30 @@
-extends TextureButton
+extends Button
 class_name ItemButton
 
 @onready var label_text = $LabelText
 @onready var label_description = $LabelDescription
 @onready var label_level = $LabelLevel
-@onready var item_icon = self.texture_normal
+@onready var item_icon = $ItemTexture
 
 var item = null
 
 signal clicked(button)
 
 func _ready():
-	randomize()
-	
 	if item == null:
-		item = ItemDictionary.get_random_item()
+		item = "food"
 		
-	update_item_display(item)
+	var item_data = ItemDictionary.items_in_dictionary[item]
+	label_text.text = item_data["displayname"]
+	label_description.text = item_data["details"]
+	label_level.text = item_data["level"]
 	
+	# Load the texture resource from the path
+	var icon_path = item_data["icon"]
+	var icon_texture = load(icon_path)
+	
+	if icon_texture:
+		item_icon.texture = icon_texture
+		
 func _on_pressed():
 	clicked.emit(self)
-	item = ItemDictionary.get_random_item()
-	if item != "":
-			update_item_display(item)
-	else:
-		label_text.text = "No more items available"
-		label_description.text = ""
-		label_level.text = ""
-	
-func update_item_display(item_name):
-	var item_data = ItemDictionary.get_item_data(item_name)
-	if item_data and item_data.size() > 0:
-		label_text.text = item_data["displayname"]
-		label_description.text = item_data["details"]
-		label_level.text = item_data["level"]
-		
-		var icon_path = item_data["icon"]
-		if typeof(icon_path) == TYPE_STRING:
-			item_icon = load(icon_path)
-		else:
-			item_icon = icon_path
-			
-		self.texture_normal = item_icon

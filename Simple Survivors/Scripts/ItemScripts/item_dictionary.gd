@@ -129,23 +129,3 @@ func get_item_data(item_name:String) -> Dictionary:
 	if item_name in items_in_dictionary:
 		return items_in_dictionary[item_name]
 	return {}
-	
-func prerequisite_fulfilled(item_name: String) -> bool:
-	var prerequisites = items_in_dictionary[item_name]["prerequisite"]
-	if prerequisites.size() == 0:
-		return true  # No prerequisites, always fulfilled
-	for prereq in prerequisites:
-		if prereq not in selected_items:
-			return false
-	return true
-	
-func get_random_item() -> String:
-	var unselected_items = items_in_dictionary.keys().filter(func(item_name):
-		return item_name not in selected_items and prerequisite_fulfilled(item_name))
-		
-	if unselected_items.size() == 0:
-		return ""
-		
-	var random_item = unselected_items[randi() % unselected_items.size()]
-	selected_items.append(random_item)
-	return random_item
