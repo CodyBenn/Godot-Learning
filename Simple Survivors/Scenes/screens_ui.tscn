@@ -1,39 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://2pbb4e1colg1"]
 
 [ext_resource type="Script" path="res://Scripts/item_select.gd" id="1_1avhh"]
-[ext_resource type="PackedScene" uid="uid://d1q5fv1fxfpkk" path="res://Scenes/item_button.tscn" id="2_0yn3l"]
+[ext_resource type="PackedScene" uid="uid://b6y5xdabrvvwn" path="res://Scenes/item_button_ui.tscn" id="2_pqpon"]
 
-[node name="ScreensUI" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Screens" type="CanvasLayer" parent="."]
+[node name="ScreensUI" type="CanvasLayer"]
 script = ExtResource("1_1avhh")
 
-[node name="PanelContainer" type="PanelContainer" parent="Screens"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 6
-size_flags_vertical = 3
-
-[node name="MarginContainer" type="MarginContainer" parent="Screens/PanelContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="VBoxContainer" parent="Screens/PanelContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="ItemButton" parent="Screens/PanelContainer/MarginContainer/HBoxContainer" instance=ExtResource("2_0yn3l")]
-layout_mode = 2
+[node name="ItemButtonUI" parent="." instance=ExtResource("2_pqpon")]

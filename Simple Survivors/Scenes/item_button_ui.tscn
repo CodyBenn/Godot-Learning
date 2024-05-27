@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6y5xdabrvvwn"]
+
+[ext_resource type="Script" path="res://Scenes/ItemButtonHContainer.gd" id="1_c5bb6"]
+
+[node name="ItemButtonUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ItemButtonContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 217.0
+offset_top = 109.0
+offset_right = -217.0
+offset_bottom = -109.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="ItemButtonMargin" type="MarginContainer" parent="ItemButtonContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="ItemButtonHContainer" type="VBoxContainer" parent="ItemButtonContainer/ItemButtonMargin"]
+layout_mode = 2
+script = ExtResource("1_c5bb6")

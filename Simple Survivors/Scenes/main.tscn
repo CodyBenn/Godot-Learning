@@ -42,14 +42,6 @@ script = ExtResource("5_a6psr")
 [node name="ScreensUI" parent="." instance=ExtResource("2_cdtkk")]
 process_mode = 2
 visible = false
-y_sort_enabled = true
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -10
