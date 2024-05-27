@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b6y5xdabrvvwn"]
 
-[ext_resource type="Script" path="res://Scenes/ItemButtonHContainer.gd" id="1_c5bb6"]
+[ext_resource type="Script" path="res://Scripts/ItemButtonHContainer.gd" id="1_uwm47"]
 
 [node name="ItemButtonUI" type="Control"]
 layout_mode = 3
@@ -32,4 +32,4 @@ layout_mode = 2
 
 [node name="ItemButtonHContainer" type="VBoxContainer" parent="ItemButtonContainer/ItemButtonMargin"]
 layout_mode = 2
-script = ExtResource("1_c5bb6")
+script = ExtResource("1_uwm47")
