@@ -37,7 +37,7 @@ func level_up():
 	if experience >= experience_to_level:
 		level += 1
 		experience = 0
-		experience_to_level = experience_to_level * 2
+		experience_to_level = experience_to_level
 		print("You leveled up! Level: ", level)
 		emit_signal("player_leveled_up")
 		
