@@ -1,10 +1,10 @@
 extends Button
 class_name ItemButton
 
-@onready var label_text = $LabelText
-@onready var label_description = $LabelDescription
-@onready var label_level = $LabelLevel
-@onready var item_icon = $ItemTexture
+@onready var label_text = $ItemButtonLabelText
+@onready var label_level = $ItemButtonLabelLevel
+@onready var label_description = $ItemButtonLabelDescription
+@onready var item_icon = $ItemButtonColorRect/ItemButtonTexture
 
 var item = null
 
@@ -16,8 +16,8 @@ func _ready():
 		
 	var item_data = ItemDictionary.items_in_dictionary[item]
 	label_text.text = item_data["displayname"]
-	label_description.text = item_data["details"]
 	label_level.text = item_data["level"]
+	label_description.text = item_data["details"]
 	
 	# Load the texture resource from the path
 	var icon_path = item_data["icon"]
