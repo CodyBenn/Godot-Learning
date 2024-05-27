@@ -1,9 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1q5fv1fxfpkk"]
+[gd_scene load_steps=3 format=3 uid="uid://d1q5fv1fxfpkk"]
 
 [ext_resource type="Script" path="res://Scripts/item_button.gd" id="2_bkqyn"]
+[ext_resource type="Texture2D" uid="uid://c0eepqosjhaof" path="res://Assets/Orange.png" id="2_wpt7o"]
 
-[node name="ItemButton" type="TextureButton" groups=["buttons"]]
+[node name="ItemButton" type="Button" groups=["buttons"]]
+offset_right = 129.0
+offset_bottom = 128.0
 script = ExtResource("2_bkqyn")
+
+[node name="ItemTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("2_wpt7o")
 
 [node name="LabelText" type="Label" parent="."]
 layout_mode = 0
