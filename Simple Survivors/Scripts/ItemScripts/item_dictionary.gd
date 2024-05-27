@@ -9,7 +9,7 @@ var items_in_dictionary = {
 		"details": "Stinky garlic that deals damage around you.",
 		"level": "Level: 1",
 		"prerequisite": [],
-		"type": "upgrade",
+		"type": "weapon",
 		"damage": 5,
 		"range": 2
 	},
@@ -29,7 +29,7 @@ var items_in_dictionary = {
 		"details": "Increase damage by 10%.",
 		"level": "Level: 3",
 		"prerequisite": ["garlic2"],
-		"type": "upgrade",
+		"type": "weapon",
 		"damage": 5 * 1.1,
 		"range": 2 * 1.1
 	},
@@ -39,7 +39,7 @@ var items_in_dictionary = {
 		"details": "Increase size by 10%.",
 		"level": "Level: 4",
 		"prerequisite": ["garlic3"],
-		"type": "upgrade",
+		"type": "weapon",
 		"damage": 5 * 1.1,
 		"range": 2 * 1.2
 	},
@@ -49,7 +49,7 @@ var items_in_dictionary = {
 		"details": "Increase size by 10%.",
 		"level": "Level: 5",
 		"prerequisite": ["garlic4"],
-		"type": "upgrade",
+		"type": "weapon",
 		"damage": 5 * 1.1,
 		"range": 2 * 1.3
 	},
@@ -59,7 +59,7 @@ var items_in_dictionary = {
 		"details": "Increase damage by 10%.",
 		"level": "Level: 6",
 		"prerequisite": ["garlic5"],
-		"type": "upgrade",
+		"type": "weapon",
 		"damage": 5 * 1.2,
 		"range": 2 * 1.3
 	},
@@ -67,9 +67,9 @@ var items_in_dictionary = {
 		"icon": item_path + "Garlic.png",
 		"displayname": "Garlic",
 		"details": "Increase size by 10%.",
-		"level": "Level: 6",
+		"level": "Level: 7",
 		"prerequisite": ["garlic6"],
-		"type": "upgrade",
+		"type": "weapon",
 		"damage": 5 * 1.2,
 		"range": 2 * 1.4
 	},
@@ -77,9 +77,9 @@ var items_in_dictionary = {
 		"icon": item_path + "Garlic.png",
 		"displayname": "Garlic",
 		"details": "Increase size by 10%.",
-		"level": "Level: 6",
+		"level": "Level: 8",
 		"prerequisite": ["garlic7"],
-		"type": "upgrade",
+		"type": "weapon",
 		"damage": 5 * 1.2,
 		"range": 2 * 1.5
 	},
@@ -87,9 +87,9 @@ var items_in_dictionary = {
 		"icon": item_path + "Garlic.png",
 		"displayname": "Garlic",
 		"details": "Increase damage by 10%.",
-		"level": "Level: 6",
+		"level": "Level: 9",
 		"prerequisite": ["garlic8"],
-		"type": "upgrade",
+		"type": "weapon",
 		"damage": 5 * 1.3,
 		"range": 2 * 1.5
 	},
@@ -99,7 +99,7 @@ var items_in_dictionary = {
 		"details": "Basic",
 		"level": "Level: 1",
 		"prerequisite": [],
-		"type": "upgrade",
+		"type": "weapon",
 		"damage": 5,
 		"range": 2
 	},
@@ -109,7 +109,7 @@ var items_in_dictionary = {
 		"details": "Indiana Jones it up",
 		"level": "Level: 1",
 		"prerequisite": [],
-		"type": "upgrade",
+		"type": "weapon",
 		"damage": 5,
 		"range": 2
 	},

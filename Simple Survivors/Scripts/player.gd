@@ -12,6 +12,7 @@ var experience:int = 0
 var experience_to_level:int = 10
 
 signal player_leveled_up
+var leveled_up = false
 
 func ready():
 	pass
@@ -35,9 +36,10 @@ func _physics_process(_delta):
 		
 func level_up():
 	if experience >= experience_to_level:
+		leveled_up = true
 		level += 1
 		experience = 0
-		experience_to_level = experience_to_level * 2
+		experience_to_level = experience_to_level
 		print("You leveled up! Level: ", level)
 		emit_signal("player_leveled_up")
 		

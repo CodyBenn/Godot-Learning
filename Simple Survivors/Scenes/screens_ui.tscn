@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b6y5xdabrvvwn" path="res://Scenes/item_button_ui.tscn" id="2_pqpon"]
 
 [node name="ScreensUI" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_1avhh")
 
 [node name="ItemButtonUI" parent="." instance=ExtResource("2_pqpon")]
