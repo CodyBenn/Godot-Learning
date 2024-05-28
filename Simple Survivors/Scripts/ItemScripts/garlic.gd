@@ -18,10 +18,9 @@ func _ready():
 	if item_data:
 		garlic_damage = item_data["damage"]
 		garlic_range = item_data["range"]
-		print(garlic_range)
 			
 	garlic.scale = Vector2(garlic_range, garlic_range)
-		
+
 func _physics_process(delta):
 	var overlapping_mobs = get_overlapping_areas()
 	for area in overlapping_mobs:
@@ -36,11 +35,11 @@ func _physics_process(delta):
 						hurtbox.die()
 				else:
 					hurtbox.enemy_take_damage()
-					
+
 func _on_area_entered(area):
 	enemy = area.get_parent()
 	if enemy not in enemies:
 		enemies[enemy] = enemy_hurtbox
-		
+
 func upgrade():
 	pass
