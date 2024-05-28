@@ -13,6 +13,8 @@ signal clicked(button)
 func _ready():
 	var item_data = ItemDictionary.items_in_dictionary.get(item)
 	if item_data:
+		if item == null:
+			item_data = "food"
 		label_text.text = item_data["displayname"]
 		label_level.text = item_data["level"]
 		label_description.text = item_data["details"]

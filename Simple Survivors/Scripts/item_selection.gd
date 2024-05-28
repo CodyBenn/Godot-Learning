@@ -1,14 +1,17 @@
 extends VBoxContainer
+class_name ItemSelector
 
 # Preload the item button scene
 @export var item_button_scene: PackedScene = preload("res://Scenes/item_button.tscn")
-@onready var item_select_screen = get_node("/root/Main/ScreensUI")
+@onready var item_select_screen = get_node("/root/Main/ItemSelectScreens")
 @onready var player = get_node("/root/Main/Player")
 
 # Change this value to create a different number of buttons
 var available_items = ItemDictionary.items_in_dictionary.keys()
 
 func _ready():
+	item_select_screen.visible = false
+	
 	if player:
 		print("Player node found")
 		player.connect("player_leveled_up", Callable(self, "_on_player_leveled_up"))
@@ -23,7 +26,7 @@ func _on_player_leveled_up():
 		#print(get_child_count())
 	create_buttons(3)
 	#print(get_child_count())
-		
+	
 func create_buttons(x:int):
 	# Ensure x is within the range of 1 to 3
 	x = clamp(x, 1, 3)

@@ -5,7 +5,7 @@ var viewport_size: Vector2
 #Player variables
 var player_spawn_pos: Vector2
 @onready var player = $Player
-@onready var item_select_ui = $ScreensUI
+@onready var item_select_ui = $ItemSelectScreens/ItemButtonUI/ItemButtonContainer/ItemButtonMargin/ItemButtonHContainer
 
 #Loads "GameCamera" so it can be instantiated later
 var camera_scene = preload("res://Scenes/game_camera.tscn")
