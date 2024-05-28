@@ -20,14 +20,7 @@ func _ready():
 		player.connect("player_leveled_up", Callable(self, "_on_player_leveled_up"))
 	else:
 		print("Player node not found")
-	
-func _on_player_leveled_up():
-	upgrade_options.clear()
-	create_buttons(3)
-	print("remaining upgrades: ", upgrade_options)
-	print("selected upgrades: ", selected_upgrades)
-	#print(get_child_count())
-	
+
 func create_buttons(x:int):
 	# Ensure x is within the range of 1 to 3
 	x = clamp(x, 1, 3)
@@ -43,24 +36,27 @@ func create_buttons(x:int):
 		if button_instance:
 			# Set the item key for the button
 			button_instance.item = item_key
-			print(item_key)
 			button_instance.connect("clicked", _on_item_button_clicked)
 			 
 			# Add the button instance to the VBoxContainer
 			add_child(button_instance)
-			
+
+func _on_player_leveled_up():
+	upgrade_options.clear()
+	create_buttons(3)
+	print("remaining upgrades: ", upgrade_options)
+	print("selected upgrades: ", selected_upgrades)
+
 func _on_item_button_clicked(button):
 	var selected_item = button.item
 	selected_upgrades.append(selected_item)
-	print(selected_upgrades, " Selected")
 	item_select_screen.visible = false
 	get_tree().paused = false
 	
-		#Checks for children on the HContainer, if there are any it kills it, then generates 3 new buttons
+	#Checks for children on the HContainer, if there are any it kills it, then generates 3 new buttons
 	for n in get_children():
 		remove_child(n)
 		n.queue_free()
-		#print(get_child_count())
 
 func get_random_item():
 	var item_list = []

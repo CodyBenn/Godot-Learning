@@ -123,8 +123,6 @@ var items_in_dictionary = {
 	}
 }
 
-var selected_items = ["garlic1"]
-
 func get_item_data(item_name:String) -> Dictionary:
 	if item_name in items_in_dictionary:
 		return items_in_dictionary[item_name]
