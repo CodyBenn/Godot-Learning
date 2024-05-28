@@ -4,5 +4,4 @@
 
 [node name="ItemManager" type="Node2D"]
 show_behind_parent = true
-y_sort_enabled = true
 script = ExtResource("1_p0c1y")
