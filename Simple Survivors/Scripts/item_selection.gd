@@ -22,12 +22,10 @@ func _ready():
 		print("Player node not found")
 	
 func _on_player_leveled_up():
-	#Checks for children on the HContainer, if there are any it kills it, then generates 3 new buttons
-	for n in get_children():
-		remove_child(n)
-		n.queue_free()
-		#print(get_child_count())
+	upgrade_options.clear()
 	create_buttons(3)
+	print("remaining upgrades: ", upgrade_options)
+	print("selected upgrades: ", selected_upgrades)
 	#print(get_child_count())
 	
 func create_buttons(x:int):
@@ -57,6 +55,12 @@ func _on_item_button_clicked(button):
 	print(selected_upgrades, " Selected")
 	item_select_screen.visible = false
 	get_tree().paused = false
+	
+		#Checks for children on the HContainer, if there are any it kills it, then generates 3 new buttons
+	for n in get_children():
+		remove_child(n)
+		n.queue_free()
+		#print(get_child_count())
 
 func get_random_item():
 	var item_list = []

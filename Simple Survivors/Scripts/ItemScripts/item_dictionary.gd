@@ -102,16 +102,16 @@ var items_in_dictionary = {
 		"type": "weapon",
 		"damage": 5,
 		"range": 2
-	#},
-	#"whip1": {
-		#"icon": item_path + "Food.png",
-		#"displayname": "Whip",
-		#"details": "Indiana Jones it up",
-		#"level": "Level: 1",
-		#"prerequisite": [],
-		#"type": "upgrade",
-		#"damage": 5,
-		#"range": 2
+	},
+	"whip1": {
+		"icon": item_path + "Food.png",
+		"displayname": "Whip",
+		"details": "Indiana Jones it up",
+		"level": "Level: 1",
+		"prerequisite": [],
+		"type": "upgrade",
+		"damage": 5,
+		"range": 2
 	},
 	"food": {
 		"icon": item_path + "Food.png",
