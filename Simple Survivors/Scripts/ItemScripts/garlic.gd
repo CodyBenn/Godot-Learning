@@ -2,24 +2,22 @@ extends Area2D
 class_name Garlic
 
 @onready var item_dictionary = ItemDictionary
-@onready var player = get_parent().get_parent()
+@onready var player = get_node("/root/Main/Player")
 @onready var enemy = Enemy
-@onready var garlic_scene:PackedScene = preload("res://Scenes/garlic.tscn")
-@onready var garlic = self
 
-var garlic_damage
-var garlic_range
+var garlic_damage = 5
+var garlic_range = 2
 var enemy_hurtbox
 
 var enemies = {}
 
 func _ready():
-	var item_data = item_dictionary.get_item_data("garlic1")
+	var item_data = ItemDictionary.get_item_data("garlic1")
 	if item_data:
 		garlic_damage = item_data["damage"]
 		garlic_range = item_data["range"]
 			
-	garlic.scale = Vector2(garlic_range, garlic_range)
+	self.scale = Vector2(garlic_range, garlic_range)
 
 func _physics_process(delta):
 	var overlapping_mobs = get_overlapping_areas()

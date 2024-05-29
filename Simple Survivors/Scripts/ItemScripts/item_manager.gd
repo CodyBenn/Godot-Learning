@@ -6,7 +6,7 @@ class_name ItemManager
 @onready var item_select_screen = get_node("/root/Main/ItemSelectScreens")
 @onready var item_buttom_container = get_node("/root/Main/ItemSelectScreens/ItemButtonUI/ItemButtonContainer/ItemButtonMargin/ItemButtonHContainer")
 @onready var player = get_node("/root/Main/Player")
-@export var garlic:PackedScene = preload("res://Scenes/garlic.tscn")
+@export var garlic = preload("res://Scenes/garlic.tscn")
 
 # Change this value to create a different number of buttons
 var available_items = ItemDictionary.items_in_dictionary.keys()
@@ -17,10 +17,10 @@ var selected_items = []
 var upgrade_options = []
 
 func _ready():
-	var garlic_instance = garlic.instantiate()
-	player.add_child.call_deferred(garlic_instance)
-	
-	item_select_screen.visible = false
+	if selected_weapons == []:
+		garlic = garlic.instantiate()
+		add_child(garlic)
+		item_select_screen.visible = false
 	
 	if player:
 		print("Player node found")
@@ -95,3 +95,42 @@ func get_random_item():
 		return random_item
 	else:
 		return null
+		
+#Weapon Details
+#func upgrade_character(upgrade):
+	#match upgrade:
+		#"garlic1":
+			#garlic.garlic_damage = 5
+			#garlic.garlic_range = 2 
+		#"garlic2":
+			#icespear_level = 2
+			#icespear_baseammo += 1
+		#"garlic3":
+			#icespear_level = 3
+		#"garlic4":
+			#icespear_level = 4
+			#icespear_baseammo += 2
+		#"garlic5":
+			#tornado_level = 1
+			#tornado_baseammo += 1
+		#"garlic6":
+			#tornado_level = 2
+			#tornado_baseammo += 1
+		#"garlic7":
+			#tornado_level = 3
+			#tornado_attackspeed -= 0.5
+		#"garlic8":
+			#tornado_level = 4
+			#tornado_baseammo += 1
+		#"garlic9":
+			#javelin_level = 1
+			#javelin_ammo = 1
+		#"whip1":
+			#javelin_level = 2
+		#"sword1":
+			#javelin_level = 3
+		#"shoes1":
+			#movement + 100
+		#"food":
+			#hp += 20
+			#hp = clamp(hp,0,maxhp)
