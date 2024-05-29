@@ -5,7 +5,7 @@ var viewport_size: Vector2
 #Player variables
 var player_spawn_pos: Vector2
 @onready var player = $Player
-@onready var item_select_ui = $ItemSelectScreens/ItemButtonUI/ItemButtonContainer/ItemButtonMargin/ItemButtonHContainer
+@onready var item_select_screen = $Player/ItemManager
 
 #Loads "GameCamera" so it can be instantiated later
 var camera_scene = preload("res://Scenes/game_camera.tscn")
@@ -46,5 +46,5 @@ func _on_spawn_timer_timeout():
 	
 func item_select():
 	get_tree().paused = true
-	item_select_ui.item_select_screen.visible = true
+	item_select_screen.item_select_screen.visible = true
 	

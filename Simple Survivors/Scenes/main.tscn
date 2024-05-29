@@ -65,3 +65,5 @@ wait_time = 0.5
 autostart = true
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+
+[editable path="Player"]
