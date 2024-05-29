@@ -9,7 +9,9 @@ class_name ItemSelector
 # Change this value to create a different number of buttons
 var available_items = ItemDictionary.items_in_dictionary.keys()
 
+var selected_weapons = []
 var selected_upgrades = []
+var selected_items = []
 var upgrade_options = []
 
 func _ready():
@@ -46,10 +48,16 @@ func _on_player_leveled_up():
 	create_buttons(3)
 	print("remaining upgrades: ", upgrade_options)
 	print("selected upgrades: ", selected_upgrades)
+	print("selected items: ", selected_items)
 
 func _on_item_button_clicked(button):
 	var selected_item = button.item
-	selected_upgrades.append(selected_item)
+	
+	if ItemDictionary.items_in_dictionary[selected_item]["type"] == "upgrade":
+		selected_upgrades.append(selected_item)
+	elif ItemDictionary.items_in_dictionary[selected_item]["type"] == "item":
+		selected_items.append(selected_item)
+	
 	item_select_screen.visible = false
 	get_tree().paused = false
 	
