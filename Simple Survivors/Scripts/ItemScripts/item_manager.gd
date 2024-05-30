@@ -4,26 +4,32 @@ class_name ItemManager
 # Preload the item button scene
 @export var item_button_scene: PackedScene = preload("res://Scenes/item_button.tscn")
 @onready var item_select_screen = get_node("/root/Main/ItemSelectScreens")
-@onready var item_buttom_container = get_node("/root/Main/ItemSelectScreens/ItemButtonUI/ItemButtonContainer/ItemButtonMargin/ItemButtonHContainer")
+@onready var item_button_container = get_node("/root/Main/ItemSelectScreens/ItemButtonUI/ItemButtonContainer/ItemButtonMargin/ItemButtonHContainer")
+@onready var item_manager = self
 @onready var player = get_node("/root/Main/Player")
-@export var garlic = preload("res://Scenes/garlic.tscn")
+@export var garlic_scene = preload("res://Scenes/garlic.tscn")
 
 # Change this value to create a different number of buttons
 var available_items = ItemDictionary.items_in_dictionary.keys()
 
-var selected_weapons = []
 var selected_upgrades = []
 var selected_items = []
 var upgrade_options = []
+var garlic
 
 func _ready():
-	if selected_weapons == []:
-		garlic = garlic.instantiate()
+	garlic = garlic_scene.instantiate()
+	
+	if selected_upgrades == []:
+		selected_upgrades.append("garlic1")
+		garlic.level = 1
+		upgrade_character("garlic1")
 		add_child(garlic)
-		item_select_screen.visible = false
+		print(selected_upgrades)
+	
+	item_select_screen.visible = false
 	
 	if player:
-		print("Player node found")
 		player.connect("player_leveled_up", Callable(self, "_on_player_leveled_up"))
 	else:
 		print("Player node not found")
@@ -46,7 +52,7 @@ func create_buttons(x:int):
 			button_instance.connect("clicked", _on_item_button_clicked)
 			 
 			# Add the button instance to the VBoxContainer
-			item_buttom_container.add_child(button_instance)
+			item_button_container.add_child(button_instance)
 
 func _on_player_leveled_up():
 	upgrade_options.clear()
@@ -59,28 +65,25 @@ func _on_item_button_clicked(button):
 	var selected_item = button.item
 	
 	if ItemDictionary.items_in_dictionary[selected_item]["type"] == "upgrade":
-		selected_upgrades.append(selected_item)
+		if selected_item in selected_upgrades:
+			upgrade_existing(selected_item)
+		else:
+			selected_upgrades.append(selected_item)
+			upgrade_character(selected_item)
 	elif ItemDictionary.items_in_dictionary[selected_item]["type"] == "item":
 		selected_items.append(selected_item)
-	
-	item_select_screen.visible = false
-	get_tree().paused = false
-	
-	#Checks for children on the HContainer, if there are any it kills it, then generates 3 new buttons
-	for n in item_buttom_container.get_children():
-		item_buttom_container.remove_child(n)
-		n.queue_free()
+		upgrade_character(selected_item)
 
 func get_random_item():
 	var item_list = []
 	for i in ItemDictionary.items_in_dictionary:
-		if i in selected_upgrades: #Finds already selected upgrades
+		if i in selected_upgrades: # Finds already selected upgrades
 			pass
-		elif i in upgrade_options: #If the upgrade was already selected
+		elif i in upgrade_options: # If the upgrade was already selected
 			pass
-		elif ItemDictionary.items_in_dictionary[i]["type"] == "item": #Dont pick item
+		elif ItemDictionary.items_in_dictionary[i]["type"] == "item": # Don't pick item
 			pass
-		elif ItemDictionary.items_in_dictionary[i]["prerequisite"].size() > 0: #Check for prerequisites
+		elif ItemDictionary.items_in_dictionary[i]["prerequisite"].size() > 0: # Check for prerequisites
 			var to_add = true
 			for n in ItemDictionary.items_in_dictionary[i]["prerequisite"]:
 				if not n in selected_upgrades:
@@ -95,42 +98,64 @@ func get_random_item():
 		return random_item
 	else:
 		return null
-		
-#Weapon Details
-#func upgrade_character(upgrade):
-	#match upgrade:
-		#"garlic1":
-			#garlic.garlic_damage = 5
-			#garlic.garlic_range = 2 
-		#"garlic2":
-			#icespear_level = 2
-			#icespear_baseammo += 1
-		#"garlic3":
-			#icespear_level = 3
-		#"garlic4":
-			#icespear_level = 4
-			#icespear_baseammo += 2
-		#"garlic5":
-			#tornado_level = 1
-			#tornado_baseammo += 1
-		#"garlic6":
-			#tornado_level = 2
-			#tornado_baseammo += 1
-		#"garlic7":
-			#tornado_level = 3
-			#tornado_attackspeed -= 0.5
-		#"garlic8":
-			#tornado_level = 4
-			#tornado_baseammo += 1
-		#"garlic9":
-			#javelin_level = 1
-			#javelin_ammo = 1
-		#"whip1":
-			#javelin_level = 2
-		#"sword1":
-			#javelin_level = 3
-		#"shoes1":
-			#movement + 100
-		#"food":
-			#hp += 20
-			#hp = clamp(hp,0,maxhp)
+
+# Weapon Details
+func upgrade_character(upgrade):
+	match upgrade:
+		"garlic1":
+			garlic.upgrade(1)
+		"garlic2":
+			garlic.upgrade(2)
+		"garlic3":
+			garlic.upgrade(3)
+		"garlic4":
+			garlic.upgrade(4)
+		"garlic5":
+			garlic.upgrade(5)
+		"garlic6":
+			garlic.upgrade(6)
+		"garlic7":
+			garlic.upgrade(7)
+		"garlic8":
+			garlic.upgrade(8)
+		"garlic9":
+			garlic.upgrade(9)
+		"shoes1":
+			player.movespeed += 100
+		"food":
+			player.current_health += 20
+			player.current_health = clamp(player.current_health, 0, player.max_health)
+	
+	adjust_gui_collection(upgrade)
+	
+	# Close item select screen and unpause the game
+	var option_children = item_button_container.get_children()
+	for i in option_children:
+		i.queue_free()
+	upgrade_options.clear()
+	item_select_screen.visible = false
+	get_tree().paused = false
+
+func upgrade_existing(item):
+	var current_level = int(item.substr(-1))
+	var next_level = current_level + 1
+	var next_item = item.substr(0, item.length() - 1) + str(next_level)
+	if next_item in ItemDictionary.items_in_dictionary:
+		upgrade_character(next_item)
+		selected_upgrades[selected_upgrades.find(item)] = next_item
+	else:
+		print("Max upgrade level reached for ", item)
+
+func adjust_gui_collection(upgrade):
+	var get_upgraded_displayname = ItemDictionary.items_in_dictionary[upgrade]["displayname"]
+	var get_type = ItemDictionary.items_in_dictionary[upgrade]["type"]
+	if get_type != "item":
+		var get_collected_displaynames = []
+		for i in selected_upgrades:
+			get_collected_displaynames.append(ItemDictionary.items_in_dictionary[i]["displayname"])
+		if not get_upgraded_displayname in get_collected_displaynames:
+			var new_item = item_button_container.instantiate()
+			new_item.upgrade = upgrade
+			match get_type:
+				"upgrade":
+					selected_upgrades.add_child(new_item)
