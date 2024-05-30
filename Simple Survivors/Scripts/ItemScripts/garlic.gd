@@ -5,19 +5,16 @@ class_name Garlic
 @onready var player = get_node("/root/Main/Player")
 @onready var enemy = Enemy
 
-var garlic_damage = 5
-var garlic_range = 2
+var level:int
+var damage:float
+var size:float
+
 var enemy_hurtbox
 
 var enemies = {}
 
 func _ready():
-	var item_data = ItemDictionary.get_item_data("garlic1")
-	if item_data:
-		garlic_damage = item_data["damage"]
-		garlic_range = item_data["range"]
-			
-	self.scale = Vector2(garlic_range, garlic_range)
+	update_stats()
 
 func _physics_process(delta):
 	var overlapping_mobs = get_overlapping_areas()
@@ -26,7 +23,7 @@ func _physics_process(delta):
 			var hurtbox = area.get_parent().get_node("Hurtbox")
 			enemy = area.get_parent()
 			if enemy in enemies:
-				enemy.current_health -= garlic_damage * delta * .1
+				enemy.current_health -= damage * delta * 0.1
 				#print(enemy.current_health, " Enemy Health")
 				if enemy.current_health <= 0:
 					if hurtbox.has_method("die"):
@@ -39,5 +36,37 @@ func _on_area_entered(area):
 	if enemy not in enemies:
 		enemies[enemy] = enemy_hurtbox
 
-func upgrade():
-	pass
+func upgrade(new_level):
+	level = new_level
+	update_stats()
+
+func update_stats():
+	match level:
+		1:
+			damage = 5
+			size = 2
+		2:
+			damage = 5
+			size = 2.5
+		3:
+			damage = 10
+			size = 2.5
+		4:
+			damage = 10
+			size = 3
+		5:
+			damage = 15
+			size = 3
+		6:
+			damage = 15
+			size = 3.5
+		7:
+			damage = 20
+			size = 3.5
+		8:
+			damage = 20
+			size = 4
+		9:
+			damage = 25
+			size = 4
+	set_scale(Vector2(size, size))  # Adjust the size of the garlic
