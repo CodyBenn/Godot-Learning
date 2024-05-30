@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwdcscn1l35ri"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_egws7"]
+radius = 15.6662
+
+[node name="WeapoName" type="Area2D" groups=["item"]]
+show_behind_parent = true
+scale = Vector2(2.32, 2.32)
+collision_layer = 32
+collision_mask = 16
+
+[node name="WeaponNameCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_egws7")
+
+[node name="WeaponNameSprite" type="Sprite2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
