@@ -131,7 +131,7 @@ func upgrade_character(upgrade):
 	# Close item select screen and unpause the game
 	var option_children = item_button_container.get_children()
 	for i in option_children:
-		i.queue_free()
+		i.queue_free() #Kill the children
 	upgrade_options.clear()
 	item_select_screen.visible = false
 	get_tree().paused = false
