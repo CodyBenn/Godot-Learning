@@ -6,6 +6,7 @@ extends Area2D
 var level:int
 var damage:float
 var size:float
+var knockback_strength:float = 50.0
 
 var enemy_hurtbox
 
@@ -27,6 +28,7 @@ func _physics_process(delta):
 					if hurtbox.has_method("die"):
 						hurtbox.die()
 				else:
+					knockback()
 					hurtbox.enemy_take_damage()
 
 func _on_area_entered(area):
@@ -68,3 +70,9 @@ func update_stats():
 			damage = 25
 			size = 4
 	set_scale(Vector2(size, size))  # Adjust the size of the garlic
+
+func knockback():
+	if enemy:
+		var knockback_direction = -enemy.velocity.normalized() * knockback_strength
+		enemy.velocity = knockback_direction
+		enemy.move_and_slide()
