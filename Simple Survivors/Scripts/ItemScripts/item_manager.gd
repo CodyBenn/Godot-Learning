@@ -121,11 +121,25 @@ func upgrade_character(upgrade):
 		"garlic9":
 			garlic.upgrade(9)
 		"shield1":
-			print(shield)
 			shield = shield_scene.instantiate()
-			print(shield)
 			item_manager.add_child(shield)
 			shield.upgrade(1)
+		"shield2":
+			shield.upgrade(2)
+		"shield3":
+			shield.upgrade(3)
+		"shield4":
+			shield.upgrade(4)
+		"shield5":
+			shield.upgrade(5)
+		"shield6":
+			shield.upgrade(6)
+		"shield7":
+			shield.upgrade(7)
+		"shield8":
+			shield.upgrade(8)
+		"shield9":
+			shield.upgrade(9)
 			
 		"shoes1", "shoes2", "shoes3", "shoes4":
 			player.movespeed += 25

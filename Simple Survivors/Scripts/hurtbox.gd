@@ -29,9 +29,6 @@ func _physics_process(delta):
 	#Monitors overlapping areas for Hurtbox to determine if group needs to take damage
 	overlapping_mobs = %Hurtbox.get_overlapping_areas()
 	if overlapping_mobs.size() > 0:
-		#print(overlapping_mobs)
-		if is_enemy:
-			knockback()
 		if is_player and !invulnerable:
 			#Assigns damage to player if overlapping with area
 			var current_health = player.current_health
@@ -72,10 +69,4 @@ func die():
 	if is_player and player:
 		print("You died")
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
-			
-func knockback():
-	if is_enemy and enemy:
-		var knockback_direction = -enemy.velocity.normalized() * knockback_strength
-		enemy.velocity = knockback_direction
-		enemy.move_and_slide()
 		

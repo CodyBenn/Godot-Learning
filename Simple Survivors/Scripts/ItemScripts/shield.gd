@@ -2,11 +2,14 @@ extends Area2D
 
 @onready var player = get_node("/root/Main/Player")
 @onready var enemy = Enemy
+@onready var attack_timer = $AttackTimer
+@onready var shield_anim = $ShieldAnimation
 
 var level:int
 var damage:float
 var size:float
 var shields:int
+var knockback_strength:float = 1000.0
 
 var enemy_hurtbox
 
@@ -29,6 +32,17 @@ func _physics_process(delta):
 						hurtbox.die()
 				else:
 					hurtbox.enemy_take_damage()
+					knockback()
+
+func attack():
+	if shields == 1:
+		shield_anim.play("ShieldAnim")
+	if shields == 2:
+		shield_anim.play("ShieldAnim_2")
+	if shields == 3:
+		shield_anim.play("ShieldAnim_3")
+	if shields == 4:
+		shield_anim.play("ShieldAnim_4")
 
 func _on_area_entered(area):
 	enemy = area.get_parent()
@@ -42,33 +56,34 @@ func upgrade(new_level):
 func update_stats():
 	match level:
 		1:
-			damage = 5
-			size = 2
+			damage = 10
 			shields = 1
 		2:
-			damage = 5
-			size = 2.5
+			damage = 20
 		3:
-			damage = 10
-			size = 2.5
-		4:
-			damage = 10
-			size = 3
-		5:
-			damage = 15
-			size = 3
 			shields = 2
+		4:
+			damage = 30
+		5:
+			attack_timer.wait_time = 4
 		6:
-			damage = 15
-			size = 3.5
-		7:
-			damage = 20
-			size = 3.5
-		8:
-			damage = 20
-			size = 4
-		9:
-			damage = 25
-			size = 4
 			shields = 3
+		7:
+			damage = 40
+		8:
+			attack_timer.wait_time = 3
+		9:
+			shields = 4
 	set_scale(Vector2(size, size))  # Adjust the size of the Shield
+
+func _on_attack_timer_timeout():
+	attack()
+
+func knockback():
+	#var player_position = player.position
+	if enemy:
+		var knockback_direction = -enemy.velocity.normalized() * knockback_strength
+		#if enemy.velocity >= player_position:
+		enemy.velocity = knockback_direction
+		enemy.move_and_slide()
+		#print(player_position)
