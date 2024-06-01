@@ -3,7 +3,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_egws7"]
 radius = 15.6662
 
-[node name="WeapoName" type="Area2D" groups=["item"]]
+[node name="WeaponName" type="Area2D" groups=["item"]]
 show_behind_parent = true
 scale = Vector2(2.32, 2.32)
 collision_layer = 32

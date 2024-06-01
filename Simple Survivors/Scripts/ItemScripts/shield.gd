@@ -6,6 +6,7 @@ extends Area2D
 var level:int
 var damage:float
 var size:float
+var shields:int
 
 var enemy_hurtbox
 
@@ -43,6 +44,7 @@ func update_stats():
 		1:
 			damage = 5
 			size = 2
+			shields = 1
 		2:
 			damage = 5
 			size = 2.5
@@ -55,6 +57,7 @@ func update_stats():
 		5:
 			damage = 15
 			size = 3
+			shields = 2
 		6:
 			damage = 15
 			size = 3.5
@@ -67,4 +70,5 @@ func update_stats():
 		9:
 			damage = 25
 			size = 4
-	set_scale(Vector2(size, size))  # Adjust the size of the garlic
+			shields = 3
+	set_scale(Vector2(size, size))  # Adjust the size of the Shield

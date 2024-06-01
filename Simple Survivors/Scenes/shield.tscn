@@ -1,0 +1,111 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpwgbdu6c8yqp"]
+
+[ext_resource type="Script" path="res://Scripts/ItemScripts/shield.gd" id="1_72jtr"]
+[ext_resource type="Texture2D" uid="uid://bpw8bag58occy" path="res://Assets/Items/Shield.png" id="1_is3ks"]
+
+[sub_resource type="Animation" id="Animation_hk1du"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_pa6wq"]
+resource_name = "ShieldAnim"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(3, 323)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.5708, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(3, 1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cy2g1"]
+_data = {
+"RESET": SubResource("Animation_hk1du"),
+"ShieldAnim": SubResource("Animation_pa6wq")
+}
+
+[node name="Shield" type="Area2D" groups=["item"]]
+show_behind_parent = true
+scale = Vector2(4, 4)
+collision_layer = 32
+collision_mask = 16
+script = ExtResource("1_72jtr")
+
+[node name="ShieldAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_cy2g1")
+}
+autoplay = "ShieldAnim"
+
+[node name="ShieldCollider" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 12.5, 31.8966, -0.862069, 51.2931, -27.1552, 63.3621, -59.0517, 50.8621, -48.7069, 38.3621, -31.0345, -0.431035, -10.7759, -37.931, -30.6035, -50, -48.7069, -62.931, -58.6207, -51.2931, -28.0172, -32.3276, -1.72414)
+
+[node name="ShieldSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -27.1552)
+texture = ExtResource("1_is3ks")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
