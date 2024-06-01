@@ -8,6 +8,7 @@ class_name ItemManager
 @onready var item_manager = self
 @onready var player = get_node("/root/Main/Player")
 @export var garlic_scene = preload("res://Scenes/garlic.tscn")
+@export var shield_scene = preload("res://Scenes/shield.tscn")
 
 # Change this value to create a different number of buttons
 var available_items = ItemDictionary.items_in_dictionary.keys()
@@ -15,16 +16,13 @@ var available_items = ItemDictionary.items_in_dictionary.keys()
 var selected_upgrades = []
 var selected_items = []
 var upgrade_options = []
-var garlic
+var garlic 
+var shield
 
 func _ready():
-	garlic = garlic_scene.instantiate()
-	
 	if selected_upgrades == []:
 		selected_upgrades.append("garlic1")
-		garlic.level = 1
 		upgrade_character("garlic1")
-		add_child(garlic)
 		print(selected_upgrades)
 	
 	item_select_screen.visible = false
@@ -103,6 +101,8 @@ func get_random_item():
 func upgrade_character(upgrade):
 	match upgrade:
 		"garlic1":
+			garlic = garlic_scene.instantiate()
+			item_manager.add_child(garlic)
 			garlic.upgrade(1)
 		"garlic2":
 			garlic.upgrade(2)
@@ -120,8 +120,15 @@ func upgrade_character(upgrade):
 			garlic.upgrade(8)
 		"garlic9":
 			garlic.upgrade(9)
-		"shoes1":
-			player.movespeed += 100
+		"shield1":
+			print(shield)
+			shield = shield_scene.instantiate()
+			print(shield)
+			item_manager.add_child(shield)
+			shield.upgrade(1)
+			
+		"shoes1", "shoes2", "shoes3", "shoes4":
+			player.movespeed += 25
 		"food":
 			player.current_health += 20
 			player.current_health = clamp(player.current_health, 0, player.max_health)
