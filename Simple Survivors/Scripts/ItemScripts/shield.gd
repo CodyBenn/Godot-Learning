@@ -2,11 +2,14 @@ extends Area2D
 
 @onready var player = get_node("/root/Main/Player")
 @onready var enemy = Enemy
+@onready var attack_timer = $AttackTimer
+@onready var shield_anim = $ShieldAnimation
 
 var level:int
 var damage:float
 var size:float
 var shields:int
+var knockback_strength:float = 1000
 
 var enemy_hurtbox
 
@@ -29,6 +32,11 @@ func _physics_process(delta):
 						hurtbox.die()
 				else:
 					hurtbox.enemy_take_damage()
+					knockback()
+
+func attack():
+	shield_anim.play("ShieldAnim")
+	
 
 func _on_area_entered(area):
 	enemy = area.get_parent()
@@ -72,3 +80,12 @@ func update_stats():
 			size = 4
 			shields = 3
 	set_scale(Vector2(size, size))  # Adjust the size of the Shield
+
+func _on_attack_timer_timeout():
+	attack()
+
+func knockback():
+	if enemy:
+		var knockback_direction = -enemy.velocity.normalized() * knockback_strength
+		enemy.velocity = knockback_direction
+		enemy.move_and_slide()
