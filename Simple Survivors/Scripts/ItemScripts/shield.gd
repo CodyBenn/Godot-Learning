@@ -33,20 +33,15 @@ func _physics_process(delta):
 				else:
 					hurtbox.enemy_take_damage()
 					knockback()
-	print(attack_timer.wait_time)
 
 func attack():
 	if shields == 1:
-		print(shield_anim, " Playing")
 		shield_anim.play("ShieldAnim")
 	if shields == 2:
-		print(shield_anim, " Playing")
 		shield_anim.play("ShieldAnim_2")
 	if shields == 3:
-		print(shield_anim, " Playing")
 		shield_anim.play("ShieldAnim_3")
 	if shields == 4:
-		print(shield_anim, " Playing")
 		shield_anim.play("ShieldAnim_4")
 
 func _on_area_entered(area):
@@ -85,7 +80,10 @@ func _on_attack_timer_timeout():
 	attack()
 
 func knockback():
+	#var player_position = player.position
 	if enemy:
 		var knockback_direction = -enemy.velocity.normalized() * knockback_strength
+		#if enemy.velocity >= player_position:
 		enemy.velocity = knockback_direction
 		enemy.move_and_slide()
+		#print(player_position)
