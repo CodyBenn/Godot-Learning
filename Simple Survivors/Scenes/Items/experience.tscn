@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfh2u1vh51mu1"]
+
+[ext_resource type="Script" path="res://Scripts/ItemScripts/experience.gd" id="1_o6bie"]
+[ext_resource type="Texture2D" uid="uid://meuq7nvi3d20" path="res://Assets/Items/blueGem.png" id="2_vjjl4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfk0y"]
+radius = 28.0
+height = 126.0
+
+[node name="Experience" type="Area2D"]
+scale = Vector2(0.280001, 0.280001)
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_o6bie")
+
+[node name="ExperienceCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_vfk0y")
+
+[node name="ExperienceSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+texture = ExtResource("2_vjjl4")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

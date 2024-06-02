@@ -9,14 +9,14 @@ var level = 1
 @export var max_shield:int  = 0
 @onready var current_shield:int = max_shield
 var experience:int = 0
-var experience_to_level:int = 10
+var experience_to_level:int = 100
 
 signal player_leveled_up
 var leveled_up = false
 
 func ready():
 	pass
-	
+
 func _physics_process(_delta):
 	#Movement controls
 	var axis_x = Input.get_axis("left", "right")
@@ -33,7 +33,7 @@ func _physics_process(_delta):
 	move_and_slide()
 		
 	update_ui_bars()
-		
+
 func level_up():
 	if experience >= experience_to_level:
 		leveled_up = true
@@ -42,15 +42,21 @@ func level_up():
 		experience_to_level = experience_to_level
 		print("You leveled up! Level: ", level)
 		emit_signal("player_leveled_up")
-		
+
 func update_ui_bars():
-	%ExperienceBar.max_value = experience_to_level
-	%ExperienceBar.value = experience
-	%ExperienceBar/ExperienceLevel.text = str(level)
-	
 	%HealthBar.max_value = max_health
 	%HealthBar.value = current_health
 	
+	%ExperienceBar.max_value = experience_to_level
+	%ExperienceBar.value = experience
+	%ExperienceBar/ExperienceLevel.text = str(level)
+
 	if experience >= experience_to_level:
 		level_up()
 		
+func _on_hitbox_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_hitbox_area_entered(area):
+	pass # Replace with function body.

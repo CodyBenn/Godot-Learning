@@ -23,6 +23,6 @@ func _ready():
 		
 		if icon_texture:
 			item_icon.texture = icon_texture
-			
+
 func _on_pressed():
 	clicked.emit(self)

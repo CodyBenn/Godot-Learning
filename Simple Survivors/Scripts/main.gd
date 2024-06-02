@@ -23,18 +23,18 @@ func _ready():
 	player.connect("player_leveled_up", item_select)
 	
 	new_game()
-	
+
 func _process(_delta):
 	#Player controls to quit and reset game using hotkeys
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
-		
+
 func new_game():
 	#Creates a camera to main scene
 	camera = camera_scene.instantiate()
-	
+
 func spawn_mob():
 	var new_enemy = preload("res://Scenes/enemy_rood.tscn").instantiate()
 	%EnemySpawnerPath.progress_ratio = randf()
@@ -47,4 +47,3 @@ func _on_spawn_timer_timeout():
 func item_select():
 	get_tree().paused = true
 	item_select_screen.item_select_screen.visible = true
-	
