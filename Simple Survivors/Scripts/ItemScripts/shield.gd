@@ -9,7 +9,8 @@ var level:int
 var damage:float
 var size:float
 var shields:int
-var knockback_strength:float = 1000.0
+var knockback_strength:float = 2000.0
+var player_position: Vector2
 
 var enemy_hurtbox
 
@@ -32,7 +33,7 @@ func _physics_process(delta):
 						hurtbox.die()
 				else:
 					hurtbox.enemy_take_damage()
-					knockback()
+					knockback(player_position)
 
 func attack():
 	if shields == 1:
@@ -78,12 +79,13 @@ func update_stats():
 
 func _on_attack_timer_timeout():
 	attack()
-
-func knockback():
-	#var player_position = player.position
+	
+func knockback(player_position: Vector2):
 	if enemy:
-		var knockback_direction = -enemy.velocity.normalized() * knockback_strength
-		#if enemy.velocity >= player_position:
+		player_position = player.position
+		# Calculate direction from player to enemy
+		var direction_to_enemy = (enemy.position - player_position).normalized()
+		# Apply knockback in the direction away from the player
+		var knockback_direction = direction_to_enemy * knockback_strength
 		enemy.velocity = knockback_direction
 		enemy.move_and_slide()
-		#print(player_position)

@@ -4,11 +4,13 @@ class_name Enemy
 #Enemy stats
 var level = 1
 @export var movespeed = 100.0
+@export var experience_to_give:int = 10
 @export var max_health: int = 100
 var current_health:int = max_health
-@export var experience_to_give:int = 10
+var knockback_strength:int = 200
 
 @onready var player = get_node("/root/Main/Player")
+@onready var enemy = Enemy
 @onready var soft_collision = $SoftCollisions
 
 func _ready():
@@ -25,3 +27,9 @@ func _physics_process(_delta):
 			position += soft_collision.get_push_vector() * 400
 		
 	move_and_slide()
+
+func knockback():
+	if enemy:
+		var knockback_direction = -enemy.velocity.normalized() * knockback_strength
+		enemy.velocity = knockback_direction
+		self.move_and_slide()
