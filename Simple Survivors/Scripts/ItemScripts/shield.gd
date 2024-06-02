@@ -79,8 +79,8 @@ func update_stats():
 
 func _on_attack_timer_timeout():
 	attack()
-	
-func knockback(player_position: Vector2):
+
+func knockback(player_position:Vector2):
 	if enemy:
 		player_position = player.position
 		# Calculate direction from player to enemy

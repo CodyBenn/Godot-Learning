@@ -16,7 +16,7 @@ var leveled_up = false
 
 func ready():
 	pass
-	
+
 func _physics_process(_delta):
 	#Movement controls
 	var axis_x = Input.get_axis("left", "right")
@@ -33,7 +33,7 @@ func _physics_process(_delta):
 	move_and_slide()
 		
 	update_ui_bars()
-		
+
 func level_up():
 	if experience >= experience_to_level:
 		leveled_up = true
@@ -42,7 +42,7 @@ func level_up():
 		experience_to_level = experience_to_level
 		print("You leveled up! Level: ", level)
 		emit_signal("player_leveled_up")
-		
+
 func update_ui_bars():
 	%ExperienceBar.max_value = experience_to_level
 	%ExperienceBar.value = experience
@@ -50,7 +50,7 @@ func update_ui_bars():
 	
 	%HealthBar.max_value = max_health
 	%HealthBar.value = current_health
-	
+
 	if experience >= experience_to_level:
 		level_up()
 		

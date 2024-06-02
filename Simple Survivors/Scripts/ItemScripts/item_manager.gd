@@ -7,8 +7,8 @@ class_name ItemManager
 @onready var item_button_container = get_node("/root/Main/ItemSelectScreens/ItemButtonUI/ItemButtonContainer/ItemButtonMargin/ItemButtonHContainer")
 @onready var item_manager = self
 @onready var player = get_node("/root/Main/Player")
-@export var garlic_scene = preload("res://Scenes/garlic.tscn")
-@export var shield_scene = preload("res://Scenes/shield.tscn")
+@export var garlic_scene = preload("res://Scenes/Items/garlic.tscn")
+@export var shield_scene = preload("res://Scenes/Items/shield.tscn")
 
 # Change this value to create a different number of buttons
 var available_items = ItemDictionary.items_in_dictionary.keys()

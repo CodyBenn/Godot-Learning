@@ -18,14 +18,14 @@ func _ready():
 	elif $"..".is_in_group("player"):
 		player = $".."
 		is_player = true
-	
+
 func _physics_process(delta):
 	#Determines enemy velocity for knockback func
 	if is_enemy and enemy:
 		velocity = enemy.velocity
 		var direction = global_position.direction_to(player.global_position)
 		velocity = direction * 100.0
-	
+
 	#Monitors overlapping areas for Hurtbox to determine if group needs to take damage
 	overlapping_mobs = %Hurtbox.get_overlapping_areas()
 	if overlapping_mobs.size() > 0:
@@ -34,13 +34,13 @@ func _physics_process(delta):
 			var current_health = player.current_health
 			player.current_health -= overlapping_mobs.size() * delta * .1
 			player_take_damage()
-			
+
 func enemy_take_damage():
 	var enemy_sprite = $"../EnemySprite"
 	enemy_sprite.modulate = Color.DARK_RED
 	await get_tree().create_timer(0.1).timeout
 	enemy_sprite.modulate = Color.WHITE 
-		
+
 func player_take_damage():
 	var player_sprite = $"../PlayerSprite"
 	var health_bar = $"../HealthBar"
@@ -55,7 +55,7 @@ func player_take_damage():
 		die()
 	else:
 		become_invulnerable()
-		
+
 func become_invulnerable():
 	invulnerable = true
 	await get_tree().create_timer(.1).timeout
@@ -69,4 +69,3 @@ func die():
 	if is_player and player:
 		print("You died")
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
-		

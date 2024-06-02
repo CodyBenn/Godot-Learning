@@ -12,7 +12,7 @@ func _process(_delta):
 func pause():
 	if can_toggle_pause:
 		get_tree().set_deferred("paused", true)
-	
+
 func resume():
 	if can_toggle_pause:
 		get_tree().set_deferred("paused", false)

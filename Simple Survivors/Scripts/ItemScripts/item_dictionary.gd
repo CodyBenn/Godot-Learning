@@ -6,7 +6,7 @@ var items_in_dictionary = {
 	"garlic1": {
 		"icon": item_path + "Garlic.png",
 		"displayname": "Garlic",
-		"scene": preload("res://Scenes/garlic.tscn"),
+		"scene": preload("res://Scenes/Items/garlic.tscn"),
 		"details": "Stinky garlic that deals damage around you.",
 		"level": "Level: 1",
 		"prerequisite": [],
@@ -15,7 +15,7 @@ var items_in_dictionary = {
 	"garlic2": {
 		"icon": item_path + "Garlic.png",
 		"displayname": "Garlic",
-		"scene": preload("res://Scenes/garlic.tscn"),
+		"scene": preload("res://Scenes/Items/garlic.tscn"),
 		"details": "Increase size by 10%.",
 		"level": "Level: 2",
 		"prerequisite": ["garlic1"],
@@ -24,7 +24,7 @@ var items_in_dictionary = {
 	"garlic3": {
 		"icon": item_path + "Garlic.png",
 		"displayname": "Garlic",
-		"scene": preload("res://Scenes/garlic.tscn"),
+		"scene": preload("res://Scenes/Items/garlic.tscn"),
 		"details": "Increase damage by 10%.",
 		"level": "Level: 3",
 		"prerequisite": ["garlic2"],
@@ -33,7 +33,7 @@ var items_in_dictionary = {
 	"garlic4": {
 		"icon": item_path + "Garlic.png",
 		"displayname": "Garlic",
-		"scene": preload("res://Scenes/garlic.tscn"),
+		"scene": preload("res://Scenes/Items/garlic.tscn"),
 		"details": "Increase size by 10%.",
 		"level": "Level: 4",
 		"prerequisite": ["garlic3"],
@@ -42,7 +42,7 @@ var items_in_dictionary = {
 	"garlic5": {
 		"icon": item_path + "Garlic.png",
 		"displayname": "Garlic",
-		"scene": preload("res://Scenes/garlic.tscn"),
+		"scene": preload("res://Scenes/Items/garlic.tscn"),
 		"details": "Increase size by 10%.",
 		"level": "Level: 5",
 		"prerequisite": ["garlic4"],
@@ -51,7 +51,7 @@ var items_in_dictionary = {
 	"garlic6": {
 		"icon": item_path + "Garlic.png",
 		"displayname": "Garlic",
-		"scene": preload("res://Scenes/garlic.tscn"),
+		"scene": preload("res://Scenes/Items/garlic.tscn"),
 		"details": "Increase damage by 10%.",
 		"level": "Level: 6",
 		"prerequisite": ["garlic5"],
@@ -60,7 +60,7 @@ var items_in_dictionary = {
 	"garlic7": {
 		"icon": item_path + "Garlic.png",
 		"displayname": "Garlic",
-		"scene": preload("res://Scenes/garlic.tscn"),
+		"scene": preload("res://Scenes/Items/garlic.tscn"),
 		"details": "Increase size by 10%.",
 		"level": "Level: 7",
 		"prerequisite": ["garlic6"],
@@ -69,7 +69,7 @@ var items_in_dictionary = {
 	"garlic8": {
 		"icon": item_path + "Garlic.png",
 		"displayname": "Garlic",
-		"scene": preload("res://Scenes/garlic.tscn"),
+		"scene": preload("res://Scenes/Items/garlic.tscn"),
 		"details": "Increase size by 10%.",
 		"level": "Level: 8",
 		"prerequisite": ["garlic7"],
@@ -78,7 +78,7 @@ var items_in_dictionary = {
 	"garlic9": {
 		"icon": item_path + "Garlic.png",
 		"displayname": "Garlic",
-		"scene": preload("res://Scenes/garlic.tscn"),
+		"scene": preload("res://Scenes/Items/garlic.tscn"),
 		"details": "Increase damage by 10%.",
 		"level": "Level: 9",
 		"prerequisite": ["garlic8"],
@@ -87,7 +87,7 @@ var items_in_dictionary = {
 	"shield1": {
 		"icon": item_path + "Shield.png",
 		"displayname": "Shield",
-		"scene": preload("res://Scenes/shield.tscn"),
+		"scene": preload("res://Scenes/Items/shield.tscn"),
 		"details": "Pushes enemies along path and blocks them momentarily.",
 		"level": "Level: 1",
 		"prerequisite": [],
@@ -96,7 +96,7 @@ var items_in_dictionary = {
 	"shield2": {
 		"icon": item_path + "Shield.png",
 		"displayname": "Shield",
-		"scene": preload("res://Scenes/shield.tscn"),
+		"scene": preload("res://Scenes/Items/shield.tscn"),
 		"details": "Increase damage by 10%",
 		"level": "Level: 2",
 		"prerequisite": ["shield1"],
@@ -105,7 +105,7 @@ var items_in_dictionary = {
 	"shield3": {
 		"icon": item_path + "Shield.png",
 		"displayname": "Shield",
-		"scene": preload("res://Scenes/shield.tscn"),
+		"scene": preload("res://Scenes/Items/shield.tscn"),
 		"details": "Increase damage by 10%",
 		"level": "Level: 3",
 		"prerequisite": ["shield2"],
@@ -114,7 +114,7 @@ var items_in_dictionary = {
 	"shield4": {
 		"icon": item_path + "Shield.png",
 		"displayname": "Shield",
-		"scene": preload("res://Scenes/shield.tscn"),
+		"scene": preload("res://Scenes/Items/shield.tscn"),
 		"details": "Increase damage by 10%",
 		"level": "Level: 4",
 		"prerequisite": ["shield3"],
@@ -123,7 +123,7 @@ var items_in_dictionary = {
 	"shield5": {
 		"icon": item_path + "Shield.png",
 		"displayname": "Shield",
-		"scene": preload("res://Scenes/shield.tscn"),
+		"scene": preload("res://Scenes/Items/shield.tscn"),
 		"details": "Adds an additional shield.",
 		"level": "Level: 5",
 		"prerequisite": ["shield4"],
@@ -132,7 +132,7 @@ var items_in_dictionary = {
 	"shield6": {
 		"icon": item_path + "Shield.png",
 		"displayname": "Shield",
-		"scene": preload("res://Scenes/shield.tscn"),
+		"scene": preload("res://Scenes/Items/shield.tscn"),
 		"details": "Increase damage by 10%",
 		"level": "Level: 6",
 		"prerequisite": ["shield5"],
@@ -141,7 +141,7 @@ var items_in_dictionary = {
 	"shield7": {
 		"icon": item_path + "Shield.png",
 		"displayname": "Shield",
-		"scene": preload("res://Scenes/shield.tscn"),
+		"scene": preload("res://Scenes/Items/shield.tscn"),
 		"details": "Increase damage by 10%",
 		"level": "Level: 7",
 		"prerequisite": ["shield6"],
@@ -150,7 +150,7 @@ var items_in_dictionary = {
 	"shield8": {
 		"icon": item_path + "Shield.png",
 		"displayname": "Shield",
-		"scene": preload("res://Scenes/shield.tscn"),
+		"scene": preload("res://Scenes/Items/shield.tscn"),
 		"details": "Increase damage by 10%",
 		"level": "Level: 8",
 		"prerequisite": ["shield7"],
@@ -159,7 +159,7 @@ var items_in_dictionary = {
 	"shield9": {
 		"icon": item_path + "Shield.png",
 		"displayname": "Shield",
-		"scene": preload("res://Scenes/shield.tscn"),
+		"scene": preload("res://Scenes/Items/shield.tscn"),
 		"details": "Adds an additional shield.",
 		"level": "Level: 9",
 		"prerequisite": ["shield8"],

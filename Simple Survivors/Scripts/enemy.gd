@@ -15,7 +15,7 @@ var knockback_strength:int = 200
 
 func _ready():
 	add_to_group("enemy")
-	
+
 func _physics_process(_delta):
 	#Combat AI to chase player's position
 	var direction = global_position.direction_to(player.global_position)
