@@ -26,7 +26,7 @@ func _physics_process(delta):
 			var hurtbox = area.get_parent().get_node("Hurtbox")
 			enemy = area.get_parent()
 			if enemy in enemies:
-				enemy.current_health -= damage * delta * 0.1
+				enemy.current_health -= damage
 				#print(enemy.current_health, " Enemy Health")
 				if enemy.current_health <= 0:
 					if hurtbox.has_method("die"):
@@ -57,20 +57,20 @@ func upgrade(new_level):
 func update_stats():
 	match level:
 		1:
-			damage = 10
+			damage = 5
 			shields = 1
 		2:
-			damage = 20
+			damage = 10
 		3:
 			shields = 2
 		4:
-			damage = 30
+			damage = 15
 		5:
 			attack_timer.wait_time = 4
 		6:
 			shields = 3
 		7:
-			damage = 40
+			damage = 20
 		8:
 			attack_timer.wait_time = 3
 		9:

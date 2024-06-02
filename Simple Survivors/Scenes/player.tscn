@@ -67,10 +67,11 @@ texture = ExtResource("1_76qul")
 
 [node name="PlayerCollider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bfm7l")
-disabled = true
 
 [node name="Hitbox" parent="." instance=ExtResource("4_sd6ho")]
-collision_layer = 0
+scale = Vector2(1.53869, 1.53869)
+collision_layer = 4
+collision_mask = 20
 
 [node name="Hurtbox" parent="." instance=ExtResource("4_dw1lb")]
 unique_name_in_owner = true

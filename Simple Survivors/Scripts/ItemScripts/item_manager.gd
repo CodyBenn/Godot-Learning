@@ -140,7 +140,6 @@ func upgrade_character(upgrade):
 			shield.upgrade(8)
 		"shield9":
 			shield.upgrade(9)
-			
 		"shoes1", "shoes2", "shoes3", "shoes4":
 			player.movespeed += 25
 		"food":

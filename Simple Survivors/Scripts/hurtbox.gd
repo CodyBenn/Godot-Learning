@@ -2,7 +2,8 @@ extends Area2D
 class_name Hurtbox
 
 @onready var player = get_node("/root/Main/Player")
-@export var knockback_strength:float = 50
+@onready var experience_scene = preload("res://Scenes/Items/experience.tscn")
+@onready var main = get_node("/root/Main")
 var enemy
 var overlapping_mobs
 var invulnerable:bool = false
@@ -64,7 +65,9 @@ func become_invulnerable():
 func die():
 	if is_enemy and enemy:
 		if enemy.current_health <= 0:
-			player.experience += enemy.experience_to_give
+			var experience_drop = experience_scene.instantiate()
+			experience_drop.global_position = enemy.global_position  # Assuming `enemy` is the enemy that died
+			main.add_child(experience_drop)
 			enemy.queue_free()
 	if is_player and player:
 		print("You died")

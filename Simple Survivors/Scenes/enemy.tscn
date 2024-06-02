@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d2y1yof04k3x6"]
+[gd_scene load_steps=9 format=3 uid="uid://d2y1yof04k3x6"]
 
 [ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_grkck"]
 [ext_resource type="PackedScene" uid="uid://dbch7jp3msncq" path="res://Scenes/hitbox.tscn" id="3_mrjmh"]
@@ -10,6 +10,29 @@ radius = 64.0312
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cgf4b"]
 radius = 64.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wvw13"]
+bg_color = Color(0, 0, 0, 0.239216)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_173ae"]
+bg_color = Color(0.760784, 0.313726, 0.101961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.479214, 0.278945, 0.00904141, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="Enemy" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
@@ -33,3 +56,21 @@ script = ExtResource("5_fpoth")
 
 [node name="SoftCollider" type="CollisionShape2D" parent="SoftCollisions"]
 shape = SubResource("CircleShape2D_cgf4b")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -80.0
+offset_right = 106.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.36, 0.36)
+theme_override_styles/background = SubResource("StyleBoxFlat_wvw13")
+theme_override_styles/fill = SubResource("StyleBoxFlat_173ae")
+value = 50.0
+show_percentage = false
