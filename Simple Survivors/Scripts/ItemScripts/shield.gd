@@ -57,20 +57,20 @@ func upgrade(new_level):
 func update_stats():
 	match level:
 		1:
-			damage = 5
+			damage = 10
 			shields = 1
 		2:
-			damage = 10
+			damage = 15
 		3:
 			shields = 2
 		4:
-			damage = 15
+			damage = 20
 		5:
 			attack_timer.wait_time = 4
 		6:
 			shields = 3
 		7:
-			damage = 20
+			damage = 25
 		8:
 			attack_timer.wait_time = 3
 		9:

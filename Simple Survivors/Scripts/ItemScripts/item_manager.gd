@@ -21,12 +21,8 @@ var shield
 
 func _ready():
 	if selected_upgrades == []:
-		selected_upgrades.append("garlic1")
-		upgrade_character("garlic1")
-		print(selected_upgrades)
-	
-	item_select_screen.visible = false
-	
+		_on_player_leveled_up()
+		
 	if player:
 		player.connect("player_leveled_up", Callable(self, "_on_player_leveled_up"))
 	else:

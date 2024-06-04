@@ -12,6 +12,8 @@ var camera_scene = preload("res://Scenes/game_camera.tscn")
 var camera = null
 
 func _ready():
+	item_select()
+	
 	#Grabs screen size for player spawn position
 	viewport_size = get_viewport_rect().size
 	#Offsets player so they wont spawn on the bottom of screen
