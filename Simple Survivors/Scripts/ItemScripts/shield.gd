@@ -12,14 +12,13 @@ var shields:int
 var knockback_strength:float = 2000.0
 var player_position: Vector2
 
-var enemy_hurtbox
-
 var enemies = {}
+var enemy_hurtbox
 
 func _ready():
 	update_stats()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var overlapping_mobs = get_overlapping_areas()
 	for area in overlapping_mobs:
 		if area.get_parent().has_method("get_node"):

@@ -9,15 +9,17 @@ class_name ItemManager
 @onready var player = get_node("/root/Main/Player")
 @export var garlic_scene = preload("res://Scenes/Items/garlic.tscn")
 @export var shield_scene = preload("res://Scenes/Items/shield.tscn")
-
+@export var sword_scene = preload("res://Scenes/Items/sword.tscn")
 # Change this value to create a different number of buttons
 var available_items = ItemDictionary.items_in_dictionary.keys()
 
 var selected_upgrades = []
 var selected_items = []
 var upgrade_options = []
+
 var garlic 
 var shield
+var sword
 
 func _ready():
 	if selected_upgrades == []:
@@ -136,6 +138,10 @@ func upgrade_character(upgrade):
 			shield.upgrade(8)
 		"shield9":
 			shield.upgrade(9)
+		"sword1":
+			sword = sword_scene.instantiate()
+			item_manager.add_child(sword)
+			sword.upgrade(1)
 		"shoes1", "shoes2", "shoes3", "shoes4":
 			player.movespeed += 25
 		"food":

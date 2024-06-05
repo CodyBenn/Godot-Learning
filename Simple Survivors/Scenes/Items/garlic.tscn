@@ -3,9 +3,6 @@
 [ext_resource type="Script" path="res://Scripts/ItemScripts/garlic.gd" id="1_4ck6j"]
 [ext_resource type="Texture2D" uid="uid://dtmq7wmxmcwqu" path="res://Assets/Items/Garlic.png" id="2_k0pf0"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_egws7"]
-radius = 64.0078
-
 [sub_resource type="Animation" id="Animation_fpkhm"]
 resource_name = "GarlicAnim"
 length = 3.0
@@ -44,6 +41,9 @@ _data = {
 "RESET": SubResource("Animation_4ejf2")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_egws7"]
+radius = 64.0078
+
 [node name="Garlic" type="Area2D" groups=["item"]]
 show_behind_parent = true
 scale = Vector2(2.3, 2.3)
@@ -51,17 +51,17 @@ collision_layer = 32
 collision_mask = 16
 script = ExtResource("1_4ck6j")
 
+[node name="GarlicAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_77n1n")
+}
+autoplay = "GarlicAnim"
+
 [node name="GarlicCollider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_egws7")
 
 [node name="GarlicSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_k0pf0")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_77n1n")
-}
-autoplay = "GarlicAnim"
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

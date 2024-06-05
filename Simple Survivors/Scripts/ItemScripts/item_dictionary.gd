@@ -166,10 +166,10 @@ var items_in_dictionary = {
 		"type": "upgrade",
 	},
 	"sword1": {
-		"icon": item_path + "Food.png",
+		"icon": item_path + "Sword.png",
 		"displayname": "Sword",
-		#"scene": preload("res://Scenes/garlic.tscn"),
-		"details": "Basic",
+		"scene": preload("res://Scenes/Items/sword.tscn"),
+		"details": "Slashes the air in front of you",
 		"level": "Level: 1",
 		"prerequisite": [],
 		"type": "upgrade",

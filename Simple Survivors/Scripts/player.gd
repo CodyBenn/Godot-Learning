@@ -14,9 +14,6 @@ var experience_to_level:int = 100
 signal player_leveled_up
 var leveled_up = false
 
-func ready():
-	pass
-
 func _physics_process(_delta):
 	#Movement controls
 	var axis_x = Input.get_axis("left", "right")
@@ -54,9 +51,3 @@ func update_ui_bars():
 	if experience >= experience_to_level:
 		level_up()
 		
-func _on_hitbox_body_entered(body):
-	pass # Replace with function body.
-
-
-func _on_hitbox_area_entered(area):
-	pass # Replace with function body.
