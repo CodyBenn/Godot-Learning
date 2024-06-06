@@ -142,6 +142,22 @@ func upgrade_character(upgrade):
 			sword = sword_scene.instantiate()
 			item_manager.add_child(sword)
 			sword.upgrade(1)
+		"sword2":
+			sword.upgrade(2)
+		"sword3":
+			sword.upgrade(3)
+		"sword4":
+			sword.upgrade(4)
+		"sword5":
+			sword.upgrade(5)
+		"sword6":
+			sword.upgrade(6)
+		"sword7":
+			sword.upgrade(7)
+		"sword8":
+			sword.upgrade(8)
+		"sword9":
+			sword.upgrade(9)
 		"shoes1", "shoes2", "shoes3", "shoes4":
 			player.movespeed += 25
 		"food":
