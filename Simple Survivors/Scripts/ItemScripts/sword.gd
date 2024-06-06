@@ -19,25 +19,25 @@ signal do_attack
 func update_stats():
 	match level:
 		1:
-			slash_count_max = 5
-			damage = 25
+			slash_count_max = 4
+			damage = 50
 			slash_hp = 2
 		2:
 			attack_timer.wait_time = 2.5
 		3:
-			slash_count_max = 3
+			slash_count_max = 6
 		4:
-			damage = 35
+			slash_hp = 3
 		5:
-			attack_timer.wait_time = 2
+			attack_timer.wait_time = 2.25
 		6:
-			slash_count_max = 4
+			slash_count_max = 8
 		7:
-			damage = 50
+			slash_hp = 4
 		8:
-			attack_timer.wait_time = 1.6
+			attack_timer.wait_time = 2
 		9:
-			slash_count_max = 5
+			slash_count_max = 10
 
 func upgrade(new_level):
 	level = new_level
