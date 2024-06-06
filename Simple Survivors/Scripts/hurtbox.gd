@@ -66,8 +66,8 @@ func die():
 	if is_enemy and enemy:
 		if enemy.current_health <= 0:
 			var experience_drop = experience_scene.instantiate()
-			experience_drop.global_position = enemy.global_position  # Assuming `enemy` is the enemy that died
-			main.add_child(experience_drop)
+			experience_drop.global_position = enemy.global_position
+			main.call_deferred("add_child", experience_drop)
 			enemy.queue_free()
 	if is_player and player:
 		print("You died")

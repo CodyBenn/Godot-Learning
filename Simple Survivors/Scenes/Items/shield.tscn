@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bpwgbdu6c8yqp"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/shield.gd" id="1_lvsuw"]
-[ext_resource type="Texture2D" uid="uid://bpw8bag58occy" path="res://Assets/Items/Shield.png" id="2_qd4fq"]
+[ext_resource type="Texture2D" uid="uid://bpw8bag58occy" path="res://Assets/Items/Shield.png" id="2_wocwa"]
 
 [sub_resource type="Animation" id="Animation_hk1du"]
 length = 0.001
@@ -1010,7 +1010,7 @@ polygon = PackedVector2Array(0, 12.5, 31.8966, -0.862069, 51.2931, -27.1552, 63.
 
 [node name="ShieldSprite" type="Sprite2D" parent="."]
 position = Vector2(0, 416)
-texture = ExtResource("2_qd4fq")
+texture = ExtResource("2_wocwa")
 
 [node name="ShieldCollider2" type="CollisionPolygon2D" parent="."]
 position = Vector2(0, -440)
@@ -1020,7 +1020,7 @@ polygon = PackedVector2Array(0, 12.5, 31.8966, -0.862069, 51.2931, -27.1552, 63.
 [node name="ShieldSprite2" type="Sprite2D" parent="."]
 position = Vector2(0, -416)
 rotation = -3.14159
-texture = ExtResource("2_qd4fq")
+texture = ExtResource("2_wocwa")
 
 [node name="ShieldCollider3" type="CollisionPolygon2D" parent="."]
 visible = false
@@ -1034,7 +1034,7 @@ visible = false
 position = Vector2(168.5, 0)
 rotation = -1.5708
 scale = Vector2(2.75, 0.4)
-texture = ExtResource("2_qd4fq")
+texture = ExtResource("2_wocwa")
 
 [node name="ShieldCollider4" type="CollisionPolygon2D" parent="."]
 visible = false
@@ -1048,7 +1048,7 @@ visible = false
 position = Vector2(-168.5, 0)
 rotation = -1.5708
 scale = Vector2(-2.75, -0.4)
-texture = ExtResource("2_qd4fq")
+texture = ExtResource("2_wocwa")
 
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 5.0
