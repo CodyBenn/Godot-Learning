@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://7ng4oxkojhgf"]
+
+[ext_resource type="Script" path="res://Scripts/ItemScripts/slash.gd" id="1_8opfi"]
+[ext_resource type="Texture2D" uid="uid://brqo6eeoj75c6" path="res://Assets/Items/Sword.png" id="2_r38u8"]
+
+[node name="Slash" type="CharacterBody2D" groups=["slashes"]]
+scale = Vector2(1, 0.5)
+collision_layer = 32
+collision_mask = 16
+script = ExtResource("1_8opfi")
+
+[node name="SlashColliderR" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.8, 1.2)
+polygon = PackedVector2Array(-51.3391, -58.5938, -51.3391, 58.5938, -21.1207, 50.8621, 49.1073, 19.5313, 66.9645, 0, 46.8751, -22.7865)
+disabled = true
+
+[node name="SlashSpriteR" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_r38u8")

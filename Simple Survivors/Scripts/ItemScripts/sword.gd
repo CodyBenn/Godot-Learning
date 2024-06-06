@@ -2,23 +2,26 @@ extends Area2D
 class_name Sword
 
 @onready var player = get_node("/root/Main/Player")
-@onready var enemy = Enemy
 @onready var slash = preload("res://Scenes/Items/slash.tscn")
 @onready var attack_timer = get_node("/root/Main/Player/ItemManager/Sword/AttackTimer")
-var enemies = {}
 
 var level:int
 var damage:float
 var size:float
+var slash_hp:int
 var slash_count_max:int
 var knockback_strength:int
 var player_position: Vector2
+var slash_alternate:bool = false
+
+signal do_attack
 
 func update_stats():
 	match level:
 		1:
-			slash_count_max = 2
+			slash_count_max = 5
 			damage = 25
+			slash_hp = 2
 		2:
 			attack_timer.wait_time = 2.5
 		3:
@@ -40,27 +43,23 @@ func upgrade(new_level):
 	level = new_level
 	update_stats()
 
-func attack():
-	for i in range(slash_count_max):
+func attack():  # Connect "do_attack" to this function
+	for i in slash_count_max:
 		var slash_instance = slash.instantiate()
-		add_child(slash_instance)
-		slash_instance.connect("enemy_is_hit", enemy_take_damage)
-		await get_tree().create_timer(0.3).timeout
+		#This will send the slash forward position.x
+		if slash_alternate == false:
+			add_child(slash_instance)
+			slash_alternate = true
+		#This will send the slash backwards -position.x
+		elif slash_alternate == true:
+			add_child(slash_instance)
+			slash_instance.scale.x = -.5
+			slash_instance.scale.y = -.25
+			slash_alternate = false
+			
+		await get_tree().create_timer(.2).timeout  # Short delay before next slash
 
 func _on_attack_timer_timeout():
 	await attack()
-	for i in get_tree().get_nodes_in_group("slashes"):
-		i.queue_free()
-	
-func enemy_take_damage(area: Area2D):  # Pass Area2D as argument
-	enemy = area.get_parent()  # Get the enemy's parent node (assuming Hurtbox is a child)
-	
-	# Check if enemy is in the tracked list and has health
-	if enemy:
-		var hurtbox = area.get_parent().get_node("Hurtbox")
-		enemy.current_health -= damage
-		# Handle enemy death if health is depleted
-		if enemy.current_health <= 0:
-			hurtbox.die()
-		else:
-			hurtbox.enemy_take_damage()
+	#for i in get_tree().get_nodes_in_group("slashes"):
+		#i.queue_free()
