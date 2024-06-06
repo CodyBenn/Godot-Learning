@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cih70gxnnbypt"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/garlic.gd" id="1_4ck6j"]
-[ext_resource type="Texture2D" uid="uid://dtmq7wmxmcwqu" path="res://Assets/Items/Garlic.png" id="2_k0pf0"]
+[ext_resource type="Texture2D" uid="uid://dtmq7wmxmcwqu" path="res://Assets/Items/Garlic.png" id="2_2okfb"]
 
 [sub_resource type="Animation" id="Animation_fpkhm"]
 resource_name = "GarlicAnim"
@@ -62,6 +62,6 @@ shape = SubResource("CircleShape2D_egws7")
 
 [node name="GarlicSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_k0pf0")
+texture = ExtResource("2_2okfb")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
