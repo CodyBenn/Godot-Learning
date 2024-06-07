@@ -1,7 +1,68 @@
-[gd_scene load_steps=3 format=3 uid="uid://7ng4oxkojhgf"]
+[gd_scene load_steps=6 format=3 uid="uid://7ng4oxkojhgf"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/slash.gd" id="1_8opfi"]
 [ext_resource type="Texture2D" uid="uid://brqo6eeoj75c6" path="res://Assets/Items/Sword.png" id="2_r38u8"]
+
+[sub_resource type="Animation" id="Animation_kcu4p"]
+resource_name = "SlashAnim"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlashSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 2.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.5, 0.25)]
+}
+
+[sub_resource type="Animation" id="Animation_s4i0j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SlashSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.25)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oa0fl"]
+_data = {
+"RESET": SubResource("Animation_s4i0j"),
+"SlashAnim": SubResource("Animation_kcu4p")
+}
 
 [node name="Slash" type="CharacterBody2D" groups=["slashes"]]
 scale = Vector2(0.5, 0.25)
@@ -29,6 +90,12 @@ texture = ExtResource("2_r38u8")
 wait_time = 2.0
 one_shot = true
 autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_oa0fl")
+}
+autoplay = "SlashAnim"
 
 [connection signal="area_entered" from="SlashArea" to="." method="_on_slash_area_area_entered"]
 [connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]
