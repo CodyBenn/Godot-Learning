@@ -5,7 +5,6 @@ radius = 15.6662
 
 [node name="WeaponName" type="Area2D" groups=["item"]]
 show_behind_parent = true
-scale = Vector2(2.32, 2.32)
 collision_layer = 32
 collision_mask = 16
 
