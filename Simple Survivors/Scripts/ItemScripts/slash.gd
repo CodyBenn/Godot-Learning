@@ -4,7 +4,6 @@ extends CharacterBody2D
 @onready var lifetime = $LifeTimer
 
 var enemy = Enemy
-var area:Area2D
 var slash_hp:int
 var damage:int
 var speed:int = 750
@@ -22,15 +21,13 @@ func _process(delta):
 		
 	move_and_collide(velocity.normalized() * delta * speed)
 	
-func _on_slash_area_area_entered(area):
+func _on_slash_area_area_entered(area:Area2D):
 	enemy = area.get_parent()
-	enemy_take_damage(damage)
+	_enemy_take_damage()
 	slash_health()
 
-func enemy_take_damage(damage):  # Optional enemy argument
-	if enemy == null:
-		enemy = area.get_parent()  # Fallback if no enemy passed
-	elif enemy != null:
+func _enemy_take_damage():  # Optional enemy argument
+	if enemy != null:
 		var hurtbox = enemy.get_node("Hurtbox")
 		damage = get_parent().damage
 		enemy.current_health -= damage
@@ -43,9 +40,7 @@ func enemy_take_damage(damage):  # Optional enemy argument
 
 func slash_health():
 	slash_hp -= 1
-	print(slash_hp)
 	if slash_hp == 0:
-		print("Slash ded")
 		self.queue_free()
 	else:
 		print("error")

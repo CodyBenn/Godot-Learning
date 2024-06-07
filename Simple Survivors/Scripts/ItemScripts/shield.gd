@@ -10,7 +10,7 @@ var damage:float
 var size:float
 var shields:int
 var knockback_strength:float = 2000.0
-var player_position: Vector2
+var player_pos: Vector2
 
 var enemies = {}
 var enemy_hurtbox
@@ -32,7 +32,7 @@ func _physics_process(_delta):
 						hurtbox.die()
 				else:
 					hurtbox.enemy_take_damage()
-					knockback(player_position)
+					knockback(player_pos)
 
 func attack():
 	if shields == 1:
