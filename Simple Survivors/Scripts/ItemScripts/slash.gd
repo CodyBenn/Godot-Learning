@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+# Eventually you need to disconnect the "get_parents()" on damage so you can
+# have the child spawn in the world rather than on the player. The bullets 
+# travel along when the player moves in the current itteration.
+
 @onready var sword = preload("res://Scenes/Items/sword.tscn")
 @onready var lifetime = $LifeTimer
 

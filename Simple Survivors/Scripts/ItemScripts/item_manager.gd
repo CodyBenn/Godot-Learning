@@ -1,25 +1,25 @@
 extends Node2D
 class_name ItemManager
 
-# Preload the item button scene
+# Player variables
+@onready var player = get_node("/root/Main/Player")
+
+# Item variables
 @export var item_button_scene: PackedScene = preload("res://Scenes/item_button.tscn")
 @onready var item_select_screen = get_node("/root/Main/ItemSelectScreens")
 @onready var item_button_container = get_node("/root/Main/ItemSelectScreens/ItemButtonUI/ItemButtonContainer/ItemButtonMargin/ItemButtonHContainer")
-@onready var item_manager = self
-@onready var player = get_node("/root/Main/Player")
 @export var garlic_scene = preload("res://Scenes/Items/garlic.tscn")
 @export var shield_scene = preload("res://Scenes/Items/shield.tscn")
 @export var sword_scene = preload("res://Scenes/Items/sword.tscn")
-# Change this value to create a different number of buttons
-var available_items = ItemDictionary.items_in_dictionary.keys()
-
-var selected_upgrades = []
-var selected_items = []
-var upgrade_options = []
-
 var garlic 
 var shield
 var sword
+
+# Upgrade variables
+var available_items = ItemDictionary.items_in_dictionary.keys()
+var selected_upgrades = []
+var selected_items = []
+var upgrade_options = []
 
 func _ready():
 	if selected_upgrades == []:
@@ -53,9 +53,11 @@ func create_buttons(x:int):
 func _on_player_leveled_up():
 	upgrade_options.clear()
 	create_buttons(3)
-	print("remaining upgrades: ", upgrade_options)
-	print("selected upgrades: ", selected_upgrades)
-	print("selected items: ", selected_items)
+	
+	# Displays the current items in the buttons, upgrades and items that were selected
+	#print("remaining upgrades: ", upgrade_options)
+	#print("selected upgrades: ", selected_upgrades)
+	#print("selected items: ", selected_items)
 
 func _on_item_button_clicked(button):
 	var selected_item = button.item
@@ -95,12 +97,36 @@ func get_random_item():
 	else:
 		return null
 
+func upgrade_existing(item):
+	var current_level = int(item.substr(-1))
+	var next_level = current_level + 1
+	var next_item = item.substr(0, item.length() - 1) + str(next_level)
+	if next_item in ItemDictionary.items_in_dictionary:
+		upgrade_character(next_item)
+		selected_upgrades[selected_upgrades.find(item)] = next_item
+	else:
+		print("Max upgrade level reached for ", item)
+
+func adjust_gui_collection(upgrade):
+	var get_upgraded_displayname = ItemDictionary.items_in_dictionary[upgrade]["displayname"]
+	var get_type = ItemDictionary.items_in_dictionary[upgrade]["type"]
+	if get_type != "item":
+		var get_collected_displaynames = []
+		for i in selected_upgrades:
+			get_collected_displaynames.append(ItemDictionary.items_in_dictionary[i]["displayname"])
+		if not get_upgraded_displayname in get_collected_displaynames:
+			var new_item = item_button_container.instantiate()
+			new_item.upgrade = upgrade
+			match get_type:
+				"upgrade":
+					selected_upgrades.add_child(new_item)
+
 # Weapon Details
 func upgrade_character(upgrade):
 	match upgrade:
 		"garlic1":
 			garlic = garlic_scene.instantiate()
-			item_manager.add_child(garlic)
+			add_child(garlic)
 			garlic.upgrade(1)
 		"garlic2":
 			garlic.upgrade(2)
@@ -120,7 +146,7 @@ func upgrade_character(upgrade):
 			garlic.upgrade(9)
 		"shield1":
 			shield = shield_scene.instantiate()
-			item_manager.add_child(shield)
+			add_child(shield)
 			shield.upgrade(1)
 		"shield2":
 			shield.upgrade(2)
@@ -140,7 +166,7 @@ func upgrade_character(upgrade):
 			shield.upgrade(9)
 		"sword1":
 			sword = sword_scene.instantiate()
-			item_manager.add_child(sword)
+			add_child(sword)
 			sword.upgrade(1)
 		"sword2":
 			sword.upgrade(2)
@@ -173,27 +199,3 @@ func upgrade_character(upgrade):
 	upgrade_options.clear()
 	item_select_screen.visible = false
 	get_tree().paused = false
-
-func upgrade_existing(item):
-	var current_level = int(item.substr(-1))
-	var next_level = current_level + 1
-	var next_item = item.substr(0, item.length() - 1) + str(next_level)
-	if next_item in ItemDictionary.items_in_dictionary:
-		upgrade_character(next_item)
-		selected_upgrades[selected_upgrades.find(item)] = next_item
-	else:
-		print("Max upgrade level reached for ", item)
-
-func adjust_gui_collection(upgrade):
-	var get_upgraded_displayname = ItemDictionary.items_in_dictionary[upgrade]["displayname"]
-	var get_type = ItemDictionary.items_in_dictionary[upgrade]["type"]
-	if get_type != "item":
-		var get_collected_displaynames = []
-		for i in selected_upgrades:
-			get_collected_displaynames.append(ItemDictionary.items_in_dictionary[i]["displayname"])
-		if not get_upgraded_displayname in get_collected_displaynames:
-			var new_item = item_button_container.instantiate()
-			new_item.upgrade = upgrade
-			match get_type:
-				"upgrade":
-					selected_upgrades.add_child(new_item)
