@@ -7,14 +7,9 @@ class_name Sword
 
 var level:int
 var damage:float
-var size:float
 var slash_hp:int
 var slash_count_max:int
-var knockback_strength:int
-var player_position: Vector2
 var slash_alternate:bool = false
-
-signal do_attack
 
 func update_stats():
 	match level:
@@ -43,7 +38,7 @@ func upgrade(new_level):
 	level = new_level
 	update_stats()
 
-func attack():  # Connect "do_attack" to this function
+func attack():
 	for i in slash_count_max:
 		var slash_instance = slash.instantiate()
 		#This will send the slash forward position.x
@@ -61,5 +56,3 @@ func attack():  # Connect "do_attack" to this function
 
 func _on_attack_timer_timeout():
 	await attack()
-	#for i in get_tree().get_nodes_in_group("slashes"):
-		#i.queue_free()
