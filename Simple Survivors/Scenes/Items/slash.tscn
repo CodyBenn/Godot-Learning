@@ -76,14 +76,6 @@ position = Vector2(-2, 0)
 polygon = PackedVector2Array(-51.3391, -58.5938, -51.3391, 58.5938, -21.1207, 50.8621, 49.1073, 19.5313, 66.9645, 0, 46.8751, -22.7865)
 disabled = true
 
-[node name="SlashArea" type="Area2D" parent="."]
-collision_layer = 32
-collision_mask = 16
-
-[node name="SlashCollider" type="CollisionPolygon2D" parent="SlashArea"]
-position = Vector2(-2, 0)
-polygon = PackedVector2Array(-51.3391, -58.5938, -51.3391, 58.5938, -21.1207, 50.8621, 49.1073, 19.5313, 66.9645, 0, 46.8751, -22.7865)
-
 [node name="SlashSprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_r38u8")
 
@@ -98,5 +90,13 @@ libraries = {
 }
 autoplay = "SlashAnim"
 
-[connection signal="area_entered" from="SlashArea" to="." method="_on_slash_area_area_entered"]
+[node name="SlashArea" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 16
+
+[node name="SlashCollider" type="CollisionPolygon2D" parent="SlashArea"]
+position = Vector2(-2, 0)
+polygon = PackedVector2Array(-51.3391, -58.5938, -51.3391, 58.5938, -21.1207, 50.8621, 49.1073, 19.5313, 66.9645, 0, 46.8751, -22.7865)
+
 [connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]
+[connection signal="area_entered" from="SlashArea" to="." method="_on_slash_area_area_entered"]
