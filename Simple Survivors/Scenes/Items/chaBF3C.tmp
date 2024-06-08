@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://h485r0ogufj6"]
+[gd_scene load_steps=3 format=3 uid="uid://h485r0ogufj6"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/chain_lightning.gd" id="1_cfep2"]
-[ext_resource type="Texture2D" uid="uid://b8y07idjkbl2s" path="res://Assets/Items/Circle.png" id="2_3eabn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2jjly"]
 radius = 40.5145
@@ -13,13 +12,8 @@ collision_mask = 16
 script = ExtResource("1_cfep2")
 
 [node name="ChainLightningCollider" type="CollisionShape2D" parent="."]
-modulate = Color(0.74902, 1, 1, 0.392157)
-scale = Vector2(10, 10)
+scale = Vector2(7.16001, 7.16001)
 shape = SubResource("CircleShape2D_2jjly")
-
-[node name="ChainLightningSprite" type="Sprite2D" parent="ChainLightningCollider"]
-scale = Vector2(0.625, 0.625)
-texture = ExtResource("2_3eabn")
 
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 4.0
