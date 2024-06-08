@@ -246,6 +246,15 @@ var items_in_dictionary = {
 		"prerequisite": ["sword8"],
 		"type": "upgrade",
 	},
+	"chainlightning1": {
+		"icon": item_path + "ChainLightning.png",
+		"displayname": "Chain Lightning",
+		"scene": preload("res://Scenes/Items/chain_lightning.tscn"),
+		"details": "Lightning that bounces between enemies",
+		"level": "Level: 1",
+		"prerequisite": [],
+		"type": "upgrade",
+	},
 	"shoes1": {
 		"icon": item_path + "Food.png",
 		"displayname": "Shoes",
