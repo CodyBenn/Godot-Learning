@@ -65,6 +65,7 @@ _data = {
 }
 
 [node name="Slash" type="CharacterBody2D" groups=["slashes"]]
+top_level = true
 scale = Vector2(0.5, 0.25)
 collision_layer = 32
 collision_mask = 16

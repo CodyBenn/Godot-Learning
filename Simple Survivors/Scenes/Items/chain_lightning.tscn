@@ -1,24 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://h485r0ogufj6"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/chain_lightning.gd" id="1_cfep2"]
-[ext_resource type="Texture2D" uid="uid://dhd87edo7ni2p" path="res://Assets/Items/LightningSprite.png" id="2_6a40h"]
+[ext_resource type="Texture2D" uid="uid://dhd87edo7ni2p" path="res://Assets/Items/ChainLightning.png" id="2_irs36"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onstk"]
-size = Vector2(128, 54)
+size = Vector2(133.334, 32)
 
 [node name="ChainLightning" type="Area2D" groups=["item"]]
 show_behind_parent = true
-scale = Vector2(1, 0.5)
+scale = Vector2(0.239999, 0.5)
 collision_layer = 32
 collision_mask = 16
 script = ExtResource("1_cfep2")
 
 [node name="ChainLightningCollider" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(0, 3)
+position = Vector2(66.6669, 0)
 shape = SubResource("RectangleShape2D_onstk")
 
 [node name="ChainLightningSprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_6a40h")
+position = Vector2(66.6669, -2)
+scale = Vector2(1.04167, 1)
+texture = ExtResource("2_irs36")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

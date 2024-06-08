@@ -44,10 +44,12 @@ func attack():
 		#This will send the slash forward position.x
 		if slash_alternate == false:
 			add_child(slash_instance)
+			slash_instance.position = player.position
 			slash_alternate = true
 		#This will send the slash backwards -position.x
 		elif slash_alternate == true:
 			add_child(slash_instance)
+			slash_instance.position = player.position
 			slash_instance.scale.x = -.5
 			slash_instance.scale.y = -.25
 			slash_alternate = false

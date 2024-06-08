@@ -11,9 +11,11 @@ class_name ItemManager
 @export var garlic_scene = preload("res://Scenes/Items/garlic.tscn")
 @export var shield_scene = preload("res://Scenes/Items/shield.tscn")
 @export var sword_scene = preload("res://Scenes/Items/sword.tscn")
+@export var chain_lightning_scene = preload("res://Scenes/Items/chain_lightning.tscn")
 var garlic 
 var shield
 var sword
+var chain_lightning
 
 # Upgrade variables
 var available_items = ItemDictionary.items_in_dictionary.keys()
@@ -184,6 +186,10 @@ func upgrade_character(upgrade):
 			sword.upgrade(8)
 		"sword9":
 			sword.upgrade(9)
+		"chainlightning1":
+			chain_lightning = chain_lightning_scene.instantiate()
+			add_child(chain_lightning)
+			chain_lightning.upgrade(1)
 		"shoes1", "shoes2", "shoes3", "shoes4":
 			player.movespeed += 25
 		"food":
