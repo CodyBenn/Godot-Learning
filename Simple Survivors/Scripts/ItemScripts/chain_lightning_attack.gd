@@ -5,10 +5,6 @@ var enemy = Enemy
 var damage:int
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	chain_lightning_hp = get_parent().chain_lightning_max_hp
-
 func _on_area_entered(area):
 	enemy = area.get_parent()
 	_enemy_take_damage()
@@ -25,14 +21,6 @@ func _enemy_take_damage():  # Optional enemy argument
 			hurtbox.die()
 		else:
 			hurtbox.enemy_take_damage() 
-
-#func chain_lightning_health():
-	#chain_lightning_hp -= 1
-	#if chain_lightning_hp == 0:
-		#self.queue_free()
-	#else:
-		#pass
-		
 
 func _on_life_timer_timeout():
 	queue_free()
