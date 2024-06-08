@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://h485r0ogufj6"]
+[gd_scene load_steps=3 format=3 uid="uid://h485r0ogufj6"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/chain_lightning.gd" id="1_cfep2"]
-[ext_resource type="Texture2D" uid="uid://dhd87edo7ni2p" path="res://Assets/Items/ChainLightning.png" id="2_irs36"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onstk"]
 size = Vector2(133.334, 32)
@@ -14,13 +13,14 @@ collision_mask = 16
 script = ExtResource("1_cfep2")
 
 [node name="ChainLightningCollider" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(66.6669, 0)
+scale = Vector2(1e-05, 1e-05)
 shape = SubResource("RectangleShape2D_onstk")
+disabled = true
 
-[node name="ChainLightningSprite" type="Sprite2D" parent="."]
-position = Vector2(66.6669, -2)
-scale = Vector2(1.04167, 1)
-texture = ExtResource("2_irs36")
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
