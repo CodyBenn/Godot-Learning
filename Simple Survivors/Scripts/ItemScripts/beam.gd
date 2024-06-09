@@ -1,8 +1,8 @@
 extends Area2D
 
 @onready var player = get_node("/root/Main/Player")
-@onready var beam_attack = preload("res://Scenes/Items/chain_lightning_attack.tscn")
-@onready var attack_timer = get_node("/root/Main/Player/ItemManager/ChainLightning/AttackTimer")
+@onready var beam_attack = preload("res://Scenes/Items/beam_attack.tscn")
+@onready var attack_timer = get_node("/root/Main/Player/ItemManager/Beam/AttackTimer")
 
 var level:int
 var damage:float
@@ -47,7 +47,7 @@ func attack():
 
 func generate_chain():
 	var beam_instance = beam_attack.instantiate()
-	var beam_sprite = beam_instance.get_node("ChainLightningSprite")
+	var beam_sprite = beam_instance.get_node("BeamAttackSprite")
 	var target_direction
 	var random_enemy = enemies_in_area.pick_random().get_parent()
 	print(random_enemy)
@@ -63,8 +63,8 @@ func generate_chain():
 	beam_instance.rotation = target_direction.angle()
 	
 	# Calculate offset based on original and scaled heights
-	var original_height = beam_instance.texture.get_height()
-	var scaled_height = original_height * beam_instance.scale.x
+	var original_height = beam_sprite.texture.get_height()
+	var scaled_height = original_height * beam_sprite.scale.x
 	var offset_y = (original_height - scaled_height) / 2.0
 	
 	# Apply offset to Y position

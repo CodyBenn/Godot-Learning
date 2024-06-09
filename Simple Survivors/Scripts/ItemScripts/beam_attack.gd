@@ -4,11 +4,9 @@ var chain_lightning_hp:int
 var enemy = Enemy
 var damage:int
 
-
 func _on_area_entered(area):
 	enemy = area.get_parent()
 	_enemy_take_damage()
-	#chain_lightning_health()
 
 func _enemy_take_damage():  # Optional enemy argument
 	if enemy != null:
