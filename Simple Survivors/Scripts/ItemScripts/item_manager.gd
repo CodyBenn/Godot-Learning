@@ -11,10 +11,12 @@ class_name ItemManager
 @export var garlic_scene = preload("res://Scenes/Items/garlic.tscn")
 @export var shield_scene = preload("res://Scenes/Items/shield.tscn")
 @export var sword_scene = preload("res://Scenes/Items/sword.tscn")
-@export var chain_lightning_scene = preload("res://Scenes/Items/beam.tscn")
+@export var beam_scene = preload("res://Scenes/Items/beam.tscn")
+#@export var chain_lightning_scene = preload("res://Scenes/Items/chain_lightning.tscn")
 var garlic 
 var shield
 var sword
+var beam
 var chain_lightning
 
 # Upgrade variables
@@ -186,10 +188,39 @@ func upgrade_character(upgrade):
 			sword.upgrade(8)
 		"sword9":
 			sword.upgrade(9)
-		"chainlightning1":
-			chain_lightning = chain_lightning_scene.instantiate()
-			add_child(chain_lightning)
-			chain_lightning.upgrade(1)
+		"beam1":
+			beam = beam_scene.instantiate()
+			add_child(beam)
+			beam.upgrade(1)
+			print(beam.level)
+		"beam2":
+			beam.upgrade(2)
+			print(beam.level)
+		"beam3":
+			beam.upgrade(3)
+			print(beam.level)
+		"beam4":
+			beam.upgrade(4)
+			print(beam.level)
+		"beam5":
+			beam.upgrade(5)
+			print(beam.level)
+		"beam6":
+			beam.upgrade(6)
+			print(beam.level)
+		"beam7":
+			beam.upgrade(7)
+			print(beam.level)
+		"beam8":
+			beam.upgrade(8)
+			print(beam.level)
+		"beam9":
+			beam.upgrade(9)
+			print(beam.level)
+		#"chainlightning1":
+			#chain_lightning = chain_lightning_scene.instantiate()
+			#add_child(chain_lightning)
+			#chain_lightning.upgrade(1)
 		"shoes1", "shoes2", "shoes3", "shoes4":
 			player.movespeed += 25
 		"food":
