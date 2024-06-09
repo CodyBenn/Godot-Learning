@@ -42,8 +42,6 @@ func slash_health():
 	slash_hp -= 1
 	if slash_hp == 0:
 		self.queue_free()
-	else:
-		print("error")
 
 func _on_life_timer_timeout():
 	queue_free()

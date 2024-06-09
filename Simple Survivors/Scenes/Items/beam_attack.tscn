@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d5mfjdtn0wiy"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/beam_attack.gd" id="1_b28jv"]
-[ext_resource type="Texture2D" uid="uid://c1yj6vquelybp" path="res://Assets/Items/LightningSprite.png" id="2_tljsl"]
+[ext_resource type="Texture2D" uid="uid://c1yj6vquelybp" path="res://Assets/Items/Beam.png" id="2_g7ed3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onstk"]
 size = Vector2(133.334, 20)
@@ -72,6 +72,7 @@ show_behind_parent = true
 top_level = true
 z_index = -1
 y_sort_enabled = true
+scale = Vector2(5, 0.5)
 collision_layer = 32
 collision_mask = 16
 script = ExtResource("1_b28jv")
@@ -84,7 +85,7 @@ shape = SubResource("RectangleShape2D_onstk")
 show_behind_parent = true
 position = Vector2(66.6669, -2)
 scale = Vector2(1.04167, 1)
-texture = ExtResource("2_tljsl")
+texture = ExtResource("2_g7ed3")
 
 [node name="LifeTimer" type="Timer" parent="."]
 autostart = true
