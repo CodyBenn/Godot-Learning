@@ -249,7 +249,7 @@ var items_in_dictionary = {
 	"chainlightning1": {
 		"icon": item_path + "ChainLightning.png",
 		"displayname": "Chain Lightning",
-		"scene": preload("res://Scenes/Items/chain_lightning.tscn"),
+		"scene": preload("res://Scenes/Items/beam.tscn"),
 		"details": "Lightning that bounces between enemies",
 		"level": "Level: 1",
 		"prerequisite": [],

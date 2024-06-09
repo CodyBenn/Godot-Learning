@@ -11,7 +11,7 @@ class_name ItemManager
 @export var garlic_scene = preload("res://Scenes/Items/garlic.tscn")
 @export var shield_scene = preload("res://Scenes/Items/shield.tscn")
 @export var sword_scene = preload("res://Scenes/Items/sword.tscn")
-@export var chain_lightning_scene = preload("res://Scenes/Items/chain_lightning.tscn")
+@export var chain_lightning_scene = preload("res://Scenes/Items/beam.tscn")
 var garlic 
 var shield
 var sword
