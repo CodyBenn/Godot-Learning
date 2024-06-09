@@ -33,7 +33,7 @@ func update_stats():
 		8:
 			beam_max_hp = 10
 		9:
-			attack_timer.wait_time = 2
+			attack_timer.wait_time = 2.1
 
 func upgrade(new_level):
 	level = new_level
@@ -48,25 +48,15 @@ func attack():
 			return 
 
 func generate_chain():
+	# Determine enemy and create a beam
 	var beam_instance = beam_attack.instantiate()
-	var beam_sprite = beam_instance.get_node("BeamAttackSprite")
-	var target_direction
-	var random_enemy
+	var random_enemy = enemies_in_area.pick_random().get_parent()
 	
-	random_enemy = enemies_in_area.pick_random().get_parent()
-	
+	#Calculate transformation properties of new child
 	add_child(beam_instance)
-	
 	beam_instance.position = player.position
-	
-	# Calculate direction vector from player to enemy
-	target_direction = random_enemy.position - beam_instance.position
-	
-	# Set rotation based on direction
+	var target_direction = random_enemy.position - beam_instance.position
 	beam_instance.rotation = target_direction.angle()
-	
-	# Now you can calculate the scale based on player and target positions
-	var target_scale = target_direction  # Use target_direction for scaling
 
 func _on_attack_timer_timeout():
 	if enemies_in_area and attack_timer.timeout:
