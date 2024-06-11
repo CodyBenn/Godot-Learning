@@ -29,7 +29,8 @@ func _physics_process(delta):
 		if enemy.current_health <= 0:
 			if hurtbox.has_method("die"):
 				hurtbox.die()
-			else:
-				hurtbox.enemy_take_damage()
+		else:
+			print("Why aren I blinking?")
+			hurtbox.enemy_take_damage()
 	
 	move_and_slide()
