@@ -43,7 +43,7 @@ func attack():
 	for i in beam_max_hp:
 		if enemies_in_area.size() > 0:
 			generate_chain()
-			await get_tree().create_timer(.2).timeout  # Short delay before next slash
+			await get_tree().create_timer(.2).timeout
 		else:
 			return 
 
@@ -52,7 +52,7 @@ func generate_chain():
 	var beam_instance = beam_attack.instantiate()
 	var random_enemy = enemies_in_area.pick_random().get_parent()
 	
-	#Calculate transformation properties of new child
+	# Calculate transformation properties of new child
 	add_child(beam_instance)
 	beam_instance.position = player.position
 	var target_direction = random_enemy.position - beam_instance.position
