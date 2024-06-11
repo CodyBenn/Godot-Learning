@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var player = get_node("/root/Main/Player")
 @onready var beam_attack = preload("res://Scenes/Items/beam_attack.tscn")
-@onready var attack_timer = get_node("/root/Main/Player/ItemManager/Beam/AttackTimer")
+@onready var attack_timer = get_node("/root/Main/Player/ItemManager/Beam/BeamAttackTimer")
 
 var level:int
 var damage:float
@@ -48,16 +48,23 @@ func attack():
 			return 
 
 func generate_chain():
+	var random_enemy
 	# Determine enemy and create a beam
-	if is_instance_valid(enemies_in_area):
-		var beam_instance = beam_attack.instantiate()
-		var random_enemy = enemies_in_area.pick_random().get_parent()
-		
-		# Calculate transformation properties of new child
-		add_child(beam_instance)
-		beam_instance.position = player.position
-		var target_direction = random_enemy.position - beam_instance.position
-		beam_instance.rotation = target_direction.angle()
+	var beam_instance = beam_attack.instantiate()
+	random_enemy = enemies_in_area.pick_random()
+	if random_enemy == null:
+		return
+	else:
+		random_enemy = random_enemy.get_parent()
+		print(random_enemy)
+		if random_enemy:
+			# Calculate transformation properties of new child
+			add_child(beam_instance)
+			beam_instance.position = player.position
+			var target_direction = random_enemy.position - beam_instance.position
+			beam_instance.rotation = target_direction.angle()
+		else:
+			return
 
 func _on_attack_timer_timeout():
 	if enemies_in_area and attack_timer.timeout:

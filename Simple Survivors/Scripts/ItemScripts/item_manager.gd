@@ -12,12 +12,16 @@ class_name ItemManager
 @export var shield_scene = preload("res://Scenes/Items/shield.tscn")
 @export var sword_scene = preload("res://Scenes/Items/sword.tscn")
 @export var beam_scene = preload("res://Scenes/Items/beam.tscn")
+@export var magic_missle_scene = preload("res://Scenes/Items/magic_missle.tscn")
 #@export var chain_lightning_scene = preload("res://Scenes/Items/chain_lightning.tscn")
+
+# Empty Item variables for instantiation
 var garlic 
 var shield
 var sword
 var beam
-var chain_lightning
+var magic_missle
+#var chain_lightning
 
 # Upgrade variables
 var available_items = ItemDictionary.items_in_dictionary.keys()
@@ -208,6 +212,26 @@ func upgrade_character(upgrade):
 			beam.upgrade(8)
 		"beam9":
 			beam.upgrade(9)
+		"magic_missle1":
+			magic_missle = magic_missle_scene.instantiate()
+			add_child(magic_missle)
+			magic_missle.upgrade(1)
+		"magic_missle2":
+			magic_missle.upgrade(2)
+		"magic_missle3":
+			magic_missle.upgrade(3)
+		"magic_missle4":
+			magic_missle.upgrade(4)
+		"magic_missle5":
+			magic_missle.upgrade(5)
+		"magic_missle6":
+			magic_missle.upgrade(6)
+		"magic_missle7":
+			magic_missle.upgrade(7)
+		"magic_missle8":
+			magic_missle.upgrade(8)
+		"magic_missle9":
+			magic_missle.upgrade(9)
 		#"chainlightning1":
 			#chain_lightning = chain_lightning_scene.instantiate()
 			#add_child(chain_lightning)

@@ -21,9 +21,9 @@ shape = SubResource("CircleShape2D_2jjly")
 scale = Vector2(0.625, 0.625)
 texture = ExtResource("2_pobgo")
 
-[node name="AttackTimer" type="Timer" parent="."]
+[node name="BeamAttackTimer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="timeout" from="BeamAttackTimer" to="." method="_on_attack_timer_timeout"]
