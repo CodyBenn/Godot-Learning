@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfh8sgylvefj2"]
+
+[ext_resource type="Script" path="res://Scripts/ItemScripts/magic_missle.gd" id="1_elwhm"]
+[ext_resource type="Texture2D" uid="uid://doaikw45s6dsd" path="res://Assets/Items/MagicMissle.png" id="2_rnh6d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1g3ir"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbotp"]
+radius = 300.88
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_egws7"]
+radius = 7.07107
+
+[node name="MagicMissle" type="CharacterBody2D" groups=["item"]]
+show_behind_parent = true
+collision_layer = 32
+collision_mask = 16
+script = ExtResource("1_elwhm")
+
+[node name="MagicMissleCollider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1g3ir")
+disabled = true
+
+[node name="MagicMissleSprite" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.486275)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_rnh6d")
+
+[node name="MagicMissleArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="MagicMissleAreaCollider" type="CollisionShape2D" parent="MagicMissleArea"]
+shape = SubResource("CircleShape2D_bbotp")
+
+[node name="MagicMissleProjectile" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 16
+
+[node name="MagicMissleProjectileCollider" type="CollisionShape2D" parent="MagicMissleProjectile"]
+shape = SubResource("CircleShape2D_egws7")
+
+[connection signal="area_entered" from="MagicMissleArea" to="." method="_on_magic_missle_area_area_entered"]
+[connection signal="area_exited" from="MagicMissleArea" to="." method="_on_magic_missle_area_area_exited"]
+[connection signal="area_entered" from="MagicMissleProjectile" to="." method="_on_magic_missle_projectile_area_entered"]
