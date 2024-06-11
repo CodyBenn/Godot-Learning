@@ -49,14 +49,15 @@ func attack():
 
 func generate_chain():
 	# Determine enemy and create a beam
-	var beam_instance = beam_attack.instantiate()
-	var random_enemy = enemies_in_area.pick_random().get_parent()
-	
-	# Calculate transformation properties of new child
-	add_child(beam_instance)
-	beam_instance.position = player.position
-	var target_direction = random_enemy.position - beam_instance.position
-	beam_instance.rotation = target_direction.angle()
+	if is_instance_valid(enemies_in_area):
+		var beam_instance = beam_attack.instantiate()
+		var random_enemy = enemies_in_area.pick_random().get_parent()
+		
+		# Calculate transformation properties of new child
+		add_child(beam_instance)
+		beam_instance.position = player.position
+		var target_direction = random_enemy.position - beam_instance.position
+		beam_instance.rotation = target_direction.angle()
 
 func _on_attack_timer_timeout():
 	if enemies_in_area and attack_timer.timeout:

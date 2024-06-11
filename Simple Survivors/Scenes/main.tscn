@@ -52,6 +52,9 @@ layer_0/tile_data = PackedInt32Array(-7143563, 0, 0, -7078027, 0, 0, -7012491, 0
 [node name="Player" parent="." instance=ExtResource("1_enl1x")]
 position = Vector2(0, 232)
 
+[node name="MagicMissle" parent="Player/ItemManager" index="0" instance=ExtResource("6_ikang")]
+position = Vector2(-140, -100)
+
 [node name="EnemySpawner" type="Path2D" parent="Player"]
 position = Vector2(62.693, -14.8317)
 scale = Vector2(0.844371, 0.695238)
@@ -64,9 +67,6 @@ position = Vector2(-1653.33, -1098.67)
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
-
-[node name="MagicMissle" parent="." instance=ExtResource("6_ikang")]
-position = Vector2(-128, 230)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 
