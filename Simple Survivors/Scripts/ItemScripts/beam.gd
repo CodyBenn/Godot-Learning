@@ -56,7 +56,6 @@ func generate_chain():
 		return
 	else:
 		random_enemy = random_enemy.get_parent()
-		print(random_enemy)
 		if random_enemy:
 			# Calculate transformation properties of new child
 			add_child(beam_instance)
