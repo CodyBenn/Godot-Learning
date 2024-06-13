@@ -6,7 +6,7 @@ class_name ItemManager
 
 # Item variables
 @export var item_button_scene: PackedScene = preload("res://Scenes/item_button.tscn")
-@onready var item_select_screen = get_node("/root/Main/ItemSelectScreens")
+@onready var item_select_screen = get_node("/root/Main/ItemSelectScreens/ItemButtonUI")
 @onready var item_button_container = get_node("/root/Main/ItemSelectScreens/ItemButtonUI/ItemButtonContainer/ItemButtonMargin/ItemButtonHContainer")
 @export var garlic_scene = preload("res://Scenes/Items/garlic.tscn")
 @export var shield_scene = preload("res://Scenes/Items/shield.tscn")
