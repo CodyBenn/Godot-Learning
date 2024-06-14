@@ -49,4 +49,3 @@ func _ready():
 
 func _on_toggle_console_pressed():
 	console.visible = !console.visible
-	print("We button")
