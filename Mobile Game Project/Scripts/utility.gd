@@ -7,4 +7,3 @@ func add_log_message(log_str: String):
 		var log_label = console.find_child("LogLabel")
 		if log_label:
 			log_label.text += log_str + "\n"
-			

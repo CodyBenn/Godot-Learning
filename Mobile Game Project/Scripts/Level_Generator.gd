@@ -26,9 +26,8 @@ func _ready():
 	#Generate floor platforms for player based on camera size and assign generate_ground to true
 	start_platform_y = viewport_size.y - (y_distance_between_platforms * 1)
 	generate_level(start_platform_y, true)
-	
+
 func _process(_delta):
-	
 	#Procedural level generation
 	if player:
 		#Determines player location, end of level location, and when to start generating
@@ -38,8 +37,7 @@ func _process(_delta):
 		#After player reaches threshold, generate new platform set at end of level position
 		if py <= threshold:
 			generate_level(end_of_level_pos, false)
-			
-			
+
 func generate_level(start_y: float, generate_ground: bool):
 	var platform_width = 138
 	if generate_ground == true:
@@ -68,7 +66,7 @@ func generate_level(start_y: float, generate_ground: bool):
 		#Adds 1 to "generated_platform_count"
 		generated_platform_count += 1
 	print(generated_platform_count)
-	
+
 func create_platform(location: Vector2):
 	#Instantiates a platform, sets it's position, sets it as a child of "platform_parent", then returns it's value
 	var platform = platform_scene.instantiate()

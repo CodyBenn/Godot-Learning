@@ -22,13 +22,8 @@ func _ready():
 	var os_name = OS.get_name()
 	if os_name == "Android" || os_name == "iOS":
 		use_accelerometer = true
-	
-func jump():
-	velocity.y = jump_velocity
-	#MyUtility.add_log_message("Player jumped!")
-	
+
 func _process(_delta):
-	
 	#Jump animation controller for player
 	if velocity.y < 0:
 		if animator.current_animation != "Jump":
@@ -36,7 +31,7 @@ func _process(_delta):
 	elif velocity.y > 0:
 		if animator.current_animation != "Idle":
 			animator.play("Idle")
-	
+
 func _physics_process(_delta):
 	#Assigns gravity to player
 	velocity.y += gravity
@@ -72,7 +67,11 @@ func _physics_process(_delta):
 	if global_position.x < -margin:
 		global_position.x = viewport_size.x + margin
 		#print("Left to right")
-		
+
+func jump():
+	velocity.y = jump_velocity
+	#MyUtility.add_log_message("Player jumped!")
+
 #Determines player and assigns "null"
 func setup_player(_player: Player):
 	if _player != null:
