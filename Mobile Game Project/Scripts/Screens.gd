@@ -41,13 +41,6 @@ func _on_button_pressed(button):
 
 func _on_toggle_console_pressed():
 	console.visible = !console.visible
-	#Same line of code as above, done worse
-	#if console.visible == false:
-		#console.visible = true
-		#print("Console is turned on")
-	#else:
-		#console.visible = false
-		#print("Console is turned off")
 
 func change_screen(new_screen):
 	if current_screen != null:
