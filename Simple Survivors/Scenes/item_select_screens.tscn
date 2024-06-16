@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://2pbb4e1colg1"]
+[gd_scene load_steps=7 format=3 uid="uid://2pbb4e1colg1"]
 
 [ext_resource type="Script" path="res://Scripts/screens.gd" id="1_ps64s"]
 [ext_resource type="Texture2D" uid="uid://c8cvweym1ynxb" path="res://Assets/Gear.png" id="2_4yipl"]
 [ext_resource type="PackedScene" uid="uid://b6y5xdabrvvwn" path="res://Scenes/item_button_ui.tscn" id="2_pqpon"]
+[ext_resource type="Texture2D" uid="uid://d0vl14kcd72lm" path="res://Assets/Grass.png" id="4_qimt6"]
+[ext_resource type="Texture2D" uid="uid://dx7llt8l5qcrl" path="res://Assets/Button2.png" id="5_0kedq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jtw8r"]
 
@@ -12,6 +14,7 @@ script = ExtResource("1_ps64s")
 
 [node name="Debug" type="Control" parent="."]
 process_mode = 3
+visible = false
 z_index = 4096
 layout_mode = 3
 anchors_preset = 15
@@ -79,6 +82,118 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="ItemButtonUI" parent="." instance=ExtResource("2_pqpon")]
+
+[node name="TitleScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="TitleScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleBackground" type="TextureRect" parent="TitleScreen/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = 357.0
+offset_right = 638.0
+offset_bottom = 819.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, -1.55029)
+texture = ExtResource("4_qimt6")
+
+[node name="ButtonContainer" type="VBoxContainer" parent="TitleScreen/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -150.0
+offset_right = 300.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button1" type="TextureButton" parent="TitleScreen/Control/ButtonContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("5_0kedq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button1Label" type="Label" parent="TitleScreen/Control/ButtonContainer/Button1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -11.5
+offset_right = 18.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "TEST"
+
+[node name="Button2" type="TextureButton" parent="TitleScreen/Control/ButtonContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("5_0kedq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button1Label" type="Label" parent="TitleScreen/Control/ButtonContainer/Button2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -11.5
+offset_right = 18.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "TEST"
+
+[node name="Button3" type="TextureButton" parent="TitleScreen/Control/ButtonContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("5_0kedq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button1Label" type="Label" parent="TitleScreen/Control/ButtonContainer/Button3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -11.5
+offset_right = 18.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "TEST"
 
 [connection signal="pressed" from="Debug/ToggleConsole" to="." method="_on_toggle_console_pressed"]
 
