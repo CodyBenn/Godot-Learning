@@ -127,3 +127,5 @@ libraries = {
 "": SubResource("AnimationLibrary_6ermf")
 }
 autoplay = "animate_play_button"
+
+[editable path="Control/TitlePlay"]
