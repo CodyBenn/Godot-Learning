@@ -18,15 +18,6 @@ offset_bottom = 40.0
 [node name="Screens" type="CanvasLayer" parent="."]
 script = ExtResource("1_rdc3p")
 
-[node name="TitleScreen" parent="Screens" instance=ExtResource("3_3g4jo")]
-visible = false
-
-[node name="PauseScreen" parent="Screens" instance=ExtResource("4_jqppi")]
-visible = false
-
-[node name="GameOverScreen" parent="Screens" instance=ExtResource("5_4p2h4")]
-visible = false
-
 [node name="Debug" type="Control" parent="Screens"]
 z_index = 4096
 layout_mode = 3
@@ -95,5 +86,13 @@ grow_vertical = 0
 texture_normal = ExtResource("2_p73r5")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="TitleScreen" parent="Screens" instance=ExtResource("3_3g4jo")]
+
+[node name="PauseScreen" parent="Screens" instance=ExtResource("4_jqppi")]
+visible = false
+
+[node name="GameOverScreen" parent="Screens" instance=ExtResource("5_4p2h4")]
+visible = false
 
 [connection signal="pressed" from="Screens/Debug/ToggleConsole" to="Screens" method="_on_toggle_console_pressed"]

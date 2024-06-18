@@ -11,10 +11,10 @@ var current_screen = null
 func _ready():
 	console.visible = false
 	
-	register_button()
+	register_buttons()
 	change_screen(title_screen)
 
-func register_button():
+func register_buttons():
 	var buttons = get_tree().get_nodes_in_group("buttons")
 	if buttons.size() >= 0:
 		for button in buttons:
@@ -44,8 +44,12 @@ func _on_toggle_console_pressed():
 
 func change_screen(new_screen):
 	if current_screen != null:
-		current_screen.disappear()
+		var disappear_tween = current_screen.disappear()
+		await(disappear_tween.finished)
+		current_screen.visible = false
 	current_screen = new_screen
-	if new_screen != null:
-		current_screen.appear()
+	if current_screen != null:
+		var appear_tween = current_screen.appear()
+		await(appear_tween.finished)
+		get_tree().call_group("buttons", "set_disabled", false)
 		

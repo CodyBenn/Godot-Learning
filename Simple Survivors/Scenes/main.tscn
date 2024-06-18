@@ -66,4 +66,6 @@ autostart = true
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 
+[editable path="ItemSelectScreens"]
+[editable path="ItemSelectScreens/ItemButtonUI"]
 [editable path="Player"]
