@@ -40,6 +40,7 @@ process_mode = 3
 script = ExtResource("5_a6psr")
 
 [node name="ItemSelectScreens" parent="." instance=ExtResource("2_cdtkk")]
+process_mode = 2
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -10
