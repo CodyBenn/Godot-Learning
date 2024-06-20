@@ -4,7 +4,7 @@ class_name ItemButton
 @onready var label_text = $ItemButtonLabelText
 @onready var label_level = $ItemButtonLabelLevel
 @onready var label_description = $ItemButtonLabelDescription
-@onready var item_icon = $ItemButtonColorRect/ItemButtonTexture
+@onready var item_icon = $ItemButtonColorRect/ItemButtonIcon
 
 var item = null
 

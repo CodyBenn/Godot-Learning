@@ -12,7 +12,7 @@ func _ready():
 	console.visible = false
 	
 	register_buttons()
-	change_screen(title_screen)
+	#change_screen(title_screen)
 
 func register_buttons():
 	var buttons = get_tree().get_nodes_in_group("UIbuttons")
@@ -48,5 +48,5 @@ func change_screen(new_screen):
 		await(appear_tween.finished)
 		get_tree().call_group("UIbuttons", "set_disabled", false)
 
-func _on_toggle_console_pressed():
-	console.visible = !console.visible
+#func _on_toggle_console_pressed():
+	#console.visible = !console.visible

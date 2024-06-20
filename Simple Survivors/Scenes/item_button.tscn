@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cklym0q7inhqo"]
+[gd_scene load_steps=5 format=3 uid="uid://cklym0q7inhqo"]
 
 [ext_resource type="Texture2D" uid="uid://c0eepqosjhaof" path="res://Assets/Orange.png" id="1_66e2t"]
+[ext_resource type="Texture2D" uid="uid://dx7llt8l5qcrl" path="res://Assets/Button2.png" id="2_a0my6"]
 [ext_resource type="Script" path="res://Scripts/item_button.gd" id="2_bkqyn"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3cq37"]
 
 [node name="ItemButton" type="Button" groups=["buttons"]]
 anchors_preset = 15
@@ -17,6 +20,42 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("2_bkqyn")
 
+[node name="ItemButtonTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_a0my6")
+
+[node name="TextureRect" type="TextureRect" parent="ItemButtonTexture"]
+modulate = Color(0.3445, 0.408404, 0.443569, 1)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -53.0
+offset_right = 127.0
+offset_bottom = 53.0
+grow_vertical = 2
+texture = SubResource("CanvasTexture_3cq37")
+
+[node name="TextureRect2" type="TextureRect" parent="ItemButtonTexture/TextureRect"]
+modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -3.0
+offset_top = -56.0
+offset_right = 111.0
+offset_bottom = 56.0
+grow_vertical = 2
+texture = SubResource("CanvasTexture_3cq37")
+
 [node name="ItemButtonColorRect" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 4
@@ -27,7 +66,7 @@ offset_right = 194.0
 grow_vertical = 2
 scale = Vector2(2.56, 2.56)
 
-[node name="ItemButtonTexture" type="TextureRect" parent="ItemButtonColorRect"]
+[node name="ItemButtonIcon" type="TextureRect" parent="ItemButtonColorRect"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
