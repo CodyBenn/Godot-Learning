@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://7ng4oxkojhgf"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/sword_attack.gd" id="1_d3fts"]
-[ext_resource type="Texture2D" uid="uid://brqo6eeoj75c6" path="res://Assets/Items/Sword.png" id="2_r38u8"]
+[ext_resource type="Texture2D" uid="uid://bcr02xhrxdyl0" path="res://Assets/Items/Slash.png" id="2_nrugi"]
 
 [sub_resource type="Animation" id="Animation_s4i0j"]
 length = 0.001
@@ -77,7 +77,7 @@ polygon = PackedVector2Array(-51.3391, -58.5938, -51.3391, 58.5938, -21.1207, 50
 disabled = true
 
 [node name="SlashSprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_r38u8")
+texture = ExtResource("2_nrugi")
 
 [node name="LifeTimer" type="Timer" parent="."]
 wait_time = 2.0
