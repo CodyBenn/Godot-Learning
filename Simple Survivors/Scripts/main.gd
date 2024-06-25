@@ -34,7 +34,6 @@ func _process(_delta):
 		get_tree().reload_current_scene()
 
 func new_game():
-	#Creates a camera to main scene
 	camera = camera_scene.instantiate()
 
 func spawn_mob():
@@ -42,10 +41,10 @@ func spawn_mob():
 	%EnemySpawnerPath.progress_ratio = randf()
 	new_enemy.global_position = %EnemySpawnerPath.global_position
 	add_child(new_enemy)
-	
+
 func _on_spawn_timer_timeout():
 	spawn_mob()
-	
+
 func item_select():
 	get_tree().paused = true
 	item_select_screen.item_select_screen.visible = true
