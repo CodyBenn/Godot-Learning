@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://d5mfjdtn0wiy"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/beam_attack.gd" id="1_b28jv"]
-[ext_resource type="Texture2D" uid="uid://c1yj6vquelybp" path="res://Assets/Items/Beam.png" id="2_g7ed3"]
+[ext_resource type="Texture2D" uid="uid://c1yj6vquelybp" path="res://Assets/Items/BeamAttack.png" id="2_g7ed3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onstk"]
 size = Vector2(133.334, 20)

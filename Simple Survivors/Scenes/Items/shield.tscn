@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bpwgbdu6c8yqp"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/shield.gd" id="1_lvsuw"]
-[ext_resource type="Texture2D" uid="uid://bpw8bag58occy" path="res://Assets/Items/Shield.png" id="2_wocwa"]
+[ext_resource type="Texture2D" uid="uid://bpw8bag58occy" path="res://Assets/Items/ShieldAttack.png" id="2_wocwa"]
 
 [sub_resource type="Animation" id="Animation_hk1du"]
 length = 0.001
