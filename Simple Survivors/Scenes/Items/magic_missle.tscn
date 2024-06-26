@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dfh8sgylvefj2"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/magic_missle.gd" id="1_elwhm"]
-[ext_resource type="Texture2D" uid="uid://doaikw45s6dsd" path="res://Assets/Items/MagicMissle.png" id="2_rnh6d"]
+[ext_resource type="Texture2D" uid="uid://doaikw45s6dsd" path="res://Assets/Items/MagicMissleAttack.png" id="2_rnh6d"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1g3ir"]
 

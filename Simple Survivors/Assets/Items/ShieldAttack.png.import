@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjiewl4k7rpf1"
-path="res://.godot/imported/Beam.png-2b58850fe4d9654f2ac67813bb6622b1.ctex"
+uid="uid://bpw8bag58occy"
+path="res://.godot/imported/ShieldAttack.png-151f7d084c18ac8df48381028bf02a81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Items/Beam.png"
-dest_files=["res://.godot/imported/Beam.png-2b58850fe4d9654f2ac67813bb6622b1.ctex"]
+source_file="res://Assets/Items/ShieldAttack.png"
+dest_files=["res://.godot/imported/ShieldAttack.png-151f7d084c18ac8df48381028bf02a81.ctex"]
 
 [params]
 
