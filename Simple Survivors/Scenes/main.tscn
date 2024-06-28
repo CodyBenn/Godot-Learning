@@ -77,6 +77,18 @@ autostart = true
 [node name="Magnet" parent="." instance=ExtResource("6_6i0xp")]
 position = Vector2(136, 213)
 
+[node name="Magnet2" parent="." instance=ExtResource("6_6i0xp")]
+position = Vector2(-410, 279)
+
+[node name="Magnet3" parent="." instance=ExtResource("6_6i0xp")]
+position = Vector2(559, 361)
+
+[node name="Magnet4" parent="." instance=ExtResource("6_6i0xp")]
+position = Vector2(412, 29)
+
+[node name="Magnet5" parent="." instance=ExtResource("6_6i0xp")]
+position = Vector2(-299, 5)
+
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 
 [editable path="ItemSelectScreens"]

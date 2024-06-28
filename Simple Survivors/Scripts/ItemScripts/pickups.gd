@@ -1,5 +1,5 @@
 extends Area2D
-class_name Experience
+class_name Pickups
 
 @onready var player = get_node("/root/Main/Player")
 
@@ -14,9 +14,18 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
-		player.experience += experience_to_give
-		queue_free()
+		if self.is_in_group("experience"):
+			player.experience += experience_to_give
+			queue_free()
+		if self.is_in_group("magnet"):
+			magnetize()
+			if get_tree().get_nodes_in_group("experience") == []:
+				queue_free()
 
 func _on_area_entered(area):
 	if area.is_in_group("hitbox") and not move_towards_player:
 		move_towards_player = true
+
+func magnetize():
+	for i in get_tree().get_nodes_in_group("experience"):
+		pass
