@@ -33,7 +33,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func attack():
-	if $MagicMissleProjectile.get_overlapping_areas() and target:
+	if $MagicMissleProjectile.get_overlapping_areas() and target and is_instance_valid(target):
 		var hurtbox = target.get_node("Hurtbox")
 		enemy = target
 		enemy.current_health -= damage

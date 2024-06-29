@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://2pbb4e1colg1" path="res://Scenes/item_select_screens.tscn" id="2_cdtkk"]
 [ext_resource type="Texture2D" uid="uid://d0vl14kcd72lm" path="res://Assets/Grass.png" id="3_idf8c"]
 [ext_resource type="Script" path="res://Scripts/pause_controller.gd" id="5_a6psr"]
-[ext_resource type="PackedScene" uid="uid://dwb2e8s8mj65s" path="res://Scenes/magnet.tscn" id="6_6i0xp"]
+[ext_resource type="PackedScene" uid="uid://dwb2e8s8mj65s" path="res://Scenes/Items/magnet.tscn" id="6_6i0xp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0yeg"]
 texture = ExtResource("3_idf8c")

@@ -3,6 +3,7 @@ class_name Hurtbox
 
 @onready var player = get_node("/root/Main/Player")
 @onready var experience_scene = preload("res://Scenes/Items/experience.tscn")
+@onready var magnet_scene = preload("res://Scenes/Items/magnet.tscn")
 @onready var main = get_node("/root/Main")
 var enemy
 var overlapping_mobs
@@ -65,10 +66,19 @@ func become_invulnerable():
 func die():
 	if is_enemy and enemy:
 		if enemy.current_health <= 0:
-			var experience_drop = experience_scene.instantiate()
-			experience_drop.global_position = enemy.global_position
-			main.call_deferred("add_child", experience_drop)
+			spawn_drop()
 			enemy.queue_free()
 	if is_player and player:
 		print("You died")
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
+
+func spawn_drop():
+	var experience_drop = experience_scene.instantiate()
+	experience_drop.global_position = enemy.global_position
+	main.call_deferred("add_child", experience_drop)
+	
+	var probability : int = 33
+	if (randi() % probability) == (probability - 1): 
+		var magnet_drop = magnet_scene.instantiate()
+		magnet_drop.global_position = enemy.global_position
+		main.call_deferred("add_child", magnet_drop)
