@@ -1,17 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfh2u1vh51mu1"]
+[gd_scene load_steps=6 format=3 uid="uid://dfh2u1vh51mu1"]
 
-[ext_resource type="Script" path="res://Scripts/ItemScripts/experience.gd" id="1_o6bie"]
+[ext_resource type="Script" path="res://Scripts/ItemScripts/pickups.gd" id="1_e50y1"]
 [ext_resource type="Texture2D" uid="uid://meuq7nvi3d20" path="res://Assets/Items/blueGem.png" id="2_vjjl4"]
+[ext_resource type="Script" path="res://Scripts/soft_collision.gd" id="3_kd4wb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfk0y"]
 radius = 28.0
 height = 126.0
 
-[node name="Experience" type="Area2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_0fjik"]
+radius = 64.0
+
+[node name="Experience" type="Area2D" groups=["experience"]]
 scale = Vector2(0.280001, 0.280001)
 collision_layer = 0
 collision_mask = 4
-script = ExtResource("1_o6bie")
+script = ExtResource("1_e50y1")
 
 [node name="ExperienceCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_vfk0y")
@@ -19,6 +23,12 @@ shape = SubResource("CapsuleShape2D_vfk0y")
 [node name="ExperienceSprite" type="Sprite2D" parent="."]
 position = Vector2(0, -2)
 texture = ExtResource("2_vjjl4")
+
+[node name="SoftCollisions" type="Area2D" parent="." groups=["pickup_collider"]]
+script = ExtResource("3_kd4wb")
+
+[node name="SoftCollider" type="CollisionShape2D" parent="SoftCollisions"]
+shape = SubResource("CircleShape2D_0fjik")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
