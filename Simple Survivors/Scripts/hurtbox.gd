@@ -77,7 +77,7 @@ func spawn_drop():
 	experience_drop.global_position = enemy.global_position
 	main.call_deferred("add_child", experience_drop)
 	
-	var probability : int = 33
+	var probability : int = 50
 	if (randi() % probability) == (probability - 1): 
 		var magnet_drop = magnet_scene.instantiate()
 		magnet_drop.global_position = enemy.global_position
