@@ -1,22 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwdcscn1l35ri"]
+[gd_scene load_steps=2 format=3 uid="uid://cwdcscn1l35ri"]
 
-[ext_resource type="Texture2D" uid="uid://doaikw45s6dsd" path="res://Assets/Items/MagicMissleAttack.png" id="1_65rto"]
 [ext_resource type="Script" path="res://Scripts/ItemScripts/magic_missle.gd" id="1_dgfwx"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_egws7"]
-radius = 40.0
-
-[node name="MagicMissle" type="Area2D" groups=["item"]]
+[node name="WeaponBase" type="Area2D" groups=["item"]]
 show_behind_parent = true
 collision_layer = 32
 collision_mask = 16
 script = ExtResource("1_dgfwx")
 
-[node name="MagicMissleCollider" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_egws7")
+[node name="WeaponCollider" type="CollisionShape2D" parent="."]
 
-[node name="MagicMissleSprite" type="Sprite2D" parent="."]
+[node name="WeaponSprite" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.486275)
-texture = ExtResource("1_65rto")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
