@@ -1,12 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwdcscn1l35ri"]
-
-[ext_resource type="Script" path="res://Scripts/ItemScripts/magic_missle.gd" id="1_dgfwx"]
+[gd_scene format=3 uid="uid://cwdcscn1l35ri"]
 
 [node name="WeaponBase" type="Area2D" groups=["item"]]
 show_behind_parent = true
 collision_layer = 32
 collision_mask = 16
-script = ExtResource("1_dgfwx")
 
 [node name="WeaponCollider" type="CollisionShape2D" parent="."]
 
