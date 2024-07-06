@@ -2,7 +2,6 @@ extends Area2D
 class_name Pickups
 
 @onready var player = get_node("/root/Main/Player")
-
 var experience_to_give: int = 10
 var move_towards_player: bool = false
 
