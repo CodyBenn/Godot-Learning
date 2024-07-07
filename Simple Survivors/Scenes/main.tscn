@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b4n58is2v4chv"]
+[gd_scene load_steps=9 format=3 uid="uid://b4n58is2v4chv"]
 
 [ext_resource type="PackedScene" uid="uid://0cnp4lxeqgha" path="res://Scenes/player.tscn" id="1_enl1x"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_n0wm6"]
 [ext_resource type="PackedScene" uid="uid://2pbb4e1colg1" path="res://Scenes/item_select_screens.tscn" id="2_cdtkk"]
 [ext_resource type="Texture2D" uid="uid://d0vl14kcd72lm" path="res://Assets/Grass.png" id="3_idf8c"]
 [ext_resource type="Script" path="res://Scripts/pause_controller.gd" id="5_a6psr"]
-[ext_resource type="PackedScene" uid="uid://h485r0ogufj6" path="res://Scenes/Items/beam.tscn" id="6_mj743"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h0yeg"]
 texture = ExtResource("3_idf8c")
@@ -73,9 +72,6 @@ position = Vector2(-1653.33, -1098.67)
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
-
-[node name="Beam" parent="." instance=ExtResource("6_mj743")]
-position = Vector2(-500, 552)
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 
