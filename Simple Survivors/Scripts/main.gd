@@ -14,9 +14,7 @@ var camera = null
 func _ready():
 	item_select()
 	
-	#Camera viewport size adjustment
 	viewport_size = get_viewport_rect().size
-	
 	#Offsets player so they wont spawn on the bottom of screen
 	var player_spawn_pos_y_margin = 135
 	
