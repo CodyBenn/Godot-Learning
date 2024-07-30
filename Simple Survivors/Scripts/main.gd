@@ -12,6 +12,7 @@ var camera_scene = preload("res://Scenes/game_camera.tscn")
 var camera = null
 
 func _ready():
+	#Pauses the game and has player select an item
 	item_select()
 	
 	#Determines screen size of current application
