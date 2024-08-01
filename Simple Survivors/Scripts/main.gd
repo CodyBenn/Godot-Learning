@@ -12,8 +12,11 @@ var camera_scene = preload("res://Scenes/game_camera.tscn")
 var camera = null
 
 func _ready():
+	#Pauses game and allows player to select an item 
+	##Create a new way that only sets a specific item or only draw from weapons (Exclude items)
 	item_select()
 	
+	#Finds user's screen size and adjusts resolution to specified size
 	viewport_size = get_viewport_rect().size
 	
 	#Offsets player so they wont spawn on the bottom of screen
