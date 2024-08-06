@@ -60,18 +60,22 @@ func update_stats():
 			damage = 10
 		2:
 			damage = 15
+			max_speed = 40000.0
 		3:
 			damage = 20
 		4:
 			damage = 25
+			max_speed = 50000.0
 		5:
 			damage = 30
 		6:
 			damage = 35
+			max_speed = 60000.0
 		7:
 			damage = 40
 		8:
 			damage = 45
+			max_speed = 70000.0
 		9:
 			damage = 50
 
