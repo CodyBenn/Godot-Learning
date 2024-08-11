@@ -1,7 +1,5 @@
 extends CanvasLayer
 
-@onready var console = $Debug/ConsoleLog
-
 @onready var title_screen = $TitleScreen
 #@onready var pause_screen = $PauseScreen
 #@onready var game_over_screen = $GameOverScreen
