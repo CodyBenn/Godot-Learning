@@ -1,11 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://2pbb4e1colg1"]
+[gd_scene load_steps=2 format=3 uid="uid://2pbb4e1colg1"]
 
-[ext_resource type="Script" path="res://Scripts/screens.gd" id="1_ps64s"]
 [ext_resource type="PackedScene" uid="uid://b6y5xdabrvvwn" path="res://Scenes/item_button_ui.tscn" id="2_pqpon"]
 
 [node name="ItemSelectScreens" type="CanvasLayer"]
 process_mode = 3
-script = ExtResource("1_ps64s")
 
 [node name="ItemButtonUI" parent="." instance=ExtResource("2_pqpon")]
 

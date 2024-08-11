@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0xiaws47fv2l"]
+[gd_scene load_steps=6 format=3 uid="uid://b0xiaws47fv2l"]
 
+[ext_resource type="Script" path="res://Scripts/screens.gd" id="1_iblqa"]
 [ext_resource type="Script" path="res://Scripts/base_screen.gd" id="1_lpx33"]
 [ext_resource type="Texture2D" uid="uid://d0vl14kcd72lm" path="res://Assets/Grass.png" id="2_fxlh6"]
 [ext_resource type="Texture2D" uid="uid://dx7llt8l5qcrl" path="res://Assets/Button2.png" id="3_nrv5g"]
 [ext_resource type="Script" path="res://Scripts/screen_button.gd" id="4_um6m7"]
 
-[node name="TitleScreen" type="Control"]
+[node name="MainMenuScreens" type="CanvasLayer"]
+script = ExtResource("1_iblqa")
+
+[node name="TitleScreenMain" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lpx33")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="TitleScreenMain"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_fxlh6")
 
-[node name="Control" type="Control" parent="."]
+[node name="TitleScreen" type="Control" parent="TitleScreenMain"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,7 +35,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TitleBackground" type="TextureRect" parent="Control"]
+[node name="TitleBackground" type="TextureRect" parent="TitleScreenMain/TitleScreen"]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -48,7 +52,7 @@ grow_vertical = 2
 scale = Vector2(1, -1.55029)
 texture = ExtResource("2_fxlh6")
 
-[node name="ButtonContainer" type="VBoxContainer" parent="Control"]
+[node name="ButtonContainer" type="VBoxContainer" parent="TitleScreenMain/TitleScreen"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -62,7 +66,7 @@ offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TitlePlay" type="TextureButton" parent="Control/ButtonContainer" groups=["UIbuttons"]]
+[node name="TitlePlay" type="TextureButton" parent="TitleScreenMain/TitleScreen/ButtonContainer" groups=["UIbuttons"]]
 layout_mode = 2
 size_flags_vertical = 3
 texture_normal = ExtResource("3_nrv5g")
@@ -70,7 +74,7 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_um6m7")
 
-[node name="Button1Label" type="Label" parent="Control/ButtonContainer/TitlePlay"]
+[node name="Button1Label" type="Label" parent="TitleScreenMain/TitleScreen/ButtonContainer/TitlePlay"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -85,7 +89,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "TEST"
 
-[node name="TitleOptions" type="TextureButton" parent="Control/ButtonContainer" groups=["UIbuttons"]]
+[node name="TitleOptions" type="TextureButton" parent="TitleScreenMain/TitleScreen/ButtonContainer" groups=["UIbuttons"]]
 layout_mode = 2
 size_flags_vertical = 3
 texture_normal = ExtResource("3_nrv5g")
@@ -93,7 +97,7 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_um6m7")
 
-[node name="Button1Label" type="Label" parent="Control/ButtonContainer/TitleOptions"]
+[node name="Button1Label" type="Label" parent="TitleScreenMain/TitleScreen/ButtonContainer/TitleOptions"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -108,7 +112,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "TEST"
 
-[node name="TitleExit" type="TextureButton" parent="Control/ButtonContainer" groups=["UIbuttons"]]
+[node name="TitleExit" type="TextureButton" parent="TitleScreenMain/TitleScreen/ButtonContainer" groups=["UIbuttons"]]
 layout_mode = 2
 size_flags_vertical = 3
 texture_normal = ExtResource("3_nrv5g")
@@ -116,7 +120,7 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_um6m7")
 
-[node name="Button1Label" type="Label" parent="Control/ButtonContainer/TitleExit"]
+[node name="Button1Label" type="Label" parent="TitleScreenMain/TitleScreen/ButtonContainer/TitleExit"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -131,12 +135,12 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "TEST"
 
-[connection signal="pressed" from="Control/ButtonContainer/TitlePlay" to="." method="_on_title_play_pressed"]
-[connection signal="pressed" from="Control/ButtonContainer/TitlePlay" to="." method="_on_pressed"]
-[connection signal="pressed" from="Control/ButtonContainer/TitlePlay" to="Control/ButtonContainer/TitlePlay" method="_on_pressed"]
-[connection signal="pressed" from="Control/ButtonContainer/TitleOptions" to="." method="_on_title_play_pressed"]
-[connection signal="pressed" from="Control/ButtonContainer/TitleOptions" to="." method="_on_pressed"]
-[connection signal="pressed" from="Control/ButtonContainer/TitleOptions" to="Control/ButtonContainer/TitleOptions" method="_on_pressed"]
-[connection signal="pressed" from="Control/ButtonContainer/TitleExit" to="." method="_on_title_play_pressed"]
-[connection signal="pressed" from="Control/ButtonContainer/TitleExit" to="." method="_on_pressed"]
-[connection signal="pressed" from="Control/ButtonContainer/TitleExit" to="Control/ButtonContainer/TitleExit" method="_on_pressed"]
+[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitlePlay" to="TitleScreenMain" method="_on_title_play_pressed"]
+[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitlePlay" to="TitleScreenMain" method="_on_pressed"]
+[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitlePlay" to="TitleScreenMain/TitleScreen/ButtonContainer/TitlePlay" method="_on_pressed"]
+[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleOptions" to="TitleScreenMain" method="_on_title_play_pressed"]
+[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleOptions" to="TitleScreenMain" method="_on_pressed"]
+[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleOptions" to="TitleScreenMain/TitleScreen/ButtonContainer/TitleOptions" method="_on_pressed"]
+[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleExit" to="TitleScreenMain" method="_on_title_play_pressed"]
+[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleExit" to="TitleScreenMain" method="_on_pressed"]
+[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleExit" to="TitleScreenMain/TitleScreen/ButtonContainer/TitleExit" method="_on_pressed"]
