@@ -20,14 +20,9 @@ script = ExtResource("5_a6psr")
 
 [node name="ItemSelectScreens" parent="." instance=ExtResource("2_cdtkk")]
 process_mode = 2
+script = null
 
-[node name="Debug" parent="ItemSelectScreens" index="0"]
-visible = false
-
-[node name="ItemButtonUI" parent="ItemSelectScreens" index="1"]
-visible = false
-
-[node name="TitleScreen" parent="ItemSelectScreens" index="2"]
+[node name="ItemButtonUI" parent="ItemSelectScreens" index="0"]
 visible = false
 
 [node name="Player" parent="." instance=ExtResource("1_enl1x")]
