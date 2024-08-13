@@ -135,12 +135,12 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "TEST"
 
-[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitlePlay" to="TitleScreenMain" method="_on_title_play_pressed"]
 [connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitlePlay" to="TitleScreenMain" method="_on_pressed"]
+[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitlePlay" to="TitleScreenMain" method="_on_title_play_pressed"]
 [connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitlePlay" to="TitleScreenMain/TitleScreen/ButtonContainer/TitlePlay" method="_on_pressed"]
-[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleOptions" to="TitleScreenMain" method="_on_title_play_pressed"]
 [connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleOptions" to="TitleScreenMain" method="_on_pressed"]
+[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleOptions" to="TitleScreenMain" method="_on_title_play_pressed"]
 [connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleOptions" to="TitleScreenMain/TitleScreen/ButtonContainer/TitleOptions" method="_on_pressed"]
-[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleExit" to="TitleScreenMain" method="_on_title_play_pressed"]
 [connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleExit" to="TitleScreenMain" method="_on_pressed"]
+[connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleExit" to="TitleScreenMain" method="_on_title_play_pressed"]
 [connection signal="pressed" from="TitleScreenMain/TitleScreen/ButtonContainer/TitleExit" to="TitleScreenMain/TitleScreen/ButtonContainer/TitleExit" method="_on_pressed"]

@@ -7,7 +7,7 @@ extends CanvasLayer
 var current_screen = null
 
 func _ready():
-	console.visible = false
+	#console.visible = false
 	
 	register_buttons()
 	#change_screen(title_screen)

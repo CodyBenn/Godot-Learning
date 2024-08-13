@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cklym0q7inhqo"]
+[gd_scene load_steps=6 format=3 uid="uid://cklym0q7inhqo"]
 
 [ext_resource type="Texture2D" uid="uid://c0eepqosjhaof" path="res://Assets/Orange.png" id="1_66e2t"]
 [ext_resource type="Texture2D" uid="uid://dx7llt8l5qcrl" path="res://Assets/Button2.png" id="2_a0my6"]
 [ext_resource type="Script" path="res://Scripts/item_button.gd" id="2_bkqyn"]
+
+[sub_resource type="Theme" id="Theme_3uw0d"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3cq37"]
 
@@ -18,6 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = SubResource("Theme_3uw0d")
 script = ExtResource("2_bkqyn")
 
 [node name="ItemButtonTexture" type="TextureRect" parent="."]
