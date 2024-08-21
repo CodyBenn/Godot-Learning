@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cih70gxnnbypt"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/garlic.gd" id="1_4ck6j"]
-[ext_resource type="Texture2D" uid="uid://dtmq7wmxmcwqu" path="res://Assets/Items/Garlic.png" id="2_2okfb"]
+[ext_resource type="Texture2D" uid="uid://b07vm2yuvba48" path="res://Assets/Items/Garlic.png" id="2_2okfb"]
 
 [sub_resource type="Animation" id="Animation_fpkhm"]
 resource_name = "GarlicAnim"

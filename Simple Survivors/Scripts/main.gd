@@ -31,11 +31,14 @@ func _ready():
 	new_game()
 
 func _process(_delta):
-	#Player controls to quit and reset game using hotkeys
+	##REMOVE THIS ON FINAL BUILD!!! DEBUG USE ONLY!!!
+	#Player controls for debugging game using hotkeys
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
+	if Input.is_action_just_pressed("level"):
+		player.experience += 100
 
 func new_game():
 	camera = camera_scene.instantiate()
