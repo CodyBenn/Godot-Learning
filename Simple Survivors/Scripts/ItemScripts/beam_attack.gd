@@ -8,7 +8,7 @@ func _on_area_entered(area):
 	enemy = area.get_parent()
 	_enemy_take_damage()
 
-func _enemy_take_damage():  # Optional enemy argument
+func _enemy_take_damage():
 	if enemy != null:
 		var hurtbox = enemy.get_node("Hurtbox")
 		damage = get_parent().damage
