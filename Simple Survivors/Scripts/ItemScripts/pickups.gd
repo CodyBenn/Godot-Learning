@@ -19,8 +19,10 @@ func _on_body_entered(body):
 			await $ExperienceSound.finished
 			queue_free()
 		if self.is_in_group("magnet"):
+			$MagnetSound.play()
 			get_tree().call_group("experience", "magnetize")
 			if get_tree().get_nodes_in_group("experience") == []:
+				await $MagnetSound.finished
 				queue_free()
 
 func _on_area_entered(area):

@@ -101,8 +101,7 @@ polygon = PackedVector2Array(-51.3391, -58.5938, -51.3391, 58.5938, -21.1207, 50
 
 [node name="SwordSlashSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_lfjff")
-volume_db = -5.0
-autoplay = true
+volume_db = -15.0
 
 [connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]
 [connection signal="area_entered" from="SlashArea" to="." method="_on_slash_area_area_entered"]

@@ -48,7 +48,6 @@ func update_ui_bars():
 	%ExperienceBar.max_value = experience_to_level
 	%ExperienceBar.value = experience
 	%ExperienceBar/ExperienceLevel.text = str(level)
-
+	
 	if experience >= experience_to_level:
 		level_up()
-		
