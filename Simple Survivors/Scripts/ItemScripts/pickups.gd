@@ -15,6 +15,8 @@ func _on_body_entered(body):
 	if body.is_in_group("player"):
 		if self.is_in_group("experience"):
 			player.experience += experience_to_give
+			$ExperienceSound.play()
+			await $ExperienceSound.finished
 			queue_free()
 		if self.is_in_group("magnet"):
 			get_tree().call_group("experience", "magnetize")

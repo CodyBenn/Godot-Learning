@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://0cnp4lxeqgha"]
+[gd_scene load_steps=15 format=3 uid="uid://0cnp4lxeqgha"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_1p3yo"]
 [ext_resource type="Texture2D" uid="uid://bebqxign5hrol" path="res://Assets/Bloo.png" id="1_76qul"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b5b3in7mvrblb" path="res://Scenes/game_camera.tscn" id="3_kfc34"]
 [ext_resource type="PackedScene" uid="uid://x80n6yybbiku" path="res://Scenes/hurtbox.tscn" id="4_dw1lb"]
 [ext_resource type="PackedScene" uid="uid://dbch7jp3msncq" path="res://Scenes/hitbox.tscn" id="4_sd6ho"]
+[ext_resource type="AudioStream" uid="uid://crdtal7rc6y5u" path="res://Assets/Sounds/LevelupSound.wav" id="7_25qye"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfm7l"]
 radius = 49.3333
@@ -131,3 +132,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]
+
+[node name="PlayerLevelupSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_25qye")
+volume_db = -20.0

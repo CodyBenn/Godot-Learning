@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bpwgbdu6c8yqp"]
+[gd_scene load_steps=10 format=3 uid="uid://bpwgbdu6c8yqp"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/shield.gd" id="1_lvsuw"]
 [ext_resource type="Texture2D" uid="uid://bpw8bag58occy" path="res://Assets/Items/ShieldAttack.png" id="2_wocwa"]
+[ext_resource type="AudioStream" uid="uid://bb0juhpokxhds" path="res://Assets/Sounds/ShieldAttackSound.wav" id="3_hsa23"]
 
 [sub_resource type="Animation" id="Animation_hk1du"]
 length = 0.001
@@ -1053,6 +1054,10 @@ texture = ExtResource("2_wocwa")
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
+[node name="ShieldSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_hsa23")
+volume_db = -15.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

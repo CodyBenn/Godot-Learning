@@ -53,4 +53,5 @@ func _on_spawn_timer_timeout():
 
 func item_select():
 	get_tree().paused = true
+	player.player_level_up_sound.play()
 	item_select_screen.item_select_screen.visible = true
