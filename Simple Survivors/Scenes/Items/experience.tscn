@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfh2u1vh51mu1"]
+[gd_scene load_steps=5 format=3 uid="uid://dfh2u1vh51mu1"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/pickups.gd" id="1_e50y1"]
 [ext_resource type="Texture2D" uid="uid://meuq7nvi3d20" path="res://Assets/Items/blueGem.png" id="2_vjjl4"]
+[ext_resource type="AudioStream" uid="uid://yjwis82vm353" path="res://Assets/Sounds/ExperienceSound.wav" id="3_q6w43"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vfk0y"]
 radius = 28.0
@@ -19,6 +20,9 @@ shape = SubResource("CapsuleShape2D_vfk0y")
 [node name="ExperienceSprite" type="Sprite2D" parent="."]
 position = Vector2(0, -2)
 texture = ExtResource("2_vjjl4")
+
+[node name="ExperienceSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_q6w43")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

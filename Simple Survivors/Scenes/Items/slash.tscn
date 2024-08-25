@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://7ng4oxkojhgf"]
+[gd_scene load_steps=7 format=3 uid="uid://7ng4oxkojhgf"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/sword_attack.gd" id="1_d3fts"]
 [ext_resource type="Texture2D" uid="uid://bcr02xhrxdyl0" path="res://Assets/Items/Slash.png" id="2_nrugi"]
+[ext_resource type="AudioStream" uid="uid://bl1fatquu0h4p" path="res://Assets/Sounds/SwordAttackSound.wav" id="3_lfjff"]
 
 [sub_resource type="Animation" id="Animation_s4i0j"]
 length = 0.001
@@ -97,6 +98,10 @@ collision_mask = 16
 [node name="SlashCollider" type="CollisionPolygon2D" parent="SlashArea"]
 position = Vector2(-2, 0)
 polygon = PackedVector2Array(-51.3391, -58.5938, -51.3391, 58.5938, -21.1207, 50.8621, 49.1073, 19.5313, 66.9645, 0, 46.8751, -22.7865)
+
+[node name="SwordSlashSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lfjff")
+volume_db = -15.0
 
 [connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]
 [connection signal="area_entered" from="SlashArea" to="." method="_on_slash_area_area_entered"]

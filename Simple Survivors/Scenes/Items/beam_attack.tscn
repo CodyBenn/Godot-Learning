@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d5mfjdtn0wiy"]
+[gd_scene load_steps=8 format=3 uid="uid://d5mfjdtn0wiy"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/beam_attack.gd" id="1_b28jv"]
 [ext_resource type="Texture2D" uid="uid://c1yj6vquelybp" path="res://Assets/Items/BeamAttack.png" id="2_g7ed3"]
+[ext_resource type="AudioStream" uid="uid://bmhdmhxijmkkk" path="res://Assets/Sounds/BeamAttackSound.wav" id="3_mutxa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onstk"]
 size = Vector2(133.334, 20)
@@ -95,6 +96,11 @@ libraries = {
 "": SubResource("AnimationLibrary_mwybo")
 }
 autoplay = "BeamAnim"
+
+[node name="BeamAttackSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mutxa")
+volume_db = -25.0
+autoplay = true
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="LifeTimer" to="." method="_on_life_timer_timeout"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwb2e8s8mj65s"]
+[gd_scene load_steps=5 format=3 uid="uid://dwb2e8s8mj65s"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/pickups.gd" id="1_vjpkm"]
 [ext_resource type="Texture2D" uid="uid://7rdnf4hyikm4" path="res://Assets/Items/Magnet.png" id="2_uhpjn"]
+[ext_resource type="AudioStream" uid="uid://dsbcp6tymy8ow" path="res://Assets/Sounds/MagnetSound.wav" id="3_okh5q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fn606"]
 radius = 65.7764
@@ -20,6 +21,10 @@ shape = SubResource("CircleShape2D_fn606")
 [node name="MagnetSprite" type="Sprite2D" parent="."]
 position = Vector2(0, 11.4286)
 texture = ExtResource("2_uhpjn")
+
+[node name="MagnetSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_okh5q")
+volume_db = -20.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

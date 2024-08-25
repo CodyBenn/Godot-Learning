@@ -10,6 +10,7 @@ var level = 1
 @onready var current_shield:int = max_shield
 var experience:int = 0
 var experience_to_level:int = 100
+@onready var player_level_up_sound = $PlayerLevelupSound
 
 signal player_leveled_up
 var leveled_up = false
@@ -47,7 +48,6 @@ func update_ui_bars():
 	%ExperienceBar.max_value = experience_to_level
 	%ExperienceBar.value = experience
 	%ExperienceBar/ExperienceLevel.text = str(level)
-
+	
 	if experience >= experience_to_level:
 		level_up()
-		

@@ -22,6 +22,7 @@ func _process(delta):
 	move_and_collide(velocity.normalized() * delta * speed)
 	
 func _on_slash_area_area_entered(area:Area2D):
+	$SwordSlashSound.play()
 	enemy = area.get_parent()
 	_enemy_take_damage()
 	slash_health()
