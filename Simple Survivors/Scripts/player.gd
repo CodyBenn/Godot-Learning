@@ -51,3 +51,4 @@ func update_ui_bars():
 	
 	if experience >= experience_to_level:
 		level_up()
+

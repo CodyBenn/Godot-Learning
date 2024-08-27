@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://0cnp4lxeqgha"]
+[gd_scene load_steps=17 format=3 uid="uid://0cnp4lxeqgha"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_1p3yo"]
 [ext_resource type="Texture2D" uid="uid://bebqxign5hrol" path="res://Assets/Bloo.png" id="1_76qul"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://x80n6yybbiku" path="res://Scenes/hurtbox.tscn" id="4_dw1lb"]
 [ext_resource type="PackedScene" uid="uid://dbch7jp3msncq" path="res://Scenes/hitbox.tscn" id="4_sd6ho"]
 [ext_resource type="AudioStream" uid="uid://crdtal7rc6y5u" path="res://Assets/Sounds/LevelupSound.wav" id="7_25qye"]
+[ext_resource type="Script" path="res://Scripts/tutorial.gd" id="7_lgagq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfm7l"]
 radius = 49.3333
@@ -56,6 +57,9 @@ font_size = 32
 font_color = Color(0, 0, 0, 1)
 shadow_size = 4
 shadow_color = Color(0, 0, 0, 0.2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dj1cc"]
+font_size = 100
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.75, 0.75)
@@ -131,6 +135,22 @@ vertical_alignment = 1
 
 [node name="GameCamera" parent="." instance=ExtResource("3_kfc34")]
 
+[node name="Label" type="Label" parent="GameCamera"]
+offset_left = 384.0
+offset_top = -425.333
+offset_right = 786.0
+offset_bottom = -148.333
+text = "WASD 
+to move"
+label_settings = SubResource("LabelSettings_dj1cc")
+script = ExtResource("7_lgagq")
+
+[node name="Timer" type="Timer" parent="GameCamera/Label"]
+wait_time = 5.0
+autostart = true
+
 [node name="PlayerLevelupSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_25qye")
 volume_db = -30.0
+
+[connection signal="timeout" from="GameCamera/Label/Timer" to="GameCamera/Label" method="_on_timer_timeout"]
