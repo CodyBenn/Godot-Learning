@@ -135,4 +135,4 @@ vertical_alignment = 1
 
 [node name="PlayerLevelupSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_25qye")
-volume_db = -20.0
+volume_db = -30.0
