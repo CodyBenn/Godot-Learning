@@ -96,7 +96,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_qe8lr")
 theme_override_styles/fill = SubResource("StyleBoxFlat_7ercv")
-value = 50.0
 show_percentage = false
 
 [node name="ExperienceBar" type="ProgressBar" parent="."]
@@ -112,7 +111,6 @@ grow_horizontal = 2
 theme = SubResource("Theme_sbuys")
 theme_override_styles/background = SubResource("StyleBoxFlat_qe8lr")
 theme_override_styles/fill = SubResource("StyleBoxFlat_8lewh")
-value = 50.0
 show_percentage = false
 
 [node name="ExperienceLevel" type="Label" parent="ExperienceBar"]
@@ -126,7 +124,7 @@ offset_top = 16.0
 offset_right = 9.5
 offset_bottom = 39.0
 grow_horizontal = 2
-text = "99"
+text = "1"
 label_settings = SubResource("LabelSettings_6vr3r")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -135,4 +133,4 @@ vertical_alignment = 1
 
 [node name="PlayerLevelupSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_25qye")
-volume_db = -20.0
+volume_db = -30.0

@@ -24,6 +24,9 @@ func _on_body_entered(body):
 			if get_tree().get_nodes_in_group("experience") == []:
 				await $MagnetSound.finished
 				queue_free()
+		if self.is_in_group("food"):
+			player.current_health += 10
+			queue_free()
 
 func _on_area_entered(area):
 	if area.is_in_group("hitbox") and not move_towards_player:
