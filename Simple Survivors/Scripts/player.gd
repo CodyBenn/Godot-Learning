@@ -29,7 +29,7 @@ func _physics_process(_delta):
 	else:
 		velocity.y = move_toward(velocity.y, 0, movespeed * .1)
 	move_and_slide()
-		
+	
 	update_ui_bars()
 
 func level_up():
