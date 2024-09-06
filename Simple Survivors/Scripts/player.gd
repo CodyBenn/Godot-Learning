@@ -16,7 +16,7 @@ signal player_leveled_up
 var leveled_up = false
 
 func _physics_process(_delta):
-	#Movement controls
+	#Player Movement Controls
 	var axis_x = Input.get_axis("left", "right")
 	var axis_y = Input.get_axis("up", "down")
 	
