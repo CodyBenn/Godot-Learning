@@ -417,43 +417,43 @@ var items_in_dictionary = {
 		#"prerequisite": [],
 		#"type": "upgrade",
 	#},
-	"shoes1": {
-		"icon": item_path + "Boot.png",
-		"displayname": "Boot",
-		#"scene": preload("res://Scenes/garlic.tscn"),
-		"details": "Just a single boot, time to hobble your way to victory.
-		Increase movement speed",
-		"level": "Level: 1",
-		"prerequisite": [],
-		"type": "upgrade"
-	},
-	"shoes2": {
-		"icon": item_path + "Boot.png",
-		"displayname": "Boot",
-		#"scene": preload("res://Scenes/garlic.tscn"),
-		"details": "Increase movement speed",
-		"level": "Level: 2",
-		"prerequisite": ["shoes1"],
-		"type": "upgrade"
-	},
-	"shoes3": {
-		"icon": item_path + "Boot.png",
-		"displayname": "Boot",
-		#"scene": preload("res://Scenes/garlic.tscn"),
-		"details": "Increase movement speed",
-		"level": "Level: 3",
-		"prerequisite": ["shoes2"],
-		"type": "upgrade"
-	},
-	"shoes4": {
-		"icon": item_path + "Boot.png",
-		"displayname": "Boot",
-		#"scene": preload("res://Scenes/garlic.tscn"),
-		"details": "Increase movement speed",
-		"level": "Level: 4",
-		"prerequisite": ["shoes3"],
-		"type": "upgrade"
-	},
+	#"shoes1": {
+		#"icon": item_path + "Boot.png",
+		#"displayname": "Boot",
+		##"scene": preload("res://Scenes/garlic.tscn"),
+		#"details": "Just a single boot, time to hobble your way to victory.
+		#Increase movement speed",
+		#"level": "Level: 1",
+		#"prerequisite": [],
+		#"type": "upgrade"
+	#},
+	#"shoes2": {
+		#"icon": item_path + "Boot.png",
+		#"displayname": "Boot",
+		##"scene": preload("res://Scenes/garlic.tscn"),
+		#"details": "Increase movement speed",
+		#"level": "Level: 2",
+		#"prerequisite": ["shoes1"],
+		#"type": "upgrade"
+	#},
+	#"shoes3": {
+		#"icon": item_path + "Boot.png",
+		#"displayname": "Boot",
+		##"scene": preload("res://Scenes/garlic.tscn"),
+		#"details": "Increase movement speed",
+		#"level": "Level: 3",
+		#"prerequisite": ["shoes2"],
+		#"type": "upgrade"
+	#},
+	#"shoes4": {
+		#"icon": item_path + "Boot.png",
+		#"displayname": "Boot",
+		##"scene": preload("res://Scenes/garlic.tscn"),
+		#"details": "Increase movement speed",
+		#"level": "Level: 4",
+		#"prerequisite": ["shoes3"],
+		#"type": "upgrade"
+	#},
 	"food": {
 		"icon": item_path + "Food.png",
 		"displayname": "Food",

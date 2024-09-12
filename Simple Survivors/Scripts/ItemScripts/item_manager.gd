@@ -236,8 +236,8 @@ func upgrade_character(upgrade):
 			#chain_lightning = chain_lightning_scene.instantiate()
 			#add_child(chain_lightning)
 			#chain_lightning.upgrade(1)
-		"shoes1", "shoes2", "shoes3", "shoes4":
-			player.movespeed += 25
+		#"shoes1", "shoes2", "shoes3", "shoes4":
+			#player.movespeed += 25
 		"food":
 			player.current_health += 20
 			player.current_health = clamp(player.current_health, 0, player.max_health)
