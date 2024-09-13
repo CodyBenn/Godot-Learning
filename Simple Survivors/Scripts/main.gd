@@ -36,8 +36,9 @@ func _process(_delta):
 		get_tree().quit()
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
-	if Input.is_action_just_pressed("level"):
-		player.experience += 100
+	#Used to debug by giving player a levelup selection
+	#if Input.is_action_just_pressed("level"):
+		#player.experience += 100
 
 func new_game():
 	camera = camera_scene.instantiate()
