@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cih70gxnnbypt"]
+[gd_scene load_steps=8 format=3 uid="uid://cih70gxnnbypt"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/garlic.gd" id="1_4ck6j"]
 [ext_resource type="Texture2D" uid="uid://b07vm2yuvba48" path="res://Assets/Items/Garlic.png" id="2_2okfb"]
+[ext_resource type="AudioStream" uid="uid://v12o32c5tx5t" path="res://Assets/Sounds/MagicMissle2.wav" id="3_an2jk"]
 
 [sub_resource type="Animation" id="Animation_fpkhm"]
 resource_name = "GarlicAnim"
@@ -63,5 +64,10 @@ shape = SubResource("CircleShape2D_egws7")
 [node name="GarlicSprite" type="Sprite2D" parent="GarlicCollider"]
 scale = Vector2(0.85, 0.85)
 texture = ExtResource("2_2okfb")
+
+[node name="GarlicSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_an2jk")
+volume_db = -20.0
+pitch_scale = 0.8
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -37,6 +37,7 @@ func attack():
 		var hurtbox = target.get_node("Hurtbox")
 		enemy = target
 		enemy.current_health -= damage
+		$MagicMissleSound.play()
 		if enemy.current_health <= 0:
 			if hurtbox.has_method("die"):
 				hurtbox.die()

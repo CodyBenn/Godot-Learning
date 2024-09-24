@@ -22,7 +22,6 @@ func _process(delta):
 	move_and_collide(velocity.normalized() * delta * speed)
 	
 func _on_slash_area_area_entered(area:Area2D):
-	$SwordSlashSound.play()
 	enemy = area.get_parent()
 	_enemy_take_damage()
 	slash_health()
@@ -32,6 +31,7 @@ func _enemy_take_damage():  # Optional enemy argument
 		var hurtbox = enemy.get_node("Hurtbox")
 		damage = get_parent().damage
 		enemy.current_health -= damage
+		$SwordSlashSound.play()
 		
 		# Handle enemy death if health is depleted
 		if enemy.current_health <= 0:
