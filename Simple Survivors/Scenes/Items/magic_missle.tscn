@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dfh8sgylvefj2"]
+[gd_scene load_steps=7 format=3 uid="uid://dfh8sgylvefj2"]
 
 [ext_resource type="Script" path="res://Scripts/ItemScripts/magic_missle.gd" id="1_elwhm"]
 [ext_resource type="Texture2D" uid="uid://doaikw45s6dsd" path="res://Assets/Items/MagicMissleAttack.png" id="2_rnh6d"]
+[ext_resource type="AudioStream" uid="uid://v12o32c5tx5t" path="res://Assets/Sounds/MagicMissle2.wav" id="3_sxd14"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1g3ir"]
 
@@ -45,5 +46,9 @@ shape = SubResource("CircleShape2D_egws7")
 [node name="AttackTimer" type="Timer" parent="."]
 wait_time = 0.1
 autostart = true
+
+[node name="MagicMissleSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_sxd14")
+volume_db = -15.0
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

@@ -23,6 +23,7 @@ func _physics_process(delta):
 			enemy = area.get_parent()
 			if enemy in enemies:
 				enemy.current_health -= damage * delta * 0.1
+				$GarlicSound.play()
 				#print(enemy.current_health, " Enemy Health")
 				if enemy.current_health <= 0:
 					if hurtbox.has_method("die"):

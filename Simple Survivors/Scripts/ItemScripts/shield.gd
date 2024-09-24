@@ -45,8 +45,8 @@ func attack():
 		shield_anim.play("ShieldAnim_4")
 
 func _on_area_entered(area):
-	enemy = area.get_parent()
 	$ShieldSound.play()
+	enemy = area.get_parent()
 	if enemy not in enemies:
 		enemies[enemy] = enemy_hurtbox
 
