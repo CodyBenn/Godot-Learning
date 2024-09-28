@@ -1,3 +1,92 @@
-[gd_scene format=3 uid="uid://dijntokbq6aqm"]
+[gd_scene load_steps=7 format=3 uid="uid://dijntokbq6aqm"]
+
+[ext_resource type="Texture2D" uid="uid://0a5ngb6qtxf7" path="res://Assets/Arts/Pinball Layout.png" id="1_0bjx5"]
+[ext_resource type="Texture2D" uid="uid://7uan6623qlnf" path="res://Assets/Arts/Pinball Ball Launcher.png" id="2_hbq67"]
+[ext_resource type="Texture2D" uid="uid://bx53etw08d08y" path="res://Assets/Arts/Pinball Ball.png" id="3_8dpei"]
+[ext_resource type="Texture2D" uid="uid://dti5nn0egxedd" path="res://Assets/Arts/Pinball Bracket.png" id="4_6p4tc"]
+[ext_resource type="Texture2D" uid="uid://f335xtxrm014" path="res://Assets/Arts/Pinball Plunger.png" id="5_26hr4"]
+[ext_resource type="Texture2D" uid="uid://caepxkdxg74gk" path="res://Assets/Arts/Pinball Bumper.png" id="6_f85bn"]
 
 [node name="Main" type="Node2D"]
+
+[node name="PinballLayout" type="Sprite2D" parent="."]
+visible = false
+z_index = -100
+position = Vector2(540, 360)
+scale = Vector2(1, 0.666667)
+texture = ExtResource("1_0bjx5")
+
+[node name="PinballBallLauncher" type="Sprite2D" parent="."]
+position = Vector2(1035, 688)
+texture = ExtResource("2_hbq67")
+
+[node name="PinballBall" type="Sprite2D" parent="."]
+position = Vector2(1034, 654)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_8dpei")
+
+[node name="PinballBracket" type="Sprite2D" parent="."]
+position = Vector2(786, 560)
+rotation = -0.349066
+scale = Vector2(4.8, 0.75)
+texture = ExtResource("4_6p4tc")
+
+[node name="PinballBracket2" type="Sprite2D" parent="."]
+position = Vector2(245, 560)
+rotation = 0.349066
+scale = Vector2(4.8, 0.75)
+texture = ExtResource("4_6p4tc")
+
+[node name="PinballPlunger2" type="Sprite2D" parent="."]
+position = Vector2(784, 730)
+scale = Vector2(8, 6)
+texture = ExtResource("5_26hr4")
+
+[node name="PinballPlunger3" type="Sprite2D" parent="."]
+position = Vector2(266, 730)
+scale = Vector2(-8, 6)
+texture = ExtResource("5_26hr4")
+
+[node name="PinballPlunger" type="Sprite2D" parent="."]
+position = Vector2(602, 623)
+rotation = -0.261799
+scale = Vector2(2.2, 0.5)
+texture = ExtResource("5_26hr4")
+
+[node name="PinballPlunger4" type="Sprite2D" parent="."]
+position = Vector2(431, 623)
+rotation = 0.261799
+scale = Vector2(-2.2, 0.5)
+texture = ExtResource("5_26hr4")
+
+[node name="PinballPlunger5" type="Sprite2D" parent="."]
+position = Vector2(755, 470)
+rotation = -0.436332
+scale = Vector2(3.5, 1.5)
+texture = ExtResource("5_26hr4")
+
+[node name="PinballPlunger6" type="Sprite2D" parent="."]
+position = Vector2(272, 470)
+rotation = 0.436332
+scale = Vector2(-3.5, 1.5)
+texture = ExtResource("5_26hr4")
+
+[node name="PinballBumper" type="Sprite2D" parent="."]
+position = Vector2(383, 365)
+texture = ExtResource("6_f85bn")
+
+[node name="PinballBumper2" type="Sprite2D" parent="."]
+position = Vector2(705, 302)
+texture = ExtResource("6_f85bn")
+
+[node name="PinballBumper3" type="Sprite2D" parent="."]
+position = Vector2(466, 135)
+texture = ExtResource("6_f85bn")
+
+[node name="PinballBumper4" type="Sprite2D" parent="."]
+position = Vector2(80, 423)
+texture = ExtResource("6_f85bn")
+
+[node name="PinballBumper5" type="Sprite2D" parent="."]
+position = Vector2(877, 214)
+texture = ExtResource("6_f85bn")
