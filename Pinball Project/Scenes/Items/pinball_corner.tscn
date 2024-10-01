@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnao5xr15qgmx"]
+
+[ext_resource type="Texture2D" uid="uid://fprok861gli0" path="res://Assets/Arts/Pinball Border Edge.png" id="1_ihcgu"]
+
+[node name="BorderEdge" type="Node2D"]
+
+[node name="BorderCornerSprite" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("1_ihcgu")
+
+[node name="BorderCornerBody" type="StaticBody2D" parent="."]
+position = Vector2(64, 64)
+
+[node name="BodyCornerCollider" type="CollisionPolygon2D" parent="BorderCornerBody"]
+polygon = PackedVector2Array(-64, -64, 64, -64, 64, -58, -4, -58, -17, -58, -26, -57, -33, -55, -41, -52, -45, -50, -50, -46, -54, -39, -57, -29, -59, -18, -60, -6, -61, 11, -62, 32, -63, 47, -64, 66)
