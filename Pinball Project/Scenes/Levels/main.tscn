@@ -1,130 +1,103 @@
-[gd_scene load_steps=9 format=3 uid="uid://dijntokbq6aqm"]
+[gd_scene load_steps=8 format=3 uid="uid://dijntokbq6aqm"]
 
-[ext_resource type="Texture2D" uid="uid://0a5ngb6qtxf7" path="res://Assets/Arts/Pinball Layout.png" id="1_0bjx5"]
-[ext_resource type="Texture2D" uid="uid://7uan6623qlnf" path="res://Assets/Arts/Pinball Ball Launcher.png" id="2_hbq67"]
-[ext_resource type="Texture2D" uid="uid://bx53etw08d08y" path="res://Assets/Arts/Pinball Ball.png" id="3_8dpei"]
-[ext_resource type="Texture2D" uid="uid://dti5nn0egxedd" path="res://Assets/Arts/Pinball Bracket.png" id="4_6p4tc"]
-[ext_resource type="Texture2D" uid="uid://f335xtxrm014" path="res://Assets/Arts/Pinball Plunger.png" id="5_26hr4"]
-[ext_resource type="Texture2D" uid="uid://caepxkdxg74gk" path="res://Assets/Arts/Pinball Bumper.png" id="6_f85bn"]
-[ext_resource type="Texture2D" uid="uid://dxx07w04xjfna" path="res://Assets/Arts/Pinball Border.png" id="7_a2xfd"]
-[ext_resource type="Texture2D" uid="uid://fprok861gli0" path="res://Assets/Arts/Pinball Border Edge.png" id="8_amggv"]
+[ext_resource type="PackedScene" uid="uid://gct8s3n0dbaw" path="res://Scenes/Items/pinball_ball.tscn" id="1_wcp4x"]
+[ext_resource type="PackedScene" uid="uid://bm5dbn8vymu7e" path="res://Scenes/Items/pinball_launcher.tscn" id="2_w4boy"]
+[ext_resource type="PackedScene" uid="uid://digxfnqmp4qmx" path="res://Scenes/Items/pinball_border.tscn" id="3_fnq7v"]
+[ext_resource type="PackedScene" uid="uid://dnao5xr15qgmx" path="res://Scenes/Items/pinball_corner.tscn" id="4_5o1ys"]
+[ext_resource type="PackedScene" uid="uid://b4wsxowm0nj04" path="res://Scenes/Items/pinball_bumper.tscn" id="5_7oenk"]
+[ext_resource type="PackedScene" uid="uid://d247h3jcv878o" path="res://Scenes/Items/pinball_plunger.tscn" id="6_k7qr5"]
+[ext_resource type="PackedScene" uid="uid://djf6kdw0s6kjv" path="res://Scenes/Items/pinball_bracket.tscn" id="7_rg835"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Organizer Node" type="Node2D" parent="."]
+[node name="Pinball" parent="." instance=ExtResource("1_wcp4x")]
+top_level = true
+position = Vector2(1021, 616)
 
-[node name="PinballLayout" type="Sprite2D" parent="Organizer Node"]
-visible = false
-z_index = -100
-position = Vector2(540, 360)
-scale = Vector2(1, 0.666667)
-texture = ExtResource("1_0bjx5")
+[node name="Launcher" parent="." instance=ExtResource("2_w4boy")]
+position = Vector2(1021, 668)
 
-[node name="PinballBallLauncher" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(1039, 688)
-scale = Vector2(0.75, 1)
-texture = ExtResource("2_hbq67")
+[node name="Border" parent="." instance=ExtResource("3_fnq7v")]
+position = Vector2(1087, 362)
+scale = Vector2(0.1, 5.75)
 
-[node name="PinballBall" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(1039, 651)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("3_8dpei")
+[node name="Border5" parent="." instance=ExtResource("3_fnq7v")]
+position = Vector2(-7, 362)
+scale = Vector2(0.1, 5.75)
 
-[node name="PinballBracket2" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(234.545, 568)
-rotation = 0.349066
-scale = Vector2(4.8, 0.75)
-texture = ExtResource("4_6p4tc")
+[node name="Border6" parent="." instance=ExtResource("3_fnq7v")]
+position = Vector2(543, -7)
+rotation = 1.5708
+scale = Vector2(0.1, 8.6)
 
-[node name="PinballBracket3" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(810, 568)
-rotation = -0.349066
-scale = Vector2(4.8, 0.75)
-texture = ExtResource("4_6p4tc")
+[node name="Border2" parent="." instance=ExtResource("3_fnq7v")]
+top_level = true
+position = Vector2(981, 656)
+scale = Vector2(0.3, 1)
 
-[node name="PinballPlunger2" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(798, 730)
-scale = Vector2(8, 6)
-texture = ExtResource("5_26hr4")
+[node name="Border4" parent="." instance=ExtResource("3_fnq7v")]
+top_level = true
+position = Vector2(1021, 702)
+rotation = 1.5708
+scale = Vector2(0.3, 0.92)
 
-[node name="PinballPlunger3" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(234, 730)
-rotation = 3.14159
-scale = Vector2(8.5, -6)
-texture = ExtResource("5_26hr4")
+[node name="Border3" parent="." instance=ExtResource("3_fnq7v")]
+position = Vector2(1061, 656)
+scale = Vector2(0.3, 1)
 
-[node name="PinballPlunger4" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(430, 635)
-rotation = 0.261799
-scale = Vector2(-2.5, 0.5)
-texture = ExtResource("5_26hr4")
-
-[node name="PinballPlunger7" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(616, 635)
-rotation = -0.261799
-scale = Vector2(2.5, 0.5)
-texture = ExtResource("5_26hr4")
-
-[node name="PinballPlunger5" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(845, 459)
-rotation = -0.436332
-scale = Vector2(3.5, 1.5)
-texture = ExtResource("5_26hr4")
-
-[node name="PinballPlunger6" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(224, 459)
-rotation = -2.70526
-scale = Vector2(3.5, -1.5)
-texture = ExtResource("5_26hr4")
-
-[node name="PinballBumper" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(402, 378)
-texture = ExtResource("6_f85bn")
-
-[node name="PinballBumper2" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(684, 438)
-texture = ExtResource("6_f85bn")
-
-[node name="PinballBumper3" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(584, 153)
-texture = ExtResource("6_f85bn")
-
-[node name="PinballBumper4" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(54, 436)
-texture = ExtResource("6_f85bn")
-
-[node name="PinballBumper5" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(877, 214)
-texture = ExtResource("6_f85bn")
-
-[node name="PinballBorder3" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(1069.63, 437)
-scale = Vector2(0.166016, 4.42187)
-texture = ExtResource("7_a2xfd")
-
-[node name="PinballBorder5" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(1008, 589.5)
-scale = Vector2(0.166016, 2.03906)
-texture = ExtResource("7_a2xfd")
-
-[node name="PinballBorder4" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(10, 437)
-scale = Vector2(0.166016, 4.42187)
-texture = ExtResource("7_a2xfd")
-
-[node name="PinballBorderEdge" type="Sprite2D" parent="Organizer Node"]
-z_index = -1
-position = Vector2(272, 192)
+[node name="BorderEdge" parent="." instance=ExtResource("4_5o1ys")]
 scale = Vector2(4.25, 3)
-texture = ExtResource("8_amggv")
 
-[node name="PinballBorderEdge2" type="Sprite2D" parent="Organizer Node"]
-z_index = -1
-position = Vector2(808, 192)
-rotation = 3.14159
-scale = Vector2(4.25, -3)
-texture = ExtResource("8_amggv")
+[node name="BorderEdge2" parent="." instance=ExtResource("4_5o1ys")]
+position = Vector2(1080, 0)
+scale = Vector2(-4.25, 3)
 
-[node name="PinballBumper6" type="Sprite2D" parent="Organizer Node"]
-position = Vector2(168, 228)
-texture = ExtResource("6_f85bn")
+[node name="Bumper" parent="." instance=ExtResource("5_7oenk")]
+position = Vector2(199, 169)
+
+[node name="Bumper2" parent="." instance=ExtResource("5_7oenk")]
+position = Vector2(341, 353)
+
+[node name="Bumper3" parent="." instance=ExtResource("5_7oenk")]
+position = Vector2(79, 406)
+
+[node name="Bumper4" parent="." instance=ExtResource("5_7oenk")]
+position = Vector2(478, 216)
+
+[node name="Bumper5" parent="." instance=ExtResource("5_7oenk")]
+position = Vector2(880, 302)
+
+[node name="Bumper6" parent="." instance=ExtResource("5_7oenk")]
+position = Vector2(778, 141)
+
+[node name="Bumper7" parent="." instance=ExtResource("5_7oenk")]
+position = Vector2(663, 286)
+
+[node name="Plunger" parent="." instance=ExtResource("6_k7qr5")]
+position = Vector2(774, 733)
+scale = Vector2(7.5, 6)
+
+[node name="Plunger2" parent="." instance=ExtResource("6_k7qr5")]
+position = Vector2(187, 733)
+scale = Vector2(-7.5, 6)
+
+[node name="Plunger3" parent="." instance=ExtResource("6_k7qr5")]
+top_level = true
+position = Vector2(555, 635)
+rotation = -0.436332
+
+[node name="Plunger4" parent="." instance=ExtResource("6_k7qr5")]
+top_level = true
+position = Vector2(397, 635)
+rotation = 0.436332
+scale = Vector2(-2, 0.5)
+
+[node name="Bracket" parent="." instance=ExtResource("7_rg835")]
+position = Vector2(218, 563)
+rotation = 0.349066
+scale = Vector2(5, 0.5)
+
+[node name="Bracket2" parent="." instance=ExtResource("7_rg835")]
+position = Vector2(734, 562)
+rotation = -0.349066
+scale = Vector2(5, 0.5)

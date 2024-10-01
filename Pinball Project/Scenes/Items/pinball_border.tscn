@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://digxfnqmp4qmx"]
+
+[ext_resource type="Texture2D" uid="uid://dxx07w04xjfna" path="res://Assets/Arts/Pinball Border.png" id="1_smv26"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twpvw"]
+size = Vector2(128, 128)
+
+[node name="Border" type="Node2D"]
+
+[node name="BorderSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_smv26")
+
+[node name="BorderBody" type="StaticBody2D" parent="."]
+
+[node name="BorderCollider" type="CollisionShape2D" parent="BorderBody"]
+shape = SubResource("RectangleShape2D_twpvw")

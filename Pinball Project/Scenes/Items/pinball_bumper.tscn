@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4wsxowm0nj04"]
+
+[ext_resource type="Texture2D" uid="uid://caepxkdxg74gk" path="res://Assets/Arts/Pinball Bumper.png" id="1_3phox"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_llwqk"]
+radius = 32.0156
+
+[node name="Bumper" type="Node2D"]
+
+[node name="BumperSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_3phox")
+
+[node name="BumperBody" type="StaticBody2D" parent="."]
+
+[node name="BumperCollider" type="CollisionShape2D" parent="BumperBody"]
+shape = SubResource("CircleShape2D_llwqk")

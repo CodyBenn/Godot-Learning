@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm5dbn8vymu7e"]
+
+[ext_resource type="Texture2D" uid="uid://7uan6623qlnf" path="res://Assets/Arts/Pinball Ball Launcher.png" id="1_07v4k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4u2m"]
+size = Vector2(52, 9)
+
+[node name="Launcher" type="Node2D"]
+scale = Vector2(0.75, 1)
+
+[node name="LauncherSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_07v4k")
+
+[node name="LauncherBody" type="AnimatableBody2D" parent="."]
+
+[node name="LauncherCollider" type="CollisionShape2D" parent="LauncherBody"]
+position = Vector2(0, -13.5)
+shape = SubResource("RectangleShape2D_r4u2m")

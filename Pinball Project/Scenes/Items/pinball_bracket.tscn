@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://djf6kdw0s6kjv"]
+
+[ext_resource type="Texture2D" uid="uid://dti5nn0egxedd" path="res://Assets/Arts/Pinball Bracket.png" id="1_ia6h4"]
+
+[node name="Bracket" type="Node2D"]
+
+[node name="BracketSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_ia6h4")
+
+[node name="BracketBody" type="StaticBody2D" parent="."]
+
+[node name="BrocketCollider" type="CollisionPolygon2D" parent="BracketBody"]
+polygon = PackedVector2Array(-29, -15, -23, -21, 23, -21, 29, -15, 29, 15, 23, 21, -23, 21, -29, 15)
