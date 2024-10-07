@@ -1,10 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://d247h3jcv878o"]
+[gd_scene load_steps=3 format=3 uid="uid://d247h3jcv878o"]
 
 [ext_resource type="Texture2D" uid="uid://f335xtxrm014" path="res://Assets/Arts/Pinball Plunger.png" id="1_mkttw"]
+[ext_resource type="Script" path="res://Scripts/Items/pinball_plunger.gd" id="1_q80ft"]
 
 [node name="Plunger" type="Node2D"]
 rotation = 0.261799
 scale = Vector2(-2, 0.5)
+script = ExtResource("1_q80ft")
 
 [node name="PlungerSprite" type="Sprite2D" parent="."]
 position = Vector2(-27, 4)
