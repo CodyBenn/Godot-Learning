@@ -22,6 +22,7 @@ position = Vector2(1087, 362)
 scale = Vector2(0.1, 5.75)
 
 [node name="Border5" parent="." instance=ExtResource("3_fnq7v")]
+top_level = true
 position = Vector2(-7, 362)
 scale = Vector2(0.1, 5.75)
 
@@ -74,30 +75,29 @@ position = Vector2(778, 141)
 position = Vector2(663, 286)
 
 [node name="Plunger" parent="." instance=ExtResource("6_k7qr5")]
-position = Vector2(774, 733)
+position = Vector2(977, 733)
+rotation = 0.0
 scale = Vector2(7.5, 6)
 
 [node name="Plunger2" parent="." instance=ExtResource("6_k7qr5")]
-position = Vector2(187, 733)
+position = Vector2(-16, 733)
+rotation = 0.0
 scale = Vector2(-7.5, 6)
 
-[node name="Plunger3" parent="." instance=ExtResource("6_k7qr5")]
-top_level = true
-position = Vector2(555, 635)
-rotation = -0.436332
-
-[node name="Plunger4" parent="." instance=ExtResource("6_k7qr5")]
-top_level = true
-position = Vector2(397, 635)
-rotation = 0.436332
-scale = Vector2(-2, 0.5)
-
 [node name="Bracket" parent="." instance=ExtResource("7_rg835")]
-position = Vector2(218, 563)
+position = Vector2(212, 563)
 rotation = 0.349066
 scale = Vector2(5, 0.5)
 
 [node name="Bracket2" parent="." instance=ExtResource("7_rg835")]
-position = Vector2(734, 562)
+position = Vector2(740, 562)
 rotation = -0.349066
 scale = Vector2(5, 0.5)
+
+[node name="Plunger3" parent="." instance=ExtResource("6_k7qr5")]
+position = Vector2(341, 612)
+
+[node name="Plunger4" parent="." instance=ExtResource("6_k7qr5")]
+position = Vector2(610, 612)
+rotation = -0.261799
+scale = Vector2(2, 0.5)
