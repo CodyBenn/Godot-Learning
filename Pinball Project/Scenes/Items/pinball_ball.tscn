@@ -1,17 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://gct8s3n0dbaw"]
+[gd_scene load_steps=4 format=3 uid="uid://gct8s3n0dbaw"]
 
 [ext_resource type="Texture2D" uid="uid://bx53etw08d08y" path="res://Assets/Arts/Pinball Ball.png" id="1_yx25b"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_apqaj"]
+bounce = 0.3
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0wko5"]
 radius = 31.0
 
-[node name="Pinball" type="Node2D"]
-scale = Vector2(0.6, 0.6)
-
-[node name="PinballSprite" type="Sprite2D" parent="."]
+[node name="MeshInstance2D" type="MeshInstance2D"]
 texture = ExtResource("1_yx25b")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="Pinball_Body" type="RigidBody2D" parent="."]
+mass = 2.0
+physics_material_override = SubResource("PhysicsMaterial_apqaj")
 
-[node name="PinballCollider" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="Pinball_Sprite" type="Sprite2D" parent="Pinball_Body"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_yx25b")
+
+[node name="Pinball_Collider" type="CollisionShape2D" parent="Pinball_Body"]
+scale = Vector2(0.6, 0.6)
 shape = SubResource("CircleShape2D_0wko5")

@@ -14,3 +14,4 @@ texture = ExtResource("1_3phox")
 
 [node name="BumperCollider" type="CollisionShape2D" parent="BumperBody"]
 shape = SubResource("CircleShape2D_llwqk")
+debug_color = Color(0.902622, 0.29838, 0.206029, 0.42)

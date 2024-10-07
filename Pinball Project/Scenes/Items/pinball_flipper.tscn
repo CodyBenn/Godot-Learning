@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d247h3jcv878o"]
+
+[ext_resource type="Texture2D" uid="uid://f335xtxrm014" path="res://Assets/Arts/Pinball Plunger.png" id="1_mkttw"]
+[ext_resource type="Script" path="res://Scripts/Items/pinball_plunger.gd" id="1_q80ft"]
+
+[node name="Plunger" type="Node2D"]
+rotation = 0.261799
+scale = Vector2(-2, 0.5)
+script = ExtResource("1_q80ft")
+
+[node name="PlungerSprite" type="Sprite2D" parent="."]
+position = Vector2(-27, 4)
+texture = ExtResource("1_mkttw")
+
+[node name="PlungerBody" type="CharacterBody2D" parent="."]
+position = Vector2(-27, 4)
+
+[node name="PlungerCollider" type="CollisionPolygon2D" parent="PlungerBody"]
+polygon = PackedVector2Array(-29, -5, -29, 18, -25, 22, -21, 24, 11, 24, 18, 21, 23, 18, 27, 12, 26.9108, -23.6945, 23.1048, -23.2157)
