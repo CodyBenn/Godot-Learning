@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dijntokbq6aqm"]
+[gd_scene load_steps=10 format=3 uid="uid://dijntokbq6aqm"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/main.gd" id="1_f7ikd"]
 [ext_resource type="PackedScene" uid="uid://gct8s3n0dbaw" path="res://Scenes/Items/pinball_ball.tscn" id="1_wcp4x"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b4wsxowm0nj04" path="res://Scenes/Items/pinball_bumper.tscn" id="5_7oenk"]
 [ext_resource type="PackedScene" uid="uid://d247h3jcv878o" path="res://Scenes/Items/pinball_flipper.tscn" id="6_k7qr5"]
 [ext_resource type="PackedScene" uid="uid://djf6kdw0s6kjv" path="res://Scenes/Items/pinball_bracket.tscn" id="7_rg835"]
+[ext_resource type="PackedScene" uid="uid://cjegbg41eemq0" path="res://Scenes/Items/pinball_guard.tscn" id="9_g650t"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_f7ikd")
@@ -72,20 +73,8 @@ position = Vector2(778, 141)
 [node name="Bumper7" parent="." instance=ExtResource("5_7oenk")]
 position = Vector2(663, 286)
 
-[node name="Left_Guard" parent="." instance=ExtResource("6_k7qr5")]
-position = Vector2(-16, 711)
-rotation = 3.14159
-scale = Vector2(7.5, -6)
-script = null
-
-[node name="Right_Guard" parent="." instance=ExtResource("6_k7qr5")]
-position = Vector2(977, 711)
-rotation = 0.0
-scale = Vector2(7.5, 6)
-script = null
-
 [node name="Left_Bracket" parent="." instance=ExtResource("7_rg835")]
-position = Vector2(212, 583)
+position = Vector2(217, 583)
 rotation = 0.349066
 scale = Vector2(5, 0.5)
 
@@ -95,7 +84,7 @@ rotation = -0.349066
 scale = Vector2(5, 0.5)
 
 [node name="Flipper_Left" parent="." groups=["Left_Plunger"] instance=ExtResource("6_k7qr5")]
-position = Vector2(341, 632)
+position = Vector2(346, 632)
 
 [node name="Flipper_Right" parent="." groups=["Right_Plunger"] instance=ExtResource("6_k7qr5")]
 position = Vector2(610, 632)
@@ -107,3 +96,11 @@ position = Vector2(1021, 600)
 
 [node name="MeshInstance2D2" parent="." instance=ExtResource("1_wcp4x")]
 position = Vector2(479, 48)
+
+[node name="Right_Guard" parent="." instance=ExtResource("9_g650t")]
+position = Vector2(761, 736)
+scale = Vector2(8, 6)
+
+[node name="Right_Guard2" parent="." instance=ExtResource("9_g650t")]
+position = Vector2(201, 736)
+scale = Vector2(-8, 6)
