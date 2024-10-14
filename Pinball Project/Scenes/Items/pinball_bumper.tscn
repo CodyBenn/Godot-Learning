@@ -1,17 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4wsxowm0nj04"]
+[gd_scene load_steps=4 format=3 uid="uid://b4wsxowm0nj04"]
 
 [ext_resource type="Texture2D" uid="uid://caepxkdxg74gk" path="res://Assets/Arts/Pinball Bumper.png" id="1_3phox"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wgviv"]
+bounce = 5.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_llwqk"]
 radius = 32.0156
 
-[node name="Bumper" type="Node2D"]
+[node name="Bumper" type="MeshInstance2D"]
 
-[node name="BumperSprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_3phox")
-
-[node name="BumperBody" type="StaticBody2D" parent="."]
+[node name="BumperBody" type="RigidBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_wgviv")
+freeze = true
 
 [node name="BumperCollider" type="CollisionShape2D" parent="BumperBody"]
 shape = SubResource("CircleShape2D_llwqk")
 debug_color = Color(0.902622, 0.29838, 0.206029, 0.42)
+
+[node name="BumperSprite" type="Sprite2D" parent="BumperBody"]
+texture = ExtResource("1_3phox")

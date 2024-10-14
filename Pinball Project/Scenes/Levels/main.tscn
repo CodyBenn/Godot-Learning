@@ -74,20 +74,20 @@ position = Vector2(778, 141)
 position = Vector2(663, 286)
 
 [node name="Left_Bracket" parent="." instance=ExtResource("7_rg835")]
-position = Vector2(217, 583)
+position = Vector2(217, 577)
 rotation = 0.349066
 scale = Vector2(5, 0.5)
 
 [node name="Right Bracket" parent="." instance=ExtResource("7_rg835")]
-position = Vector2(740, 582)
+position = Vector2(740, 576)
 rotation = -0.349066
 scale = Vector2(5, 0.5)
 
 [node name="Flipper_Left" parent="." groups=["Left_Plunger"] instance=ExtResource("6_k7qr5")]
-position = Vector2(346, 632)
+position = Vector2(346, 626)
 
 [node name="Flipper_Right" parent="." groups=["Right_Plunger"] instance=ExtResource("6_k7qr5")]
-position = Vector2(610, 632)
+position = Vector2(610, 626)
 rotation = -0.261799
 scale = Vector2(2, 0.5)
 

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bx53etw08d08y" path="res://Assets/Arts/Pinball Ball.png" id="1_yx25b"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_apqaj"]
-bounce = 0.3
+bounce = 0.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0wko5"]
 radius = 31.0
@@ -14,6 +14,7 @@ texture = ExtResource("1_yx25b")
 [node name="Pinball_Body" type="RigidBody2D" parent="."]
 mass = 2.0
 physics_material_override = SubResource("PhysicsMaterial_apqaj")
+gravity_scale = 2.0
 
 [node name="Pinball_Sprite" type="Sprite2D" parent="Pinball_Body"]
 scale = Vector2(0.6, 0.6)
