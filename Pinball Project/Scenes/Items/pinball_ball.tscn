@@ -15,6 +15,7 @@ texture = ExtResource("1_yx25b")
 mass = 2.0
 physics_material_override = SubResource("PhysicsMaterial_apqaj")
 gravity_scale = 2.0
+linear_damp = 0.2
 
 [node name="Pinball_Sprite" type="Sprite2D" parent="Pinball_Body"]
 scale = Vector2(0.6, 0.6)

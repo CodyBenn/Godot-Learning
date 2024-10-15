@@ -14,9 +14,9 @@ radius = 32.0156
 physics_material_override = SubResource("PhysicsMaterial_wgviv")
 freeze = true
 
-[node name="BumperCollider" type="CollisionShape2D" parent="BumperBody"]
-shape = SubResource("CircleShape2D_llwqk")
-debug_color = Color(0.902622, 0.29838, 0.206029, 0.42)
-
 [node name="BumperSprite" type="Sprite2D" parent="BumperBody"]
 texture = ExtResource("1_3phox")
+
+[node name="BumperCollider" type="CollisionShape2D" parent="BumperBody"]
+shape = SubResource("CircleShape2D_llwqk")
+debug_color = Color(0.205124, 0.802292, 1, 0.42)

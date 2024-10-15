@@ -16,3 +16,4 @@ texture = ExtResource("1_07v4k")
 [node name="LauncherCollider" type="CollisionShape2D" parent="LauncherBody"]
 position = Vector2(0, -13.5)
 shape = SubResource("RectangleShape2D_r4u2m")
+debug_color = Color(5.77569e-07, 0.833026, 0.968602, 0.42)
