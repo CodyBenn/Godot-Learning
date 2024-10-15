@@ -1,7 +1,87 @@
-[gd_scene load_steps=3 format=3 uid="uid://d247h3jcv878o"]
+[gd_scene load_steps=9 format=3 uid="uid://d247h3jcv878o"]
 
 [ext_resource type="Texture2D" uid="uid://f335xtxrm014" path="res://Assets/Arts/Pinball Plunger.png" id="1_mkttw"]
 [ext_resource type="Script" path="res://Scripts/Items/pinball_plunger.gd" id="1_q80ft"]
+
+[sub_resource type="Animation" id="Animation_5kckr"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_d6ill"]
+resource_name = "left_active"
+length = 0.05
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.261799, -0.523599]
+}
+
+[sub_resource type="Animation" id="Animation_5ej2k"]
+resource_name = "left_default"
+length = 0.05
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.523599, 0.261799]
+}
+
+[sub_resource type="Animation" id="Animation_fdlas"]
+resource_name = "right_active"
+length = 0.05
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.261799, 0.523599]
+}
+
+[sub_resource type="Animation" id="Animation_iag67"]
+resource_name = "right_default"
+length = 0.05
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.523599, -0.261799]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8xlni"]
+_data = {
+"RESET": SubResource("Animation_5kckr"),
+"left_active": SubResource("Animation_d6ill"),
+"left_default": SubResource("Animation_5ej2k"),
+"right_active": SubResource("Animation_fdlas"),
+"right_default": SubResource("Animation_iag67")
+}
 
 [node name="Plunger" type="Node2D"]
 rotation = 0.261799
@@ -16,4 +96,10 @@ texture = ExtResource("1_mkttw")
 position = Vector2(-27, 4)
 
 [node name="PlungerCollider" type="CollisionPolygon2D" parent="PlungerBody"]
+modulate = Color(0.681514, 0.71169, 0.707951, 1)
 polygon = PackedVector2Array(-29, -5, -29, 18, -25, 22, -21, 24, 11, 24, 18, 21, 23, 18, 27, 12, 26.9108, -23.6945, 23.1048, -23.2157)
+
+[node name="PlungerAnim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8xlni")
+}
