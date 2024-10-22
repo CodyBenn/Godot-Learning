@@ -52,7 +52,7 @@ scale = Vector2(-4.25, 3)
 position = Vector2(199, 169)
 
 [node name="Bumper8" parent="." instance=ExtResource("5_7oenk")]
-position = Vector2(901, 358)
+position = Vector2(963, 366)
 
 [node name="Bumper10" parent="." instance=ExtResource("5_7oenk")]
 position = Vector2(135, 330)
@@ -64,7 +64,7 @@ position = Vector2(678, 436)
 position = Vector2(341, 353)
 
 [node name="Bumper3" parent="." instance=ExtResource("5_7oenk")]
-position = Vector2(17, 572)
+position = Vector2(17, 580)
 
 [node name="Bumper4" parent="." instance=ExtResource("5_7oenk")]
 position = Vector2(478, 216)

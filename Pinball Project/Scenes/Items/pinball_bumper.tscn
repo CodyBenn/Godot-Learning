@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://caepxkdxg74gk" path="res://Assets/Arts/Pinball Bumper.png" id="1_3phox"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wgviv"]
+friction = 0.0
 bounce = 5.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_llwqk"]
