@@ -1,17 +1,96 @@
-[gd_scene load_steps=3 format=3 uid="uid://bm5dbn8vymu7e"]
+[gd_scene load_steps=9 format=3 uid="uid://bm5dbn8vymu7e"]
 
 [ext_resource type="Texture2D" uid="uid://7uan6623qlnf" path="res://Assets/Arts/Pinball Ball Launcher.png" id="1_07v4k"]
+[ext_resource type="Script" path="res://Scenes/Items/pinball_launcher.gd" id="1_77c8o"]
+
+[sub_resource type="Animation" id="Animation_rkxw4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LauncherBody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -32)]
+}
+
+[sub_resource type="Animation" id="Animation_asi4e"]
+resource_name = "pull_back"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LauncherBody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -32), Vector2(0, 9)]
+}
+
+[sub_resource type="Animation" id="Animation_ha16y"]
+resource_name = "launch"
+length = 0.05
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LauncherBody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.02),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 9), Vector2(0, -32)]
+}
+
+[sub_resource type="Animation" id="Animation_ncoqr"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LauncherBody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -32)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tymax"]
+_data = {
+"RESET": SubResource("Animation_rkxw4"),
+"idle": SubResource("Animation_ncoqr"),
+"launch": SubResource("Animation_ha16y"),
+"pull_back": SubResource("Animation_asi4e")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4u2m"]
 size = Vector2(52, 9)
 
 [node name="Launcher" type="Node2D"]
 scale = Vector2(0.75, 1)
+script = ExtResource("1_77c8o")
 
-[node name="LauncherSprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_07v4k")
+[node name="LauncherAnim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tymax")
+}
+autoplay = "idle"
 
 [node name="LauncherBody" type="AnimatableBody2D" parent="."]
+position = Vector2(0, -32)
+
+[node name="LauncherSprite" type="Sprite2D" parent="LauncherBody"]
+texture = ExtResource("1_07v4k")
 
 [node name="LauncherCollider" type="CollisionShape2D" parent="LauncherBody"]
 position = Vector2(0, -13.5)
