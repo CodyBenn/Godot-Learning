@@ -97,7 +97,7 @@ position = Vector2(-27, 4)
 
 [node name="PlungerCollider" type="CollisionPolygon2D" parent="PlungerBody"]
 modulate = Color(0.681514, 0.71169, 0.707951, 1)
-polygon = PackedVector2Array(-29, -5, -29, 18, -25, 22, -21, 24, 11, 24, 18, 21, 23, 18, 27, 12, 26.9108, -23.6945, 23.1048, -23.2157)
+polygon = PackedVector2Array(-29, -5, -29.2757, 24.7177, 26.8012, 14.4219, 26.8452, -24.8714)
 
 [node name="PlungerAnim" type="AnimationPlayer" parent="."]
 libraries = {

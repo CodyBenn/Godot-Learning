@@ -6,21 +6,25 @@
 bounce = 0.5
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0wko5"]
-radius = 31.0
+radius = 33.3333
 
-[node name="MeshInstance2D" type="MeshInstance2D"]
+[node name="Pinball" type="MeshInstance2D" groups=["pinball"]]
 texture = ExtResource("1_yx25b")
 
-[node name="Pinball_Body" type="RigidBody2D" parent="."]
+[node name="PinballBody" type="RigidBody2D" parent="." groups=["pinball"]]
 mass = 2.0
 physics_material_override = SubResource("PhysicsMaterial_apqaj")
 gravity_scale = 2.0
+can_sleep = false
+continuous_cd = 2
+max_contacts_reported = 2
+contact_monitor = true
 linear_damp = 0.2
 
-[node name="Pinball_Sprite" type="Sprite2D" parent="Pinball_Body"]
+[node name="PinballSprite" type="Sprite2D" parent="PinballBody"]
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_yx25b")
 
-[node name="Pinball_Collider" type="CollisionShape2D" parent="Pinball_Body"]
+[node name="PinballCollider" type="CollisionShape2D" parent="PinballBody"]
 scale = Vector2(0.6, 0.6)
 shape = SubResource("CircleShape2D_0wko5")

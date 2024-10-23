@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dijntokbq6aqm"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/main.gd" id="1_f7ikd"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_f7ikd"]
 [ext_resource type="PackedScene" uid="uid://gct8s3n0dbaw" path="res://Scenes/Items/pinball_ball.tscn" id="1_wcp4x"]
 [ext_resource type="PackedScene" uid="uid://bm5dbn8vymu7e" path="res://Scenes/Items/pinball_launcher.tscn" id="2_w4boy"]
 [ext_resource type="PackedScene" uid="uid://digxfnqmp4qmx" path="res://Scenes/Items/pinball_border.tscn" id="3_fnq7v"]
@@ -14,12 +14,12 @@
 script = ExtResource("1_f7ikd")
 
 [node name="Launcher" parent="." instance=ExtResource("2_w4boy")]
-position = Vector2(1058, 668)
+position = Vector2(1058, 682)
 
 [node name="Border" parent="." instance=ExtResource("3_fnq7v")]
 top_level = true
 position = Vector2(1207, 362)
-scale = Vector2(1.98, 5.75)
+scale = Vector2(1.98411, 5.74616)
 
 [node name="Border7" parent="." instance=ExtResource("3_fnq7v")]
 top_level = true
@@ -27,9 +27,9 @@ position = Vector2(-126, 362)
 scale = Vector2(1.98, 5.75)
 
 [node name="Border6" parent="." instance=ExtResource("3_fnq7v")]
-position = Vector2(543, -124)
+position = Vector2(541, -125)
 rotation = 1.5708
-scale = Vector2(1.94, 12.44)
+scale = Vector2(1.94, 12.4)
 
 [node name="Border2" parent="." instance=ExtResource("3_fnq7v")]
 top_level = true
@@ -52,7 +52,7 @@ scale = Vector2(-4.25, 3)
 position = Vector2(199, 169)
 
 [node name="Bumper8" parent="." instance=ExtResource("5_7oenk")]
-position = Vector2(901, 358)
+position = Vector2(963, 366)
 
 [node name="Bumper10" parent="." instance=ExtResource("5_7oenk")]
 position = Vector2(135, 330)
@@ -64,13 +64,13 @@ position = Vector2(678, 436)
 position = Vector2(341, 353)
 
 [node name="Bumper3" parent="." instance=ExtResource("5_7oenk")]
-position = Vector2(17, 572)
+position = Vector2(-3, 553)
 
 [node name="Bumper4" parent="." instance=ExtResource("5_7oenk")]
 position = Vector2(478, 216)
 
 [node name="Bumper5" parent="." instance=ExtResource("5_7oenk")]
-position = Vector2(1004, 599)
+position = Vector2(1005, 553)
 
 [node name="Bumper6" parent="." instance=ExtResource("5_7oenk")]
 position = Vector2(778, 141)
@@ -79,28 +79,25 @@ position = Vector2(778, 141)
 position = Vector2(663, 286)
 
 [node name="Left_Bracket" parent="." instance=ExtResource("7_rg835")]
-position = Vector2(208, 559)
+position = Vector2(208, 541)
 rotation = 0.349066
 scale = Vector2(6, 0.5)
 
 [node name="Right Bracket" parent="." instance=ExtResource("7_rg835")]
-position = Vector2(785, 557)
+position = Vector2(785, 541)
 rotation = -0.349066
 scale = Vector2(6, 0.5)
 
 [node name="Flipper_Left" parent="." groups=["Left_Plunger"] instance=ExtResource("6_k7qr5")]
-position = Vector2(364, 617)
+position = Vector2(364, 601)
 
 [node name="Flipper_Right" parent="." groups=["Right_Plunger"] instance=ExtResource("6_k7qr5")]
-position = Vector2(628, 617)
+position = Vector2(628, 601)
 rotation = -0.261799
 scale = Vector2(2, 0.5)
 
 [node name="MeshInstance2D" parent="." instance=ExtResource("1_wcp4x")]
-position = Vector2(1057, 628)
-
-[node name="MeshInstance2D2" parent="." instance=ExtResource("1_wcp4x")]
-position = Vector2(441, 409)
+position = Vector2(1057, 611)
 
 [node name="Right_Guard" parent="." instance=ExtResource("9_g650t")]
 position = Vector2(798, 736)
