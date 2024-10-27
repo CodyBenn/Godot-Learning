@@ -3,19 +3,19 @@
 [ext_resource type="Texture2D" uid="uid://caepxkdxg74gk" path="res://Assets/Arts/Pinball Bumper.png" id="1_3phox"]
 [ext_resource type="Script" path="res://Scripts/Items/pinball_bumper.gd" id="1_dhmsl"]
 
-[sub_resource type="Animation" id="Animation_lleiw"]
-resource_name = "idle"
+[sub_resource type="Animation" id="Animation_l22po"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("BumperBody:scale")
+tracks/0/path = NodePath("PinballBumperBody:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 1)]
+"values": [Vector2(0.9, 0.9)]
 }
 
 [sub_resource type="Animation" id="Animation_k8cjd"]
@@ -25,7 +25,7 @@ step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("BumperBody:scale")
+tracks/0/path = NodePath("PinballBumperBody:scale")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -35,19 +35,19 @@ tracks/0/keys = {
 "values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1.3, 1.3), Vector2(0.8, 0.8), Vector2(1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_l22po"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_lleiw"]
+resource_name = "idle"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("BumperBody:scale")
+tracks/0/path = NodePath("PinballBumperBody:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.9, 0.9)]
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lb4np"]
@@ -64,29 +64,29 @@ bounce = 5.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_llwqk"]
 radius = 32.0156
 
-[node name="Bumper" type="MeshInstance2D"]
+[node name="PinballBumper" type="MeshInstance2D"]
 script = ExtResource("1_dhmsl")
 
-[node name="BumperAnim" type="AnimationPlayer" parent="."]
+[node name="PinballBumperAnim" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_lb4np")
 }
 autoplay = "idle"
 
-[node name="BumperBody" type="RigidBody2D" parent="."]
+[node name="PinballBumperBody" type="RigidBody2D" parent="."]
 scale = Vector2(0.9, 0.9)
 physics_material_override = SubResource("PhysicsMaterial_wgviv")
 freeze = true
 freeze_mode = 1
 continuous_cd = 1
-max_contacts_reported = 1
+max_contacts_reported = 10
 contact_monitor = true
 
-[node name="BumperSprite" type="Sprite2D" parent="BumperBody"]
+[node name="PinballBumperSprite" type="Sprite2D" parent="PinballBumperBody"]
 texture = ExtResource("1_3phox")
 
-[node name="BumperCollider" type="CollisionShape2D" parent="BumperBody"]
+[node name="PinballBumperCollider" type="CollisionShape2D" parent="PinballBumperBody"]
 shape = SubResource("CircleShape2D_llwqk")
 debug_color = Color(0.205124, 0.802292, 1, 0.42)
 
-[connection signal="body_entered" from="BumperBody" to="." method="_on_bumper_body_body_entered"]
+[connection signal="body_entered" from="PinballBumperBody" to="." method="_on_bumper_body_body_entered"]

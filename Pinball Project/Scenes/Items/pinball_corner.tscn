@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://fprok861gli0" path="res://Assets/Arts/Pinball Border Edge.png" id="1_ihcgu"]
 
-[node name="BorderEdge" type="Node2D"]
+[node name="BorderCorner" type="Node2D"]
 
 [node name="BorderCornerSprite" type="Sprite2D" parent="."]
 position = Vector2(64, 64)

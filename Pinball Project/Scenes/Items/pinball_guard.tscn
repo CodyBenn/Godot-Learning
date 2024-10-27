@@ -2,15 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://f335xtxrm014" path="res://Assets/Arts/Pinball Plunger.png" id="1_1312l"]
 
-[node name="Right_Guard" type="Node2D"]
+[node name="PinballGuard" type="Node2D"]
 scale = Vector2(7.5, 6)
 
-[node name="PlungerSprite" type="Sprite2D" parent="."]
+[node name="PinballGuardSprite" type="Sprite2D" parent="."]
 position = Vector2(1.90735e-06, 0)
 texture = ExtResource("1_1312l")
 
-[node name="PlungerBody" type="CharacterBody2D" parent="."]
+[node name="PinballGuardBody" type="CharacterBody2D" parent="."]
 position = Vector2(1.90735e-06, 0)
 
-[node name="PlungerCollider" type="CollisionPolygon2D" parent="PlungerBody"]
-polygon = PackedVector2Array(-29, -5, -29, 18, -25, 22, -21, 24, 11, 24, 18, 21, 23, 18, 27, 12, 26.9108, -23.6945, 23.1048, -23.2157)
+[node name="PinballGuardCollider" type="CollisionPolygon2D" parent="PinballGuardBody"]
+polygon = PackedVector2Array(-29, -5, -29, 18, -25, 22, -21, 24, 11, 24, 18, 21, 23, 18, 27, 12, 26.8, -21.1667, 24.8, -24)

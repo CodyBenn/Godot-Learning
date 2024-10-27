@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dijntokbq6aqm"]
+[gd_scene load_steps=11 format=3 uid="uid://dijntokbq6aqm"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_f7ikd"]
 [ext_resource type="PackedScene" uid="uid://gct8s3n0dbaw" path="res://Scenes/Items/pinball_ball.tscn" id="1_wcp4x"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://djf6kdw0s6kjv" path="res://Scenes/Items/pinball_bracket.tscn" id="7_rg835"]
 [ext_resource type="PackedScene" uid="uid://cjegbg41eemq0" path="res://Scenes/Items/pinball_guard.tscn" id="9_g650t"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_14r7y"]
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_f7ikd")
 
@@ -19,19 +21,31 @@ script = ExtResource("1_f7ikd")
 top_level = true
 z_index = 1
 position = Vector2(1207, 362)
-scale = Vector2(2, 7.906)
+scale = Vector2(1.98411, 5.74616)
 
 [node name="Border7" parent="Walls" instance=ExtResource("3_fnq7v")]
 top_level = true
 z_index = 1
-position = Vector2(-127, 362)
-scale = Vector2(2, 7.99)
+position = Vector2(-126, 362)
+scale = Vector2(1.98, 5.75)
 
 [node name="Border6" parent="Walls" instance=ExtResource("3_fnq7v")]
 z_index = 1
 position = Vector2(541, -125)
 rotation = 1.5708
 scale = Vector2(1.94, 12.4)
+
+[node name="Border2" parent="Walls" instance=ExtResource("3_fnq7v")]
+top_level = true
+z_index = 1
+position = Vector2(1016, 656)
+scale = Vector2(0.3, 1)
+
+[node name="Border4" parent="Walls" instance=ExtResource("3_fnq7v")]
+z_index = 1
+position = Vector2(1055, 701)
+rotation = 1.5708
+scale = Vector2(0.3, 0.92)
 
 [node name="LeftBorderEdge" parent="Walls" instance=ExtResource("4_5o1ys")]
 scale = Vector2(4.25, 3)
@@ -44,83 +58,87 @@ scale = Vector2(4.25, -3)
 [node name="Bumpers" type="Node" parent="."]
 
 [node name="Bumper" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(170, 136)
+position = Vector2(199, 169)
 
 [node name="Bumper8" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(976, 362)
+position = Vector2(963, 366)
 
 [node name="Bumper10" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(127, 370)
+position = Vector2(135, 330)
 
 [node name="Bumper11" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(793, 457)
+position = Vector2(752, 409)
 
 [node name="Bumper2" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(306, 457)
+position = Vector2(328, 408)
+
+[node name="Bumper3" parent="Bumpers" instance=ExtResource("5_7oenk")]
+position = Vector2(-3, 553)
 
 [node name="Bumper9" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(445, 181)
+position = Vector2(432, 181)
 
 [node name="Bumper14" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(624, 181)
+position = Vector2(611, 181)
 
 [node name="Bumper12" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(463, 273)
+position = Vector2(450, 273)
 
 [node name="Bumper15" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(609, 273)
+position = Vector2(596, 273)
 
 [node name="Bumper13" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(337, 124)
+position = Vector2(523, 124)
 
-[node name="Bumper17" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(736, 124)
+[node name="Bumper5" parent="Bumpers" instance=ExtResource("5_7oenk")]
+position = Vector2(1005, 553)
 
 [node name="Bumper6" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(947, 136)
+position = Vector2(778, 141)
 
 [node name="Bumper7" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(822, 284)
-
-[node name="Bumper16" parent="Bumpers" instance=ExtResource("5_7oenk")]
-position = Vector2(277, 284)
+position = Vector2(839, 280)
 
 [node name="Environment" type="Node" parent="."]
 
-[node name="PinballBall" parent="Environment" instance=ExtResource("1_wcp4x")]
-position = Vector2(538, 509)
-
 [node name="LeftBracket" parent="Environment" instance=ExtResource("7_rg835")]
-position = Vector2(241, 554)
-rotation = 0.261799
+position = Vector2(208, 541)
+rotation = 0.349066
 scale = Vector2(6, 0.5)
 
 [node name="RightBracket" parent="Environment" instance=ExtResource("7_rg835")]
-position = Vector2(837, 554)
-rotation = -0.261799
+position = Vector2(785, 541)
+rotation = -0.349066
 scale = Vector2(6, 0.5)
 
 [node name="FlipperLeft" parent="Environment" groups=["Left_Flipper"] instance=ExtResource("6_k7qr5")]
-position = Vector2(406, 601)
-rotation = 0.261799
+position = Vector2(364, 601)
+rotation = -2.87979
 
 [node name="FlipperRight" parent="Environment" groups=["Right_Flipper"] instance=ExtResource("6_k7qr5")]
-position = Vector2(670, 601)
+position = Vector2(628, 601)
 scale = Vector2(2, 0.5)
 
 [node name="RightGuard" parent="Environment" instance=ExtResource("9_g650t")]
-position = Vector2(822, 737)
+position = Vector2(798, 736)
 scale = Vector2(8, 6)
 
 [node name="LeftGuard" parent="Environment" instance=ExtResource("9_g650t")]
-position = Vector2(259, 737)
+position = Vector2(202, 736)
 rotation = -3.14159
 scale = Vector2(8, -6)
 
 [node name="Launcher" parent="Environment" instance=ExtResource("2_w4boy")]
-position = Vector2(1059, 720)
+position = Vector2(1058, 682)
 
-[node name="Launcher2" parent="Environment" instance=ExtResource("2_w4boy")]
-position = Vector2(22, 720)
+[node name="Deadzone" type="Area2D" parent="Environment"]
+position = Vector2(492, 772)
+scale = Vector2(36.28, 1)
 
-[editable path="Environment/PinballBall"]
+[node name="DeadzoneCollider" type="CollisionShape2D" parent="Environment/Deadzone"]
+position = Vector2(0.0275634, 13)
+scale = Vector2(1.76957, -21.88)
+shape = SubResource("WorldBoundaryShape2D_14r7y")
+
+[node name="PinballBall" parent="." instance=ExtResource("1_wcp4x")]
+position = Vector2(1057, 611)
