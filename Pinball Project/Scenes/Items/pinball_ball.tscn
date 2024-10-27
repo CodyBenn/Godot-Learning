@@ -8,10 +8,10 @@ bounce = 0.5
 [sub_resource type="CircleShape2D" id="CircleShape2D_0wko5"]
 radius = 33.3333
 
-[node name="PinballBall" type="MeshInstance2D" groups=["pinball"]]
+[node name="PinballBall" type="MeshInstance2D"]
 texture = ExtResource("1_yx25b")
 
-[node name="PinballBallBody" type="RigidBody2D" parent="."]
+[node name="PinballBallBody" type="RigidBody2D" parent="." groups=["pinball"]]
 mass = 2.0
 physics_material_override = SubResource("PhysicsMaterial_apqaj")
 gravity_scale = 2.0

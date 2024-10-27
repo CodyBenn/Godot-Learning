@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlxqqw56c5idx"]
+
+[ext_resource type="Texture2D" uid="uid://bx53etw08d08y" path="res://Assets/Arts/Pinball Ball.png" id="1_m3p27"]
+
+[node name="LifeCounterPinballImage" type="TextureRect"]
+texture = ExtResource("1_m3p27")

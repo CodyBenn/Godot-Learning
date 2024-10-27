@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://d247h3jcv878o"]
 
 [ext_resource type="Texture2D" uid="uid://f335xtxrm014" path="res://Assets/Arts/Pinball Plunger.png" id="1_mkttw"]
-[ext_resource type="Script" path="res://Scripts/Items/pinball_flipper.gd" id="1_s7b6l"]
+[ext_resource type="Script" path="res://Scripts/Environments/pinball_flipper.gd" id="1_s0f5s"]
 
 [sub_resource type="Animation" id="Animation_5kckr"]
 length = 0.001
@@ -86,7 +86,7 @@ _data = {
 [node name="PinballFlipper" type="Node2D"]
 rotation = -0.261799
 scale = Vector2(-2, 0.5)
-script = ExtResource("1_s7b6l")
+script = ExtResource("1_s0f5s")
 
 [node name="PinballFlipperSprite" type="Sprite2D" parent="."]
 position = Vector2(-27, 4)

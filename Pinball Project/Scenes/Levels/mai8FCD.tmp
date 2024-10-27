@@ -149,4 +149,3 @@ offset_bottom = 649.0
 [connection signal="area_entered" from="Environment/Deadzone" to="LifeCounter" method="_on_deadzone_area_entered"]
 [connection signal="body_entered" from="Environment/Deadzone" to="." method="_on_deadzone_body_entered"]
 [connection signal="body_entered" from="Environment/Deadzone" to="Environment/Deadzone" method="_on_body_entered"]
-[connection signal="body_entered" from="Environment/Deadzone" to="LifeCounter" method="_on_deadzone_body_entered"]
