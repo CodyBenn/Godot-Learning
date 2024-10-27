@@ -1,16 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://76ggwwlujjjh"]
+[gd_scene load_steps=2 format=3 uid="uid://76ggwwlujjjh"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/deadzone.gd" id="1_6imiw"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qivbk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3o1o5"]
-
-[node name="Deadzone" type="Area2D" groups=["deadzone"]]
-scale = Vector2(36.28, 1)
-script = ExtResource("1_6imiw")
+[node name="Deadzone" type="Area2D"]
+position = Vector2(534, 887)
 
 [node name="DeadzoneCollider" type="CollisionShape2D" parent="."]
-scale = Vector2(1.76957, -21.88)
-shape = SubResource("RectangleShape2D_3o1o5")
-
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="pinball_entered_deadzone" from="." to="." method="_on_pinball_entered_deadzone"]
+scale = Vector2(1, -1)
+shape = SubResource("WorldBoundaryShape2D_qivbk")

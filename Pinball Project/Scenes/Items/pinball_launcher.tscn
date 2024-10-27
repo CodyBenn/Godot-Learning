@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bm5dbn8vymu7e"]
 
 [ext_resource type="Texture2D" uid="uid://7uan6623qlnf" path="res://Assets/Arts/Pinball Ball Launcher.png" id="1_07v4k"]
-[ext_resource type="Script" path="res://Scripts/Items/pinball_launcher.gd" id="1_afnlr"]
+[ext_resource type="Script" path="res://Scripts/Environments/pinball_launcher.gd" id="1_afnlr"]
 
 [sub_resource type="Animation" id="Animation_rkxw4"]
 length = 0.001

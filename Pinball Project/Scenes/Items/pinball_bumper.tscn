@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b4wsxowm0nj04"]
 
 [ext_resource type="Texture2D" uid="uid://caepxkdxg74gk" path="res://Assets/Arts/Pinball Bumper.png" id="1_3phox"]
-[ext_resource type="Script" path="res://Scripts/Items/pinball_bumper.gd" id="1_dhmsl"]
+[ext_resource type="Script" path="res://Scripts/Environments/pinball_bumper.gd" id="1_dhmsl"]
 
 [sub_resource type="Animation" id="Animation_l22po"]
 length = 0.001
