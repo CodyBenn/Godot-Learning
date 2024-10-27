@@ -84,7 +84,7 @@ _data = {
 }
 
 [node name="PinballFlipper" type="Node2D"]
-rotation = -0.261799
+rotation = 0.261799
 scale = Vector2(-2, 0.5)
 script = ExtResource("1_s7b6l")
 
